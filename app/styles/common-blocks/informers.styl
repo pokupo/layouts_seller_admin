@@ -1,0 +1,46 @@
+.b-informer
+	position relative
+	padding 17px 10px 13px 60px
+	min-height 50px 
+	background #f7f6f3
+	
+	a
+		color $a__link
+
+	&__text
+		font-size 14px 
+		line-height 20px
+			
+	&__icon
+		width 30px
+		height 30px
+		position absolute
+		left 20px
+		top 12px
+		
+	&__close
+		position absolute
+		right 25px
+		top 21.5px
+		cursor pointer
+		centered-icon($icon--close--xs)
+		
+	&.b-informer--fail
+		color #FF6766 
+		.b-informer__icon
+			centered-icon($pic__fail)
+			
+	&.b-informer--alert
+		background #FCF5D9 
+		color #9B731D
+		.b-informer__icon
+			centered-icon($pic__alert)		
+			
+	&.b-informer--done
+		color #84B758 
+		.b-informer__icon
+			centered-icon($pic__done)
+			
+	&.b-informer--info
+		.b-informer__icon
+			centered-icon($pic__done)

@@ -1,0 +1,71 @@
+.b-breadcrumb
+	padding 22px 20px 19px
+	background #FFF
+	border-bottom 1px solid #efece7 
+	
+ul.breadcrumb
+	display block
+	vertical-align middle
+	font-size 18px
+	line-height 30px
+	font-weight 100 
+	margin-right 200px
+	
+	li.root
+		a
+			display inline-block
+			width 30px
+			height 30px
+			position relative
+			overflow hidden
+			text-indent -1000em
+			centered-icon($icon--root)
+	
+	li 
+		display inline-block
+		vertical-align middle
+		
+		a
+			color $a__link
+	
+	li.divider
+		margin 0 8px
+	
+	li.active
+		color #000
+
+.btn
+	display inline-block
+	background $btngreen
+	padding 14px 30px
+	border-radius 8px
+	text-transform uppercase
+	color #333
+	font-size 11px
+	line-height 1
+	font-weight 600  
+	letter-spacing 0.5px 
+	position relative
+	cursor pointer
+	
+	&.tooltiped
+		background lighten($btngreen, 0.5)
+	
+a.btn
+	color #333
+		
+.btn-support
+	float right
+	padding 14px 14px 14px 48px
+	
+	.icon
+		width 24px
+		height 21px
+		position absolute
+		top 50%
+		left 14px
+		margin-top -10.5px
+		centered-icon($icon--support)
+		
+	
+		

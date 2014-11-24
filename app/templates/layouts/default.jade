@@ -1,0 +1,16 @@
+include ../__helpers/variables
+include ../__helpers/mixins
+
+doctype html
+html(lang='ru')
+	include ../common-blocks/head
+	body
+		.page-container
+			include ../common-blocks/sidebar
+			.page-content
+				include ../common-blocks/breadcrumb
+				include ../common-blocks/navtop
+				block content
+				include ../common-blocks/footer
+
+		include ../common-blocks/scripts

@@ -1,0 +1,125 @@
+aside.b-sidebar.mCustomScrollbar
+    .b-sidebar-header
+        .dropdown
+            .b-sidebar-header__title.dropdown__trigger(data-target="mainmenu")
+                | Торговая платформа полного цикла Pokupo
+            .b-sidebar-header__menu.dropdown__content.hidden(data-target="mainmenu")
+                ul.menu
+                    li.menu__item
+                        a(href=js0) Учётная запись
+                    li.menu__item
+                        a(href=js0) Условия
+                    li.menu__item
+                        a(href=js0) Конфиденциальность
+                    li.menu__item
+                        a.menu__item--logout(href=js0) Выйти
+
+    .b-sidebar-subheader
+        //- a.b-shop-mini Мини-версия
+        .b-shop
+            .b-shop__image
+                img(src='images/logo/shop-1.png', alt='')
+            .b-shop__data
+                span.b-shop__data-name Торговая платформа полного цикла «Депозитстрой»
+
+            .b-shop__control
+                .inline-sorter.dropdown.selector
+                    span.selector__current.dropdown__trigger(data-target="sort") Сменить магазин
+                    div.dropdown__content.selector__options.hidden(data-target="sort")
+                        ul.menu
+                            li.menu__item
+                                a(href=js0) Pokupo
+
+                            li.menu__item.active
+                                a(href=js0) Торговая платформа полного цикла «Депозитстрой»
+                            
+                            li.menu__item
+                                a(href=js0) Магазин низких цен
+
+                            li.menu__item
+                                a(href=js0) Золото-брильянты
+
+    .b-sidebar-search
+        form(role='form')
+            i.icon.icon--search
+            input.b-sidebar-search__input(type='text', name='search', placeholder='Поиск...')
+
+    ul.b-sidebar-navigation.menu(role="navigation")
+        li.menu-item.active
+            a(href=js0)
+                span.icon.icon--home
+                span.sidebar__text Панель управления
+        li.menu-item
+            a(href=js0, target='_blank')
+                span.icon.icon--shop
+                span.sidebar__text Магазины
+        li.menu-item.menu-item--openable
+            a(href=js0)
+                span.icon.icon--goods
+                span.sidebar__text Товары
+            ul.menu
+                li.menu-item
+                    a(href=js0)
+                        span.icon
+                        | Я уверен,
+                li.menu-item
+                    a(href=js0)
+                        span.icon
+                        | что потребуется
+                li.menu-item
+                    a(href=js0)
+                        span.icon
+                        | дополнительный
+                
+                li.menu-item.menu-item--openable
+                    a(href=js0)
+                        span.icon.icon--users
+                        | уровень вложенности
+                    ul.menu
+                        li.menu-item
+                            a(href=js0)
+                                span.icon
+                                | (И, наверное,
+                        li.menu-item
+                            a(href=js0)
+                                span.icon
+                                | не один,
+                        li.menu-item
+                            a(href=js0)
+                                span.icon
+                                | а несколько —
+                        li.menu-item
+                            a(href=js0)
+                                span.icon
+                                | как минимум, два)
+                li.menu-item
+                    a(href=js0)
+                        span.icon.icon--comments
+                        | для дальнейшего
+                li.menu-item
+                    a(href=js0)
+                        span.icon.icon--calendar
+                        | расширения меню
+        li.menu-item
+            a(href=js0)
+                span.icon.icon--sales
+                span.sidebar__text Продажи               
+        li.menu-item
+            a(href=js0)
+                span.icon.icon--docs
+                span.sidebar__text Бухгалтерия
+        li.menu-item
+            a(href=js0)
+                span.icon.icon--users
+                span.sidebar__text Клиенты
+
+    .b-sidebar-footer
+        ul.b-sidebar-footer__actions
+            li.b-sidebar-footer__actions-item
+                span.b-sidebar-footer__action.icon.icon--settings(title="Настройки" rel="tooltip")
+
+            li.b-sidebar-footer__actions-item
+                span.b-sidebar-footer__action.icon.icon--cart(title="Заказы" rel="tooltip")
+
+            li.b-sidebar-footer__actions-item
+                span.b-sidebar-footer__action.icon.icon--help(title="Помощь" rel="tooltip")

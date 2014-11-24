@@ -1,0 +1,238 @@
+.b-sidebar-navigation,
+.b-sidebar-navigation ul
+    width 100%
+    padding 0px
+    margin 0px
+    float left
+    list-style none
+    display block
+    z-index 3
+
+.b-sidebar-navigation
+    background #474b53
+
+    li
+        float left
+        display block
+        width 100%
+        padding 0
+        margin 0
+        position relative
+
+        & > a
+            display block
+            float left
+            width 100%
+            line-height 19px
+            color #fff
+            font-size 14px
+            font-weight 400
+            padding 15px 10px 15px 20px
+            text-decoration none
+            vertical-align middle
+
+            .icon
+                text-align center
+                width 20px
+                height 20px
+                display inline-block
+                margin-right 10px
+                vertical-align middle
+
+            &:hover
+                background #3e424a
+                transition all 200ms ease
+
+                .fa,
+                .glyphicon
+                    color #ffd559
+
+        & > ul
+            background #35383f
+            max-height 0px
+            transition all 200ms ease
+            overflow hidden
+
+            li 
+                & > a
+                    color #cccccc
+                    font-size 12px
+                    line-height 19px
+                    font-weight 400
+                    padding 12px 10px
+
+                    &:hover
+                        background #1f2125
+                        color #fff
+
+                &.active > a
+                    background #1f2125
+                    color #fff
+
+        &.menu-item--openable
+            position relative
+            &:before
+                content ''
+                position absolute
+                top 20px
+                right 20px
+                display block
+                width 0
+                height 0
+                border 6px solid transparent
+                border-top-color #fff
+                background none 
+                z-index 5
+                
+            &.active
+                &:before
+                    border-top-color transparent
+                    border-bottom-color #ccc
+                    top 16px
+
+        &.active 
+            & > a
+                background #3e424a
+                transition all 200ms ease
+
+                .icon
+                    color #ffd559
+
+            & > ul
+                max-height 1200px
+
+
+    & > li
+        & > ul 
+            & > li 
+                & > a
+                    padding-left 25px
+                    &:hover
+                        padding-left 30px
+                &.active > a
+                    padding-left 30px
+
+                & > ul 
+                    & > li 
+                        & > a
+                            padding-left 40px
+                            &:hover
+                                padding-left 44px
+                        &.active > a
+                            padding-left 44px
+                            
+                        & > ul 
+                            & > li 
+                                & > a
+                                    padding-left 48px
+                                    &:hover
+                                        padding-left 52px
+                                &.active > a
+                                    padding-left 52px
+
+                                & > ul 
+                                    & > li 
+                                        & > a
+                                            padding-left 56px
+                                            &:hover
+                                                padding-left 60px
+                                        &.active > a
+                                            padding-left 60px
+
+        &:last-child > a
+            border-radius 0 0 0 5px
+            border-bottom 0
+
+
+
+    &.b-sidebar-navigation--minimized
+        width 50px
+
+        li
+            width auto
+            position relative
+
+            &.active > ul
+                display block
+
+            ul
+                top 0px
+                right -230px
+                box-shadow 0px 2px 1px 0px rgba(0, 0, 0, 0.1)
+                &:after
+                    right 100%
+                    top 23px
+                    border solid transparent
+                    content " "
+                    height 0
+                    width 0
+                    position absolute
+                    pointer-events none
+                    border-color rgba(0, 0, 0, 0)
+                    border-right-color #33414e
+                    border-width 5px
+                    margin-top -5px
+
+                li 
+                    & > a
+                        padding-left 15px !important
+
+                        &:hover
+                            padding-left 20px !important
+
+                    &.active > a
+                        padding-left 20px !important
+
+                    &:first-child > a
+                        border-radius 3px 3px 0 0
+
+                    &:last-child > a
+                        border-bottom 0
+                        border-radius 0 0 3px 3px
+
+        & > li
+            width 100%
+
+            & > a
+                padding 15px 10px
+                text-align center
+
+                .icon
+                    margin 0px
+
+                ul
+                    width 220px
+                    position absolute
+                    overflow visible
+                    display none
+                    border-radius 3px
+
+                li
+                    width 100%
+
+                li.menu-item--openable
+                    &:before
+                        content "\f105"
+
+                    &.active:before
+                        content "\f104"
+
+
+a.b-sidebar-navigation-minimize
+    text-align center
+    width 50px
+    height 50px
+    background #666
+    padding 15px
+    border-bottom 0
+    line-height 20px
+    color #FFF
+    text-shadow none
+
+
+
+
+
+
+
+
