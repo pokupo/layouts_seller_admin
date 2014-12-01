@@ -1,0 +1,128 @@
+.playlist-components
+    transform translate(-50%, -50%)
+    position absolute
+    top 50%
+    left 50%
+    z-index 999
+
+.b-playlist
+    width 460px
+    max-height 375px
+    overflow-y auto
+    color #333
+    margin 5px 0
+    position relative
+    background #fff
+    box-shadow 0 3px 10px rgba(#000,0.25)
+    
+    &__close
+        position absolute
+        right 25px
+        top 21.5px
+        cursor pointer
+        centered-icon($icon--close--xs)
+    
+    h1
+        font-size 24px
+        line-height 1
+        font-weight 100
+        margin 0
+        padding 30px 10px 20px 25px
+        border-bottom 1px solid $grey 
+    
+    ul
+        padding 0
+        margin 0
+        list-style none
+        
+        .b-playlist-item
+            padding 10px 10px 10px 20px
+            border-bottom 1px solid $grey
+            cursor pointer
+            vertical-align middle
+            
+            &.active
+                background-color #97ce68
+                border-color #97ce68
+                color #000
+                
+            &.unread
+                color #000
+                font-weight bold
+                
+            &:hover
+                border-color $grey
+                background $grey
+                
+            .icon
+                display inline-block
+                vertical-align middle
+                width 24px
+                height 18px
+                padding-right 10px
+                padding-left 5px 
+                centered-icon($icon--video)
+                
+            &__number
+                padding-right 10px
+                
+            &__poster
+                padding-left 10px
+                img
+                    width 64px
+                    
+            &__title
+                padding-left 10px
+            
+            &__poster, 
+            &__title
+                display inline-block
+                vertical-align middle
+            
+            &__duration
+                padding-top 10px
+                float right
+
+
+.b-playlist-controls
+    position absolute
+    bottom 17px
+    right 40px
+    font-size 0
+    
+    .b-playlist-control
+        display inline-block
+        width 40px
+        height 40px
+        border-radius 8px
+        border 1px solid $grey
+        position relative
+        margin-left 8px
+        cursor pointer
+        opacity 0.8 
+        
+        &:first-child
+            margin-left 0
+        
+        &:hover
+            opacity 1
+        
+        &.next
+            centered-icon($icon--video-next)
+        &.prev
+            centered-icon($icon--video-prev)
+        &.playlist
+            centered-icon($icon--video-playlist)
+    
+
+
+
+#js-next
+    float right
+
+#js-prev
+    float left
+
+#js-prev, 
+#js-next
+    cursor pointer

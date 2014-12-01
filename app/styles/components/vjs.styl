@@ -63,12 +63,14 @@ $adgreen = #97ce68
 		opacity 1
 		transition opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
 	
+	/*
 	&.vjs-has-started.vjs-user-inactive.vjs-playing 
 		.vjs-control-bar
 		& + .close-video
 			opacity 0
 			transition opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955)
 
+	*/
 	
 	&.vjs-using-native-controls .vjs-control-bar, 
 	&.vjs-controls-disabled .vjs-control-bar
@@ -77,7 +79,7 @@ $adgreen = #97ce68
 	.vjs-progress-control
 		position absolute
 		top 0
-		right 95px
+		right 310px
 		bottom 0
 		left 75px
 	
@@ -131,9 +133,11 @@ $adgreen = #97ce68
 
 	.vjs-duration
 		position absolute
+		font-size 11px
 		top 50%
-		right 95px
-		margin-top 10px
+		right 270px
+		margin-top -6px
+		color #ccc
 		.vjs-control-text
 			display none
 
@@ -195,7 +199,7 @@ $adgreen = #97ce68
 		margin-top -7px
 		position absolute
 		top 50%
-		right 20px
+		right 190px
 		height 14px
 		width 22px
 		&:hover
@@ -217,7 +221,7 @@ $adgreen = #97ce68
 		margin-top -7px
 		position absolute
 		top 50%
-		right 55px
+		right 230px
 		height 14px
 		width 22px
 		&:hover

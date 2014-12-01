@@ -27,7 +27,8 @@ include ../common-blocks/informers
         .third.column.double
             .content
                 .pkp-block
-                    .pkp-slot
+                    .pkp-slot.b-log
+                        pre
 
     .pkp-block
         .pkp-slot
@@ -38,3 +39,15 @@ include ../common-blocks/informers
 .video-holder(style="display:none")
     video#intro-video.video-js.vjs-pokupo-skin(src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4")
     span#js-close-video.close-video
+
+    .playlist-components
+        .b-playlist
+            h1 Список материалов
+            ul
+            span.b-playlist__close#js-close-playlist
+
+    .b-playlist-controls
+        span.b-playlist-control.prev#js-prev(data-target="prev")
+        span.b-playlist-control.playlist#js-show-playlist
+        span.b-playlist-control.next#js-next(data-target="next")
+    
