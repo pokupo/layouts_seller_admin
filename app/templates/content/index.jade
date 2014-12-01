@@ -1,4 +1,40 @@
 include ../common-blocks/informers
 
 .page-content-wrap
-    p Контент админки
+    dl.tabs.tabs--noskin
+        dt.tab__trigger.selected
+            span Описание
+        dd.tab__content.selected
+            .content
+                .pkp-slot
+        dt.tab__trigger
+            span Депозитстрой
+        dd.tab__content
+            .content
+                .pkp-slot
+        dt.tab__trigger
+            span Магазин низких цен
+        dd.tab__content
+            .content
+                .pkp-slot
+
+    .columns
+        .first.column.double
+            .content
+                .pkp-block
+                    .pkp-slot
+                        a#js-video(href=js0) Старт
+        .third.column.double
+            .content
+                .pkp-block
+                    .pkp-slot
+
+    .pkp-block
+        .pkp-slot
+
+    .pkp-block
+        .pkp-slot
+
+.video-holder(style="display:none")
+    video#intro-video.video-js.vjs-pokupo-skin(src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4")
+    span#js-close-video.close-video

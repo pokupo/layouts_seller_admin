@@ -7,6 +7,7 @@ PKP.init = function() {
 
     /* Включаем модули */
     PKP.UI.init();
+    PKP.Video.init();
     PKP.Tip.init();
 
     PKP.$window.on('load resize', function() {
@@ -14,7 +15,7 @@ PKP.init = function() {
         PKP.windowWidth      = PKP.$window.width();
         PKP.windowScrollTop  = PKP.$window.scrollTop();
         PKP.windowScrollLeft = PKP.$window.scrollLeft();
-        // PKP.Responsive.reflow();
+        PKP.Responsive.reflow();
     });
 };
 
@@ -23,7 +24,7 @@ PKP.UI = {
     init: function() {
         PKP.UI.dropdowns();
         PKP.UI.sidebar();
-
+        PKP.UI.mini();
     },
 
     dropdowns: function() {
@@ -110,8 +111,6 @@ PKP.UI = {
                 $(".b-sidebar .b-sidebar-navigation").removeClass("b-sidebar-navigation--minimized");
                 $(".page-container").removeClass("page-container--wide");
                 $(".b-sidebar .b-sidebar-navigation li.active").removeClass("active");
-
-                console.log(inner_port);
                 
                         
                 $(".b-sidebar-navigation--horizontal").each(function(){            
@@ -124,9 +123,7 @@ PKP.UI = {
                 if($(".page-navigation-toggled").length > 0){
                     navigation_minimize("close");
                 }               
-            }
-
-            console.log('resized');     
+            }  
         }
 
         function navigation_minimize(action) {
@@ -179,7 +176,9 @@ PKP.UI = {
                 
                 var li = $(this);
                         
-                if(li.children("ul").length > 0 || li.children(".panel").length > 0 || $(this).hasClass("xn-profile") > 0) {
+                if( li.children("ul").length > 0 || 
+                    li.children(".panel").length > 0) {
+
                     if(li.hasClass("active")) {
                         li.removeClass("active");
                         li.find("li.active").removeClass("active");
@@ -189,10 +188,7 @@ PKP.UI = {
                         
                     navigation_onresize();
                     
-                    if($(this).hasClass("xn-profile") > 0)
-                        return true;
-                    else
-                        return false;
+                    return false;
                 }                                     
             });
             
@@ -202,6 +198,12 @@ PKP.UI = {
             });
         }
         navigation();
+    },
+
+    mini: function() {
+        $('#js-navigation-trigger').on('click', function(){
+            $('.b-sidebar').toggle();
+        });
     }
 }
 
@@ -251,6 +253,54 @@ PKP.Tip = {
     }
 }
 
+PKP.Responsive = {
+    reflow: function(){
+        if(PKP.windowWidth < 560) {
+            navigation_minimize()
+        } else {
+            navigation_maximize()
+        }
+
+        function navigation_minimize(){
+            PKP.$body.addClass('navigation-minimized');
+            $('.b-sidebar').hide();
+        }
+        function navigation_maximize(){
+            PKP.$body.removeClass('navigation-minimized');
+            $('.b-sidebar').show();
+        }
+    }
+}
+
+/* Инициализация видеоплеера */
+PKP.Video = {
+    init: function() {
+        if($('.video-holder').length > 0) {
+            var pkPlayer = videojs("intro-video", { 
+                "width" : "100%",
+                "height": "100%",
+                "controls": true, 
+                "autoplay": false, 
+                "preload": "auto" 
+            });
+
+            $('#js-video').on('click',function () {
+                PKP.$body.addClass('locked');
+                $('.video-holder').fadeIn(400, function() {
+                    // pkPlayer.requestFullscreen();
+                    pkPlayer.play();
+                });
+            });
+
+            $('#js-close-video').on('click',function () {
+                $('.video-holder').fadeOut(400,function() {
+                    PKP.$body.removeClass('locked');
+                    pkPlayer.pause().currentTime(0);
+                });
+            });
+        }
+    }
+};
 
 /* Поехали! */
 $($.proxy(PKP.init, PKP));

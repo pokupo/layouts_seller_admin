@@ -1,0 +1,65 @@
+.columns
+	position relative
+	overflow hidden
+	margin-right -10px
+	
+.column
+	position relative
+	left 0
+	margin-right -100%
+	float left
+	width 25%
+	
+	& > .content
+		margin-right 10px
+		
+
+	&.first
+		left 0
+	&.second 
+		left 25%
+	&.third
+		left 50%
+	&.fourth
+		left 75%
+	&.double
+		width 50%
+	&.triple
+		width 75%
+	&.full
+		width 100%
+
+
+.video-holder
+	position fixed
+	z-index 500
+	top 0
+	right 0
+	bottom 0
+	left 0
+	width 100%
+	height 100%
+	overflow hidden
+	background #000
+	user-select none
+
+	video
+		overflow hidden
+		height auto
+		width 100%
+
+	.close-video
+		position absolute
+		top 20px
+		right 20px
+		z-index 1
+		&:active
+			top 21px
+
+body.locked
+	position absolute
+	top 0
+	left -8px
+	width 100%
+	height 100%
+	overflow hidden			

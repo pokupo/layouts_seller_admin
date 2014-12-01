@@ -120,18 +120,21 @@
 			</aside>
 			<div class="page-content">
 				<div class="b-breadcrumb">
+					<div class="breadcrumb-wrapper">
+						<div id="js-navigation-trigger" class="navigation-trigger"></div>
+						<ul class="breadcrumb">
+							<li class="root"><a href="/">Home</a>
+							</li>
+							<li class="divider">/</li>
+							<li><a href="javascript:void(0);">Панель управления</a>
+							</li>
+							<li class="divider">/</li>
+							<li class="active"><span>Мои магазины</span>
+							</li>
+						</ul>
+					</div>
 					<div class="btn btn-support">
 						<div class="icon icon--support"></div>Служба поддержки</div>
-					<ul class="breadcrumb">
-						<li class="root"><a href="/">Home</a>
-						</li>
-						<li class="divider">/</li>
-						<li><a href="javascript:void(0);">Панель управления</a>
-						</li>
-						<li class="divider">/</li>
-						<li class="active"><span>Мои магазины</span>
-						</li>
-					</ul>
 				</div>
 				<div class="b-subnavigation">
 					<ul class="menu subnavigation">
@@ -149,14 +152,57 @@
 					<div class="b-informer__close">&times;</div>
 				</div>
 				<div class="page-content-wrap">
-					<p>Контент админки</p>
+					<dl class="tabs tabs--noskin"><dt class="tab__trigger selected"><span>Описание</span></dt>
+						<dd class="tab__content selected">
+							<div class="content">
+								<div class="pkp-slot"></div>
+							</div>
+						</dd><dt class="tab__trigger"><span>Депозитстрой</span></dt>
+						<dd class="tab__content">
+							<div class="content">
+								<div class="pkp-slot"></div>
+							</div>
+						</dd><dt class="tab__trigger"><span>Магазин низких цен</span></dt>
+						<dd class="tab__content">
+							<div class="content">
+								<div class="pkp-slot"></div>
+							</div>
+						</dd>
+					</dl>
+					<div class="columns">
+						<div class="first column double">
+							<div class="content">
+								<div class="pkp-block">
+									<div class="pkp-slot"><a id="js-video" href="javascript:void(0);">Старт</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="third column double">
+							<div class="content">
+								<div class="pkp-block">
+									<div class="pkp-slot"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pkp-block">
+						<div class="pkp-slot"></div>
+					</div>
+					<div class="pkp-block">
+						<div class="pkp-slot"></div>
+					</div>
+				</div>
+				<div style="display:none" class="video-holder">
+					<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" class="video-js vjs-pokupo-skin"></video><span id="js-close-video" class="close-video"></span>
 				</div>
 			</div>
 		</div>
-		<script src="scripts/debug.js?1416807263679"></script>
-		<script src="scripts/libs/jquery-2.1.1.min.js?1416807263679"></script>
-		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1416807263679"></script>
-		<script src="scripts/libs/jquery.tooltip.js?1416807263679"></script>
-		<script src="scripts/common.js?1416807263679"></script>
+		<script src="scripts/debug.js?1417416847832"></script>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1417416847832"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1417416847832"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1417416847832"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1417416847832"></script>
+		<script src="scripts/common.js?1417416847832"></script>
 	</body>
 </html>

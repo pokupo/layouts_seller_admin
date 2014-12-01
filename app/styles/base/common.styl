@@ -88,8 +88,92 @@
 					color #A9A7A3
 					background #efece7 
 			
+.tabs
+		width 100%
+		zoom 1
+		position relative
+		box-sizing content-box
+		margin 0 -4px 6px
+		padding 0 4px 4px
+		overflow hidden
+		
+				
+.tab
+	&__trigger
+		float left
+		position relative
+		left 0
+		padding 0
+		z-index 1
+		
+		span
+			display block
+			height 100%
+			cursor pointer
+
+		&.selected	
+			span
+				color #000
+				cursor default
+				border-bottom 0
+
+	&__content
+		display none
+		float right
+		text-align left
+		width 100%
+		min-height 150px 
+		position relative
+		z-index 2
+		margin-left -100%
+		background #FFF
+		box-shadow 0 1px 1px rgba(#000, 0.2)
 		
 		
+
+		& > .content
+			
+			padding-top 20px
+
+		&.selected
+			display block		
+	
+.tabs
+	.tab__trigger
+		padding 0 15px
+		line-height 50px
+		height 50px
+		margin-right 20px
+
+		span
+			color $a__link
+
+		&:hover
+			span
+				color #333
+
+		&.selected
+			z-index 2
+			background #FFF 
+			span
+					color #000
+			&:hover
+				span
+					color #000
+
+	.tab__content
+		border-top 1px solid $grey
+		margin-top 49px
+		z-index 1
+
+		& > .content
+			padding-top 33px
+
+
+
+
+
+
 
 .dropdown__content
 .chosen-drop
