@@ -2100,17 +2100,20 @@ a.b-sidebar-navigation-minimize {
 	background-position: -138px -73px;
 }
 
-#js-next {
-	float: right;
-}
-
-#js-prev {
-	float: left;
-}
-
-#js-prev,
-#js-next {
-	cursor: pointer;
+.b-playlist-controls .b-playlist-control__num {
+	position: absolute;
+	top: -9px;
+	right: -5px;
+	padding: 2px 5px;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 16px;
+	text-align: center;
+	color: #fff;
+	background: #f00;
+	border-radius: 30px;
+	text-shadow: 0 1px rgba(0,0,0,.25);
 }
 
 .mCustomScrollbar {
@@ -3973,6 +3976,7 @@ a.b-sidebar-navigation-minimize {
 .close-video {
 	width: 37px;
 	height: 37px;
+	cursor: pointer;
 	background: #8c919b;
 	border-radius: 37px;
 }
@@ -4056,6 +4060,7 @@ a.b-sidebar-navigation-minimize {
 	bottom: 0;
 	left: 0;
 	height: 80px;
+	background: #70747d;
 	opacity: 0;
 }
 

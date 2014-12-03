@@ -72,7 +72,7 @@
 				<ul role="navigation" class="b-sidebar-navigation menu">
 					<li class="menu-item active"><a href="javascript:void(0);"><span class="icon icon--home"></span><span class="sidebar__text">Панель управления</span></a>
 					</li>
-					<li class="menu-item"><a href="javascript:void(0);" target="_blank"><span class="icon icon--shop"></span><span class="sidebar__text">Магазины</span></a>
+					<li id="js-another-tooltip" class="menu-item"><a href="javascript:void(0);" target="_blank"><span class="icon icon--shop"></span><span class="sidebar__text">Магазины</span></a>
 					</li>
 					<li class="menu-item menu-item--openable"><a href="javascript:void(0);"><span class="icon icon--goods"></span><span class="sidebar__text">Товары</span></a>
 						<ul class="menu">
@@ -113,7 +113,7 @@
 						</li>
 						<li class="b-sidebar-footer__actions-item"><span title="Заказы" rel="tooltip" class="b-sidebar-footer__action icon icon--cart"></span>
 						</li>
-						<li class="b-sidebar-footer__actions-item"><span title="Помощь" rel="tooltip" class="b-sidebar-footer__action icon icon--help"></span>
+						<li class="b-sidebar-footer__actions-item"><span id="js-video" title="Помощь" rel="tooltip" class="b-sidebar-footer__action icon icon--help"></span>
 						</li>
 					</ul>
 				</div>
@@ -151,6 +151,16 @@
 					<p class="b-informer__text">Ошибка проведения операции</p>
 					<div class="b-informer__close">&times;</div>
 				</div>
+				<div class="b-informer b-informer--alert">
+					<div class="b-informer__icon"></div>
+					<p class="b-informer__text">Внимание! Спасибо за внимание.</p>
+					<div class="b-informer__close">&times;</div>
+				</div>
+				<div class="b-informer b-informer--done">
+					<div class="b-informer__icon"></div>
+					<p class="b-informer__text">Операция завершена успешно.</p>
+					<div class="b-informer__close">&times;</div>
+				</div>
 				<div class="page-content-wrap">
 					<dl class="tabs tabs--noskin"><dt class="tab__trigger selected"><span>Описание</span></dt>
 						<dd class="tab__content selected">
@@ -173,8 +183,7 @@
 						<div class="first column double">
 							<div class="content">
 								<div class="pkp-block">
-									<div class="pkp-slot"><a id="js-video" href="javascript:void(0);">Старт</a>
-									</div>
+									<div class="pkp-slot"></div>
 								</div>
 							</div>
 						</div>
@@ -202,17 +211,17 @@
 							<ul></ul><span id="js-close-playlist" class="b-playlist__close"></span>
 						</div>
 					</div>
-					<div class="b-playlist-controls"><span id="js-prev" data-target="prev" class="b-playlist-control prev"></span><span id="js-show-playlist" class="b-playlist-control playlist"></span><span id="js-next" data-target="next" class="b-playlist-control next"></span>
+					<div class="b-playlist-controls"><span id="js-prev" data-target="prev" class="b-playlist-control prev"></span><span id="js-next" data-target="next" class="b-playlist-control next"></span><span id="js-show-playlist" class="b-playlist-control playlist"><span class="b-playlist-control__num">24</span></span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script src="scripts/debug.js?1417438040063"></script>
-		<script src="scripts/libs/jquery-2.1.1.min.js?1417438040063"></script>
-		<script src="http://vjs.zencdn.net/4.7/video.js?1417438040063"></script>
-		<script src="scripts/libs/playlist.js?1417438040063"></script>
-		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1417438040063"></script>
-		<script src="scripts/libs/jquery.tooltip.js?1417438040063"></script>
-		<script src="scripts/common.js?1417438040063"></script>
+		<script src="scripts/debug.js?1417603630731"></script>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1417603630731"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1417603630731"></script>
+		<script src="scripts/libs/playlist.js?1417603630731"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1417603630731"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1417603630731"></script>
+		<script src="scripts/common.js?1417603630731"></script>
 	</body>
 </html>

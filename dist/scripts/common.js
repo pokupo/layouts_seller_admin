@@ -168,6 +168,39 @@ PKP.Tip = {
     init: function() {
 
         $('[rel="tooltip"]').tooltip();
+        
+        // First tooltip (button)
+        $("#js-another-tooltip").tooltip({
+            content: 'Loading...',
+            updateAnimation: false,
+            interactive: true,
+            contentAsHTML: true,
+            position: 'right',
+            positionTracker: true,
+            interactiveTolerance: 2000,
+            // autoClose: false,
+            offsetX: -20,
+            offsetY: 0,
+            functionBefore: function(origin, continueTooltip) {
+                continueTooltip();
+
+                if (origin.data('ajax') !== 'cached') {
+                    $.ajax({
+                        type: 'GET',
+                        dataType: 'html',
+                        url: 'ajax-popup-2.html',
+                        success: function(data) {
+                            origin
+                                .tooltip('content', data)
+                                .data('ajax', 'cached');
+                        }
+                    });
+                }
+            },
+            functionAfter: function(origin) {
+                // console.log('The tooltip has closed.');
+            }
+        });
 
         // First tooltip (button)
         $(".btn.btn-support").tooltip({
