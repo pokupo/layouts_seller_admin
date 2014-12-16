@@ -42,8 +42,9 @@ include ../common-blocks/informers
     .playlist-components
         .b-playlist
             h1 Список материалов
-            ul
-            span.b-playlist__close#js-close-playlist
+            .b-playlist__scroll
+                ul
+                span.b-playlist__close#js-close-playlist
 
     .b-playlist-controls
         span.b-playlist-control.prev#js-prev(data-target="prev")

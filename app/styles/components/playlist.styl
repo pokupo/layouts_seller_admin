@@ -8,12 +8,27 @@
 .b-playlist
     width 460px
     max-height 375px
-    overflow-y auto
+    overflow-y hidden
     color #333
     margin 5px 0
     position relative
     background #fff
     box-shadow 0 3px 10px rgba(#000,0.25)
+    
+    &__scroll
+        overflow-y scroll
+        max-height 273px
+        
+        &::-webkit-scrollbar
+            width 6px
+         
+        &::-webkit-scrollbar-track
+            background #FFF
+         
+        &::-webkit-scrollbar-thumb
+            border 1px solid #FFF
+            border-radius 10px
+            background #97CE68
     
     &__close
         position absolute

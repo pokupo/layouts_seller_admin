@@ -324,7 +324,7 @@ PKP.Playlist = {
     },
 
     cacheElements: function() {
-        this.els.$playlist = $('div.b-playlist > ul');
+        this.els.$playlist = $('div.b-playlist ul');
         this.els.$next = $('#js-next');
         this.els.$prev = $('#js-prev');
         this.els.log = $('div.b-log > pre');

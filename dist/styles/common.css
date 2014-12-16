@@ -1913,13 +1913,32 @@ a.b-sidebar-navigation-minimize {
 .b-playlist {
 	position: relative;
 	margin: 5px 0;
-	overflow-y: auto;
+	overflow-y: hidden;
 	width: 460px;
 	max-height: 375px;
 	color: #333;
 	background: #fff;
 	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,.25);
 	        box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+
+.b-playlist__scroll {
+	overflow-y: scroll;
+	max-height: 273px;
+}
+
+.b-playlist__scroll::-webkit-scrollbar {
+	width: 6px;
+}
+
+.b-playlist__scroll::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+.b-playlist__scroll::-webkit-scrollbar-thumb {
+	background: #97ce68;
+	border: 1px solid #fff;
+	border-radius: 10px;
 }
 
 .b-playlist__close {
@@ -3648,6 +3667,8 @@ a.b-sidebar-navigation-minimize {
 .tooltip__default {
 	color: #333;
 	background: #fff;
+	border: 2px solid #000;
+	border-radius: 5px;
 }
 
 .tooltip__default .tooltip__content {
