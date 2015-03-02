@@ -1,30 +1,30 @@
 include ../common-blocks/informers
 
-.page-content-wrap
-    dl.tabs.tabs--noskin
-        dt.tab__trigger.selected
+.b-page-content__wrap
+    dl.b-tabs
+        dt.b-tabs__trigger.j-tabs.selected
             span Описание
-        dd.tab__content.selected
-            .content
+        dd.b-tabs__content.selected
+            .b-content
                 .pkp-slot
-        dt.tab__trigger
+        dt.b-tabs__trigger.j-tabs
             span Депозитстрой
-        dd.tab__content
-            .content
+        dd.b-tabs__content
+            .b-content
                 .pkp-slot
-        dt.tab__trigger
+        dt.b-tabs__trigger.j-tabs
             span Магазин низких цен
-        dd.tab__content
-            .content
+        dd.b-tabs__content
+            .b-content
                 .pkp-slot
 
-    .columns
-        .first.column.double
-            .content
+    .b-columns
+        .m-column_first.b-column.m-column_double
+            .b-content
                 .pkp-block
                     .pkp-slot
-        .third.column.double
-            .content
+        .m-column_third.b-column.m-column_double
+            .b-content
                 .pkp-block
                     .pkp-slot.b-log
                         pre
@@ -35,19 +35,26 @@ include ../common-blocks/informers
     .pkp-block
         .pkp-slot
 
+    .pkp-block
+        .pkp-slot
+
+    .pkp-block
+        .pkp-slot
+
 .video-holder(style="display:none")
     video#intro-video.video-js.vjs-pokupo-skin(src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4")
-    span#js-close-video.close-video
+    span.js-close-video.close-video
 
     .playlist-components
         .b-playlist
             h1 Список материалов
             .b-playlist__scroll
                 ul
-                span.b-playlist__close#js-close-playlist
+                span.b-playlist__close.js-close-playlist
 
     .b-playlist-controls
+        span.b-playlist-controls__close
         span.b-playlist-control.prev#js-prev(data-target="prev")
         span.b-playlist-control.next#js-next(data-target="next")
-        span.b-playlist-control.playlist#js-show-playlist
+        span.b-playlist-control.playlist.js-show-playlist
             span.b-playlist-control__num 24

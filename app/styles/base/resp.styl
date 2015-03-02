@@ -1,4 +1,4 @@
-body.navigation-minimized
+@media screen and (max-width: 560px)
     .b-sidebar
         display none
         margin-top 80px
@@ -9,32 +9,31 @@ body.navigation-minimized
     .b-sidebar-footer
         background #474b53
         
-    .page-content
+    .b-page-content
         margin-left 0
         
-    .page-container 
-        .page-content-wrap
-            padding 10px 5px
+    .b-page-content__wrap
+        padding 10px 5px
             
-    .b-breadcrumb
+    .b-header
         padding 0 0 19px
         
-        .breadcrumb
-            margin-right 0
-            padding-bottom 15px
-            padding-top 25px
-            border-bottom 1px solid $grey
-            margin-left 55px
-            padding-left 10px
-            white-space nowrap
+    .b-breadcrumbs
+        margin-right 0
+        padding-bottom 22px
+        padding-top 24px
+        border-bottom 1px solid $grey
+        margin-left 55px
+        padding-left 10px
+        white-space nowrap
         
-    .btn-support
+    .m-btn_support
         float right
         margin-left 0
         margin-top 18px
         margin-right 5px
             
-    .navigation-trigger
+    .b-mobile-menu
         position relative
         display block
         height 80px
@@ -44,5 +43,15 @@ body.navigation-minimized
         margin-right -100%
         cursor pointer
         centered-icon($icon--menu-trigger)
-        &:hover
-            background darken($grey, 1%) 
+
+    .m-mobile-menu_active
+        background #3e424a
+        position fixed
+        z-index 9999
+        top 0
+        centered-icon($icon--menu-trigger-active)
+    
+    .b-breadcrumbs__item:not(.m-breadcrumbs__item_active)
+        max-width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;

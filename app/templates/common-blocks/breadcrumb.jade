@@ -1,18 +1,16 @@
-.b-breadcrumb
-    .breadcrumb-wrapper
-        .navigation-trigger#js-navigation-trigger
-        ul.breadcrumb
-            li.root
+.b-header
+    .b-breadcrumbs-wrapper
+        .b-mobile-menu.j-mobile-menu
+        ul.b-breadcrumbs
+            li.b-breadcrumbs__item.m-breadcrumbs__item_root
                 a(href="/") Home
-            li.divider
-                | / 
-            li
+            li.b-breadcrumbs__item
                 a(href=js0) Панель управления
-            li.divider
+            li.b-breadcrumbs__item.m-breadcrumbs__item_divider
                 | / 
-            li.active
+            li.b-breadcrumbs__item.m-breadcrumbs__item_active
                 span Мои магазины
 
-    .btn.btn-support
-        .icon.icon--support
+    .b-btn.m-btn_support.j-btn_support
+        .b-icon.m-icon_support
         | Служба поддержки

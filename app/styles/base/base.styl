@@ -13,30 +13,30 @@ html, body
     
 
 /* PAGE CONTAINER */
-.page-container
+.b-page-container
     width 100%
     float left
     height 100%
     min-height 100%
     position relative
     background #474b53
+    display table
 
-    .b-sidebar
-        width 231px
-        float left
-        position relative
-        z-index 3
+.b-sidebar
+    width 231px
+    float left
+    position fixed
+    top 0
+    z-index 3
 
-        &.b-sidebar-fixed
-            position fixed
-
-    .page-content
-        min-height 100%
-        margin-left 231px
-        background #efece7 left top repeat
-        position relative
-        zoom 1
-        clearfix()
+.b-page-content
+    min-height 100%
+    margin-left 231px
+    background #efece7 left top repeat
+    position relative
+    zoom 1
+    height 100%
+    clearfix()
 
         .content-frame
             float left
@@ -123,8 +123,8 @@ html, body
                 display none
                 margin-left 5px
 
-        &-wrap
-            padding 10px 20px
+    &__wrap
+        padding 10px 20px
 
 
     &.page-container--wide 

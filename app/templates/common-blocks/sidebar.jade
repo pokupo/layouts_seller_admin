@@ -1,125 +1,127 @@
-aside.b-sidebar.mCustomScrollbar
+aside.b-sidebar.j-scrollbar
     .b-sidebar-header
-        .dropdown
-            .b-sidebar-header__title.dropdown__trigger(data-target="mainmenu")
+        .b-dropdown
+            .b-sidebar-header__title.b-dropdown__trigger.j-dropdown__trigger(data-target="mainmenu")
                 | Торговая платформа полного цикла Pokupo
-            .b-sidebar-header__menu.dropdown__content.hidden(data-target="mainmenu")
-                ul.menu
-                    li.menu__item
-                        a(href=js0) Учётная запись
-                    li.menu__item
-                        a(href=js0) Условия
-                    li.menu__item
-                        a(href=js0) Конфиденциальность
-                    li.menu__item
-                        a.menu__item--logout(href=js0) Выйти
+            .b-sidebar-header__menu.b-dropdown__content.g-hidden(data-target="mainmenu")
+                ul.b-menu
+                    li.b-menu__item
+                        a.b-menu__link(href=js0) Учётная запись
+                    li.b-menu__item
+                        a.b-menu__link(href=js0) Условия
+                    li.b-menu__item
+                        a.b-menu__link(href=js0) Конфиденциальность
+                    li.b-menu__item
+                        a.b-menu__link.m-menu__link_logout(href=js0) Выйти
 
-    .b-sidebar-subheader
-        //- a.b-shop-mini Мини-версия
-        .b-shop
-            .b-shop__image
-                img(src='images/logo/shop-1.png', alt='')
-            .b-shop__data
-                span.b-shop__data-name Торговая платформа полного цикла «Депозитстрой»
+    .b-shop
+        .b-shop__image
+            img(src='images/logo/shop-1.png', alt='')
+        .b-shop__data
+            span.b-shop__data-name 
+                | Торговая
+                br
+                | платформа полного цикла «Депозитстрой»
 
-            .b-shop__control
-                .inline-sorter.dropdown.selector
-                    span.selector__current.dropdown__trigger(data-target="sort") Сменить магазин
-                    div.dropdown__content.selector__options.hidden(data-target="sort")
-                        ul.menu
-                            li.menu__item
-                                a(href=js0) Pokupo
+        .b-shop__control
+            .b-inline-sorter.b-dropdown.b-selector
+                span.b-selector__current.b-dropdown__trigger.j-dropdown__trigger(data-target="sort") Сменить магазин
+                div.b-dropdown__content.b-selector__options.g-hidden(data-target="sort")
+                    ul.b-menu
+                        li.b-menu__item
+                            a.b-menu__link(href=js0) Pokupo
 
-                            li.menu__item.active
-                                a(href=js0) Торговая платформа полного цикла «Депозитстрой»
-                            
-                            li.menu__item
-                                a(href=js0) Магазин низких цен
+                        li.b-menu__item.active
+                            a.b-menu__link(href=js0) Торговая платформа полного цикла «Депозитстрой»
+                        
+                        li.b-menu__item
+                            a.b-menu__link(href=js0) Магазин низких цен
 
-                            li.menu__item
-                                a(href=js0) Золото-брильянты
+                        li.b-menu__item
+                            a.b-menu__link(href=js0) Золото-брильянты
 
     .b-sidebar-search
         form(role='form')
-            i.icon.icon--search
+            i.b-icon.m-icon_search
             input.b-sidebar-search__input(type='text', name='search', placeholder='Поиск...')
 
-    ul.b-sidebar-navigation.menu(role="navigation")
-        li.menu-item.active
-            a(href=js0)
-                span.icon.icon--home
+    ul.b-sidebar-navigation.b-menu(role="navigation")
+        li.b-menu__item
+            a.b-menu__link(href=js0)
+                span.b-icon.m-icon_home
                 span.sidebar__text Панель управления
-        li#js-another-tooltip.menu-item
-            a(href=js0, target='_blank')
-                span.icon.icon--shop
+        li.j-another-tooltip.b-menu__item
+            a.b-menu__link(href=js0, target='_blank')
+                span.b-icon.m-icon_shop
                 span.sidebar__text Магазины
-        li.menu-item.menu-item--openable
-            a(href=js0)
-                span.icon.icon--goods
+        li.b-menu__item.m-menu__item_openable
+            a.b-menu__link(href=js0)
+                span.b-icon.m-icon_goods
                 span.sidebar__text Товары
-            ul.menu
-                li.menu-item
-                    a(href=js0)
-                        span.icon
+            ul.b-menu
+                li.b-menu__item
+                    a.b-menu__link(href=js0)
+                        span.b-icon
                         | Я уверен,
-                li.menu-item
-                    a(href=js0)
-                        span.icon
+                li.b-menu__item
+                    a.b-menu__link(href=js0)
+                        span.b-icon
                         | что потребуется
-                li.menu-item
-                    a(href=js0)
-                        span.icon
+                li.b-menu__item
+                    a.b-menu__link(href=js0)
+                        span.b-icon
                         | дополнительный
                 
-                li.menu-item.menu-item--openable
-                    a(href=js0)
-                        span.icon.icon--users
+                li.b-menu__item.m-menu__item_openable
+                    a.b-menu__link(href=js0)
+                        span.b-icon.m-icon_users
                         | уровень вложенности
-                    ul.menu
-                        li.menu-item
-                            a(href=js0)
-                                span.icon
+                    ul.b-menu
+                        li.b-menu__item
+                            a.b-menu__link(href=js0)
+                                span.b-icon
                                 | (И, наверное,
-                        li.menu-item
-                            a(href=js0)
-                                span.icon
+                        li.b-menu__item
+                            a.b-menu__link(href=js0)
+                                span.b-icon
                                 | не один,
-                        li.menu-item
-                            a(href=js0)
-                                span.icon
+                        li.b-menu__item
+                            a.b-menu__link(href=js0)
+                                span.b-icon
                                 | а несколько —
-                        li.menu-item
-                            a(href=js0)
-                                span.icon
+                        li.b-menu__item
+                            a.b-menu__link(href=js0)
+                                span.b-icon
                                 | как минимум, два)
-                li.menu-item
-                    a(href=js0)
-                        span.icon.icon--comments
+                li.b-menu__item
+                    a.b-menu__link(href=js0)
+                        span.b-icon.m-icon_comments
                         | для дальнейшего
-                li.menu-item
-                    a(href=js0)
-                        span.icon.icon--calendar
+                li.b-menu__item
+                    a.b-menu__link(href=js0)
+                        span.b-icon.m-icon_calendar
                         | расширения меню
-        li.menu-item
-            a(href=js0)
-                span.icon.icon--sales
+        li.b-menu__item
+            a.b-menu__link(href=js0)
+                span.b-icon.m-icon_sales
                 span.sidebar__text Продажи               
-        li.menu-item
-            a(href=js0)
-                span.icon.icon--docs
+        li.b-menu__item
+            a.b-menu__link(href=js0)
+                span.b-icon.m-icon_docs
                 span.sidebar__text Бухгалтерия
-        li.menu-item
-            a(href=js0)
-                span.icon.icon--users
+        li.b-menu__item
+            a.b-menu__link(href=js0)
+                span.b-icon.m-icon_users
                 span.sidebar__text Клиенты
 
     .b-sidebar-footer
         ul.b-sidebar-footer__actions
             li.b-sidebar-footer__actions-item
-                span.b-sidebar-footer__action.icon.icon--settings(title="Настройки" rel="tooltip")
-
+                span.b-sidebar-footer__action.b-icon.m-icon_settings
+                    span.b-tooltip.m-tooltip_left Настройки
             li.b-sidebar-footer__actions-item
-                span.b-sidebar-footer__action.icon.icon--cart(title="Заказы" rel="tooltip")
-
+                span.b-sidebar-footer__action.b-icon.m-icon_cart
+                    span.b-tooltip Заказы
             li.b-sidebar-footer__actions-item
-                span#js-video.b-sidebar-footer__action.icon.icon--help(title="Помощь" rel="tooltip")
+                span#js-video.b-sidebar-footer__action.b-icon.m-icon_help
+                    span.b-tooltip.m-tooltip_right Помощь
