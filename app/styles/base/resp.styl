@@ -47,7 +47,7 @@
     .m-mobile-menu_active
         background #3e424a
         position fixed
-        z-index 9999
+        z-index 99
         top 0
         centered-icon($icon--menu-trigger-active)
     
@@ -55,3 +55,17 @@
         max-width: 150px;
         text-overflow: ellipsis;
         overflow: hidden;
+        
+    /*loaded content tooltips*/
+    .info
+        display none
+
+    .hummingbird-demo .preview
+        margin 0 auto
+        float none
+    .hummingbird-demo
+        min-width 1px
+    .tooltip__footer li
+        display block
+        text-align center
+        margin 10px 0

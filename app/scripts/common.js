@@ -57,6 +57,12 @@ PKP.UI = {
         PKP.UI.dropdowns();
         PKP.UI.sidebar();
         PKP.UI.mini();
+        PKP.UI.common();
+    },
+    common: function(){
+        $('.j-informer__close').on('click', function(){
+            $(this).closest('.b-informer').hide();
+        });
     },
     dropdowns: function() {
         /* Кастомный скроллбар*/
@@ -251,7 +257,7 @@ PKP.Video = {
                 });
             });
 
-            $('.js-close-video').on('click',function () {
+            $('.j-close-video').on('click',function () {
                 $('.video-holder').fadeOut(400,function() {
                     PKP.$body.removeClass('locked');
                     pkPlayer.pause().currentTime(0);
