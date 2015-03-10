@@ -27,11 +27,12 @@
             color #fff
             font-size 14px
             font-weight 400
-            padding 15px 10px 15px 20px
+            padding 14px 10px 15px 20px
             text-decoration none
             vertical-align middle
+            border none
 
-            .icon
+            .b-icon
                 text-align center
                 width 20px
                 height 20px
@@ -59,7 +60,6 @@
                     font-size 12px
                     line-height 19px
                     font-weight 400
-                    padding 12px 10px
 
                     &:hover
                         background #1f2125
@@ -68,27 +68,6 @@
                 &.active > a
                     background #1f2125
                     color #fff
-
-        &.menu-item--openable
-            position relative
-            &:before
-                content ''
-                position absolute
-                top 20px
-                right 20px
-                display block
-                width 0
-                height 0
-                border 6px solid transparent
-                border-top-color #fff
-                background none 
-                z-index 5
-                
-            &.active
-                &:before
-                    border-top-color transparent
-                    border-bottom-color #ccc
-                    top 16px
 
         &.active 
             & > a
@@ -101,43 +80,10 @@
             & > ul
                 max-height 1200px
 
-
-    & > li
-        & > ul 
-            & > li 
-                & > a
-                    padding-left 25px
-                    &:hover
-                        padding-left 30px
-                &.active > a
-                    padding-left 30px
-
-                & > ul 
-                    & > li 
-                        & > a
-                            padding-left 40px
-                            &:hover
-                                padding-left 44px
-                        &.active > a
-                            padding-left 44px
-                            
-                        & > ul 
-                            & > li 
-                                & > a
-                                    padding-left 48px
-                                    &:hover
-                                        padding-left 52px
-                                &.active > a
-                                    padding-left 52px
-
-                                & > ul 
-                                    & > li 
-                                        & > a
-                                            padding-left 56px
-                                            &:hover
-                                                padding-left 60px
-                                        &.active > a
-                                            padding-left 60px
+for row in 1 2 3 4 5
+    .m-menu_{row} li a{
+        padding: 12px 10px 12px 10px*row
+    }
 
         &:last-child > a
             border-radius 0 0 0 5px
@@ -210,13 +156,25 @@
                 li
                     width 100%
 
-                li.menu-item--openable
+                li.m-menu__item_openable
                     &:before
                         content "\f105"
 
                     &.active:before
                         content "\f104"
 
+.m-menu__item_openable:before
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    background: none;
+    border: 6px solid transparent;
+    border-top-color: #fff;
 
 a.b-sidebar-navigation-minimize
     text-align center

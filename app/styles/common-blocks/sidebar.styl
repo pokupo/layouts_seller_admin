@@ -1,22 +1,24 @@
 .b-sidebar
 	color #fff
 	height 100%
-	padding-bottom 76px
-	
+
 	&-header
 		height 100px
 		border-bottom 1px solid #3e424a
+		display table
 		
-		.dropdown__trigger
+		.b-dropdown__trigger
 			z-index 10
 			&.active
 				color #000
+				border-bottom: 1px solid #efece7
+				margin-right 0
 			&:after
 				content ''
 				position absolute
 				top 50%
-				right 2px
-				margin-top -1px
+				right 0
+				margin-top -6px
 				display block
 				width 0
 				height 0
@@ -29,7 +31,7 @@
 				&:after
 					border-top-color transparent
 					border-bottom-color #000
-					margin-top -8px
+					margin -10px 10px 0 0
 
 					
 		&__title
@@ -43,13 +45,12 @@
 			font-size 13px
 			
 			&:before
-				pseudo()
+				content ''
 				width 60px
 				height 60px
 				float left
-				margin 0 10px 0 -60px
+				margin -3px 10px 0 -60px
 				border-radius 60px
-				display block
 				position relative
 				overflow hidden
 				background #fff url('../images/logo/logo.png') 50% 50% no-repeat
@@ -61,54 +62,26 @@
 				sprite($dropdown__active)
 		
 		&__menu
-			padding-top 100px
+			padding-top 80px
 			z-index 9
 			
-			
-	&-subheader
-		min-height 100px
-		padding 20px 5px 0
-		border-bottom 1px solid #3e424a
-		
-		.b-shop
-			position relative
-			text-align center
-			
-			&__image
-
-				img
-					display block
-					margin 0 auto 5px
-					height 40px
-					width auto
-			
-			&__data
-				font-size 16px
-				margin-bottom 10px
-				
-			&__control
-				padding 10px
-				margin 0 -5px
-				font-size 14px
-				cursor pointer
-				
 	&-search
 		position relative
-		height 40px
+		height 50px
 		
-		.icon
+		.b-icon
 			display block
 			position absolute
-			top 10px
+			top 15px
 			left 20px
 			width 20px
 			height 20px
 		
 		&__input
-			padding 5px 10px 5px 50px
+			padding 6px 10px 5px 50px
 			font-size 14px
 			line-height 20px
-			height 40px
+			height 49px
 			width 100%
 			background #474b53
 			color #FFF 
@@ -116,6 +89,9 @@
 			
 			&:focus
 				background #797e89
+			&:focus:hover{
+				cursor: url(../images/cursor.png), auto
+			}
 				
 	&-footer
 		height 76px
@@ -137,9 +113,11 @@
 				width 76px
 				border-right 1px solid #3e424a
 				background #474b53
+				position relative
 				
 				&:last-child
-					border-right none 
+					border-right none			
+				
 					
 		&__action
 			position relative
@@ -149,44 +127,114 @@
 			height 100%
 			width 100%
 		
+	
+			.b-tooltip
+				opacity 0
+				display block
+				position absolute
+				top -70px
+				font-size 13px
+				font-family 'Open Sans'	
+				color #000
+				background #fff
+				padding 8px 18px
+				box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.25);
+				white-space nowrap
+				transition all 0.3s ease-in-out
+				pointer-events none
+				
+			.b-tooltip:after
+				content ''
+				width 0
+				height 0
+				border-style solid
+				border-width 6px 6.5px 0 6.5px
+				border-color #ffffff transparent transparent transparent
+				bottom: -6px;
+				left: 50%;
+				margin-left -6px
+				position absolute
+				
+			.m-tooltip_left
+				left 1px
+				
+			.m-tooltip_left:after
+				left 10px
+			
+			.m-tooltip_right
+				right 0
+				
+			.m-tooltip_right:after
+				right 10px
+				left auto
+			
+			&:hover .b-tooltip
+				opacity 1
+				top -41px
+				
 			&:hover
 				background rgba(#000, 0.15)
 						
+.b-shop
+	position relative
+	text-align center
+	min-height 100px
+	padding 20px 5px 8px
+	border-bottom 1px solid #3e424a
+	
+	&__image
 
-.icon
+		img
+			display block
+			margin 0 auto 5px
+			height 40px
+			width auto
+	
+	&__data
+		font-size 16px
+		margin-bottom 10px
+		line-height 20px
+		
+	&__control
+		padding 10px
+		margin 0 -5px
+		font-size 14px
+		cursor pointer
+
+.b-icon
 	position relative
 	
-	&--settings
-		centered-icon($icon--settings)
-		
-	&--cart
-		centered-icon($icon--cart)
-		
-	&--help
-		centered-icon($icon--help)
+.m-icon_settings
+	centered-icon($icon--settings)
+	
+.m-icon_cart
+	centered-icon($icon--cart)
+	
+.m-icon_help
+	centered-icon($icon--help)
 
-	&--home
-		centered-icon($icon--home)
+.m-icon_home
+	centered-icon($icon--home)
 
-	&--shop
-		centered-icon($icon--shop)
-		
-	&--goods
-		centered-icon($icon--goods)
-		
-	&--sales
-		centered-icon($icon--sales)
-		
-	&--docs
-		centered-icon($icon--docs)
-		
-	&--users
-		centered-icon($icon--users)
-		
-	&--search
-		centered-icon($icon--search)
+.m-icon_shop
+	centered-icon($icon--shop)
+	
+.m-icon_goods
+	centered-icon($icon--goods)
+	
+.m-icon_sales
+	centered-icon($icon--sales)
+	
+.m-icon_docs
+	centered-icon($icon--docs)
+	
+.m-icon_users
+	centered-icon($icon--users)
+	
+.m-icon_search
+	centered-icon($icon--search)
 
-.menu__item--logout
+.m-menu__link_logout
 	position relative
 	centered-icon($icon--logout)
 	&:after

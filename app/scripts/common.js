@@ -42,27 +42,80 @@ PKP.init = function() {
     PKP.UI.init();
     PKP.Video.init();
     PKP.Tip.init();
-
+    PKP.mobile.init();
     PKP.$window.on('load resize', function() {
         PKP.windowHeight     = PKP.$window.height();
         PKP.windowWidth      = PKP.$window.width();
         PKP.windowScrollTop  = PKP.$window.scrollTop();
         PKP.windowScrollLeft = PKP.$window.scrollLeft();
-        PKP.Responsive.reflow();
     });
 };
 
+PKP.mobile = {
+    init: function(){
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone/i);
+            },
+            iOSFull: function(){
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            },
+            anyFull: function(){
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOSFull() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+        if(isMobile.any()) {
+           $('body').addClass('mobile');
+           $('.j-breadcrumbs__item').css({
+                'max-width': $(window).width() - 135 - $('.m-breadcrumbs__item_active').width()
+           });
+           window.addEventListener("resize", function() {
+                setTimeout(function(){
+                    $('.j-breadcrumbs__item').css({
+                        'max-width': $(window).width() - 135 - $('.m-breadcrumbs__item_active').width()
+                    });
+                }, 200);
+            }, false);
+        }
+        if(isMobile.anyFull()) {
+           $('body').addClass('mobile_full');
+        }
+    }
+};
 /* Элементы интерфейса */
 PKP.UI = {
     init: function() {
         PKP.UI.dropdowns();
         PKP.UI.sidebar();
         PKP.UI.mini();
+        PKP.UI.common();
     },
-
+    common: function(){
+        $('.j-informer__close').on('click', function(){
+            $(this).closest('.b-informer').hide();
+        });
+    },
     dropdowns: function() {
+        /* Кастомный скроллбар*/
+        $('.j-scrollbar').mCustomScrollbar();
+
         /* «Выпадайка» */
-        PKP.$body.on("click", '.dropdown__trigger', function(e) {
+        PKP.$body.on("click", '.j-dropdown__trigger', function(e) {
             e.preventDefault();
             var $this = $(this);
 
@@ -70,44 +123,36 @@ PKP.UI = {
                 return false;
             }
 
-            if(0 < $('.dropdown__trigger.active').length) {
-                $('.dropdown__trigger.active')
+            if($('.b-dropdown__trigger.active').length) {
+                $('.b-dropdown__trigger.active')
                     .not(this).removeClass('active')
-                    .closest('.dropdown')
-                    .find('.dropdown__content').addClass('hidden');   
+                    .closest('.b-dropdown')
+                    .find('.b-dropdown__content').addClass('g-hidden');   
             }
-            
             $this
                 .toggleClass('active')
-                .closest('.dropdown')
-                .find('.dropdown__content[data-target="' + $this.data('target') + '"]')
-                .toggleClass('hidden');
+                .closest('.b-dropdown')
+                .find('.b-dropdown__content[data-target="' + $this.data('target') + '"]')
+                .toggleClass('g-hidden');
         });
 
         /* Скрываем выпадайку по клику мимо неё */
         PKP.$document.click(function(e) {
             var $this = $(e.target);
-
-            if($this.is('.dropdown__trigger')) {
-                //
-            } else {
-                if(1 !== $this.parents().filter('.dropdown__content').length) {
-                    $('.dropdown__trigger.active').
-                        removeClass('active').
-                        siblings('.dropdown__content').addClass('hidden');
-                }
+            if(!$this.is('.b-dropdown__trigger')) {
+                $('.b-dropdown__trigger.active').removeClass('active').siblings('.b-dropdown__content').addClass('g-hidden');
             }
         });
 
         /* По клику на внутреннюю ссылку «выпадайка» закрывается */
-        PKP.$body.on("click", '.dropdown__content a', function() {
+        PKP.$body.on("click", '.b-dropdown__content a', function() {
             $(this).
-                closest('.dropdown__content').toggleClass('hidden').
-                siblings('.dropdown__trigger').toggleClass('active');
+                closest('.b-dropdown__content').toggleClass('g-hidden').
+                siblings('.b-dropdown__trigger').toggleClass('active');
         });
 
         /* Табы */
-        PKP.$body.on("click", '.tab__trigger', function() {
+        PKP.$body.on("click", '.j-tabs', function() {
             var $this = $(this);
             $this
                 .siblings()
@@ -144,9 +189,7 @@ PKP.UI = {
                 } else {
                     li.addClass("active");
                 }
-                    
-                navigation_onresize();
-                
+                                   
                 return false;
             }                                     
         });
@@ -158,19 +201,17 @@ PKP.UI = {
     },
 
     mini: function() {
-        $('#js-navigation-trigger').on('click', function(){
+        $('.j-mobile-menu').on('click', function(){
+            $(this).toggleClass('m-mobile-menu_active');
             $('.b-sidebar').toggle();
         });
     }
 };
 
 PKP.Tip = {
-    init: function() {
-
-        $('[rel="tooltip"]').tooltip();
-        
+    init: function() {   
         // First tooltip (button)
-        $("#js-another-tooltip").tooltip({
+        $(".j-another-tooltip").tooltip({
             content: 'Loading...',
             updateAnimation: false,
             interactive: true,
@@ -178,12 +219,10 @@ PKP.Tip = {
             position: 'right',
             positionTracker: true,
             interactiveTolerance: 2000,
-            // autoClose: false,
-            offsetX: -20,
-            offsetY: 0,
+            offsetX: -12,
+            offsetY: ($(window).scrollTop()/2),
             functionBefore: function(origin, continueTooltip) {
                 continueTooltip();
-
                 if (origin.data('ajax') !== 'cached') {
                     $.ajax({
                         type: 'GET',
@@ -197,22 +236,25 @@ PKP.Tip = {
                     });
                 }
             },
-            functionAfter: function(origin) {
-                // console.log('The tooltip has closed.');
+            functionReady: function(origin, tooltip) {
+                if($('body').hasClass('mobile')){
+                    $(".j-another-tooltip").tooltip('option', 'offsetX', '-200');
+                    $('.tooltip__base').css('right','10px');
+                    $('.j-another-tooltip').tooltip('reposition');
+                }
             }
         });
-
+        
         // First tooltip (button)
-        $(".btn.btn-support").tooltip({
+        $(".j-btn_support").tooltip({
             content: 'Loading...',
             updateAnimation: false,
             interactive: true,
             contentAsHTML: true,
-            position: 'bottom-left',
+            position: 'bottom',
             positionTracker: true,
-            interactiveTolerance: 2000,
-            // autoClose: false,
-            offsetX: -20,
+            interactiveTolerance: 200000,
+            offsetX: 20,
             offsetY: 0,
             functionBefore: function(origin, continueTooltip) {
                 continueTooltip();
@@ -226,39 +268,45 @@ PKP.Tip = {
                             origin
                                 .tooltip('content', data)
                                 .data('ajax', 'cached');
+                        },
+                        complete: function(){
+                            if($('body').hasClass('mobile')){
+                                $('.tooltip__base').css({
+                                    'margin-top': -$('.tooltip__base').css('top')
+                                });
+                                $('.hummingbird-demo').css({
+                                    'width':'320px',
+                                });
+                                $('.j-btn_support').tooltip('reposition');
+                            }
+                            if(($('.tooltip__content').height() > $(window).height()) && !$('body').hasClass('mobile')){
+                                $('.hummingbird-demo').css('width','800px');
+                                $('.j-btn_support').tooltip('reposition');
+                            }
                         }
                     });
                 }
             },
-            functionAfter: function(origin) {
-                // console.log('The tooltip has closed.');
+            functionReady: function(origin, tooltip) {
+                if($('body').hasClass('mobile')){
+                    $('.hummingbird-demo').css('width','320px');
+                    $('.j-btn_support').tooltip('reposition');
+                }
+                if(($(tooltip).height() > $(window).height()) && !$('body').hasClass('mobile')){
+                    $('.hummingbird-demo').css('width','800px');
+                    $('.j-btn_support').tooltip('reposition');
+                }
             }
         });
-
-        PKP.$body.on("click", '.tooltip__close', function(e) {
+        
+        PKP.$body.on("click", '.j-tooltip-close', function(e) {
             var $this = $(this);
-
             $('.tooltiped').tooltip('hide');
         });
-    }
-};
-
-PKP.Responsive = {
-    reflow: function(){
-        if(PKP.windowWidth < 560) {
-            navigation_minimize()
-        } else {
-            navigation_maximize()
-        }
-
-        function navigation_minimize(){
-            PKP.$body.addClass('navigation-minimized');
-            $('.b-sidebar').hide();
-        }
-        function navigation_maximize(){
-            PKP.$body.removeClass('navigation-minimized');
-            $('.b-sidebar').show();
-        }
+        PKP.$body.on("click", function(e) {
+            var $this = $(this);
+            $('.tooltiped').tooltip('hide');
+        });
     }
 };
 
@@ -271,31 +319,31 @@ PKP.Video = {
                 "height": "100%",
                 "controls": true, 
                 "autoplay": false, 
-                "preload": "auto" 
+                "preload": "auto",
+                "nativeControlsForTouch": false
             });
 
             $('#js-video').on('click',function () {
                 PKP.$body.addClass('locked');
                 $('.video-holder').fadeIn(400, function() {
-                    // pkPlayer.requestFullscreen();
                     pkPlayer.play();
                 });
             });
 
-            $('#js-close-video').on('click',function () {
+            $('.j-close-video').on('click',function () {
                 $('.video-holder').fadeOut(400,function() {
                     PKP.$body.removeClass('locked');
                     pkPlayer.pause().currentTime(0);
                 });
             });
 
-            $('#js-close-playlist').on('click', function() {
-                $('.b-playlist').addClass('hidden');
+            $('.js-close-playlist').on('click', function() {
+                $('.b-playlist').addClass('g-hidden');
             });
 
-            $('#js-show-playlist').on('click', function() {
+            $('.js-show-playlist').on('click', function() {
                 var pl = $('.b-playlist');
-                pl.toggleClass('hidden');
+                pl.toggleClass('g-hidden');
             });
         }
 
@@ -315,11 +363,11 @@ PKP.Playlist = {
 
     overwriteConsole: function() {
         console._log = console.log;
-        //console.log = this.log;
+
     },
 
     log: function(string) {
-        //PKP.Playlist.els.log.append('<p>' + string + '</p>');
+
         console._log(string);
     },
 
@@ -345,8 +393,7 @@ PKP.Playlist = {
         var html = '';
         for (var i = 0, len = this.player.pl.videos.length; i < len; i++) {
             html += '<li class="b-playlist-item" data-videoplaylist="'+ i +'">'+
-                        //'<span class="number">' + (i + 1) + '</span>' +
-                        '<span class="icon video"></span>' +
+                        '<span class="b-icon video"></span>' +
                         '<span class="b-playlist-item__poster"><img src="'+ PKP.videos[i].poster +'"></span>' +
                         '<span class="b-playlist-item__title">'+ PKP.videos[i].title +'</span>' +
                         '<span class="b-playlist-item__duration">'+ PKP.videos[i].duration +'</span>' +
@@ -370,15 +417,13 @@ PKP.Playlist = {
         this.els.$prev.on('click', $.proxy(this.nextOrPrev,this));
 
         this.player.on('next', function(e) {
-            //console.log('Next video');
             self.updateActiveVideo.apply(self);
         });
         this.player.on('prev', function(e) {
-            //console.log('Previous video');
             self.updateActiveVideo.apply(self);
         });
         this.player.on('lastVideoEnded', function(e) {
-            //console.log('Last video has finished');
+
         });
     },
 
@@ -391,7 +436,6 @@ PKP.Playlist = {
         var clicked = e.target.nodeName === 'LI' ? $(e.target): $(e.target).closest('li');
 
         if (!clicked.hasClass('active')){
-            //console.log('Selecting video');
             var videoIndex = clicked.data('videoplaylist');
             this.player.playList(videoIndex);
             this.updateActiveVideo();

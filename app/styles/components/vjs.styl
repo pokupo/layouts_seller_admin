@@ -116,7 +116,7 @@ $adgreen = #97ce68
 		.vjs-play-progress
 			background-color $adgreen
 		.vjs-load-progress
-			background-color rgba(#fff,0.3)
+			background-color rgba(#fff,1)
 			.vjs-control-text
 				display none
 
@@ -201,6 +201,7 @@ $adgreen = #97ce68
 		margin-top -7px
 		position absolute
 		top 50%
+		display none
 		right 190px
 		height 14px
 		width 22px
@@ -220,39 +221,66 @@ $adgreen = #97ce68
 		
 	.vjs-volume-control
 		cursor pointer
-		margin-top -7px
+		margin-top -2px
 		position absolute
 		top 50%
-		right 230px
+		right 220px
 		height 14px
 		width 22px
-		&:hover
-			.vjs-volume-level
-				background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcAQMAAAAgMM/vAAAABlBMVEUAAAD/qAB9IbvDAAAAAXRSTlMAQObYZgAAABlJREFUCNdjAAH+D0RS/4miQKqJpP5TgwIA8o9LtWN3N8wAAAAASUVORK5CYII=')
-
+		
 	.vjs-volume-bar
-		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcCAQAAACw95UnAAAAMElEQVRIx2NgoBL4n4YKGUYNHkEG4zJg1OCRYDCpBowaPJwMppbLRg0eNXjUYBLEAXWNUA6QNm1lAAAAAElFTkSuQmCC')
-		background-size 22px 14px
 		height 100%
-		width 100%
-	
+		width 45px
+		height 4px
+		background #fff
+		
 	.vjs-volume-level
-		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcAQMAAAAgMM/vAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAABlJREFUCNdjAAH+D0RS/4miQKqJpP5TgwIA8o9LtWN3N8wAAAAASUVORK5CYII=')
-		background-size 22px 14px
+		background #79a553
 		height 100%
-
-
+	
 	.vjs-current-time,
 	.vjs-time-divider,
 	.vjs-remaining-time,
 	.vjs-play-progress .vjs-control-text,
 	.vjs-play-control .vjs-control-content,
 	.vjs-fullscreen-control .vjs-control-text,
-	.vjs-volume-handle,
-	.vjs-mute-control
+	.vjs-volume-handle
 		display none
+		
+.vjs-mute-control
+	position absolute
+	top 32px
+	right 250px 
+	width 10px
+	height 16px
+	background url($mute_image)
+	background-position $mute_offset_x $mute_offset_y
+	cursor pointer
+	
+.vjs-vol-0:after
+	content ''
+	position absolute
+	top -4px
+	left 4px
+	width 1px
+	height 24px
+	background #ccc
+	transform: rotate(45deg);
+	
+.vjs-vol-0:before
+	content ''
+	position absolute
+	top -4px
+	right 4px
+	width 1px
+	height 24px
+	background #ccc
+	transform: rotate(-45deg);
+	
 	
 
+.vjs-control-text
+	display none
 .video-js
 	background-color black
 	padding 0

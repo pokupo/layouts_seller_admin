@@ -870,8 +870,11 @@
 					
 					// if it goes off the bottom of the page
 					if (((proxy.offset.top + proxy.dimension.height + tooltipHeight + 12 + offsetY) > ($(window).scrollTop() + $(window).height())) && (switchFrom.indexOf('bottom') > -1)) {
-						practicalPosition = switchTo;
-						myTop = (proxy.offset.top - tooltipHeight) - offsetY - 12;
+						var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+						if( !mobile ) {
+							practicalPosition = switchTo;
+							myTop = (proxy.offset.top - tooltipHeight) - offsetY - 12;
+						}
 					}
 				}
 				

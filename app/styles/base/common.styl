@@ -1,10 +1,10 @@
-.hidden
+.g-hidden
 	display none
 	
 .invisible
 	visibility hidden
 	
-.dropdown
+.b-dropdown
 	position relative
 
 	&__trigger
@@ -20,103 +20,105 @@
 		top 0
 		z-index 2
 
-		li
-			text-align left
-			
-			a
-			u
-				display block
-				width 100%	
-				padding 9px 20px
-				font-size 13px
-				line-height 22px
-				text-decoration none
-				color #333
-				background transparent
-				transition background 0.1 ease-in-out
-				white-space nowrap
-				border-bottom 1px solid $grey
+.b-menu__item
+	text-align left
+	
+	&.active > a
+		color #ccc
+		position relative
+		background $grey
 
-				&:hover
-					background $grey
-		
-			&.active > a
-			&.active > u
-				color #ccc
-				position relative
-				&:after
-					content ''
-					display inline-block
-					margin-left 8px
-					sprite($dropdown__active)
+		&:hover
+			color #ccc
+			cursor default
 
-				&:hover
-					color #ccc
-					background none
-					cursor default
-		.submenu__item
-			a
-				padding-left 36px
+.b-menu__link
+	display block
+	width 100%	
+	padding 9px 20px
+	line-height 22px
+	text-decoration none
+	color #333
+	background transparent
+	transition background 0.1 ease-in-out
+	white-space nowrap
+	border-bottom 1px solid $grey
+	font-size 15px
+	padding-right 5px 
+	overflow hidden
+	text-overflow ellipsis
+	text-indent 0
+	
+	&:hover
+		background $grey
 				
 /* Инлайновый дропдаун */
-.inline-sorter 
+.b-inline-sorter 
 	display inline-block
 	padding 0 30px 0 20px
 	min-width 211px
 	line-height 16px
 	z-index 6
+	text-indent -12px
+	.b-dropdown__content
+		top -14px
 
-	.selector__current
-		color #fff
+.b-selector__current
+	color #fff
+	&.active
+		color #555
+		border-bottom none
+	&:hover
 		border-bottom 1px dashed rgba(#fff, 0.25)
-		&.active
-			color #555
-			border-bottom none
+		
+.b-dropdown__content
+	padding-top 40px
 
-	.dropdown__content
-		top -18px
-		padding-top 40px
-		
-		li
-			a
-				font-size 15px
-				padding-right 5px 
-				overflow hidden
-				text-overflow ellipsis
-			&.active
-				a 
-					color #A9A7A3
-					background #efece7 
+	&.active
+		a 
+			color #A9A7A3
+			background #efece7 
 			
-.tabs
-		width 100%
-		zoom 1
-		position relative
-		box-sizing content-box
-		margin 0 -4px 6px
-		padding 0 4px 4px
-		overflow hidden
+.b-tabs
+	width 100%
+	zoom 1
+	position relative
+	box-sizing content-box
+	margin 0 -4px -14px
+	padding 0 4px 4px
+	overflow hidden
 		
-				
-.tab
 	&__trigger
 		float left
 		position relative
 		left 0
-		padding 0
 		z-index 1
+		padding 0 15px
+		line-height 50px
+		height 50px
+		margin-right 20px
 		
 		span
 			display block
 			height 100%
 			cursor pointer
-
+			color $a__link
+			
+		&:hover
+			span
+				color #333
+				
 		&.selected	
+			z-index 2
+			background #FFF 
 			span
 				color #000
 				cursor default
 				border-bottom 0
-
+			&:hover
+				span
+					color #000
+.b-tabs
 	&__content
 		display none
 		float right
@@ -128,46 +130,15 @@
 		margin-left -100%
 		background #FFF
 		box-shadow 0 1px 1px rgba(#000, 0.2)
-		
-		
-
-		& > .content
-			
-			padding-top 20px
-
-		&.selected
-			display block		
-	
-.tabs
-	.tab__trigger
-		padding 0 15px
-		line-height 50px
-		height 50px
-		margin-right 20px
-
-		span
-			color $a__link
-
-		&:hover
-			span
-				color #333
-
-		&.selected
-			z-index 2
-			background #FFF 
-			span
-					color #000
-			&:hover
-				span
-					color #000
-
-	.tab__content
 		border-top 1px solid $grey
 		margin-top 49px
 		z-index 1
 
-		& > .content
-			padding-top 33px
+		&.selected
+			display block
+.b-content
+	padding-top 20px	
+	
 
 
 
@@ -175,14 +146,14 @@
 
 
 
-.dropdown__content
+.b-dropdown__content
 .chosen-drop
 .suggestions-suggestions
 	drop-shadow()
 
-.inline-sorter 
-.dropdown
-	.dropdown__trigger
+.b-inline-sorter 
+.b-dropdown
+	.b-dropdown__trigger
 		&:after
 			content ''
 			position absolute
@@ -202,12 +173,12 @@
 				margin-top -8px
 				
 .b-sidebar-header			
-	.dropdown
+	.b-dropdown
 		margin 10px
 		
 		li
 			a
-				font-size 15px
+				font-size 16px
 				color $a__link
 
 

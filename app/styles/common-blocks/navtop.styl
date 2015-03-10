@@ -3,8 +3,7 @@
 	border-bottom 1px solid #efece7
 	padding 20px 20px
 	
-.subnavigation
-	.menu-item
+	&__item
 		display inline-block
 		font-weight 800
 		margin 0 10px
@@ -13,7 +12,9 @@
 		a
 			color $a__link
 			text-decoration none
-			
-		&.active 
-			a
-				color #000 
+		a:hover
+			opacity 0.8
+
+.m-subnavigation__item_active
+	a
+		color #000 

@@ -1,40 +1,43 @@
-body.navigation-minimized
+.mobile
     .b-sidebar
         display none
         margin-top 80px
         width 231px
         position fixed
+        padding-bottom 80px
         
     .b-sidebar
     .b-sidebar-footer
         background #474b53
         
-    .page-content
+    .b-page-content
         margin-left 0
         
-    .page-container 
-        .page-content-wrap
-            padding 10px 5px
+    .b-page-content__wrap
+        padding 10px 5px
             
-    .b-breadcrumb
+    .b-header
         padding 0 0 19px
         
-        .breadcrumb
-            margin-right 0
-            padding-bottom 15px
-            padding-top 25px
-            border-bottom 1px solid $grey
-            margin-left 55px
-            padding-left 10px
-            white-space nowrap
+    .b-breadcrumbs-wrapper
+        width 100%
+          
+    .b-breadcrumbs
+        margin-right 0
+        padding-bottom 22px
+        padding-top 24px
+        border-bottom 1px solid $grey
+        margin-left 55px
+        padding-left 10px
+        white-space nowrap
         
-    .btn-support
+    .m-btn_support
         float right
         margin-left 0
         margin-top 18px
         margin-right 5px
             
-    .navigation-trigger
+    .b-mobile-menu
         position relative
         display block
         height 80px
@@ -44,5 +47,47 @@ body.navigation-minimized
         margin-right -100%
         cursor pointer
         centered-icon($icon--menu-trigger)
-        &:hover
-            background darken($grey, 1%) 
+
+    .m-mobile-menu_active
+        background #3e424a
+        position fixed
+        z-index 99
+        top 0
+        centered-icon($icon--menu-trigger-active)
+    
+    .b-breadcrumbs__item:not(.m-breadcrumbs__item_active)
+        text-overflow: ellipsis;
+        overflow: hidden;
+    
+    .b-subnavigation__item 
+        margin 0 5px
+        
+    .b-tabs__trigger
+        margin-right 11px
+        padding 0 9px
+    /*loaded content tooltips*/
+    .tooltip__content .preview
+        display none
+    .tooltip__content .hummingbird-demo
+        width auto
+    .tooltip__content .info
+        border none
+        padding 0
+
+    .hummingbird-demo .preview
+        margin 0 auto
+        float none
+    .hummingbird-demo
+        min-width 1px
+    .tooltip__footer li
+        display block
+        text-align center
+        margin 10px 0
+        
+.mobile_full
+    .vjs-volume-control,.vjs-mute-control
+        display none
+    .vjs-pokupo-skin .vjs-progress-control
+        right 220px
+    .vjs-pokupo-skin .vjs-duration
+        right 190px

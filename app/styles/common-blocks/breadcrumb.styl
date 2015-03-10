@@ -1,50 +1,58 @@
-.navigation-trigger
+.b-mobile-menu
 	display none
-	
-.breadcrumb-wrapper
+		
+.b-breadcrumbs-wrapper
 	overflow hidden
 	position relative
 	float left
-	width 100%
 	
-.b-breadcrumb
-	padding 22px 20px 19px
+.b-header
+	padding 26px 20px 15px
 	background #FFF
 	border-bottom 1px solid #efece7 
 	overflow hidden
 	
-ul.breadcrumb
+.b-breadcrumbs
 	display block
 	vertical-align middle
 	font-size 18px
 	line-height 30px
 	font-weight 100 
-	margin-right 200px
 	
-	li.root
-		a
-			display inline-block
-			width 30px
-			height 30px
-			position relative
-			overflow hidden
-			text-indent -1000em
-			centered-icon($icon--root)
-	
-	li 
-		display inline-block
-		vertical-align middle
+.b-breadcrumbs__item
+	display inline-block
+	vertical-align middle
+	font-size 24px
+	line-height 20px
+	border-bottom: 1px solid #b9d7de;
+	padding-bottom 3px
+	&:hover
+		opacity 0.8
+	a
+		color $a__link
+		text-decoration none
 		
-		a
-			color $a__link
+.m-breadcrumbs__item_root
+	border-bottom none
+	a
+		display inline-block
+		width 30px
+		height 30px
+		position relative
+		overflow hidden
+		text-indent -1000em
+		margin-right 8px
+		centered-icon($icon--root)
 	
-	li.divider
-		margin 0 8px
-	
-	li.active
-		color #000
+.m-breadcrumbs__item_divider
+	border-bottom none
+	margin 0 2px
 
-.btn
+.m-breadcrumbs__item_active
+	border-bottom none
+	color #000
+
+.b-btn
 	display inline-block
 	background $btngreen
 	padding 14px 30px
@@ -60,18 +68,18 @@ ul.breadcrumb
 	
 	&.tooltiped
 		background lighten($btngreen, 0.5)
-	
-a.btn
+	&:hover
+		opacity 0.9
+a.b-btn
 	color #333
 		
-.btn-support
+.m-btn_support
 	padding 14px 14px 14px 48px
-	float left
+	float right
 	width 200px
-	margin-left -200px
 	position relative
 	
-	.icon
+	.b-icon
 		width 24px
 		height 21px
 		position absolute
