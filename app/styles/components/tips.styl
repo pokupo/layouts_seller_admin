@@ -1,6 +1,5 @@
 .tooltip__default
     background #fff
-    border 2px solid #000
     border-radius 5px
     color #333
     
@@ -10,7 +9,7 @@
         padding 10px 20px
         overflow hidden
         
-        box-shadow 0 4px 7px rgba(#000, 0.25)
+        box-shadow 0 4px 7px 2px rgba(#000, 0.25)
         
 .tooltip__icon
     cursor help
@@ -38,7 +37,6 @@
     position absolute
     top 0
     left 0
-    z-index -1
 
     span
     &-border
@@ -71,10 +69,14 @@
         &-right
         &-left 
             span
-                border-left 8px solid transparent !important
-                border-right 8px solid transparent !important
-                border-bottom 8px solid
-                top -7px
+                //border-left 8px solid transparent !important
+                //border-right 8px solid transparent !important
+                //border-bottom 8px solid
+                top -11px
+                background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAYAAABlNU3NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDRBRkM5MURDM0VFMTFFNDlFOTZFNDRFNDU0ODU0QTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDRBRkM5MUVDM0VFMTFFNDlFOTZFNDRFNDU0ODU0QTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NEFGQzkxQkMzRUUxMUU0OUU5NkU0NEU0NTQ4NTRBNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NEFGQzkxQ0MzRUUxMUU0OUU5NkU0NEU0NTQ4NTRBNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoPuMY4AAADtSURBVHjapJI7D4JAEISFU/GX2djYaWNnoZ2Flb1/lIbwKEhIDM9bd/BA5HGgTrLkcrP7TbisQUSzMRksnU8aiKELaIHLc1EUN5yFEPeKrw3CXV8pIMrkElzzLMuupIQz7pRnVv0dzgQ4IIs4ji/sSXpL4g6e6ukN0cGFGlxGUXRqwesQ9s7oafzNR8gY3ArD8MheTsPK0YPevhDds1hBEBxG4HUIehsh9XMNwj3P27GX0nSlvu/ve0K6cNd1tzyQ0PdKMNsKqdcQ22A5jrPhxgf9rgcYKgTM8oMtWNm2vZZS/gN/rRYzwALzKcAASAEPxke8aLIAAAAASUVORK5CYII=");
+                width 24px
+                height 11px
+                
         & 
         &-right
         &-left 
@@ -165,12 +167,13 @@
 .tooltip__footer
     border-top 1px solid $grey
     clear both
-    margin 10px -20px 0
+    margin 10px -20px -10px -20px
     padding 10px 20px 10px
     
     ul
         padding 0
         text-align right
+        float left
     
     li 
         display inline-block
@@ -181,7 +184,8 @@
     
     a:not(.b-btn)
         color $a__link
-
+.tooltip__footer a.b-btn
+    border-radius 8px
 
 /* Эффекты */
 .tooltip

@@ -42,7 +42,7 @@ PKP.init = function() {
     PKP.UI.init();
     PKP.Video.init();
     PKP.Tip.init();
-
+    PKP.mobile.init();
     PKP.$window.on('load resize', function() {
         PKP.windowHeight     = PKP.$window.height();
         PKP.windowWidth      = PKP.$window.width();
@@ -51,12 +51,64 @@ PKP.init = function() {
     });
 };
 
+PKP.mobile = {
+    init: function(){
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone/i);
+            },
+            iOSFull: function(){
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            },
+            anyFull: function(){
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOSFull() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+        if(isMobile.any()) {
+           $('body').addClass('mobile');
+           $('.j-breadcrumbs__item').css({
+                'max-width': $(window).width() - 135 - $('.m-breadcrumbs__item_active').width()
+           });
+           window.addEventListener("resize", function() {
+                setTimeout(function(){
+                    $('.j-breadcrumbs__item').css({
+                        'max-width': $(window).width() - 135 - $('.m-breadcrumbs__item_active').width()
+                    });
+                }, 200);
+            }, false);
+        }
+        if(isMobile.anyFull()) {
+           $('body').addClass('mobile_full');
+        }
+    }
+};
 /* Элементы интерфейса */
 PKP.UI = {
     init: function() {
         PKP.UI.dropdowns();
         PKP.UI.sidebar();
         PKP.UI.mini();
+        PKP.UI.common();
+    },
+    common: function(){
+        $('.j-informer__close').on('click', function(){
+            $(this).closest('.b-informer').hide();
+        });
     },
     dropdowns: function() {
         /* Кастомный скроллбар*/
@@ -168,7 +220,7 @@ PKP.Tip = {
             positionTracker: true,
             interactiveTolerance: 2000,
             offsetX: -12,
-            offsetY: 0,
+            offsetY: ($(window).scrollTop()/2),
             functionBefore: function(origin, continueTooltip) {
                 continueTooltip();
                 if (origin.data('ajax') !== 'cached') {
@@ -184,20 +236,24 @@ PKP.Tip = {
                     });
                 }
             },
-            functionAfter: function(origin) {
-                
+            functionReady: function(origin, tooltip) {
+                if($('body').hasClass('mobile')){
+                    $(".j-another-tooltip").tooltip('option', 'offsetX', '-200');
+                    $('.tooltip__base').css('right','10px');
+                    $('.j-another-tooltip').tooltip('reposition');
+                }
             }
         });
-
+        
         // First tooltip (button)
         $(".j-btn_support").tooltip({
             content: 'Loading...',
             updateAnimation: false,
             interactive: true,
             contentAsHTML: true,
-            position: 'bottom-right',
+            position: 'bottom',
             positionTracker: true,
-            interactiveTolerance: 2000,
+            interactiveTolerance: 200000,
             offsetX: 20,
             offsetY: 0,
             functionBefore: function(origin, continueTooltip) {
@@ -212,15 +268,37 @@ PKP.Tip = {
                             origin
                                 .tooltip('content', data)
                                 .data('ajax', 'cached');
+                        },
+                        complete: function(){
+                            if($('body').hasClass('mobile')){
+                                $('.tooltip__base').css({
+                                    'margin-top': -$('.tooltip__base').css('top')
+                                });
+                                $('.hummingbird-demo').css({
+                                    'width':'320px',
+                                });
+                                $('.j-btn_support').tooltip('reposition');
+                            }
+                            if(($('.tooltip__content').height() > $(window).height()) && !$('body').hasClass('mobile')){
+                                $('.hummingbird-demo').css('width','800px');
+                                $('.j-btn_support').tooltip('reposition');
+                            }
                         }
                     });
                 }
             },
-            functionAfter: function(origin) {
-
+            functionReady: function(origin, tooltip) {
+                if($('body').hasClass('mobile')){
+                    $('.hummingbird-demo').css('width','320px');
+                    $('.j-btn_support').tooltip('reposition');
+                }
+                if(($(tooltip).height() > $(window).height()) && !$('body').hasClass('mobile')){
+                    $('.hummingbird-demo').css('width','800px');
+                    $('.j-btn_support').tooltip('reposition');
+                }
             }
         });
-
+        
         PKP.$body.on("click", '.j-tooltip-close', function(e) {
             var $this = $(this);
             $('.tooltiped').tooltip('hide');
@@ -241,7 +319,8 @@ PKP.Video = {
                 "height": "100%",
                 "controls": true, 
                 "autoplay": false, 
-                "preload": "auto" 
+                "preload": "auto",
+                "nativeControlsForTouch": false
             });
 
             $('#js-video').on('click',function () {
@@ -251,7 +330,7 @@ PKP.Video = {
                 });
             });
 
-            $('.js-close-video').on('click',function () {
+            $('.j-close-video').on('click',function () {
                 $('.video-holder').fadeOut(400,function() {
                     PKP.$body.removeClass('locked');
                     pkPlayer.pause().currentTime(0);
@@ -264,7 +343,7 @@ PKP.Video = {
 
             $('.js-show-playlist').on('click', function() {
                 var pl = $('.b-playlist');
-                pl.toggleClass('hidden');
+                pl.toggleClass('g-hidden');
             });
         }
 

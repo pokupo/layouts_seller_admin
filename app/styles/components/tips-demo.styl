@@ -1,6 +1,8 @@
 .hummingbird-demo
     font-size 11px
-    min-width 440px
+    display table
+    width 440px
+    table-layout fixed
     
     a
         color #379c51
@@ -12,13 +14,13 @@
         line-height 23px
         margin-bottom 5px
     .preview
-        float left
-        width 140px
+        width 152px
         height 182px
-        margin-right 10px
-        position relative
+        display table-cell
         img
             float left
+            margin-right 10px
+            border 1px solid $grey
     .border-overlay
         position absolute
         top 0
@@ -29,8 +31,9 @@
         border 1px solid $grey
         
     .info
-        float left
-        width 290px
+        display table-cell
+        width 100%
+        vertical-align top
         padding-left 10px
         border-left 1px solid $grey
     .credits
