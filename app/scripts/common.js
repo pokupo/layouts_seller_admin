@@ -100,21 +100,481 @@ PKP.mobile = {
 /* Элементы интерфейса */
 PKP.UI = {
     init: function() {
+        PKP.UI.popup();
+        PKP.UI.charts();
+        PKP.UI.common();
         PKP.UI.dropdowns();
         PKP.UI.sidebar();
-        PKP.UI.mini();
-        PKP.UI.common();
+        PKP.UI.calendar();
+        PKP.UI.mini();            
+    },
+    popup: function(){
+        // Уведомления системы
+        $('.j-system-notification').on('click', function(){
+            $('.j-notification-popup').arcticmodal();
+        });
+        // Закрытие попап
+        $('.j-modal-close').on('click', function(){
+            $.arcticmodal('close');
+        });
+    },
+    charts: function(){
+        var visitsChart = c3.generate({
+            bindto: d3.select('.j-visits-graph'),
+            size: {
+              height: 255
+            },
+            data: {
+                x: 'x',
+                names: {
+                    data1: 'Посетителей',
+                    data2: 'Конверсия',
+                },
+                columns: [
+                    ['x', '2015-02-27', '2015-02-28', '2015-03-01', '2015-03-02', '2015-03-03', '2015-03-04', '2015-03-05'],
+                    ['data1', 0, 15, 4, 24, 7, 27, 36],
+                    ['data2', 0, 7, 9, 28, 12, 30, 25]
+                ],
+                types: {
+                    data1: 'line',
+                    data2: 'area'
+                },
+                classes: {
+                    data1: 'line-data1',
+                    data2: 'area-data2',
+                },
+                colors: {
+                    data1: '#4dbbec',
+                    data2: '#4dbbec',
+                }
+            },
+            axis: {
+                x: {
+                    padding : 0,
+                    type: 'timeseries',
+                    tick: {
+                        format: '%d.%m'
+                    }
+                },
+                y: {
+                    tick: {
+                        count: 5,
+                        values: [0, 10, 20, 30, 40]
+                    }
+                }
+            },
+            padding: {
+                top: 21,
+                right: 15,
+                left: 22
+            },
+            tooltip: {
+                show: true,
+                position: function (data, width, height, element) {
+                    var chartOffsetX = document.querySelector(".j-visits-graph").getBoundingClientRect().left;
+                    var graphOffsetX = document.querySelector(".j-visits-graph g.c3-axis-y").getBoundingClientRect().right;
+                    var someY = parseInt(element.getAttribute('x')) + parseInt(element.getAttribute('width')/2) - 19;
+                    var point = $(element).parents('.j-visits-graph').find('.c3-circle-' + data[0].index);
+
+                    var graph = $('.j-visits-graph');
+                    var tooltipContainer = graph.find('.c3-tooltip-container');
+                    var graphSectionsLenght = graph.find('circle.c3-shape').length/2;
+                    if(graphSectionsLenght==data[0].index+1) {
+                        tooltipContainer.addClass('c3-tooltip-container_last');
+                        return {
+                            top: (parseInt(point.attr('cy')) - height), 
+                            left: (parseInt(point.attr('cx')) - tooltipContainer.outerWidth()/2 - 22)
+                        };
+                    }else{
+                        tooltipContainer.removeClass('c3-tooltip-container_last');
+                        return {
+                            top: (parseInt(point.attr('cy')) - height), 
+                            left: (parseInt(point.attr('cx')) - 42)
+                        };
+                    }
+                },
+                contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+                    var $$ = this, config = $$.config,
+                        titleFormat = config.tooltip_format_title || defaultTitleFormat,
+                        nameFormat = config.tooltip_format_name || function (name) { return name; },
+                        valueFormat = config.tooltip_format_value || defaultValueFormat,
+                        text, i, title, value, name, bgcolor;
+                    for (i = 0; i < d.length; i++) {
+                        if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+                        if (! text) {
+                          title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+                          text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + moment(d[i].x).locale('ru').format("dd, D MMM. YYYY") + "</th></tr>" : "");
+                        }
+                        name = nameFormat(d[i].name);
+                        value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+                        bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+                        text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+                        if(i == 1) {
+                            text += "<td class='name'>" + name + ":&nbsp;" + value +"%" + "</td>";
+                        }else{
+                            text += "<td class='name'>" + name + ":&nbsp;" + value + "</td>";
+                        }
+                        text += "</tr>";
+                    }
+                    return text + "</table>" ;
+                }
+            },
+            legend: {
+                show: false
+            },
+            point: {
+                r: 7,
+                focus: {
+                    expand: {
+                        r: 9
+                    }
+                }
+            },
+            grid: {
+                x: {
+                    show: true
+                },
+                y: {
+                    show: true
+                }
+            }
+        });
+        var ordersChart = c3.generate({
+            bindto: '.j-orders-graph',
+            size: {
+              height: 255
+            },
+            data: {
+                x: 'x',
+                names: {
+                    data1: 'Посетителей',
+                    data2: 'Конверсия',
+                },
+                columns: [
+                    ['x', '2015-02-27', '2015-02-28', '2015-03-01', '2015-03-02', '2015-03-03', '2015-03-04', '2015-03-05'],
+                    ['data1', 0, 15, 4, 24, 7, 27, 36],
+                    ['data2', 0, 7, 9, 28, 12, 30, 25]
+                ],
+                types: {
+                    data1: 'line',
+                    data2: 'area'
+                },
+                classes: {
+                    data1: 'line-data1',
+                    data2: 'area-data2',
+                },
+                colors: {
+                    data1: '#4dbbec',
+                    data2: '#4dbbec',
+                }
+            },
+            padding: {
+                top: 21,
+                right: 15,
+                left: 22
+            },
+            tooltip: {
+                show: true,
+                position: function (data, width, height, element) {
+                    var chartOffsetX = document.querySelector(".j-orders-graph").getBoundingClientRect().left;
+                    var graphOffsetX = document.querySelector(".j-orders-graph g.c3-axis-y").getBoundingClientRect().right;
+                    var someY = parseInt(element.getAttribute('x')) + parseInt(element.getAttribute('width')/2) - 19;
+                    var point = $(element).parents('.j-orders-graph').find('.c3-circle-' + data[0].index);
+                    var graph = $('.j-orders-graph');
+                    var tooltipContainer = graph.find('.c3-tooltip-container');
+                    var graphSectionsLenght = graph.find('circle.c3-shape').length/2;
+                    if(graphSectionsLenght==data[0].index+1) {
+                        tooltipContainer.addClass('c3-tooltip-container_last');
+                        return {
+                            top: (parseInt(point.attr('cy')) - height), 
+                            left: (parseInt(point.attr('cx')) - tooltipContainer.outerWidth()/2 - 22)
+                        };
+                    }else{
+                        tooltipContainer.removeClass('c3-tooltip-container_last');
+                        return {
+                            top: (parseInt(point.attr('cy')) - height), 
+                            left: (parseInt(point.attr('cx')) - 42)
+                        };
+                    }
+                },
+                contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+                    var $$ = this, config = $$.config,
+                        titleFormat = config.tooltip_format_title || defaultTitleFormat,
+                        nameFormat = config.tooltip_format_name || function (name) { return name; },
+                        valueFormat = config.tooltip_format_value || defaultValueFormat,
+                        text, i, title, value, name, bgcolor;
+                    for (i = 0; i < d.length; i++) {
+                        if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+                        if (! text) {
+                          title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+                          text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + moment(d[i].x).locale('ru').format("dd, D MMM. YYYY") + "</th></tr>" : "");
+                        }
+                        name = nameFormat(d[i].name);
+                        value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+                        bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+                        text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+                        if(i == 1) {
+                            text += "<td class='name'>" + name + ":&nbsp;" + value +"%" + "</td>";
+                        }else{
+                            text += "<td class='name'>" + name + ":&nbsp;" + value + "</td>";
+                        }
+                        text += "</tr>";
+                    }
+                    return text + "</table>" ;
+                }
+            },
+            legend: {
+                show: false
+            },
+            point: {
+                r: 7,
+                focus: {
+                    expand: {
+                        r: 9
+                    }
+                }
+            },
+            axis: {
+                y: {
+                    tick: {
+                        count: 5,
+                        values: [0, 10, 20, 30, 40]
+                    }
+                },
+                x: {
+                    padding : 0,
+                    type: 'timeseries',
+                    tick: {
+                        format: '%d.%m'
+                    }
+                }
+            },
+            grid: {
+                x: {
+                    show: true
+                },
+                y: {
+                    show: true
+                }
+            }
+        });
+        var visitorsChart =c3.generate({
+            bindto: '.j-visitors-graph',
+            size: {
+              height: 355
+            },
+            data: {
+                columns: [
+                    ['data1', 37],
+                    ['data2', 63]
+                ],
+                type : 'donut',
+                classes: {
+                    data1: 'donut-new',
+                    data2: 'donut-registrated',
+                },
+            },
+            padding: {
+                top: 5
+            },
+            legend: {
+                show: false
+            },
+            tooltip: {
+                show: false,
+            },
+            donut: {
+                width: 60,
+                label: {
+                    show: true,
+                    threshold: 0.1,
+                    format: function (value, ratio, id) {
+                        var round = Math.round(ratio*100);
+                        return (round + "%");
+                    }
+                }
+            },
+            color: {
+                pattern: ['#97ce68', '#efece7']
+            },
+        });
+        var visitsGeographyChart = function(){
+            var svg = d3.select(".j-visits-geography-graph")
+                .append("svg")
+                .append("g");
+
+            svg.append("g")
+                .attr("class", "slices");
+            svg.append("g")
+                .attr("class", "labels");
+            svg.append("g")
+                .attr("class", "lines");
+
+            var width = 230,
+                height = 230,
+                radius = Math.min(width, height)/2;
+
+            var pie = d3.layout.pie()
+                .sort(null)
+                .value(function(d) {
+                    return d.value;
+                });
+
+            var arc = d3.svg.arc()
+                .outerRadius(radius * 1)
+                .innerRadius(radius * 0.43);
+
+            var outerArc = d3.svg.arc()
+                .innerRadius(radius * 1.2)
+                .outerRadius(radius * 1.2);
+
+            svg.attr("transform", "translate(" + 180 + "," + 115 + ")");
+
+            var key = function(d){ return d.data.label; };
+
+            var data = [{
+                        "label":"Украина", 
+                        "value":23,
+                        "color": '#efece7'
+                    }, 
+                    {
+                        "label":"Белоруссия",
+                        "value":29,
+                        "color": '#4dbbec'
+                    }, 
+                    {
+                        "label":"Сербия", 
+                        "value":17,
+                        "color": '#719f4a'
+                    },
+                    {
+                        "label":"Россия", 
+                        "value":31,
+                        "color": '#97ce68'
+                    }];
+
+            change(data);
+
+
+            function change(data) {
+                /* ------- PIE SLICES -------*/
+                var slice = svg.select(".slices").selectAll("path.slice")
+                    .data(pie(data), key);
+
+                slice.enter()
+                    .insert("path")
+                    .style("fill", function(d) { 
+                        return d.data.color; 
+                    })
+                    .attr("class", "slice");
+
+                slice       
+                    .transition().duration(1000)
+                    .attrTween("d", function(d) {
+                        this._current = this._current || d;
+                        var interpolate = d3.interpolate(this._current, d);
+                        this._current = interpolate(0);
+                        return function(t) {
+                            return arc(interpolate(t));
+                        };
+                    });
+
+                slice.exit()
+                    .remove();
+
+                /* ------- TEXT LABELS -------*/
+
+                var text = svg.select(".labels").selectAll("text")
+                    .data(pie(data), key);
+
+                text.enter()
+                    .append("text")
+                    .attr({
+                        "dy": ".35em"
+                    })
+                    .html(function(d) {                
+                        return '<tspan x="0" class="labels__label">' + d.data.label + '</tspan>' + '<tspan class="labels__value" style="text-anchor:start" x="0" dy="20">' + d.data.value + '%' + '</tspan>';
+                    });
+                
+                function midAngle(d){
+                    return d.startAngle + (d.endAngle - d.startAngle)/2;
+                }
+
+                text.transition().duration(1000)
+                    .attrTween("transform", function(d) {
+                        this._current = this._current || d;
+                        var interpolate = d3.interpolate(this._current, d);
+                        this._current = interpolate(0);
+                        return function(t) {
+                            var d2 = interpolate(t);
+                            var pos = outerArc.centroid(d2);
+                            pos[0] = radius * (midAngle(d2) < Math.PI ? 0.9 : -1.4);
+                            return "translate("+ pos +")";
+                        };
+                    })
+                    .styleTween("text-anchor", function(d){
+                        this._current = this._current || d;
+                        var interpolate = d3.interpolate(this._current, d);
+                        this._current = interpolate(0);
+                        return function(t) {
+                            var d2 = interpolate(t);
+                            return midAngle(d2) < Math.PI ? "start":"start";
+                        };
+                    });
+
+                text.exit()
+                    .remove();
+
+                /* ------- SLICE TO TEXT POLYLINES -------*/
+
+                var polyline = svg.select(".lines").selectAll("polyline")
+                    .data(pie(data), key);
+                
+                polyline.enter()
+                    .append("polyline");
+
+                polyline.transition().duration(1000)
+                    .attrTween("points", function(d){
+                        this._current = this._current || d;
+                        var interpolate = d3.interpolate(this._current, d);
+                        this._current = interpolate(0);
+                        return function(t) {
+                            var d2 = interpolate(t);
+                            return [arc.centroid(d2), outerArc.centroid(d2)];
+                        };          
+                    });
+                
+                polyline.exit()
+                    .remove();
+            }
+        }();
     },
     common: function(){
+        //Сворачивание блока
+        $('.j-roll-up').on('click', function(){
+            $(this).parents('.j-roll-up-wrapper').find('.j-roll-up-content').slideToggle();
+        });
+
         $('.j-informer__close').on('click', function(){
             $(this).closest('.b-informer').hide();
         });
     },
     dropdowns: function() {
-        /* Кастомный скроллбар*/
+        // Кастомный скроллбар
         $('.j-scrollbar').mCustomScrollbar();
 
-        /* «Выпадайка» */
+        $('.j-scrollbar_both').mCustomScrollbar({
+            scrollbarPosition: 'inside',
+            axis: "yx",
+        });
+        $('.j-scrollbar-y').mCustomScrollbar({
+            scrollbarPosition: 'outside',
+            axis: "yx",
+        });
+
+        // «Выпадайка» 
         PKP.$body.on("click", '.j-dropdown__trigger', function(e) {
             e.preventDefault();
             var $this = $(this);
@@ -169,7 +629,6 @@ PKP.UI = {
             $(this).closest(".input-holder").find('.error__message').hide();
         });
     },
-
     sidebar: function() {
         $(".b-sidebar-navigation li > a").click(function() {
             var li = $(this).parent('li').siblings().removeClass("active");
@@ -199,7 +658,27 @@ PKP.UI = {
             $(this).find("input").focus();
         });
     },
-
+    calendar: function(){
+        $('.j-calendar__range-start,.j-calendar__range-end').datepick($.extend({
+            firstDay: 1,
+            dateFormat: "dd.mm.yyyy",
+            showOtherMonths: true,
+            nextText: '',
+            prevText: '',
+            changeMonth: false,
+            onSelect: customRange,
+        },
+            $.datepick.regionalOptions["ru"]
+        ));
+        function customRange(dates) { 
+            if ($(this).hasClass('j-calendar__range-start')) { 
+                $('.j-calendar__range-end').datepick('option', 'minDate', dates[0] || null); 
+            } 
+            else { 
+                $('.j-calendar__range-start').datepick('option', 'maxDate', dates[0] || null); 
+            } 
+        }
+    },
     mini: function() {
         $('.j-mobile-menu').on('click', function(){
             $(this).toggleClass('m-mobile-menu_active');
@@ -210,6 +689,20 @@ PKP.UI = {
 
 PKP.Tip = {
     init: function() {   
+
+        $('.j-hint').tooltip({
+            theme: 'g-hint'
+        });
+        $('.j-hint_right').tooltip({
+            theme: 'g-hint_right',
+            functionReady: function(origin, tooltip){
+                var tooltipWidth = tooltip.width();
+                tooltip.css({
+                    'margin-left': -tooltipWidth/2 + 25
+                });
+            }
+        });
+
         // First tooltip (button)
         $(".j-another-tooltip").tooltip({
             content: 'Loading...',
@@ -279,7 +772,7 @@ PKP.Tip = {
                                 });
                                 $('.j-btn_support').tooltip('reposition');
                             }
-                            if(($('.tooltip__content').height() > $(window).height()) && !$('body').hasClass('mobile')){
+                            if(($('.tooltip__content').height() > ($(window).height() - 100))  && !$('body').hasClass('mobile')){
                                 $('.hummingbird-demo').css('width','800px');
                                 $('.j-btn_support').tooltip('reposition');
                             }
@@ -292,7 +785,7 @@ PKP.Tip = {
                     $('.hummingbird-demo').css('width','320px');
                     $('.j-btn_support').tooltip('reposition');
                 }
-                if(($(tooltip).height() > $(window).height()) && !$('body').hasClass('mobile')){
+                if(($(tooltip).height() > ($(window).height() - 100)) && !$('body').hasClass('mobile')){
                     $('.hummingbird-demo').css('width','800px');
                     $('.j-btn_support').tooltip('reposition');
                 }

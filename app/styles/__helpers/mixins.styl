@@ -1,3 +1,23 @@
+btn()
+	position relative
+	margin-right 10px
+	display inline-block
+	width 40px
+	height 40px
+	cursor pointer
+	background #fff
+	border 1px solid #ddd8d0
+	border-radius 5px
+	&:hover
+		border-color #ebe8e3
+		background #ebe8e3
+ 
+background-icon($icon)
+	background url($icon[8]) $icon[2] $icon[3]
+	width $icon[4]
+	height $icon[5]
+			
+
 fix-text-size-adjust()
 	background-image linear-gradient(transparent, transparent)
 
@@ -17,7 +37,6 @@ text-hide()
 pseudo()
 	content ''
 	position absolute
-	display block
 
 pseudo__center()
 	content ''
@@ -32,6 +51,11 @@ centered-icon($icon)
 		sprite($icon)
 		margin-left -(spriteWidth($icon)/2)
 		margin-top -(spriteHeight($icon)/2)
+
+any-icon($icon)
+	&:after
+		pseudo()
+		sprite($icon)
 
 
 drop-shadow()

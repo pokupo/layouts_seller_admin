@@ -13,7 +13,6 @@
 	"leading-zero": false,
 	"quotes": "single",
 	"remove-empty-rulesets": true,
-	"sort-order-fallback": "abc",
 	"space-after-colon": " ",
 	"space-after-combinator": " ",
 	"space-after-declaration": "\n\n",

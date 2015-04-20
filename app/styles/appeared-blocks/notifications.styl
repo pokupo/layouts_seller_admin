@@ -1,0 +1,113 @@
+.b-notification-popup  
+    padding 15px 20px 30px 40px
+    width 1000px
+    background #efece7
+    position relative
+
+.b-notification-popup__close
+    position absolute
+    right 14px
+    width 22px
+    height 22px
+    cursor pointer
+    &:after
+        content ''
+        position absolute
+        background #10100f
+        height 22px
+        width 2px
+        transform rotate(45deg)
+        right 11px
+    &:before
+        content ''
+        position absolute
+        background #10100f
+        height 22px
+        width 2px
+        transform rotate(-45deg)
+        right 11px
+
+.b-system-message__content
+    margin-top 8px
+    height 616px
+    overflow-y auto
+
+.b-system-message__item
+    background #fff
+    padding 28px 3px 25px 18px
+    margin 0 0 2px 2px
+    border 1px solid #cbc9c5
+    border-top none
+    clearfix()
+    display table
+    width 921px
+    min-height 90px
+    
+.m-system-message__item_done
+    background #cbe6b3
+.m-system-message__item_fail
+    background #ffd1d1
+.m-system-message__item_alert
+    background #fcf5d9
+.m-system-message__item_disabled
+    opacity 0.4
+    pointer-events none
+    
+.b-system-message__item-content
+    width 680px
+    display table-cell
+    vertical-align middle
+    margin-right 20px
+    padding 28px 0 26px 15px
+
+.b-system-message__item-text
+    p
+        line-height 20px
+        font-size 13px
+        color #000000
+        letter-spacing 0.2px
+    a
+        color #177a93
+        text-decoration none
+        &:hover
+            text-decoration underline
+   
+.b-system-message__item-title
+    font-size 14px
+    font-weight 700
+    margin-bottom 3px
+    color #000
+
+.b-system-message__item-date
+    color #666666
+    font-size 12px
+    display table-cell
+    vertical-align middle
+    text-align right
+
+.b-system-message__item-chechbox
+    width 55px
+    display table-cell
+    vertical-align middle
+    padding 0 0 0 14px
+
+.b-system-message__footer
+    text-align center
+    margin-top 20px
+
+.b-system-message__load
+    color #000
+    font-size 14px
+    text-transform uppercase
+    background #efece7
+    display inline-block
+    border-radius 5px
+    padding 17px 55px
+    text-decoration none
+    margin-left -15px
+    font-weight 600
+    border 1px solid #ddd8d0
+    &:hover
+        background #ddd8d0
+    &:active
+        background #c7c3be
