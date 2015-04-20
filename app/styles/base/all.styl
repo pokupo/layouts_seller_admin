@@ -1,0 +1,958 @@
+//gloabel styles
+    //hint
+        .g-hint,.g-hint_right
+            .tooltip__arrow span
+                width: 0;
+                height: 0;
+                border-style: solid;
+                display block
+                background none
+            .tooltip__arrow-bottom span
+                top -10px
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #4c4c4c transparent !important;
+            .tooltip__arrow-top span
+                bottom -10px
+                border-width: 10px 10px 0 10px;
+                border-color: #4c4c4c transparent transparent transparent !important;
+            .tooltip__content
+                line-height 20px
+                font-size 13px
+                background #4c4c4c
+                color #ffffff
+                padding 6px 19px
+
+        .g-hint_right
+            .tooltip__arrow span
+                right 20px
+                left auto
+                
+    //popup
+        .b-popup-holder
+            display none
+
+    //checkbox
+        .b-checkbox__label
+            cursor pointer
+        .b-checkbox__input
+            position absolute 
+            overflow hidden 
+            clip rect(0 0 0 0) 
+            height 1px 
+            width 1px 
+            margin -1px 
+            padding 0
+            border 0
+            &:checked + .b-checkbox__icon
+                width $checkbox_general_checked_width
+                height $checkbox_general_checked_height
+                background url($checkbox_general_checked_image) $checkbox_general_checked_offset_x $checkbox_general_checked_offset_y
+                
+
+        .b-checkbox__icon
+            display inline-block
+            width $checkbox_general_checked_width
+            height $checkbox_general_checked_height
+            background url($checkbox_general_image) $checkbox_general_offset_x $checkbox_general_offset_y + 3
+        
+        .m-checkbox__input_system-message
+             &:checked + .b-checkbox__icon
+                background-icon($checkbox)
+                
+        .m-checkbox__icon_system-message
+            width $checkbox_unchecked_width
+            height $checkbox_unchecked_height
+            background url($checkbox_unchecked_image) $checkbox_unchecked_offset_x $checkbox_unchecked_offset_y
+            
+    // common
+        .g-ruble
+            font-family $rubl
+            font-weight normal
+            
+        .b-inner-content
+            padding: 0 20px 20px 18px;
+            margin-top 10px
+            
+        .b-pkp-block-holder
+            clearfix()
+        .b-pkp-block__row
+            clearfix()
+
+        .b-pkp-block
+            background #fff
+            padding 5px 20px 20px 20px 
+            border-bottom 1px solid #cbc9c5
+            border-left 1px solid #e3e0db
+            border-right 1px solid #e3e0db
+            box-shadow 0 1px 0 0 #e3e0db
+            margin-bottom 8px
+            position relative
+            clearfix()
+            
+        .b-pkp-block-holder
+            text-align justify
+            display table
+            table-layout fixed
+            width 100%
+            margin-bottom 8px
+                
+        .m-pkp-block_full-width
+            width 100%
+            
+        .m-pkp-block_half-width
+            width 50%
+            display table-cell
+            
+        .m-pkp-block_gap
+            display table-cell
+            border none
+            padding 0
+            background #efece7
+            width 8px 
+
+            
+        .b-resized-block
+            resize vertical
+            overflow auto
+
+        .b-link
+            color #177a93
+            letter-spacing 0.35px
+            font-size 13px
+            &:hover
+                text-decoration none
+
+        .b-calendar-range__input-holder
+            display inline-block
+            position relative
+
+        .b-calendar-range__date-input-icon
+            width 19px
+            height 20px
+            background url($calendar_icon_image) $calendar_icon_offset_x $calendar_icon_offset_y
+            position absolute
+            right 16px
+            top 8px
+
+        .b-input
+            background #fff
+            border 1px solid #cccccc
+            border-radius 5px
+            height 36px
+            padding 0 12px
+            color #000
+            font-size 14px
+            letter-spacing 0.3px
+            &:focus
+                border #177a93
+                border 2px solid #177a93
+                       
+        .m-input_date
+            width 132px
+            position relative
+            
+        .b-select
+            height 36px
+ 
+    // text 
+        .b-block-title
+            font-size 30px
+            font-weight 300
+            color #000000
+            line-height 30px
+            max-width 80%
+            padding 18px 0
+            
+        .m-block-title_big
+            font-size 45px
+            line-height 45px
+            padding 10px 0 10px 0
+            max-width 100%
+
+        .b-block-title__subtext
+            font-size 13px
+            display block
+            line-height 20px
+            letter-spacing 0.25px
+
+        .b-block-subtitle
+            font-size 20px
+            font-weight 300
+        
+    //bnts
+        .b-btn-green
+            color #000
+            text-transform uppercase
+            text-decoration none
+            font-size 11px
+            font-weight 600
+            line-height 14px
+            letter-spacing: 0.2px;
+            background #97ce68
+            border-radius 5px
+            padding 12px 20px
+            &:hover
+                opacity 0.8
+
+        .b-roll-up-btn
+            color: #177a93
+            font-size 14px
+            font-weight 700
+            text-decoration none
+            border-bottom 1px dotted #177a93
+            &:hover
+                border-bottom none
+        .b-store-code__copy
+            float right
+            text-transform uppercase
+            color #000
+            background #fff
+            border 1px solid #ddd8d0
+            text-decoration none
+            font-weight 600
+            border-radius 5px
+            padding 13px 19px 13px 43px
+            margin-top -13px
+            letter-spacing -0.2px
+            position relative
+            any-icon($copy--code)
+            &:after
+                top 11px
+                left 20px
+
+//notice operation
+    .b-operation-notice__icon
+        width 30px
+        height 30px
+        float left
+        position relative
+        margin-right 10px
+        
+    .b-operation-notice_text
+        line-height 30px
+        color #000
+        letter-spacing 0.2px
+        font-size 13px
+        a
+            color #177a93
+            text-decoration none
+            &:hover
+                text-decoration underline
+    .m-operation-notice__icon_fail
+        centered-icon($pic__fail)
+
+    .m-operation-notice__icon_done
+        centered-icon($pic__done)
+
+    .m-operation-notice__icon_alert
+        centered-icon($pic__alert)
+    
+//header 
+    .b-header__notification-holder
+        float right
+
+    .b-notification
+        width 40px   
+        height  40px
+        border 1px solid #ddd8d0
+        border-radius 5px
+        background #fff
+        display inline-block
+        margin-right 10px
+        cursor pointer
+        position relative
+        &:after
+            content ''
+            position absolute
+            top 50%
+            left 50%
+        &:hover
+            background #ebe8e3
+            border-color #ebe8e3
+        
+    .m-notification_message
+        &:after
+            background url($notification_message_image) $notification_message_offset_x $notification_message_offset_y
+            width 18px
+            height 13px
+            margin -7px 0 0 -9px
+    .m-notification_system-message
+        &:after
+            background url($notification_bell_image) $notification_bell_offset_x $notification_bell_offset_y
+            width 12px
+            height 15px
+            margin -8px 0 0 -6px
+    .b-notification__amount
+        width 19px
+        height  19px
+        border-radius 8px
+        background #e23f3f
+        color #fff
+        position absolute
+        top -10px
+        left 25px
+        text-align center
+        line-height 19px
+        font-size 10px
+        font-weight 600
+
+//admin-main page
+
+    //b-indicator
+        .b-indicator__title
+            padding-left 18px
+            
+        .b-indicator__top
+            margin-top 15px
+            clearfix()
+
+        .b-indicator__line
+            float left
+            
+        .b-indicator__calendar
+            float right  
+        
+        .b-indicator__calendar-text
+            display inline-block
+            font-size 14px
+            font-weight 700
+            margin-right 3px
+            color #333
+
+        .b-calendar-range
+            display inline-block
+            margin-top 3px
+
+        .b-calendar-range__divider
+            margin 0 4px
+            display inline-block
+
+        .b-indicator-btn
+            width 81px
+            line-height 40px
+            height 40px
+            color #000000
+            font-size 13px
+            text-decoration none
+            background #fff
+            text-align center
+            margin-right 1px
+            float left
+            
+            &:hover
+                color #fff
+                background #97ce68
+                   
+        .m-indicator-btn_first
+            border-radius 5px 0 0 5px
+            
+        .m-indicator-btn_last
+            border-radius 0 5px 5px 0
+            
+        .m-indicator-btn_active
+            background #97ce68
+            color #fff
+            
+        .b-indicator__content 
+            margin-top 12px
+            
+        .b-new-orders
+            width 100%
+            table-layout fixed
+            margin-top -37px
+            color #333333
+
+        .b-new-orders thead td
+            font-size 13px
+            font-weight 700
+            height 54px
+            vertical-align top
+
+        .b-new-orders thead td:nth-child(1)
+            width 39.8%
+        .b-new-orders thead td:nth-child(2)
+            width 17.5%
+        .b-new-orders thead td:nth-child(3)
+            width 13%
+        .b-new-orders thead td:nth-child(4)
+            width 16%
+        .b-new-orders thead td:nth-child(5)
+            width 136px
+
+        .b-new-orders tbody tr
+            border 1px solid #d4d4d4
+
+        .b-new-orders tbody tr td
+            font-weight 600
+            letter-spacing: 0.6px;
+
+        .b-new-orders tbody tr td:first-child
+            padding 0 20px
+            
+        .b-new-orders tbody tr td:last-child
+            padding 0 20px 0 0
+            
+        .b-new-orders__order-number
+            line-height 70px
+            color #177a93
+            font-size 18px
+            letter-spacing -0.2px
+            
+            &:hover
+                text-decoration none
+
+    //visits-graph
+        .b-full-width-graph__item
+            display inline-block
+            margin-right 46px
+            
+        .b-full-width-graph__number
+            font-size 45px
+            font-weight 600
+            color #000
+        
+        .b-full-width-graph__text
+            display block
+            font-size 13px
+            margin-top 5px
+            letter-spacing 0.3px
+            
+        .b-full-width-graph__additional-info
+            font-size 25px
+            line-height 20px
+            margin-left -4px
+        
+        .b-graph-legend
+            position absolute
+            top 35px
+            right 19px
+            
+        .b-graph-legend__item
+            float left
+            margin-left 30px
+        
+        .b-graph-legend__indicator
+            height 14px
+            width 30px
+            margin-right 5px
+            border-radius 10px
+            display inline-block
+            vertical-align top
+            cursor pointer
+        
+        .m-graph-legend__indicator_green
+            background #97ce68
+        
+        .m-graph-legend__indicator_gray
+            background #efece7
+        
+        .m-graph-legend__indicator_visitation
+            background #4dbbec
+            height 4px
+            width 35px
+            position relative
+            top 5px
+            &:before
+                content ''
+                position absolute
+                width 12px
+                height 12px
+                display block
+                background #4dbbec
+                left 50%
+                top 50%
+                margin -6px 0 0 -6px
+                border-radius 999px
+            &:after
+                content ''
+                position absolute
+                width 6px
+                height 6px
+                display block
+                background #fff
+                left 50%
+                top 50%
+                margin -3px 0 0 -3px
+                border-radius 999px
+                
+        .m-graph-legend__blue
+            background #c9eaf9  
+
+        .b-graph-legend__title
+            font-size 10px
+            color #333
+            font-weight 600
+            letter-spacing -0.2px
+
+    //double graph
+        .b-donut 
+            position relative
+        
+        .b-donut-graph
+            padding 53px 0
+            width 360px
+            margin 0 auto        
+
+        .b-donut__info
+            position absolute
+            display table
+            width 200px
+            height 200px
+            top 50%
+            left 50%
+            margin -100px 0 0 -100px
+            
+        .b-donut__info-cell
+            display table-cell
+            vertical-align middle
+            text-align center
+
+        .b-donut__info-text
+            font-size 13px
+            line-height 16px
+            color #000000
+        
+        .b-donut__info-amount
+            font-size 30px
+            font-weight 600
+            display block
+            margin-top: 8px;
+            color #000000
+
+    //general_goods_statistic
+        .b-general-goods-statistic__to-all
+            position absolute
+            top 33px
+            right 17px
+           
+
+        .b-general-goods-statistic__table
+            width 100%
+            table-layout fixed
+            margin 7px 0 13px 0
+            
+        .b-general-goods-statistic td
+            width calc(100%/6)
+            text-align center
+            height 73px
+            border-left 1px solid #ccc
+
+        .b-general-goods-statistic td:first-child
+            border-left: none
+
+        .b-general-goods-statistic__cell-title
+            font-size 13px
+            line-height 16px
+            display block
+            margin-bottom 8px
+
+        .b-general-goods-statistic__link
+            display block
+            color #000
+            text-decoration none
+            font-weight 600
+            font-size 30px
+            
+            &:hover
+                color #177a93 
+
+    //bestseller
+        .b-bestseller
+            margin-bottom 10px
+            
+        .b-bestseller__table 
+            width 100%
+            table-layout fixed
+            margin-top: -37px;
+            color #333333
+        
+        .b-bestseller__table thead td
+            height 54px
+            font-size 13px
+            font-weight 700
+            vertical-align top
+
+        .b-bestseller__table thead td:nth-child(1)
+            width 95px
+            
+        .b-bestseller__table thead td:nth-child(2)
+            width 36%
+
+        .b-bestseller__table tbody tr
+            border: 1px solid #d4d4d4;
+
+        .b-bestseller__table tbody td
+            padding 5px 0
+            font-weight 600
+            
+        .b-bestseller__table tbody td:nth-child(2)
+            padding-right 85px
+            
+        .b-bestseller__link
+            line-height 20px
+            font-weight normal
+        
+        .b-bestseller__goods-title
+            display
+            
+
+        .b-bestseller__img-holder
+            float left
+            width 60px
+            height 60px
+            margin 0 14px 0 21px
+            & img
+                max-width 60px
+                max-height 60px  
+
+    //store-code
+        .b-store-code
+            margin-top 10px
+            
+        .b-store-code .b-block-subtitle
+            float left
+            margin-right 18px
+            
+        .b-store-code .b-roll-up-btn
+            line-height: 23px;
+            
+        .b-store-code__content
+            background #f5f5f5
+            border 1px solid #d4d4d4
+            height 200px
+            margin 14px 0 10px 0
+            clear both
+
+        .b-store-code__inner
+            padding 14px 21px
+            
+        .b-store-code__content pre
+            color #333333
+            font-size 13px
+            line-height 20px
+            letter-spacing 0.3px
+
+    //platform_news
+        .b-platform-news__item
+            margin-bottom 17px
+            
+        .b-platform-news__date
+            color rgba(0,0,0,.5)
+            display block
+            font-size 13px
+            
+        .b-platform-news__link 
+            font-size 18px
+            line-height 20px
+            text-decoration none
+            border-bottom 1px solid #b9d7de
+            &:hover
+                border-bottom none
+
+//my-goods page
+    //goods search
+        .b-goods-search
+            background #efece7
+            margin 37px 0 0 0
+            padding 13px 20px 20px 20px
+        
+        .b-goods-search__title
+            font-size 30px
+            font-weight 300
+            position relative
+            color #000
+            padding 0 30px
+            display inline-block
+            &:before
+                content ''
+                position absolute
+                background url($search_image) $search_offset_x $search_offset_y
+                width $search_width
+                height $search_height
+                left 4px
+                top 9px
+            &:after
+                content ''
+                position absolute
+                background url($arrow-down_image) $arrow-down_offset_x $arrow-down_offset_y
+                width $arrow-down_width
+                height $arrow-down_height
+                right 6px
+                top 15px
+        
+        .b-goods-search__form
+            margin 25px 0 0 3px
+        
+        .b-goods-search__label
+            display inline-block
+
+        .b-goods-search__filter-title
+            font-weight 700
+            color #000
+            display block
+            font-size 14px
+            margin-bottom 8px
+        
+        .b-goods-search__input
+            color red
+        
+        .b-goods-search__goods-type
+            display inline-block
+            
+        .b-goods-type__label
+            cursor pointer
+            display inline-block
+            color #333333
+            letter-spacing 0.6px
+            margin-right 3px
+            
+        .b-goods-type__input
+            position absolute 
+            overflow hidden 
+            clip rect(0 0 0 0) 
+            height 1px 
+            width 1px 
+            margin -1px 
+            padding 0
+            border 0
+            &:checked + .b-goods-type__span
+                background #97ce68
+                border 1px solid #97ce68
+                color #fff
+            &:checked + .m-goods-type__span_physical:before
+                background url($input-physical_image) $input-physical_offset_x $input-physical_offset_y
+            &:checked + .m-goods-type__span_digital:before
+                background url($input-digital_checked_image) $input-digital_checked_offset_x $input-digital_checked_offset_y
+                
+        
+        .b-goods-type__span
+            padding 0 9px
+            line-height 38px
+            display block
+            border 1px solid #ddd8d0
+            border-radius 5px
+            position relative
+        
+        .m-goods-type__span_physical
+            padding-left 44px
+            &:before
+                content ''
+                position absolute
+                background url($input-physical_checked_image) $input-physical_checked_offset_x $input-physical_checked_offset_y
+                width $input-physical_width
+                height $input-physical_height
+                left 9px
+                top 6px
+        .m-goods-type__span_digital
+            padding-left 44px
+            &:before
+                content ''
+                position absolute
+                background url($input-digital_image) $input-digital_offset_x $input-digital_offset_y
+                width $input-digital_width
+                height $input-digital_height
+                left 9px
+                top 6px       
+
+    //b-actions
+        .b-actions
+            float left
+            margin-top 50px
+            
+        .b-actions__group
+            display inline-block
+            margin-right 6px
+            
+            & .b-actions__item
+                &:first-child .b-actions__btn
+                    border-top-left-radius 5px
+                    border-bottom-left-radius 5px
+                &:last-child .b-actions__btn
+                    border-top-right-radius 5px
+                    border-bottom-right-radius 5px
+                    
+        .b-actions__item
+            float left
+            margin 0 1px
+            &:first-child
+                margin-left 0
+            &:last-child
+                margin-right 0
+
+        .b-actions__btn
+            display block
+            width 61px
+            height 40px
+            background #ebe8e3
+            position relative
+            &:hover
+                background #d9d6d1
+                
+        .m-actions__btn_success
+            centered-icon($action_success)
+        .m-actions__btn_remove
+            centered-icon($action_remove)
+        .m-actions__btn_delete
+            centered-icon($action_delete)
+        .m-actions__btn_plus-minus
+            centered-icon($action_plus-minus)
+        .m-actions__btn_rub
+            centered-icon($action_rub)
+        .m-actions__btn_list
+            centered-icon($action_list)
+        .m-actions__btn_load
+            centered-icon($action_load)
+        .m-actions__btn_search
+            centered-icon($search)
+    //b-pagination
+        .b-pagination
+            float right     
+        .b-pagination__arrow
+            btn()
+        .m-pagination__arrow_prev
+            centered-icon($arrow-left)
+        .m-pagination__arrow_next
+            centered-icon($arrow-right)
+        .m-pagination__arrow_disable
+            &:hover
+                background #fff
+                border-color #ddd8d0
+            &:after
+                opacity 0.5
+                
+    //b-goods-table
+        .b-goods-table
+            width 100%
+            table-layout fixed
+            
+        .b-goods-table__thead
+            background #ebe8e3
+        
+        .b-goods-table__thead 
+            & th:nth-child(1)
+                width 57px
+            & th:nth-child(2)
+                width 60px
+            & th:nth-child(3)
+                text-align left
+                padding-left 5px
+                width 250px
+            & th:nth-child(4)
+                width 250px
+                text-align left
+                padding-left 5px
+            & th:nth-child(4)
+                width 250px
+                text-align left
+                padding-left 5px
+            & th:nth-child(5)
+                width 75px
+                text-align left
+                padding-left 5px
+            & th:nth-child(6)
+                width 75px
+                text-align left
+            & th:nth-child(7)
+                width 140px
+                text-indent 6px
+            
+
+        .b-goods-table__thead-title
+            color #333333
+            line-height 50px
+            font-weight 700
+            font-size 13px
+        .m-goods-table__thead-title_sortable
+            padding-left 8px
+            position relative
+        .m-goods-table__thead-title_sortable_top
+            &:before
+                pseudo()
+                background-icon($arrow-sort-top)
+                left 0
+                top 5px
+        .m-goods-table__thead-title_sortable_bottom
+            &:before
+                pseudo()
+                background-icon($arrow-sort-down)
+                left 0
+                top 5px
+        
+        .b-goods-table__tbody
+            border 1px solid #d4d4d4
+            & td 
+                font-size 13px
+                text-align center
+                padding 5px 0 5px 0
+                border-bottom 1px solid #d4d4d4
+                height 70px
+            & tr:last-child td
+                border-bottom 0
+            & td:nth-child(1)
+                padding-left 20px
+                text-align left
+            & td:nth-child(3)
+                padding-left 12px
+                text-align left
+            & td:nth-child(4)
+                text-align left
+            & td:nth-child(5)
+                text-align left
+                padding-left 5px
+            & td:nth-child(6)
+                text-align left
+                padding-left 5px
+            & td:nth-child(7)
+                padding-right 16px
+        
+        .b-goods-table__rubric-list
+            margin 6px 0 9px 9px
+
+        .b-goods-table__rubric-item
+            padding-left 5px
+            position relative
+            letter-spacing 0.3px
+            margin-bottom 3px
+            color #333
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+            width 230px
+            &:before
+                content ''
+                position absolute
+                width 2px 
+                height 2px
+                background #333333
+                top 6px
+                left 0
+                opacity 0.6
+
+    //b-activity-btn
+        .b-activity-btn
+            display inline-block
+            width 34px
+            height  34px
+            position relative
+            margin-right 5px
+            
+        .m-activity-btn_favorite
+            border-radius 999px
+            border 1px solid #ffa800
+            centered-icon($activity-btn_favorite)
+            
+        .m-activity-btn_edit
+            border-radius 999px
+            border 1px solid #474b53
+            centered-icon($activity-btn_edit)
+        
+        .m-activity-btn_done
+            border-radius 999px
+            border 1px solid #7caa1f
+            centered-icon($activity-btn_done)
+        
+        .m-activity-btn_fail
+            border-radius 999px
+            border 1px solid #ff6766
+            
+               

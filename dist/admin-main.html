@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title id="title">ЛК продавца</title>
+		<meta name="description" content="Description for pokupo">
+		<meta name="keywords" content="pokupo, admin, project">
+		<meta name="copyright" content="©tabrisov">
+		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+		<link href="styles/common.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="b-page-container">
+			<aside class="b-sidebar j-scrollbar">
+				<div class="b-sidebar-header">
+					<div class="b-dropdown">
+						<div data-target="mainmenu" class="b-sidebar-header__title b-dropdown__trigger j-dropdown__trigger">Торговая платформа полного цикла Pokupo</div>
+						<div data-target="mainmenu" class="b-sidebar-header__menu b-dropdown__content g-hidden">
+							<ul class="b-menu">
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Учётная запись</a>
+								</li>
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Условия</a>
+								</li>
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Конфиденциальность</a>
+								</li>
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link m-menu__link_logout">Выйти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="b-shop">
+					<div class="b-shop__image">
+						<img src="images/logo/shop-1.png" alt="">
+					</div>
+					<div class="b-shop__data"><span class="b-shop__data-name">Торговая<br>платформа полного цикла «Депозитстрой»</span>
+					</div>
+					<div class="b-shop__control">
+						<div class="b-inline-sorter b-dropdown b-selector"><span data-target="sort" class="b-selector__current b-dropdown__trigger j-dropdown__trigger">Сменить магазин</span>
+							<div data-target="sort" class="b-dropdown__content b-selector__options g-hidden">
+								<ul class="b-menu">
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Pokupo</a>
+									</li>
+									<li class="b-menu__item active"><a href="javascript:void(0);" class="b-menu__link">Торговая платформа полного цикла «Депозитстрой»</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Магазин низких цен</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Золото-брильянты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-sidebar-search">
+					<form role="form"><i class="b-icon m-icon_search"></i>
+						<input type="text" name="search" placeholder="Поиск..." class="b-sidebar-search__input">
+					</form>
+				</div>
+				<ul role="navigation" class="b-sidebar-navigation b-menu">
+					<li class="b-menu__item active"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_home"></span><span class="sidebar__text">Панель управления</span></a>
+					</li>
+					<li class="j-another-tooltip b-menu__item"><a href="javascript:void(0);" target="_blank" class="b-menu__link"><span class="b-icon m-icon_shop"></span><span class="sidebar__text">Магазины</span></a>
+					</li>
+					<li class="b-menu__item m-menu__item_openable"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_goods"></span><span class="sidebar__text">Товары</span></a>
+						<ul class="b-menu m-menu_2">
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>Я уверен,</a>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>что потребуется</a>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>дополнительный       </a>
+							</li>
+							<li class="b-menu__item m-menu__item_openable"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_users"></span>уровень вложенности</a>
+								<ul class="b-menu m-menu_3">
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>(И, наверное,</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>не один,</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>а несколько —</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>как минимум, два)</a>
+									</li>
+								</ul>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_comments"></span>для дальнейшего</a>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_calendar"></span>расширения меню</a>
+							</li>
+						</ul>
+					</li>
+					<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_sales"></span><span class="sidebar__text">Продажи               </span></a>
+					</li>
+					<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_docs"></span><span class="sidebar__text">Бухгалтерия</span></a>
+					</li>
+					<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_users"></span><span class="sidebar__text">Клиенты</span></a>
+					</li>
+				</ul>
+				<div class="b-sidebar-footer">
+					<ul class="b-sidebar-footer__actions">
+						<li class="b-sidebar-footer__actions-item"><span class="b-sidebar-footer__action b-icon m-icon_settings"><span class="b-tooltip m-tooltip_left">Настройки</span></span>
+						</li>
+						<li class="b-sidebar-footer__actions-item"><span class="b-sidebar-footer__action b-icon m-icon_cart"><span class="b-tooltip">Заказы</span></span>
+						</li>
+						<li class="b-sidebar-footer__actions-item"><span id="js-video" class="b-sidebar-footer__action b-icon m-icon_help"><span class="b-tooltip m-tooltip_right">Помощь</span></span>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="b-page-content">
+				<div class="b-header">
+					<div class="b-inner-container">
+						<div class="b-breadcrumbs-wrapper">
+							<div class="b-mobile-menu j-mobile-menu"></div>
+							<ul class="b-breadcrumbs">
+								<li class="b-breadcrumbs__item m-breadcrumbs__item_root"><a href="/">Home</a>
+								</li>
+								<li class="b-breadcrumbs__item j-breadcrumbs__item"><a href="javascript:void(0);">Панель управления</a>
+								</li>
+							</ul>
+						</div>
+						<div class="b-btn m-btn_support j-btn_support">
+							<div class="b-icon m-icon_support"></div>Служба поддержки</div>
+						<div class="b-header__notification-holder"><span title="Посмотреть уведомления системы" class="b-notification m-notification_message j-hint"><span class="b-notification__amount">3</span></span><span class="b-notification m-notification_system-message j-system-notification"><span class="b-notification__amount">25</span></span>
+						</div>
+					</div>
+				</div>
+				<div class="b-subnavigation">
+					<div class="b-inner-container">
+						<ul class="b-subnavigation__list">
+							<li class="b-subnavigation__item m-subnavigation__item_active"><a href="/">Мои товары </a>
+							</li>
+							<li class="b-subnavigation__item"><a href="javascript:void(0);">Товары партнёров</a>
+							</li>
+							<li class="b-subnavigation__item"><a href="javascript:void(0);">Рубрикатор</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="b-inner-content">
+					<div class="b-inner-container">
+						<div class="b-indicator">
+							<h2 class="b-block-title m-block-title_big b-indicator__title">Показатели</h2>
+							<div class="b-indicator__top">
+								<div class="b-indicator__line"><a href="#" class="b-indicator-btn m-indicator-btn_first">Вчера</a><a href="#" title="Посмотреть уведомления системы" class="b-indicator-btn j-hint">Сегодня</a><a href="#" class="b-indicator-btn m-indicator-btn_active">Неделя</a><a href="#" class="b-indicator-btn">Месяц</a>
+									<a
+									href="#" class="b-indicator-btn">Квартал</a><a href="#" class="b-indicator-btn m-indicator-btn_last">Год</a>
+								</div>
+								<div class="b-indicator__calendar"><span class="b-indicator__calendar-text">Данные за:</span>
+									<div class="b-calendar-range">
+										<div class="b-calendar-range__input-holder">
+											<label class="b-calendar-range__label">
+												<input type="text" readonly class="b-input m-input_date j-calendar j-calendar__range-start"><span class="b-calendar-range__date-input-icon"></span>
+											</label>
+										</div><span class="b-calendar-range__divider">—</span>
+										<div class="b-calendar-range__input-holder">
+											<label class="b-calendar-range__label">
+												<input type="text" readonly class="b-input m-input_date j-calendar j-calendar__range-end"><span class="b-calendar-range__date-input-icon"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="b-indicator__content">
+								<div class="b-pkp-block m-pkp-block_full-width">
+									<h2 class="b-block-title">Новые заказы</h2>
+									<table class="b-new-orders">
+										<thead>
+											<tr>
+												<td></td>
+												<td>Дата платежа</td>
+												<td>Стоимость</td>
+												<td>Способ оплаты</td>
+												<td>Действие</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><a href="#" class="b-new-orders__order-number">Заказ № 125401</a>
+												</td>
+												<td>02.03.2015 в 15:45</td>
+												<td>6 254.59 a</td>
+												<td>Яндекс. Деньги</td>
+												<td><a href="#" class="b-btn-green">Обработать</a>
+												</td>
+											</tr>
+											<tr>
+												<td><a href="#" class="b-new-orders__order-number">Заказ № 125319</a>
+												</td>
+												<td>02.03.2015 в 15:45</td>
+												<td>16 254.59 a</td>
+												<td>Visa QIWI Wallet</td>
+												<td><a href="#" class="b-btn-green">Обработать</a>
+												</td>
+											</tr>
+											<tr>
+												<td><a href="#" class="b-new-orders__order-number">Заказ № 125318</a>
+												</td>
+												<td>02.03.2015 в 15:45</td>
+												<td>1 254.59 a</td>
+												<td>Z-Payment</td>
+												<td><a href="#" class="b-btn-green">Обработать</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="b-full-width-graph-holder">
+							<div class="b-pkp-block m-pkp-block_full-width">
+								<h2 class="b-block-title">Посещения и конверсия</h2>
+								<div class="b-graph-legend">
+									<ul class="b-graph-legend__list">
+										<li class="b-graph-legend__item"><span class="b-graph-legend__indicator m-graph-legend__indicator_visitation"></span><span class="b-graph-legend__title">Посещения</span>
+										</li>
+										<li class="b-graph-legend__item"><span class="b-graph-legend__indicator m-graph-legend__blue"></span><span class="b-graph-legend__title">Конверсия</span>
+										</li>
+									</ul>
+								</div>
+								<ul class="b-full-width-graph__info">
+									<li class="b-full-width-graph__item"><strong class="b-full-width-graph__number">2 000</strong><span class="b-full-width-graph__text">посещений</span>
+									</li>
+									<li class="b-full-width-graph__item"><strong class="b-full-width-graph__number">350</strong><span class="b-full-width-graph__text">заказов</span>
+									</li>
+									<li class="b-full-width-graph__item"><strong class="b-full-width-graph__number">64 845.94 <span class="b-full-width-graph__additional-info"><span class="g-ruble">Р</span></span></strong><span class="b-full-width-graph__text">оборот</span>
+									</li>
+									<li class="b-full-width-graph__item"><strong class="b-full-width-graph__number">36 <span class="b-full-width-graph__additional-info">%</span></strong><span class="b-full-width-graph__text">конверсия</span>
+									</li>
+								</ul>
+								<div class="b-visits-graph j-visits-graph"></div>
+							</div>
+						</div>
+						<div class="b-full-width-graph-holder">
+							<div class="b-pkp-block m-pkp-block_fullwidth-width">
+								<h2 class="b-block-title">Заказы и оборот</h2>
+								<div class="b-graph-legend">
+									<ul class="b-graph-legend__list">
+										<li class="b-graph-legend__item"><span class="b-graph-legend__indicator m-graph-legend__indicator_visitation"></span><span class="b-graph-legend__title">Заказы</span>
+										</li>
+										<li class="b-graph-legend__item"><span class="b-graph-legend__indicator m-graph-legend__blue"></span><span class="b-graph-legend__title">Оборот</span>
+										</li>
+									</ul>
+								</div>
+								<ul class="b-full-width-graph__info">
+									<li class="b-full-width-graph__item"><strong class="b-full-width-graph__number">28 <span class="b-full-width-graph__additional-info">на 2 854 <span class="g-ruble">Р</span></span></strong><span class="b-full-width-graph__text">новых заказов</span>
+									</li>
+									<li class="b-full-width-graph__item"><strong class="b-full-width-graph__number">34 <span class="b-full-width-graph__additional-info">на 56 944.65 <span class="g-ruble">Р</span></span></strong><span class="b-full-width-graph__text">заказа в работе</span>
+									</li>
+								</ul>
+								<div class="b-orders-graph j-orders-graph"></div>
+							</div>
+						</div>
+						<div class="b-pkp-block m-pkp-block_full-width">
+							<h2 class="b-block-title">Общая статистика по товарам</h2>
+							<div class="b-general-goods-statistic"><a href="#" class="b-link b-general-goods-statistic__to-all">Прейти к товарам</a>
+								<table class="b-general-goods-statistic__table">
+									<tr>
+										<td><span class="b-general-goods-statistic__cell-title">Общее количество <br /> товаров</span><a href="#" class="b-general-goods-statistic__link">2 086</a>
+										</td>
+										<td><span class="b-general-goods-statistic__cell-title">Товаров на <br /> витрине</span><a href="#" class="b-general-goods-statistic__link">1 560</a>
+										</td>
+										<td><span class="b-general-goods-statistic__cell-title">Снятых с <br /> продажи</span><a href="#" class="b-general-goods-statistic__link">489</a>
+										</td>
+										<td><span class="b-general-goods-statistic__cell-title">Нет в <br /> наличии</span><a href="#" class="b-general-goods-statistic__link">35</a>
+										</td>
+										<td><span class="b-general-goods-statistic__cell-title">Количество <br /> категорий</span><a href="#" class="b-general-goods-statistic__link">12</a>
+										</td>
+										<td><span class="b-general-goods-statistic__cell-title">Зарегистрированных <br /> пользователей</span><a href="#" class="b-general-goods-statistic__link">20 086</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="b-pkp-block-holder">
+							<div class="b-pkp-block m-pkp-block_half-width">
+								<h2 class="b-block-title">Посетители</h2>
+								<div class="b-graph-legend">
+									<ul class="b-graph-legend__list">
+										<li class="b-graph-legend__item"><span class="b-graph-legend__indicator m-graph-legend__indicator_green"></span><span class="b-graph-legend__title">Новые</span>
+										</li>
+										<li class="b-graph-legend__item"><span class="b-graph-legend__indicator m-graph-legend__indicator_gray"></span><span class="b-graph-legend__title">Зарегистрированные</span>
+										</li>
+									</ul>
+								</div>
+								<div class="b-donut">
+									<div class="b-donut__graph j-visitors-graph"></div>
+									<div class="b-donut__info">
+										<div class="b-donut__info-cell"><span class="b-donut__info-text">Всего <br/> посетителей</span><strong class="b-donut__info-amount">1 489</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="b-pkp-block m-pkp-block_gap"></div>
+							<div class="b-pkp-block m-pkp-block_half-width">
+								<h2 class="b-block-title">География посещений</h2>
+								<div class="b-donut">
+									<div class="b-donut-graph j-visits-geography-graph"></div>
+								</div>
+							</div>
+						</div>
+						<div class="b-bestseller">
+							<div class="b-pkp-block m-pkp-block_full-width">
+								<h2 class="b-block-title">Лидеры продаж</h2>
+								<table class="b-bestseller__table">
+									<thead>
+										<tr>
+											<td></td>
+											<td></td>
+											<td>Цена</td>
+											<td>Продано</td>
+											<td>Остаток</td>
+											<td>Оборот</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<a href="#" class="b-bestseller__img-holder">
+													<img src="images/goods/goods_2.jpg" alt="">
+												</a>
+											</td>
+											<td><a href="#" class="b-bestseller__link b-link"><span class="b-bestseller__goods-title">Samsung Galaxy Tab 2 7.0 215g15215 P3100 8Gb</span></a>
+											</td>
+											<td>5 600</td>
+											<td>265 шт</td>
+											<td>2 154 шт</td>
+											<td>1 486 254</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="b-bestseller__img-holder">
+													<img src="images/goods/goods_1.jpg" alt="">
+												</a>
+											</td>
+											<td><a href="#" class="b-bestseller__link b-link"><span class="b-bestseller__goods-title">Основы интернет-маркетинга</span></a>
+											</td>
+											<td>5 600 a</td>
+											<td>265</td>
+											<td>∞</td>
+											<td>1 486 254 a</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="b-bestseller__img-holder">
+													<img src="images/goods/goods_3.jpg" alt="">
+												</a>
+											</td>
+											<td><a href="#" class="b-bestseller__link b-link"><span class="b-bestseller__goods-title">Apple iPad mini 16Gb Wi-Fi</span></a>
+											</td>
+											<td>5 600</td>
+											<td>265 шт</td>
+											<td>2 154 шт</td>
+											<td>1 486 254</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="b-bestseller__img-holder">
+													<img src="images/goods/goods_2.jpg" alt="">
+												</a>
+											</td>
+											<td><a href="#" class="b-bestseller__link b-link"><span class="b-bestseller__goods-title">Samsung Galaxy Tab 2 7.0 215g15215 P3100 8Gb</span></a>
+											</td>
+											<td>5 600</td>
+											<td>265 шт</td>
+											<td>2 154 шт</td>
+											<td>1 486 254</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="b-bestseller__img-holder">
+													<img src="images/goods/goods_2.jpg" alt="">
+												</a>
+											</td>
+											<td>
+												<a href="#" class="b-bestseller__link b-link"> <span class="b-bestseller__goods-title">Samsung Galaxy Tab 2 7.0 215g15215 P3100 8Gb</span>
+												</a>
+											</td>
+											<td>5 600</td>
+											<td>265 шт</td>
+											<td>2 154 шт</td>
+											<td>1 486 254</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="b-pkp-block m-pkp-block_full-width">
+							<h2 class="b-block-title">Код магазина<span class="b-block-title__subtext">Чтобы добавить магазин на ваш сайт, вставьте код виджета Pokupo на страницы вашего магазина</span></h2>
+							<div class="b-store-code j-roll-up-wrapper">
+								<h4 class="b-block-subtitle">HTML код магазина</h4><a href="javascript:void(0);" class="b-roll-up-btn j-roll-up">Скрыть код</a><a href="javascript:void(0);" class="b-store-code__copy">копировать код</a>
+								<div class="b-store-code__content b-resized-block j-scrollbar_both j-roll-up-content">
+									<div class="b-store-code__inner"><pre>&lt;script type='text/javascript'&gt;
+         var clientSettings = {
+             widget_id:  7,
+             widget_url: '',    
+             site_name: 'zpcode',    
+             widget_type: 'ticket',    
+             tab_bg_color: '#1EA619',  
+             tab_border_color: '#E0E0E0', 
+             tab_border_width: 2,
+             tab_border_radius: 5,
+             tab_indent: '50%',
+             tab_location: 'left',
+             widget_width: 740,
+             widget_height: 520,
+             tab_image_url: 'http://helpdesk.dz7.su/images/user_widgets_pics/7.png' 'http://helpdesk.dz7.su/images/user_widgets_pics/7.png''http://helpdesk.dz7.su/images/user_widgets_pics/7.png'  
+         };
+         
+         (function() {
+             var script = document.createElement('script');
+             script.type = 'text/javascript'; script.async = true;
+             script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';
+             document.getElementsByTagName('head')[0].appendChild(script);
+         })();
+&lt;/script&gt;</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-pkp-block m-pkp-block_full-width">
+							<h2 class="b-block-title">Новости платформы</h2>
+							<div class="b-platform-news">
+								<ul class="b-platform-news__list">
+									<li class="b-platform-news__item"><span class="b-platform-news__date">27 декабря 2014</span><a href="#" class="b-platform-news__link b-link">C Новым годом!</a>
+									</li>
+									<li class="b-platform-news__item"><span class="b-platform-news__date">16 декабря 2014</span><a href="#" class="b-platform-news__link b-link">Полноценный запуск и много обновлений</a>
+									</li>
+									<li class="b-platform-news__item"><span class="b-platform-news__date">30 ноября 2014</span><a href="#" class="b-platform-news__link b-link">Полноценный запуск состоится 16 декабря</a>
+									</li>
+									<li class="b-platform-news__item"><span class="b-platform-news__date">04 ноября 2014</span><a href="#" class="b-platform-news__link b-link">Pokupo переходит на этап закрытого Beta-тестирования</a>
+									</li>
+									<li class="b-platform-news__item"><span class="b-platform-news__date">01 октября 2014</span><a href="#" class="b-platform-news__link b-link">Pokupo участвует в выставке RACE 2014</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-popup-holder">
+							<div class="b-notification-popup j-notification-popup">
+								<div class="b-notification-popup__close j-modal-close"></div>
+								<div class="b-block-title">Уведомления системы</div>
+								<div class="b-notification-popup__content">
+									<div class="b-system-message">
+										<div class="b-system-message__content j-scrollbar-y">
+											<div class="b-system-message__item">
+												<div class="b-system-message__item-content">
+													<div class="b-system-message__item-text">
+														<h4 class="b-system-message__item-title">Команда Pokupo</h4>
+														<p>Уважаемые пользователи Pokupo!</p>
+														<p>Завтра, 28.08.2014, с 04:00 до 11:00 по московскому времени серверы портала будут остановлены для проведения плановых технических работ. Приносим извинения за возможные неудобства. Следите за новостями на сайте, в группе <a href="#">ВКонтакте</a> и
+															на странице <a href="#">Facebook</a>.</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">сегодня в 21:32</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon m-checkbox__icon_system-message j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="b-system-message__item m-system-message__item_disabled">
+												<div class="b-system-message__item-content">
+													<div class="b-system-message__item-text">
+														<h4 class="b-system-message__item-title">Команда Pokupo</h4>
+														<p>Пока сайт на стадии бета-тестирования — два раза в месяц.</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">18 июня 2014 г.</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon m-checkbox__icon_system-message j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="b-system-message__item m-system-message__item_done">
+												<div class="b-system-message__item-content">
+													<div class="b-operation-notice">
+														<div class="b-operation-notice__icon m-operation-notice__icon_done"></div>
+														<p class="b-operation-notice_text">Операция прошла успешно</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">18 июня 2014 г.</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon m-checkbox__icon_system-message j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="b-system-message__item m-system-message__item_fail m-system-message__item_disabled">
+												<div class="b-system-message__item-content">
+													<div class="b-operation-notice">
+														<div class="b-operation-notice__icon m-operation-notice__icon_fail"></div>
+														<p class="b-operation-notice_text">Ошибка проведения операции</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">18 июня 2014 г.</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon m-checkbox__icon_system-message j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="b-system-message__item m-system-message__item_alert">
+												<div class="b-system-message__item-content">
+													<div class="b-operation-notice">
+														<div class="b-operation-notice__icon m-operation-notice__icon_alert"></div>
+														<p class="b-operation-notice_text">Вы не <a href="#">активировали</a> свою учетную запись</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">18 июня 2014 г.</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon m-checkbox__icon_system-message j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="b-system-message__item m-system-message__item_disabled">
+												<div class="b-system-message__item-content">
+													<div class="b-system-message__item-text">
+														<h4 class="b-system-message__item-title">Команда Pokupo</h4>
+														<p>Пока сайт на стадии бета-тестирования — два раза в месяц.</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">18 июня 2014 г.</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon m-checkbox__icon_system-message j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="b-system-message__item m-system-message__item_disabled">
+												<div class="b-system-message__item-content">
+													<div class="b-system-message__item-text">
+														<h4 class="b-system-message__item-title">Команда Pokupo</h4>
+														<p>Пока сайт на стадии бета-тестирования — два раза в месяц.</p>
+													</div>
+												</div>
+												<div class="b-system-message__item-date">18 июня 2014 г.</div>
+												<div class="b-system-message__item-chechbox">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input m-checkbox__input_system-message"><span title="Отметить как непрочитанное" class="b-checkbox__icon j-hint_right"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="b-system-message__footer"><a href="#" class="b-system-message__load">Показать еще</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="display:none" class="video-holder">
+							<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
+							<div class="playlist-components">
+								<div class="b-playlist">
+									<h1>Список материалов</h1>
+									<div class="b-playlist__scroll">
+										<ul></ul><span class="b-playlist__close js-close-playlist"></span>
+									</div>
+								</div>
+							</div>
+							<div class="b-playlist-controls"><span class="j-close-video b-playlist-controls__close"></span><span id="js-prev" data-target="prev" class="b-playlist-control prev"></span><span id="js-next" data-target="next" class="b-playlist-control next"></span><span class="b-playlist-control playlist js-show-playlist"><span class="b-playlist-control__num">24</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/debug.js?1429516044029"></script>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1429516044029"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1429516044029"></script>
+		<script src="scripts/libs/playlist.js?1429516044029"></script>
+		<script src="scripts/libs/d3.min.js?1429516044029"></script>
+		<script src="scripts/libs/c3.min.js?1429516044029"></script>
+		<script src="scripts/libs/moment.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.plugin.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.datepick.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.arcticmodal.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1429516044029"></script>
+		<script src="scripts/libs/d3.min.js?1429516044029"></script>
+		<script src="scripts/libs/c3.min.js?1429516044029"></script>
+		<script src="scripts/libs/moment.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.plugin.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.datepick.min.js?1429516044029"></script>
+		<script src="scripts/libs/jquery.arcticmodal.js?1429516044029"></script>
+		<script src="scripts/common.js?1429516044029"></script>
+	</body>
+</html>

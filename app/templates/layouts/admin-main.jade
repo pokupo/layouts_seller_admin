@@ -1,0 +1,17 @@
+include ../__helpers/variables
+include ../__helpers/mixins
+
+doctype html
+html(lang='ru')
+    include ../common-blocks/head
+    body
+        .b-page-container
+            include ../common-blocks/sidebar
+            .b-page-content
+                include ../common-blocks/breadcrumb_admin-main
+                include ../common-blocks/navtop_admin-main
+                .b-inner-content
+                    .b-inner-container
+                        block content
+
+        include ../common-blocks/scripts

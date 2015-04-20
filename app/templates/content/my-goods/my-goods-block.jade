@@ -1,0 +1,221 @@
+.b-own-goods
+    .b-pkp-block.m-pkp-block_full-width
+        h2.b-block-title.m-block-title_big
+            | Мои товары
+        .b-goods-search
+            h2.b-goods-search__title
+                | Поиск товаров
+            form.b-goods-search__form
+                .b-goods-search__filter
+                    label.b-goods-search__label
+                        span.b-goods-search__filter-title
+                            | Ключевые слова
+                        input(type="text").b-input.b-goods-search__input
+                    label.b-goods-search__label
+                        span.b-goods-search__filter-title
+                            | Статус товара
+                        select.b-select
+                            option
+                                | Любой статус
+                            option
+                                | value1
+                            option
+                                | value1
+                    .b-goods-search__goods-type
+                        span.b-goods-search__filter-title
+                            | Тип товара
+                        .b-goods-type
+                            label.b-goods-type__label
+                                input(type="radio" name="goodsType").b-goods-type__input
+                                span.b-goods-type__span
+                                    | Все товары
+                            label.b-goods-type__label
+                                input(type="radio" name="goodsType").b-goods-type__input
+                                span.b-goods-type__span.m-goods-type__span_physical
+                                    | Физические
+                            label.b-goods-type__label
+                                input(type="radio" name="goodsType").b-goods-type__input
+                                span.b-goods-type__span.m-goods-type__span_digital
+                                    | Цифровые
+        .b-pkp-block__row
+            .b-actions
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_success
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_remove
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_delete
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_plus-minus
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_rub
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_list
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_load
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_search
+
+            .b-pagination
+                span.b-pagination__current
+                    strong
+                        | 1 
+                    | -
+                    strong
+                        | 10 
+                | из 
+                span.b-pagination__total
+                    strong
+                        | 150
+                .b-pagination__arrows
+                    a(href="#").b-pagination__arrow.m-pagination__arrow_prev.m-pagination__arrow_disable
+                    a(href="#").b-pagination__arrow.m-pagination__arrow_next
+        
+        .b-pkp-block__row
+            table.b-goods-table
+                thead.b-goods-table__thead
+                    tr
+                        th
+                        th 
+                            span.b-goods-table__thead-title Фото
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_top Название
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_bottom Рубрики
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_top Остаток
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_top Цена
+                        th
+                            span.b-goods-table__thead-title Действия
+                tbody.b-goods-table__tbody
+                    tr
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input(type="checkbox")
+                                    span.b-checkbox__icon.j-hint_right
+                        td
+                            img(src="images/goods/real-goods_small.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                        td
+                            ul.b-goods-table__rubric-list
+                                li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                                li.b-goods-table__rubric-item Обучающие материалы и авторские
+                                li.b-goods-table__rubric-item Бижутерия и украшения
+                                li.b-goods-table__rubric-item Головоломки, пазлы
+                                li.b-goods-table__rubric-item Механические блокираторы
+                                li.b-goods-table__rubric-item Бижутерия и украшения
+                                li.b-goods-table__rubric-item Универсальные зарядные устройства
+                        td
+                            span 2 646
+                        td
+                            span 56 600 
+                                span.g-ruble a
+                        td
+                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#").b-activity-btn.m-activity-btn_edit
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    tr
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input(type="checkbox")
+                                    span.b-checkbox__icon.j-hint_right
+                        td
+                            img(src="images/goods/real-goods_small.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                        td
+                            ul.b-goods-table__rubric-list
+                                li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                                li.b-goods-table__rubric-item Обучающие материалы и авторские
+                                li.b-goods-table__rubric-item Бижутерия и украшения
+                        td
+                            span 2 646
+                        td
+                            span 56 600 
+                                span.g-ruble a
+                        td
+                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#").b-activity-btn.m-activity-btn_edit
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    tr
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input(type="checkbox")
+                                    span.b-checkbox__icon.j-hint_right
+                        td
+                            img(src="images/goods/goods_1.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                        td
+                            p Вне каталога
+                        td
+                            span ∞
+                        td
+                            span 56 600 
+                                span.g-ruble a
+                        td
+                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#").b-activity-btn.m-activity-btn_edit
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    tr
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input(type="checkbox")
+                                    span.b-checkbox__icon.j-hint_right
+                        td
+                            img(src="images/goods/digital-goods_small.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                        td
+                            ul.b-goods-table__rubric-list
+                                li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                        td
+                            span ∞
+                        td
+                            span 56 600 
+                                span.g-ruble a
+                        td
+                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#").b-activity-btn.m-activity-btn_edit
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    tr
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input(type="checkbox")
+                                    span.b-checkbox__icon.j-hint_right
+                        td
+                            img(src="images/goods/goods_2.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                        td
+                            ul.b-goods-table__rubric-list
+                                li.b-goods-table__rubric-item Посуда
+                        td
+                            span ∞
+                        td
+                            span 56 600 
+                                span.g-ruble a
+                        td
+                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#").b-activity-btn.m-activity-btn_edit
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    

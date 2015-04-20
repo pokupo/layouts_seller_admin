@@ -1,0 +1,88 @@
+div.b-indicator
+    h2.b-block-title.m-block-title_big.b-indicator__title
+        | Показатели
+    .b-indicator__top
+        .b-indicator__line
+            a.b-indicator-btn.m-indicator-btn_first(href="#")
+                | Вчера
+            a.b-indicator-btn(href="#").j-hint(title="Посмотреть уведомления системы")
+                | Сегодня
+            a.b-indicator-btn.m-indicator-btn_active(href="#")
+                | Неделя
+            a.b-indicator-btn(href="#")
+                | Месяц
+            a.b-indicator-btn(href="#")
+                | Квартал
+            a.b-indicator-btn.m-indicator-btn_last(href="#")
+                | Год
+        .b-indicator__calendar
+            span.b-indicator__calendar-text
+                | Данные за:
+            .b-calendar-range
+                .b-calendar-range__input-holder
+                    label.b-calendar-range__label
+                        input.b-input.m-input_date.j-calendar.j-calendar__range-start(type="text" readonly)
+                        span.b-calendar-range__date-input-icon
+                span.b-calendar-range__divider
+                    | —
+                .b-calendar-range__input-holder
+                    label.b-calendar-range__label
+                        input.b-input.m-input_date.j-calendar.j-calendar__range-end(type="text" readonly)
+                        span.b-calendar-range__date-input-icon
+    .b-indicator__content
+        .b-pkp-block.m-pkp-block_full-width
+            h2.b-block-title
+                | Новые заказы
+            table.b-new-orders
+                thead
+                    tr
+                        td
+                        td
+                            | Дата платежа
+                        td
+                            | Стоимость
+                        td
+                            | Способ оплаты 
+                        td
+                            | Действие
+                tbody
+                    tr
+                        td
+                            a.b-new-orders__order-number(href="#")
+                                | Заказ № 125401
+                        td
+                            | 02.03.2015 в 15:45
+                        td 
+                            | 6 254.59 a 
+                        td
+                            | Яндекс. Деньги
+                        td
+                            a.b-btn-green(href="#")
+                                | Обработать
+                    tr
+                        td
+                            a.b-new-orders__order-number(href="#")
+                                | Заказ № 125319
+                        td
+                            | 02.03.2015 в 15:45
+                        td 
+                            | 16 254.59 a 
+                        td
+                            | Visa QIWI Wallet
+                        td
+                            a.b-btn-green(href="#")
+                                | Обработать
+                    tr
+                        td
+                            a.b-new-orders__order-number(href="#")
+                                | Заказ № 125318
+                        td
+                            | 02.03.2015 в 15:45
+                        td 
+                            | 1 254.59 a 
+                        td
+                            | Z-Payment
+                        td
+                            a.b-btn-green(href="#")
+                                | Обработать
+                                

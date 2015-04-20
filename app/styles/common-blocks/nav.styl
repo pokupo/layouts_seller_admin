@@ -73,6 +73,7 @@
             & > a
                 background #3e424a
                 transition all 200ms ease
+                color #fff
 
                 .icon
                     color #ffd559
@@ -81,10 +82,9 @@
                 max-height 1200px
 
 for row in 1 2 3 4 5
-    .m-menu_{row} li a{
+    .m-menu_{row} li a
         padding: 12px 10px 12px 10px*row
-    }
-
+        
         &:last-child > a
             border-radius 0 0 0 5px
             border-bottom 0
