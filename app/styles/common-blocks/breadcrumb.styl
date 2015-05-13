@@ -7,7 +7,7 @@
 	float left
 	
 .b-header
-	padding 26px 20px 12px
+	padding 26px 20px 15px
 	background #FFF
 	border-bottom 1px solid #efece7 
 	overflow hidden
@@ -31,6 +31,12 @@
 	a
 		color $a__link
 		text-decoration none
+
+.m-breadcrumbs__item_last
+	border-bottom 0
+	color #010101
+	&:hover
+		opacity 1
 		
 .m-breadcrumbs__item_root
 	border-bottom none
@@ -43,6 +49,9 @@
 		text-indent -1000em
 		margin-right 8px
 		centered-icon($icon--root)
+		
+.m-breadcrumbs__item_root_goods a
+	centered-icon($icon--root_goods)
 	
 .m-breadcrumbs__item_divider
 	border-bottom none

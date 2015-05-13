@@ -1,0 +1,63 @@
+.b-selling-prices
+    .b-pkp-block.m-pkp-block_full-width
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Цена продажи
+        .b-selling-prices__payments
+            .b-selling-prices__payments-row
+                div.b-selling-prices__payments-price
+                    input(type="text").b-input.b-selling-prices__input
+                    span руб.
+                div.b-selling-prices__payments-agent
+                    span 5 +
+                    input(type="text").b-input.b-selling-prices__input
+                    span
+                        | % выплаты агенту
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+            .b-selling-prices__payments-row
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_customize-discount
+                    ul.b-configure__discount-list
+                        li.b-configure__discount-item
+                            a(href="").b-configure__discount-link
+                                | Скидка 5% для группы «Постоянные покупатели»
+                                span.b-configure__discount-item-remove
+                            a(href="").b-configure__more-discount
+                                | и еще 5 вариантов скидок
+                    .b-configure__discounts-btns-group
+                        a(href="#" title="Редактировать скидки" data-position="top" data-theme="g-hint").b-configure__edit-discounts.j-hint
+                        a(href="#").b-configure__roll-up-discounts
+        .b-selling-prices__universal-item
+            | Универсальный товар?
+            .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Универсальный товар" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+            .b-checkbox
+                label.b-checkbox__label
+                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text
+                        | Да
+        .b-selling-prices__item-count
+            div
+                | Количество товара <i>(шт)</i>
+            input(type="text").b-input.b-selling-prices__item-count-input
+            ul.b-actions__group
+                li.b-actions__item
+                    a.b-actions__btn.m-actions__btn_count-increase
+                li.b-actions__item
+                    a.b-actions__btn.m-actions__btn_count-decrease.m-actions__btn_disabled
+        .b-selling-prices__for-sale
+            | В продаже
+            .b-selling-prices__for-sale-inner
+                label.b-selling-prices__for-sale-label
+                    input(type="radio" name="inSales").b-selling-prices__for-sale-input
+                    span.b-selling-prices__for-sale-span
+                        | Выставлен
+                label.b-selling-prices__for-sale-label
+                    input(type="radio" name="inSales").b-selling-prices__for-sale-input
+                    span.b-selling-prices__for-sale-span
+                        | Снят с продажи

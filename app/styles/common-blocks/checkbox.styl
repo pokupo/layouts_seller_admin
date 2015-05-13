@@ -1,0 +1,103 @@
+//checkbox
+    .b-checkbox
+        position relative
+    .b-checkbox__label
+        cursor pointer
+        display inline-block
+    .b-checkbox__input
+        position absolute 
+        overflow hidden 
+        clip rect(0 0 0 0) 
+        height 1px 
+        width 1px 
+        margin -1px 
+        padding 0
+        border 0
+        &:checked + .b-checkbox__icon
+            width $checkbox_general_checked_width
+            height $checkbox_general_checked_height
+            background url($checkbox_general_checked_image) $checkbox_general_checked_offset_x $checkbox_general_checked_offset_y
+        &:checked + .m-checkbox__icon_minus
+            height 27px
+            background url($checkbox_general_checked_minus_image) $checkbox_general_checked_minus_offset_x $checkbox_general_checked_minus_offset_y + 3
+        
+        &:checked + .m-checkbox__icon_big
+            width $checkbox_general_big_checked_width
+            height $checkbox_general_big_checked_height
+            background url($checkbox_general_big_checked_image) $checkbox_general_big_checked_offset_x $checkbox_general_big_checked_offset_y
+            
+        &:checked + .m-checkbox__icon_small
+            width $checkbox_general_small_checked_width
+            height $checkbox_general_small_checked_height
+            background url($checkbox_general_small_checked_image) $checkbox_general_small_checked_offset_x $checkbox_general_small_checked_offset_y
+
+    .b-checkbox__icon
+        display inline-block
+        width $checkbox_general_checked_width
+        height $checkbox_general_checked_height
+        background url($checkbox_general_image) $checkbox_general_offset_x $checkbox_general_offset_y + 3
+    
+    .m-checkbox__icon_big
+        display inline-block
+        width $checkbox_general_big_checked_width
+        height $checkbox_general_big_checked_height
+        background url($checkbox_general_big_image) $checkbox_general_big_offset_x $checkbox_general_big_offset_y + 5
+        background-repeat no-repeat
+        
+    .m-checkbox__icon_small
+        display inline-block
+        width $checkbox_general_small_checked_width
+        height $checkbox_general_small_checked_height
+        background url($checkbox_general_small_image) $checkbox_general_small_offset_x $checkbox_general_small_offset_y + 1
+        background-repeat no-repeat
+        margin 4px 0 0 0
+        vertical-align top
+    
+
+    .m-checkbox__input_system-message
+         &:checked + .b-checkbox__icon
+            background-icon($checkbox)
+            
+    .m-checkbox__icon_system-message
+        width $checkbox_unchecked_width
+        height $checkbox_unchecked_height
+        background url($checkbox_unchecked_image) $checkbox_unchecked_offset_x $checkbox_unchecked_offset_y
+        
+    .b-ckeckbox__text
+        display inline-block
+        vertical-align top
+        color #000
+        font-size 13px
+        line-height 26px
+        font-weight normal
+        margin-left 5px
+        
+    
+    .b-ckeckbox__text-link
+        font-size 14px
+        color #177a93
+        text-decoration none
+        position relative
+        letter-spacing 0.3px
+    
+
+    .b-ckeckbox__text-icon
+        position relative
+        display inline-block     
+
+    .m-ckeckbox__text-icon_catalog_novelty
+        top 3px
+        margin 0 10px 0 3px
+        background-icon($catalog_novelty)
+        
+    .m-ckeckbox__text-icon_catalog_hot
+        top 2px
+        margin 0 10px 0 1px
+        background-icon($catalog_hot)
+        
+    .m-ckeckbox__text-icon_catalog_recommended
+        top 2px 
+        margin 0 4px 0 0
+        left -2px
+        background-icon($catalog_recommended)
+        

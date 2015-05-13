@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title id="title">ЛК продавца - товары партнёров</title>
+		<meta name="description" content="Description for pokupo">
+		<meta name="keywords" content="pokupo, admin, project">
+		<meta name="copyright" content="©tabrisov">
+		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+		<link href="styles/common.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="b-page-container">
+			<aside class="b-sidebar j-scrollbar">
+				<div class="b-sidebar-header">
+					<div class="b-dropdown">
+						<div data-target="mainmenu" class="b-sidebar-header__title b-dropdown__trigger j-dropdown__trigger">Торговая платформа полного цикла Pokupo</div>
+						<div data-target="mainmenu" class="b-sidebar-header__menu b-dropdown__content g-hidden">
+							<ul class="b-menu">
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Учётная запись</a>
+								</li>
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Условия</a>
+								</li>
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Конфиденциальность</a>
+								</li>
+								<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link m-menu__link_logout">Выйти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="b-shop">
+					<div class="b-shop__image">
+						<img src="images/logo/shop-1.png" alt="">
+					</div>
+					<div class="b-shop__data"><span class="b-shop__data-name">Торговая<br>платформа полного цикла «Депозитстрой»</span>
+					</div>
+					<div class="b-shop__control">
+						<div class="b-inline-sorter b-dropdown b-selector"><span data-target="sort" class="b-selector__current b-dropdown__trigger j-dropdown__trigger">Сменить магазин</span>
+							<div data-target="sort" class="b-dropdown__content b-selector__options g-hidden">
+								<ul class="b-menu">
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Pokupo</a>
+									</li>
+									<li class="b-menu__item active"><a href="javascript:void(0);" class="b-menu__link">Торговая платформа полного цикла «Депозитстрой»</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Магазин низких цен</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link">Золото-брильянты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-sidebar-search">
+					<form role="form"><i class="b-icon m-icon_search"></i>
+						<input type="text" name="search" placeholder="Поиск..." class="b-sidebar-search__input">
+					</form>
+				</div>
+				<ul role="navigation" class="b-sidebar-navigation b-menu">
+					<li class="b-menu__item active"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_home"></span><span class="sidebar__text">Панель управления</span></a>
+					</li>
+					<li class="j-another-tooltip b-menu__item"><a href="javascript:void(0);" target="_blank" class="b-menu__link"><span class="b-icon m-icon_shop"></span><span class="sidebar__text">Магазины</span></a>
+					</li>
+					<li class="b-menu__item m-menu__item_openable"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_goods"></span><span class="sidebar__text">Товары</span></a>
+						<ul class="b-menu m-menu_2">
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>Я уверен,</a>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>что потребуется</a>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>дополнительный       </a>
+							</li>
+							<li class="b-menu__item m-menu__item_openable"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_users"></span>уровень вложенности</a>
+								<ul class="b-menu m-menu_3">
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>(И, наверное,</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>не один,</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>а несколько —</a>
+									</li>
+									<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon"></span>как минимум, два)</a>
+									</li>
+								</ul>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_comments"></span>для дальнейшего</a>
+							</li>
+							<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_calendar"></span>расширения меню</a>
+							</li>
+						</ul>
+					</li>
+					<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_sales"></span><span class="sidebar__text">Продажи               </span></a>
+					</li>
+					<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_docs"></span><span class="sidebar__text">Бухгалтерия</span></a>
+					</li>
+					<li class="b-menu__item"><a href="javascript:void(0);" class="b-menu__link"><span class="b-icon m-icon_users"></span><span class="sidebar__text">Клиенты</span></a>
+					</li>
+				</ul>
+				<div class="b-sidebar-footer">
+					<ul class="b-sidebar-footer__actions">
+						<li class="b-sidebar-footer__actions-item"><span class="b-sidebar-footer__action b-icon m-icon_settings"><span class="b-tooltip m-tooltip_left">Настройки</span></span>
+						</li>
+						<li class="b-sidebar-footer__actions-item"><span class="b-sidebar-footer__action b-icon m-icon_cart"><span class="b-tooltip">Заказы</span></span>
+						</li>
+						<li class="b-sidebar-footer__actions-item"><span id="js-video" class="b-sidebar-footer__action b-icon m-icon_help"><span class="b-tooltip m-tooltip_right">Помощь</span></span>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="b-page-content">
+				<div class="b-header">
+					<div class="b-inner-container">
+						<div class="b-breadcrumbs-wrapper">
+							<div class="b-mobile-menu j-mobile-menu"></div>
+							<ul class="b-breadcrumbs">
+								<li class="b-breadcrumbs__item m-breadcrumbs__item_root m-breadcrumbs__item_root_goods"><a href="/">Home</a>
+								</li>
+								<li class="b-breadcrumbs__item m-breadcrumbs__item_last j-breadcrumbs__item"><span>Товары партнёров</span>
+								</li>
+							</ul>
+						</div>
+						<div class="b-btn m-btn_support j-btn_support">
+							<div class="b-icon m-icon_support"></div>Служба поддержки</div>
+						<div class="b-header__notification-holder"><span title="Каталог товаров" data-position="bottom" data-theme="g-hint" class="b-notification m-notification_system-message j-hint j-system-notification"><span class="b-notification__amount">25</span></span>
+						</div>
+					</div>
+				</div>
+				<div class="b-subnavigation">
+					<div class="b-inner-container">
+						<ul class="b-subnavigation__list">
+							<li class="b-subnavigation__item m-subnavigation__item_active"><a href="/">Мои товары </a>
+							</li>
+							<li class="b-subnavigation__item"><a href="javascript:void(0);">Товары партнёров</a>
+							</li>
+							<li class="b-subnavigation__item"><a href="javascript:void(0);">Рубрикатор</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="b-inner-content">
+					<div class="b-partners-goods">
+						<div class="b-pkp-block m-pkp-block_full-width">
+							<div class="b-block-title">
+								<div class="b-block-title__left">
+									<h2 class="b-block-title__heading m-block-title__heading_big">Товары партнёров</h2>
+								</div>
+							</div>
+							<div class="b-goods-search m-goods-search_active">
+								<h2 class="b-goods-search__title">Поиск товаров</h2>
+								<div class="b-partners-shop"><strong>Магазин партнёра</strong>
+									<div class="b-select-btn"></div>
+									<div class="b-partners-shop__link-holder"><a href="#">Торговая платформа полного цикла Pokupo</a>
+									</div>
+								</div>
+								<form class="b-goods-search__form">
+									<div class="b-goods-search__filter">
+										<div class="b-goods-search__filter-holder">
+											<div class="b-goods-search__goods-status"><span class="b-goods-search__filter-title">Статус товара</span>
+												<div class="b-goods-search__select">
+													<select class="b-select j-select">
+														<option>Любой статус</option>
+														<option>Запрещен</option>
+														<option>Продается</option>
+														<option>Вне каталога</option>
+														<option>Ожидает модерации</option>
+													</select>
+												</div>
+											</div>
+											<div class="b-goods-search__goods-type"><span class="b-goods-search__filter-title">Тип товара</span>
+												<div class="b-goods-type">
+													<label class="b-goods-type__label">
+														<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span">Все товары</span>
+													</label>
+													<label class="b-goods-type__label">
+														<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_physical">Физические</span>
+													</label>
+													<label class="b-goods-type__label">
+														<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_digital">Цифровые</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="b-goods-search__input-holder">
+											<label class="b-goods-search__label"><span class="b-goods-search__filter-title">Ключевые слова</span>
+												<input type="text" class="b-input b-goods-search__input">
+											</label>
+										</div>
+									</div>
+									<div class="b-goods-search__form-controls">
+										<input type="submit" value="найти" class="b-btn-green b-goods-search__form-submit">
+										<label class="b-goods-search__form-reset">
+											<input type="reset" value="">
+										</label>
+									</div>
+									<div class="b-configure"><span class="b-configure__icon m-configure__icon_customize-discount"></span><a href="#" class="b-configure__link m-configure__link_customize-discounts">Выбрать рубрики</a><span class="b-configure__subtext">(выбраны все рубрики)</span>
+									</div>
+								</form>
+							</div>
+							<div class="b-pkp-block__row">
+								<div class="b-actions">
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<label class="b-actions__btn m-actions__btn_checkbox">
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon m-checkbox__icon_minus"></span>
+													</label>
+												</div>
+											</label>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" title="Выставить на продажу" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_success j-hint"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" title="Снять с продажи" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_remove j-hint"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_delete"></a>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_plus-minus"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_rub"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" title="Изменить категорию" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_list j-hint"></a>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_load"></a>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_search"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="b-pagination">
+									<div class="b-pagination__text"><span class="b-pagination__current"><strong>1 </strong>-<strong>10 </strong></span>из <span class="b-pagination__total"><strong>150</strong></span>
+									</div>
+									<div class="b-pagination__arrows">
+										<a href="#" class="b-pagination__arrow m-pagination__arrow_prev m-pagination__arrow_disable"></a>
+										<a href="#" class="b-pagination__arrow m-pagination__arrow_next"></a>
+									</div>
+								</div>
+							</div>
+							<div class="b-pkp-block__row m-pkp-block__row_above">
+								<table class="b-goods-table">
+									<thead class="b-goods-table__thead">
+										<tr>
+											<th></th>
+											<th><span class="b-goods-table__thead-title">Фото</span>
+											</th>
+											<th><span class="b-goods-table__thead-title m-goods-table__thead-title_sortable m-goods-table__thead-title_sortable_top">Название</span>
+											</th>
+											<th><span class="b-goods-table__thead-title m-goods-table__thead-title_sortable m-goods-table__thead-title_sortable_bottom">Рубрики</span>
+											</th>
+											<th><span class="b-goods-table__thead-title m-goods-table__thead-title_sortable m-goods-table__thead-title_sortable_top">Цена</span>
+											</th>
+											<th><span class="b-goods-table__thead-title m-goods-table__thead-title_sortable m-goods-table__thead-title_sortable_bottom">% партнеру</span>
+											</th>
+											<th><span class="b-goods-table__thead-title">Действия</span>
+											</th>
+										</tr>
+									</thead>
+									<tbody class="b-goods-table__tbody">
+										<tr class="b-goods-table__row">
+											<td>
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+													</label>
+												</div>
+											</td>
+											<td>
+												<div class="b-goods-table__goods-img-holder">
+													<img src="images/goods/real-goods_small.jpg" alt="">
+												</div>
+											</td>
+											<td><a href="#" class="b-link">Apple iPad mini 16Gb Wi-Fi</a><span class="b-goods-table__residue m-goods-table__residue_plus">+264</span>
+											</td>
+											<td>
+												<div class="b-goods-table__editable">
+													<a href="#" class="b-goods-table__editable-btn"></a>
+													<ul class="b-goods-table__rubric-list">
+														<li class="b-goods-table__rubric-item">Нагрудники и слюнявчики</li>
+														<li class="b-goods-table__rubric-item">Обучающие материалы и авторские</li>
+														<li class="b-goods-table__rubric-item">Бижутерия и украшения</li>
+														<li class="b-goods-table__rubric-item">Головоломки, пазлы</li>
+														<li class="b-goods-table__rubric-item">Механические блокираторы</li>
+														<li class="b-goods-table__rubric-item">Бижутерия и украшения</li>
+														<li class="b-goods-table__rubric-item">Универсальные зарядные устройства</li>
+													</ul>
+												</div>
+											</td>
+											<td><span>2 646</span>
+											</td>
+											<td><span class="b-goods-table__partner">5 + 1.55 % </span>
+											</td>
+											<td>
+												<a href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_favorite j-hint"></a>
+												<a href="#" title="Снять с продажи" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_fail j-hint"></a>
+											</td>
+										</tr>
+										<tr class="b-goods-table__row">
+											<td>
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+													</label>
+												</div>
+											</td>
+											<td>
+												<div class="b-goods-table__goods-img-holder">
+													<img src="images/goods/real-goods_small.jpg" alt="">
+												</div>
+											</td>
+											<td><a href="#" class="b-link">Apple iPad mini 16Gb Wi-Fi</a><span class="b-goods-table__residue m-goods-table__residue_minus">-12</span>
+											</td>
+											<td>
+												<div class="b-goods-table__editable">
+													<a href="#" class="b-goods-table__editable-btn"></a>
+													<ul class="b-goods-table__rubric-list">
+														<li class="b-goods-table__rubric-item">Нагрудники и слюнявчики</li>
+														<li class="b-goods-table__rubric-item">Обучающие материалы и авторские</li>
+														<li class="b-goods-table__rubric-item">Бижутерия и украшения</li>
+													</ul>
+												</div>
+											</td>
+											<td><span>2 646</span>
+											</td>
+											<td><span class="b-goods-table__partner">5 + 1.55 % </span>
+											</td>
+											<td>
+												<a href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_favorite j-hint"></a>
+												<a href="#" class="b-activity-btn m-activity-btn_done"></a>
+											</td>
+										</tr>
+										<tr class="b-goods-table__row">
+											<td>
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+													</label>
+												</div>
+											</td>
+											<td>
+												<div class="b-goods-table__goods-img-holder">
+													<img src="images/goods/goods_1_big.jpg" alt="" class="b-goods-table__goods-img">
+												</div>
+											</td>
+											<td><a href="#" class="b-link">Apple iPad mini 16Gb Wi-Fi</a><span class="b-goods-table__residue">0</span>
+											</td>
+											<td>
+												<div class="b-goods-table__editable">
+													<a href="#" class="b-goods-table__editable-btn"></a>
+													<p class="b-goods-table__unavailable">Вне каталога</p>
+												</div>
+											</td>
+											<td><span class="g-infinity">∞</span>
+											</td>
+											<td><span class="b-goods-table__partner">5 + 1.55 % </span>
+											</td>
+											<td>
+												<a href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_favorite j-hint"></a>
+												<a href="#" title="Утвердить" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_list j-hint"></a>
+											</td>
+										</tr>
+										<tr class="b-goods-table__row">
+											<td>
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+													</label>
+												</div>
+											</td>
+											<td>
+												<div class="b-goods-table__goods-img-holder">
+													<img src="images/goods/digital-goods_small.jpg" alt="">
+												</div>
+											</td>
+											<td><a href="#" class="b-link">Apple MacBook Air 11 Mid 2012</a><span class="b-goods-table__residue m-goods-table__residue_minus">-12</span>
+											</td>
+											<td>
+												<div class="b-goods-table__editable">
+													<a href="#" class="b-goods-table__editable-btn"></a>
+													<ul class="b-goods-table__rubric-list">
+														<li class="b-goods-table__rubric-item">Нагрудники и слюнявчики</li>
+													</ul>
+												</div>
+											</td>
+											<td><span class="g-infinity">∞</span>
+											</td>
+											<td><span class="b-goods-table__partner">5 + 1.55 %</span>
+											</td>
+											<td>
+												<a href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_favorite j-hint"></a>
+												<a href="#" class="b-activity-btn m-activity-btn_done"></a>
+											</td>
+										</tr>
+										<tr class="b-goods-table__row">
+											<td>
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+													</label>
+												</div>
+											</td>
+											<td>
+												<div class="b-goods-table__goods-img-holder">
+													<img src="images/goods/goods_2.jpg" alt="" class="b-goods-table__goods-img">
+												</div>
+											</td>
+											<td><a href="#" class="b-link">Samsung Galaxy Tab 2 7.0 P310 8Gb</a>
+											</td>
+											<td>
+												<div class="b-goods-table__editable">
+													<a href="#" class="b-goods-table__editable-btn"></a>
+													<ul class="b-goods-table__rubric-list">
+														<li class="b-goods-table__rubric-item">Посуда</li>
+													</ul>
+												</div>
+											</td>
+											<td><span class="g-infinity">∞</span>
+											</td>
+											<td><span class="b-goods-table__partner">5 + 1.55 % </span>
+											</td>
+											<td>
+												<a href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint" class="b-activity-btn m-activity-btn_favorite j-hint"></a>
+												<a href="#" class="b-activity-btn m-activity-btn_fail"></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="b-pkp-block__row">
+								<div class="b-actions">
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<label class="b-actions__btn m-actions__btn_checkbox">
+												<div class="b-checkbox">
+													<label class="b-checkbox__label">
+														<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon m-checkbox__icon_minus"></span>
+													</label>
+												</div>
+											</label>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_success"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" title="Снять с продажи" data-position="bottom" data-theme="g-hint" class="b-actions__btn m-actions__btn_remove j-hint"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_delete"></a>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_plus-minus"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_rub"></a>
+										</li>
+										<li class="b-actions__item">
+											<a href="#" title="Изменить категорию" data-position="bottom" data-theme="g-hint" class="b-actions__btn m-actions__btn_list j-hint"></a>
+										</li>
+									</ul>
+									<ul class="b-actions__group">
+										<li class="b-actions__item">
+											<a href="#" class="b-actions__btn m-actions__btn_load"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="b-items-per-page"><span class="b-items-per-page__text">Показывать на странице:</span><a href="#" class="b-items-per-page__item m-items-per-page__item_active">10</a><a href="#" class="b-items-per-page__item">25</a><a href="#" class="b-items-per-page__item">50</a>
+								</div>
+							</div>
+						</div>
+						<div class="b-notification-popup j-notification-popup">
+							<div class="b-notification-popup__close j-modal-close"></div>
+							<div class="b-block-title__heading">Каталог товаров</div>
+							<div class="b-tabs">
+								<ul class="b-tabs__list">
+									<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text">Мои рубрики</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+									</li>
+									<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text">Рубрики партнёров</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+									</li>
+								</ul>
+								<div class="p-tabs__container">
+									<div id="tab-1" class="p-tabs__content">
+										<label class="b-label">
+											<div class="b-label__text">Быстрый поиск</div>
+											<div class="b-keywords-and-phrases">
+												<select multiple="multiple" style="width: 100%" class="b-select j-select-tags">
+													<option value="Звуковые карты" class="j-hint">Звуковые карты</option>
+													<option value="Модули памяти">Модули памяти</option>
+													<option value="Платы ввода-вывода">Платы ввода-вывода</option>
+													<option value="Видеокарты">Видеокарты</option>
+													<option value="Клавиатруы">Клавиатруы</option>
+													<option value="Моноблоки">Моноблоки</option>
+												</select>
+											</div>
+										</label>
+										<div class="b-product-catalog">
+											<h5 class="b-product-catalog__heading j-catalog">Каталог товаров<div class="b-editing-actions"><a href="#" class="b-editing-actions__item m-editing-actions__item_edit"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_add"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_remove"></a></div></h5>
+											<ul class="b-catalog-tree j-catalog-tree">
+												<li>
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_novelty"></span><a href="#" class="b-ckeckbox__text-link">Новинки</a>
+															</div>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><span title="Слайдер" data-position="bottom" data-theme="g-hint" class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_hot j-hint"></span><a href="#" class="b-ckeckbox__text-link">Горячие предложения</a>
+															</span>
+														</label>
+													</div>
+												</li>
+												<li style="margin-bottom: 11px">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><span class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_recommended"></span><a href="#" class="b-ckeckbox__text-link">Рекомендуемые товары</a>
+															</span>
+														</label>
+													</div>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Детские товары</span>
+															</div>
+															<div class="b-editing-actions">
+																<a href="#" data-offsetx="-9" data-offsety="-5" data-theme="product-catalog-dropdown" data-content="j-template_propose-dropdown" data-position="bottom-left" class="b-editing-actions__item m-editing-actions__item_add j-hint"></a>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-editing-actions">
+																		<a href="#" title="Заявка" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_bid j-hint"></a>
+																	</div>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Игрушки и игровые комплексы</span>
+																	</div>
+																	<div class="b-editing-actions">
+																		<a href="#" title="Утвердить" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_edit j-hint"></a>
+																		<a href="#" data-offsetx="-9" data-offsety="-5" data-theme="product-catalog-dropdown" data-content="j-template_add-dropdown" data-position="bottom-left" class="b-editing-actions__item m-editing-actions__item_add j-hint"></a>
+																		<a href="#" class="b-editing-actions__item m-editing-actions__item_remove"></a>
+																	</div>
+																</label>
+															</div>
+															<ul>
+																<li>
+																	<div class="b-checkbox">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Игрушки и игровые комплексы 2</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-catalog-moderation">
+																		<div class="b-catalog-moderation__status m-catalog-moderation__status_published"></div>
+																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_published"></div>
+																	</div>
+																	<div class="b-catalog-moderation">
+																		<div class="b-catalog-moderation__status m-catalog-moderation__status_waiting"></div>
+																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_waiting"></div>
+																	</div>
+																	<div class="b-catalog-moderation">
+																		<div class="b-catalog-moderation__status m-catalog-moderation__status_reject"></div>
+																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_reject"></div>
+																	</div>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучение и творчество</span>
+																	</div>
+																</label>
+															</div>
+															<ul>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Наука и техника</span>
+																			</div>
+																		</label>
+																	</div>
+																	<ul>
+																		<li>
+																			<div class="b-checkbox m-checkbox_small">
+																				<label class="b-checkbox__label">
+																					<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																					<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Наука и техника 2</span>
+																					</div>
+																				</label>
+																			</div>
+																		</li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для творчества</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для школы</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучающие материалы и авторские методики</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Чертежные принадлежности</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Тетради, дневники, альбомы</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для мам и малышей</span>
+																	</div>
+																</label>
+															</div>
+															<ul>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для мам и малышей 2</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучающие материалы и авторские методики</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса</span>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox"></div>
+															<label class="b-checkbox__label">
+																<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+																<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса 2</span>
+																</div>
+															</label>
+														</li>
+													</ul>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Бытовая техника</span>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox"></div>
+															<label class="b-checkbox__label">
+																<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+																<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса 2</span>
+																</div>
+															</label>
+														</li>
+													</ul>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Одежда, обувь и аксессуары</span>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li class="root">
+															<div class="b-checkbox"></div>
+															<label class="b-checkbox__label">
+																<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+																<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса 2</span>
+																</div>
+															</label>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div id="tab-2" class="p-tabs__content">
+										<div class="b-selling-files"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/template" class="j-template_add-dropdown">
+					< div class = "b-product-catalog__add-dropdown" > < span class = "b-product-catalog__add-item" > Добавитькатегориютоваров < /span><span class="b-product-catalog__add-item">Добавить секцию товаров</span > < span class = "b-product-catalog__add-item m-product-catalog__add-item_slider" > Добавитьслайдер < /span><span class="b-product-catalog__add-item m-product-catalog__add-item_carousel">Добавить карусель</span > < span class = "b-product-catalog__add-item m-product-catalog__add-item_tile" > Добавитьплитку < /span></div >
+					</script>
+					<script type="text/template" class="j-template_propose-dropdown">
+					< div class = "b-product-catalog__propose-dropdown" > < span class = "b-product-catalog__propose-item" > Предложитьсекциютоваров < /span><span class="b-product-catalog__propose-item">Предложить категорию товаров</span > < /div>
+					</script>
+					<div class="b-popup-holder">
+						<div class="b-notification-popup j-notification-popup">
+							<div class="b-notification-popup__close j-modal-close"></div>
+							<div class="b-block-title__heading">Каталог товаров</div>
+							<div class="b-tabs j-tabs">
+								<ul class="b-tabs__list">
+									<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text">Мои рубрики</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+									</li>
+									<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text">Рубрики партнёров</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+									</li>
+								</ul>
+								<div class="p-tabs__container">
+									<div id="tab-1" class="p-tabs__content">
+										<label class="b-label">
+											<div class="b-label__text">Быстрый поиск</div>
+											<div class="b-keywords-and-phrases">
+												<select multiple="multiple" style="width: 100%" class="b-select j-select-tags">
+													<option value="Звуковые карты">Звуковые карты</option>
+													<option value="Модули памяти">Модули памяти</option>
+													<option value="Платы ввода-вывода">Платы ввода-вывода</option>
+													<option value="Видеокарты">Видеокарты</option>
+													<option value="Клавиатруы">Клавиатруы</option>
+													<option value="Моноблоки">Моноблоки</option>
+												</select>
+											</div>
+											<div class="b-product-catalog">
+												<h5 class="b-product-catalog__heading">Каталог товаров<div class="b-editing-actions"><a href="#" class="b-editing-actions__item m-editing-actions__item_edit"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_add"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_remove"></a></div></h5>
+												<ul class="b-catalog-tree">
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Новинки</a>
+																	</div>
+																</label>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_hot">Горячие предложения</a></span>
+																</label>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_recommended">Рекомендуемые товары</a></span>
+																</label>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Детские товары</a>
+																	</div>
+																</label>
+															</div>
+														</label>
+														<ul>
+															<li>
+																<label>
+																	<div class="b-checkbox">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Игрушки и игровые комплексы</a>
+																			</div>
+																		</label>
+																	</div>
+																</label>
+															</li>
+															<li>
+																<label>
+																	<div class="b-checkbox">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Обучение и творчество</a>
+																			</div>
+																		</label>
+																	</div>
+																</label>
+															</li>
+															<li>
+																<label>
+																	<div class="b-checkbox">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Товары для мам и малышей</a>
+																			</div>
+																		</label>
+																	</div>
+																</label>
+															</li>
+															<li>
+																<label>
+																	<div class="b-checkbox">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Обучающие материалы и авторские методики</a>
+																			</div>
+																		</label>
+																	</div>
+																</label>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Все для офиса</a>
+																	</div>
+																</label>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Бытовая техника</a>
+																	</div>
+																</label>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<div class="b-checkbox">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
+																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Одежда, обувь и аксессуары</a>
+																	</div>
+																</label>
+															</div>
+														</label>
+													</li>
+												</ul>
+											</div>
+										</label>
+									</div>
+									<div id="tab-2" class="p-tabs__content">
+										<div class="b-selling-files"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="video-holder">
+						<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
+						<div class="playlist-components">
+							<div class="b-playlist">
+								<h1>Список материалов</h1>
+								<div class="b-playlist__scroll">
+									<ul></ul><span class="b-playlist__close js-close-playlist"></span>
+								</div>
+							</div>
+						</div>
+						<div class="b-playlist-controls"><span class="j-close-video b-playlist-controls__close"></span><span id="js-prev" data-target="prev" class="b-playlist-control prev"></span><span id="js-next" data-target="next" class="b-playlist-control next"></span><span class="b-playlist-control playlist js-show-playlist"><span class="b-playlist-control__num">24</span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1431505306086"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1431505306086"></script>
+		<script src="scripts/libs/jstarbox.js?1431505306086"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1431505306086"></script>
+		<script src="scripts/libs/playlist.js?1431505306086"></script>
+		<script src="scripts/libs/d3.min.js?1431505306086"></script>
+		<script src="scripts/libs/c3.min.js?1431505306086"></script>
+		<script src="scripts/libs/moment.min.js?1431505306086"></script>
+		<script src="scripts/libs/jquery.plugin.min.js?1431505306086"></script>
+		<script src="scripts/libs/jquery.datepick.min.js?1431505306086"></script>
+		<script src="scripts/libs/formstone.core.js?1431505306086"></script>
+		<script src="scripts/libs/formstone.touch.js?1431505306086"></script>
+		<script src="scripts/libs/formstone.dropdown.js?1431505306086"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1431505306086"></script>
+		<script src="scripts/libs/jquery.arcticmodal.js?1431505306086"></script>
+		<script src="scripts/libs/select2.full.min.js?1431505306086"></script>
+		<script src="scripts/libs/tabulous.js?1431505306086"></script>
+		<script src="scripts/libs/checkboxTree.js?1431505306086"></script>
+		<script src="scripts/tinymce/tinymce.min.js?1431505306086"></script>
+		<script src="scripts/common.js?1431505306086"></script>
+		<script src="scripts/debug.js?1431505306086"></script>
+	</body>
+</html>

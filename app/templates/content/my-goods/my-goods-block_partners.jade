@@ -1,0 +1,552 @@
+.b-partners-goods
+    .b-pkp-block.m-pkp-block_full-width
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading.m-block-title__heading_big
+                    | Товары партнёров
+        .b-goods-search.m-goods-search_active
+            h2.b-goods-search__title
+                | Поиск товаров
+            
+            .b-partners-shop
+                strong Магазин партнёра
+                .b-select-btn
+                div.b-partners-shop__link-holder
+                    a(href="#") Торговая платформа полного цикла Pokupo
+                
+
+
+            form.b-goods-search__form
+                .b-goods-search__filter
+                    .b-goods-search__filter-holder
+                        .b-goods-search__goods-status
+                            span.b-goods-search__filter-title
+                                | Статус товара
+                            .b-goods-search__select
+                                select.b-select.j-select
+                                    option
+                                        | Любой статус
+                                    option
+                                        | Запрещен
+                                    option
+                                        | Продается
+                                    option
+                                        | Вне каталога
+                                    option
+                                        | Ожидает модерации
+                        .b-goods-search__goods-type
+                            span.b-goods-search__filter-title
+                                | Тип товара
+                            .b-goods-type
+                                label.b-goods-type__label
+                                    input(type="radio" name="goodsType").b-goods-type__input
+                                    span.b-goods-type__span
+                                        | Все товары
+                                label.b-goods-type__label
+                                    input(type="radio" name="goodsType").b-goods-type__input
+                                    span.b-goods-type__span.m-goods-type__span_physical
+                                        | Физические
+                                label.b-goods-type__label
+                                    input(type="radio" name="goodsType").b-goods-type__input
+                                    span.b-goods-type__span.m-goods-type__span_digital
+                                        | Цифровые
+                    .b-goods-search__input-holder
+                        label.b-goods-search__label
+                            span.b-goods-search__filter-title
+                                | Ключевые слова
+                            input(type="text").b-input.b-goods-search__input
+                .b-goods-search__form-controls
+                    input(type="submit" value="найти").b-btn-green.b-goods-search__form-submit
+                    label.b-goods-search__form-reset
+                        input(type="reset" value="")
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_customize-discount
+                    a(href="#").b-configure__link.m-configure__link_customize-discounts
+                        | Выбрать рубрики
+                    span.b-configure__subtext 
+                        | (выбраны все рубрики)
+                    
+        .b-pkp-block__row
+            .b-actions
+                ul.b-actions__group
+                    li.b-actions__item
+                        label.b-actions__btn.m-actions__btn_checkbox
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon.m-checkbox__icon_minus
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#" title="Выставить на продажу" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_success.j-hint
+                    li.b-actions__item
+                        a(href="#" title="Снять с продажи" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_remove.j-hint
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_delete
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_plus-minus
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_rub
+                    li.b-actions__item
+                        a(href="#" title="Изменить категорию" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_list.j-hint
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_load
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_search
+
+            .b-pagination
+                .b-pagination__text
+                    span.b-pagination__current
+                        strong
+                            | 1 
+                        | -
+                        strong
+                            | 10 
+                    | из 
+                    span.b-pagination__total
+                        strong
+                            | 150
+                .b-pagination__arrows
+                    a(href="#").b-pagination__arrow.m-pagination__arrow_prev.m-pagination__arrow_disable
+                    a(href="#").b-pagination__arrow.m-pagination__arrow_next
+        .b-pkp-block__row.m-pkp-block__row_above
+            table.b-goods-table
+                thead.b-goods-table__thead
+                    tr
+                        th
+                        th 
+                            span.b-goods-table__thead-title Фото
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_top Название
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_bottom Рубрики
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_top Цена
+                        th
+                            span.b-goods-table__thead-title.m-goods-table__thead-title_sortable.m-goods-table__thead-title_sortable_bottom % партнеру
+                        th
+                            span.b-goods-table__thead-title Действия
+                tbody.b-goods-table__tbody
+                    tr.b-goods-table__row
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
+                        td
+                            .b-goods-table__goods-img-holder
+                                img(src="images/goods/real-goods_small.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                            span.b-goods-table__residue.m-goods-table__residue_plus +264
+                        td
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                                    li.b-goods-table__rubric-item Обучающие материалы и авторские
+                                    li.b-goods-table__rubric-item Бижутерия и украшения
+                                    li.b-goods-table__rubric-item Головоломки, пазлы
+                                    li.b-goods-table__rubric-item Механические блокираторы
+                                    li.b-goods-table__rubric-item Бижутерия и украшения
+                                    li.b-goods-table__rubric-item Универсальные зарядные устройства
+                        td
+                            span 2 646
+                        td
+                            span.b-goods-table__partner 5 + 1.55 % 
+
+                        td
+                            a(href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
+                            a(href="#" title="Снять с продажи" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_fail.j-hint
+                    tr.b-goods-table__row
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
+                        td
+                            .b-goods-table__goods-img-holder
+                                img(src="images/goods/real-goods_small.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                            span.b-goods-table__residue.m-goods-table__residue_minus -12
+                        td
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                                    li.b-goods-table__rubric-item Обучающие материалы и авторские
+                                    li.b-goods-table__rubric-item Бижутерия и украшения
+                        td
+                            span 2 646
+                        td
+                            span.b-goods-table__partner 5 + 1.55 % 
+                        td
+                            a(href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    tr.b-goods-table__row
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
+                        td
+                            .b-goods-table__goods-img-holder
+                                img.b-goods-table__goods-img(src="images/goods/goods_1_big.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple iPad mini 16Gb Wi-Fi
+                            span.b-goods-table__residue 0
+                        td
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                p.b-goods-table__unavailable Вне каталога
+                        td
+                            span.g-infinity ∞
+                        td
+                            span.b-goods-table__partner 5 + 1.55 % 
+                        td
+                            a(href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
+                            a(href="#"  title="Утвердить" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_list.j-hint
+                    tr.b-goods-table__row
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
+                        td
+                            .b-goods-table__goods-img-holder
+                                img(src="images/goods/digital-goods_small.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Apple MacBook Air 11 Mid 2012
+                            span.b-goods-table__residue.m-goods-table__residue_minus -12
+                        td
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                        td
+                            span.g-infinity ∞
+                        td
+                            span.b-goods-table__partner 5 + 1.55 %
+                        td
+                            a(href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_done
+                    tr.b-goods-table__row
+                        td
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
+                        td
+                            .b-goods-table__goods-img-holder
+                                img.b-goods-table__goods-img(src="images/goods/goods_2.jpg", alt="")
+                        td
+                            a(href="#").b-link
+                                | Samsung Galaxy Tab 2 7.0 P310 8Gb
+                        td
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Посуда
+                        td
+                            span.g-infinity ∞
+                        td
+                            span.b-goods-table__partner 5 + 1.55 % 
+                        td
+                            a(href="#" title="Отзывы о товаре" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_fail
+                    
+        .b-pkp-block__row
+            .b-actions
+                ul.b-actions__group
+                    li.b-actions__item
+                        label.b-actions__btn.m-actions__btn_checkbox
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon.m-checkbox__icon_minus
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_success
+                    li.b-actions__item
+                        a(href="#" title="Снять с продажи" data-position="bottom" data-theme="g-hint").b-actions__btn.m-actions__btn_remove.j-hint
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_delete
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_plus-minus
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_rub
+                    li.b-actions__item
+                        a(href="#" title="Изменить категорию" data-position="bottom" data-theme="g-hint").b-actions__btn.m-actions__btn_list.j-hint
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_load
+
+            .b-items-per-page
+                span.b-items-per-page__text
+                    | Показывать на странице:
+                a(href="#").b-items-per-page__item.m-items-per-page__item_active 10
+                a(href="#").b-items-per-page__item 25
+                a(href="#").b-items-per-page__item 50
+
+
+    .b-notification-popup.j-notification-popup
+        .b-notification-popup__close.j-modal-close
+        .b-block-title__heading
+            | Каталог товаров
+        .b-tabs
+            ul.b-tabs__list
+                li.b-tabs__item
+                    a(href="#tab-1").p-tabs__btn
+                        span.b-tabs__btn-text
+                            | Мои рубрики
+                        .pkp-tooltip.pkp-tooltip_inline
+                                span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+                li.b-tabs__item
+                    a(href="#tab-2").p-tabs__btn 
+                        span.b-tabs__btn-text
+                            | Рубрики партнёров
+                        .pkp-tooltip.pkp-tooltip_inline
+                                span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+            div.p-tabs__container
+                .p-tabs__content#tab-1
+                    label.b-label
+                        .b-label__text Быстрый поиск
+                        .b-keywords-and-phrases
+                            select.b-select.j-select-tags(multiple="multiple" style="width: 100%")
+                                option.j-hint(value="Звуковые карты") Звуковые карты
+                                option(value="Модули памяти") Модули памяти
+                                option(value="Платы ввода-вывода") Платы ввода-вывода
+                                option(value="Видеокарты") Видеокарты
+                                option(value="Клавиатруы") Клавиатруы
+                                option(value="Моноблоки") Моноблоки
+                    .b-product-catalog
+                        h5.b-product-catalog__heading.j-catalog Каталог товаров
+                            .b-editing-actions
+                                a(href="#").b-editing-actions__item.m-editing-actions__item_edit
+                                a(href="#").b-editing-actions__item.m-editing-actions__item_add
+                                a(href="#").b-editing-actions__item.m-editing-actions__item_remove
+                        ul.b-catalog-tree.j-catalog-tree
+                            li
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        .b-ckeckbox__text
+                                            span.b-ckeckbox__text-icon.m-ckeckbox__text-icon_catalog_novelty
+                                            a(href="#").b-ckeckbox__text-link Новинки
+                            li
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        span.b-ckeckbox__text
+                                            span(title="Слайдер" data-position="bottom" data-theme="g-hint").b-ckeckbox__text-icon.m-ckeckbox__text-icon_catalog_hot.j-hint
+                                            a(href="#").b-ckeckbox__text-link Горячие предложения
+                            li(style="margin-bottom: 11px")
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        span.b-ckeckbox__text
+                                            span.b-ckeckbox__text-icon.m-ckeckbox__text-icon_catalog_recommended
+                                            a(href="#").b-ckeckbox__text-link Рекомендуемые товары
+                            li.root
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        .b-ckeckbox__text
+                                            span.b-catalog-tree__text Детские товары
+                                        .b-editing-actions
+                                            a(href="#" data-offsetx='-9' data-offsety='-5' data-theme="product-catalog-dropdown" data-content="j-template_propose-dropdown" data-position="bottom-left").b-editing-actions__item.m-editing-actions__item_add.j-hint
+                                ul
+                                    li
+                                        .b-checkbox.m-checkbox_small
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                span.b-checkbox__icon.m-checkbox__icon_small
+                                                .b-editing-actions
+                                                    a(href="#" title="Заявка" data-position="bottom" data-theme="g-hint").b-editing-actions__item.m-editing-actions__item_bid.j-hint
+                                                .b-ckeckbox__text
+                                                    span.b-catalog-tree__text.m-catalog-tree__text_small Игрушки и игровые комплексы
+                                                .b-editing-actions
+                                                    a(href="#" title="Утвердить" data-position="bottom" data-theme="g-hint").b-editing-actions__item.m-editing-actions__item_edit.j-hint
+                                                    a(href="#" data-offsetx='-9' data-offsety='-5' data-theme="product-catalog-dropdown" data-content="j-template_add-dropdown" data-position="bottom-left").b-editing-actions__item.m-editing-actions__item_add.j-hint
+                                                    a(href="#").b-editing-actions__item.m-editing-actions__item_remove
+                                        ul
+                                            li
+                                                .b-checkbox
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Игрушки и игровые комплексы 2
+                                    li
+                                        .b-checkbox.m-checkbox_small
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                span.b-checkbox__icon.m-checkbox__icon_small
+                                                .b-catalog-moderation
+                                                    .b-catalog-moderation__status.m-catalog-moderation__status_published
+                                                    .b-catalog-moderation__dropdown.m-catalog-moderation__dropdown_published
+                                                .b-catalog-moderation
+                                                    .b-catalog-moderation__status.m-catalog-moderation__status_waiting
+                                                    .b-catalog-moderation__dropdown.m-catalog-moderation__dropdown_waiting
+                                                .b-catalog-moderation
+                                                    .b-catalog-moderation__status.m-catalog-moderation__status_reject
+                                                    .b-catalog-moderation__dropdown.m-catalog-moderation__dropdown_reject
+                                                .b-ckeckbox__text
+                                                    span.b-catalog-tree__text.m-catalog-tree__text_small Обучение и творчество
+                                        ul
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Наука и техника
+                                                ul
+                                                    li
+                                                        .b-checkbox.m-checkbox_small
+                                                            label.b-checkbox__label
+                                                                input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                                span.b-checkbox__icon.m-checkbox__icon_small
+                                                                .b-ckeckbox__text
+                                                                    span.b-catalog-tree__text.m-catalog-tree__text_small Наука и техника 2
+
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Товары для творчества
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Товары для школы
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Обучающие материалы и авторские методики
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Чертежные принадлежности
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Тетради, дневники, альбомы
+                                    li
+                                        .b-checkbox.m-checkbox_small
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                span.b-checkbox__icon.m-checkbox__icon_small
+                                                .b-ckeckbox__text
+                                                    span.b-catalog-tree__text.m-catalog-tree__text_small Товары для мам и малышей
+                                        ul
+                                            li
+                                                .b-checkbox.m-checkbox_small
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                        span.b-checkbox__icon.m-checkbox__icon_small
+                                                        .b-ckeckbox__text
+                                                            span.b-catalog-tree__text.m-catalog-tree__text_small Товары для мам и малышей 2
+                                    li
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.m-checkbox__input_small(type="checkbox")
+                                                span.b-checkbox__icon.m-checkbox__icon_small
+                                                .b-ckeckbox__text
+                                                    span.b-catalog-tree__text.m-catalog-tree__text_small Обучающие материалы и авторские методики
+                            li.root
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        .b-ckeckbox__text
+                                            span.b-catalog-tree__text Все для офиса
+                                ul
+                                    li
+                                        .b-checkbox
+                                        label.b-checkbox__label
+                                            input.b-checkbox__input(type="checkbox")
+                                            span.b-checkbox__icon
+                                            .b-ckeckbox__text
+                                                span.b-catalog-tree__text Все для офиса 2
+                            li.root
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        .b-ckeckbox__text
+                                            span.b-catalog-tree__text Бытовая техника
+                                ul
+                                    li
+                                        .b-checkbox
+                                        label.b-checkbox__label
+                                            input.b-checkbox__input(type="checkbox")
+                                            span.b-checkbox__icon
+                                            .b-ckeckbox__text
+                                                span.b-catalog-tree__text Все для офиса 2
+                            li.root
+                                .b-checkbox
+                                    label.b-checkbox__label
+                                        input.b-checkbox__input(type="checkbox")
+                                        span.b-checkbox__icon
+                                        .b-ckeckbox__text
+                                            span.b-catalog-tree__text Одежда, обувь и аксессуары
+                                ul
+                                    li.root
+                                        .b-checkbox
+                                        label.b-checkbox__label
+                                            input.b-checkbox__input(type="checkbox")
+                                            span.b-checkbox__icon
+                                            .b-ckeckbox__text
+                                                span.b-catalog-tree__text Все для офиса 2
+
+                .p-tabs__content#tab-2
+                    .b-selling-files
+
+script(type="text/template" class="j-template_add-dropdown")
+    .b-product-catalog__add-dropdown
+        span.b-product-catalog__add-item
+            | Добавить категорию товаров
+        span.b-product-catalog__add-item
+            | Добавить секцию товаров
+        span.b-product-catalog__add-item.m-product-catalog__add-item_slider
+            | Добавить слайдер
+        span.b-product-catalog__add-item.m-product-catalog__add-item_carousel
+            | Добавить карусель
+        span.b-product-catalog__add-item.m-product-catalog__add-item_tile 
+            | Добавить плитку
+
+script(type="text/template" class="j-template_propose-dropdown")
+    .b-product-catalog__propose-dropdown
+        span.b-product-catalog__propose-item
+            | Предложить секцию товаров
+        span.b-product-catalog__propose-item
+            | Предложить категорию товаров
+

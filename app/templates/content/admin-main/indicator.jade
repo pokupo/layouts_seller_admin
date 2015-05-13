@@ -1,11 +1,13 @@
 div.b-indicator
-    h2.b-block-title.m-block-title_big.b-indicator__title
-        | Показатели
+    .b-block-title
+        .b-block-title__left
+            h2.b-block-title__heading.m-block-title__heading_big.b-indicator__title
+                | Показатели
     .b-indicator__top
         .b-indicator__line
-            a.b-indicator-btn.m-indicator-btn_first(href="#")
+            a(href="#").b-indicator-btn.m-indicator-btn_first
                 | Вчера
-            a.b-indicator-btn(href="#").j-hint(title="Посмотреть уведомления системы")
+            a(href="#" title="Посмотреть уведомления системы" data-position="top" data-theme="g-hint").b-indicator-btn.j-hint
                 | Сегодня
             a.b-indicator-btn.m-indicator-btn_active(href="#")
                 | Неделя
@@ -31,8 +33,10 @@ div.b-indicator
                         span.b-calendar-range__date-input-icon
     .b-indicator__content
         .b-pkp-block.m-pkp-block_full-width
-            h2.b-block-title
-                | Новые заказы
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        | Новые заказы
             table.b-new-orders
                 thead
                     tr

@@ -1,0 +1,11 @@
+extends ../layouts/default
+
+block variables
+    - var prevpage = 1
+    - var clear = 1
+
+block head
+    - pageTitle = 'ЛК продавца - отзывы о товаре';
+
+block content
+    include ../content/product-reviews

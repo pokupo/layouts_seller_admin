@@ -1,52 +1,92 @@
 .b-own-goods
     .b-pkp-block.m-pkp-block_full-width
-        h2.b-block-title.m-block-title_big
-            | Мои товары
-        .b-goods-search
+        .b-block-title
+            .b-block-title__right
+                .b-add-goods
+                    label.b-add-goods__item.m-add-goods__item_real
+                        input(type="file")
+                    label(title="Добавить цифровой товар" data-position="top" data-theme="g-hint").b-add-goods__item.m-add-goods__item_digital.j-hint
+                        input(type="file")
+                    label.b-add-goods__item.m-add-goods__item_import
+                        input(type="file")
+            .b-block-title__left
+                h2.b-block-title__heading.m-block-title__heading_big
+                    | Мои товары
+        .b-goods-search.m-goods-search_active
             h2.b-goods-search__title
                 | Поиск товаров
             form.b-goods-search__form
                 .b-goods-search__filter
-                    label.b-goods-search__label
-                        span.b-goods-search__filter-title
-                            | Ключевые слова
-                        input(type="text").b-input.b-goods-search__input
-                    label.b-goods-search__label
-                        span.b-goods-search__filter-title
-                            | Статус товара
-                        select.b-select
-                            option
-                                | Любой статус
-                            option
-                                | value1
-                            option
-                                | value1
-                    .b-goods-search__goods-type
-                        span.b-goods-search__filter-title
-                            | Тип товара
-                        .b-goods-type
-                            label.b-goods-type__label
-                                input(type="radio" name="goodsType").b-goods-type__input
-                                span.b-goods-type__span
-                                    | Все товары
-                            label.b-goods-type__label
-                                input(type="radio" name="goodsType").b-goods-type__input
-                                span.b-goods-type__span.m-goods-type__span_physical
-                                    | Физические
-                            label.b-goods-type__label
-                                input(type="radio" name="goodsType").b-goods-type__input
-                                span.b-goods-type__span.m-goods-type__span_digital
-                                    | Цифровые
+                    .b-goods-search__filter-holder
+                        .b-goods-search__goods-status
+                            span.b-goods-search__filter-title
+                                | Статус товара
+                            .b-goods-search__select
+                                select.b-select.j-select
+                                    option
+                                        | Любой статус
+                                    option
+                                        | Запрещен
+                                    option
+                                        | Продается
+                                    option
+                                        | Вне каталога
+                                    option
+                                        | Ожидает модерации
+                        .b-goods-search__goods-type
+                            span.b-goods-search__filter-title
+                                | Тип товара
+                            .b-goods-type
+                                label.b-goods-type__label
+                                    input(type="radio" name="goodsType").b-goods-type__input
+                                    span.b-goods-type__span
+                                        | Все товары
+                                label.b-goods-type__label
+                                    input(type="radio" name="goodsType").b-goods-type__input
+                                    span.b-goods-type__span.m-goods-type__span_physical
+                                        | Физические
+                                label.b-goods-type__label
+                                    input(type="radio" name="goodsType").b-goods-type__input
+                                    span.b-goods-type__span.m-goods-type__span_digital
+                                        | Цифровые
+                    .b-goods-search__input-holder
+                        label.b-goods-search__label
+                            span.b-goods-search__filter-title
+                                | Ключевые слова
+                            input(type="text").b-input.b-goods-search__input
+                .b-goods-search__form-controls
+                    input(type="submit" value="найти").b-btn-green.b-goods-search__form-submit
+                    label.b-goods-search__form-reset
+                        input(type="reset" value="")
+                .b-entries-select
+                    .b-entries-select__item
+                        .b-entries-select__item-text
+                            | Звуковые карты
+                        .b-entries-select__item-remove
+                    .b-entries-select__item
+                        .b-entries-select__item-text
+                            | Модули памяти
+                        .b-entries-select__item-remove
+                    .b-entries-select__item
+                        .b-entries-select__item-text
+                            | Платы ввода-вывода
+                        .b-entries-select__item-remove
+                    .b-entries-select__full-list
+                    
         .b-pkp-block__row
             .b-actions
                 ul.b-actions__group
                     li.b-actions__item
-                        a(href="#").b-actions__btn
+                        label.b-actions__btn.m-actions__btn_checkbox
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon.m-checkbox__icon_minus
                 ul.b-actions__group
                     li.b-actions__item
-                        a(href="#").b-actions__btn.m-actions__btn_success
+                        a(href="#" title="Выставить на продажу" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_success.j-hint
                     li.b-actions__item
-                        a(href="#").b-actions__btn.m-actions__btn_remove
+                        a(href="#" title="Снять с продажи" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_remove.j-hint
                     li.b-actions__item
                         a(href="#").b-actions__btn.m-actions__btn_delete
                 ul.b-actions__group
@@ -55,7 +95,7 @@
                     li.b-actions__item
                         a(href="#").b-actions__btn.m-actions__btn_rub
                     li.b-actions__item
-                        a(href="#").b-actions__btn.m-actions__btn_list
+                        a(href="#" title="Изменить категорию" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_list.j-hint
                 ul.b-actions__group
                     li.b-actions__item
                         a(href="#").b-actions__btn.m-actions__btn_load
@@ -64,21 +104,21 @@
                         a(href="#").b-actions__btn.m-actions__btn_search
 
             .b-pagination
-                span.b-pagination__current
-                    strong
-                        | 1 
-                    | -
-                    strong
-                        | 10 
-                | из 
-                span.b-pagination__total
-                    strong
-                        | 150
+                .b-pagination__text
+                    span.b-pagination__current
+                        strong
+                            | 1 
+                        | -
+                        strong
+                            | 10 
+                    | из 
+                    span.b-pagination__total
+                        strong
+                            | 150
                 .b-pagination__arrows
                     a(href="#").b-pagination__arrow.m-pagination__arrow_prev.m-pagination__arrow_disable
                     a(href="#").b-pagination__arrow.m-pagination__arrow_next
-        
-        .b-pkp-block__row
+        .b-pkp-block__row.m-pkp-block__row_above
             table.b-goods-table
                 thead.b-goods-table__thead
                     tr
@@ -96,126 +136,176 @@
                         th
                             span.b-goods-table__thead-title Действия
                 tbody.b-goods-table__tbody
-                    tr
+                    tr.b-goods-table__row
                         td
                             .b-checkbox
                                 label.b-checkbox__label
-                                    input.b-checkbox__input(type="checkbox")
-                                    span.b-checkbox__icon.j-hint_right
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
                         td
-                            img(src="images/goods/real-goods_small.jpg", alt="")
+                            .b-goods-table__goods-img-holder
+                                img(src="images/goods/real-goods_small.jpg", alt="")
                         td
                             a(href="#").b-link
                                 | Apple iPad mini 16Gb Wi-Fi
                         td
-                            ul.b-goods-table__rubric-list
-                                li.b-goods-table__rubric-item Нагрудники и слюнявчики
-                                li.b-goods-table__rubric-item Обучающие материалы и авторские
-                                li.b-goods-table__rubric-item Бижутерия и украшения
-                                li.b-goods-table__rubric-item Головоломки, пазлы
-                                li.b-goods-table__rubric-item Механические блокираторы
-                                li.b-goods-table__rubric-item Бижутерия и украшения
-                                li.b-goods-table__rubric-item Универсальные зарядные устройства
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                                    li.b-goods-table__rubric-item Обучающие материалы и авторские
+                                    li.b-goods-table__rubric-item Бижутерия и украшения
+                                    li.b-goods-table__rubric-item Головоломки, пазлы
+                                    li.b-goods-table__rubric-item Механические блокираторы
+                                    li.b-goods-table__rubric-item Бижутерия и украшения
+                                    li.b-goods-table__rubric-item Универсальные зарядные устройства
                         td
                             span 2 646
                         td
-                            span 56 600 
-                                span.g-ruble a
+                            span.b-goods-table__price.j-goods-price 56 600 
+                                span.g-ruble Р
+
                         td
-                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#" title="Отзывы о товаре" data-position="top" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
                             a(href="#").b-activity-btn.m-activity-btn_edit
                             a(href="#").b-activity-btn.m-activity-btn_done
-                    tr
+                    tr.b-goods-table__row
                         td
                             .b-checkbox
                                 label.b-checkbox__label
-                                    input.b-checkbox__input(type="checkbox")
-                                    span.b-checkbox__icon.j-hint_right
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
                         td
-                            img(src="images/goods/real-goods_small.jpg", alt="")
+                            .b-goods-table__goods-img-holder
+                                img(src="images/goods/real-goods_small.jpg", alt="")
                         td
                             a(href="#").b-link
                                 | Apple iPad mini 16Gb Wi-Fi
                         td
-                            ul.b-goods-table__rubric-list
-                                li.b-goods-table__rubric-item Нагрудники и слюнявчики
-                                li.b-goods-table__rubric-item Обучающие материалы и авторские
-                                li.b-goods-table__rubric-item Бижутерия и украшения
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                                    li.b-goods-table__rubric-item Обучающие материалы и авторские
+                                    li.b-goods-table__rubric-item Бижутерия и украшения
                         td
                             span 2 646
                         td
-                            span 56 600 
-                                span.g-ruble a
+                            span.b-goods-table__price.j-goods-price 56 600 
+                                span.g-ruble Р
                         td
-                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#" title="Отзывы о товаре" data-position="top" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
                             a(href="#").b-activity-btn.m-activity-btn_edit
                             a(href="#").b-activity-btn.m-activity-btn_done
-                    tr
+                    tr.b-goods-table__row
                         td
                             .b-checkbox
                                 label.b-checkbox__label
-                                    input.b-checkbox__input(type="checkbox")
-                                    span.b-checkbox__icon.j-hint_right
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
                         td
-                            img(src="images/goods/goods_1.jpg", alt="")
+                            .b-goods-table__goods-img-holder
+                                img.b-goods-table__goods-img(src="images/goods/goods_1_big.jpg", alt="")
                         td
                             a(href="#").b-link
                                 | Apple iPad mini 16Gb Wi-Fi
                         td
-                            p Вне каталога
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                p.b-goods-table__unavailable Вне каталога
                         td
-                            span ∞
+                            span.g-infinity ∞
                         td
-                            span 56 600 
-                                span.g-ruble a
+                            span.b-goods-table__price.j-goods-price 56 600 
+                                span.g-ruble Р
                         td
-                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#" title="Отзывы о товаре" data-position="top" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
                             a(href="#").b-activity-btn.m-activity-btn_edit
                             a(href="#").b-activity-btn.m-activity-btn_done
-                    tr
+                    tr.b-goods-table__row
                         td
                             .b-checkbox
                                 label.b-checkbox__label
-                                    input.b-checkbox__input(type="checkbox")
-                                    span.b-checkbox__icon.j-hint_right
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
                         td
-                            img(src="images/goods/digital-goods_small.jpg", alt="")
+                            .b-goods-table__goods-img-holder
+                                img(src="images/goods/digital-goods_small.jpg", alt="")
                         td
                             a(href="#").b-link
-                                | Apple iPad mini 16Gb Wi-Fi
+                                | Apple MacBook Air 11 Mid 2012
                         td
-                            ul.b-goods-table__rubric-list
-                                li.b-goods-table__rubric-item Нагрудники и слюнявчики
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Нагрудники и слюнявчики
                         td
-                            span ∞
+                            span.g-infinity ∞
                         td
-                            span 56 600 
-                                span.g-ruble a
+                            span.b-goods-table__price.j-goods-price 56 600 
+                                span.g-ruble Р
                         td
-                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#" title="Отзывы о товаре" data-position="top" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
                             a(href="#").b-activity-btn.m-activity-btn_edit
                             a(href="#").b-activity-btn.m-activity-btn_done
-                    tr
+                    tr.b-goods-table__row
                         td
                             .b-checkbox
                                 label.b-checkbox__label
-                                    input.b-checkbox__input(type="checkbox")
-                                    span.b-checkbox__icon.j-hint_right
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon
                         td
-                            img(src="images/goods/goods_2.jpg", alt="")
+                            .b-goods-table__goods-img-holder
+                                img.b-goods-table__goods-img(src="images/goods/goods_2.jpg", alt="")
                         td
-                            a(href="#").b-link
-                                | Apple iPad mini 16Gb Wi-Fi
+                            a(href="#").b-link.b-goods-table__unavailable
+                                | Samsung Galaxy Tab 2 7.0 215g15215 P3100 8Gb
                         td
-                            ul.b-goods-table__rubric-list
-                                li.b-goods-table__rubric-item Посуда
+                            .b-goods-table__editable
+                                a(href="#").b-goods-table__editable-btn
+                                ul.b-goods-table__rubric-list
+                                    li.b-goods-table__rubric-item Посуда
                         td
-                            span ∞
+                            span.g-infinity ∞
                         td
-                            span 56 600 
-                                span.g-ruble a
+                            span.b-goods-table__price.j-goods-price 56 600 
+                                span.g-ruble Р
                         td
-                            a(href="#").b-activity-btn.m-activity-btn_favorite
+                            a(href="#" title="Отзывы о товаре" data-position="top" data-theme="g-hint").b-activity-btn.m-activity-btn_favorite.j-hint
                             a(href="#").b-activity-btn.m-activity-btn_edit
-                            a(href="#").b-activity-btn.m-activity-btn_done
+                            a(href="#").b-activity-btn.m-activity-btn_fail
                     
+        .b-pkp-block__row
+            .b-actions
+                ul.b-actions__group
+                    li.b-actions__item
+                        label.b-actions__btn.m-actions__btn_checkbox
+                            .b-checkbox
+                                label.b-checkbox__label
+                                    input.b-checkbox__input.j-goods-input(type="checkbox")
+                                    span.b-checkbox__icon.m-checkbox__icon_minus
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_success
+                    li.b-actions__item
+                        a(href="#" title="Снять с продажи" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_remove.j-hint
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_delete
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_plus-minus
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_rub
+                    li.b-actions__item
+                        a(href="#" title="Изменить категорию" data-position="top" data-theme="g-hint").b-actions__btn.m-actions__btn_list.j-hint
+                ul.b-actions__group
+                    li.b-actions__item
+                        a(href="#").b-actions__btn.m-actions__btn_load
+
+            .b-items-per-page
+                span.b-items-per-page__text
+                    | Показывать на странице:
+                a(href="#").b-items-per-page__item.m-items-per-page__item_active 10
+                a(href="#").b-items-per-page__item 25
+                a(href="#").b-items-per-page__item 50
+

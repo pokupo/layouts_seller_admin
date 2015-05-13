@@ -1,0 +1,132 @@
+.b-popup-holder
+    .b-notification-popup.j-notification-popup
+        .b-notification-popup__close.j-modal-close
+        .b-block-title__heading
+            | Каталог товаров
+        .b-tabs.j-tabs
+            ul.b-tabs__list
+                li.b-tabs__item
+                    a(href="#tab-1").p-tabs__btn
+                        span.b-tabs__btn-text
+                            | Мои рубрики
+                        .pkp-tooltip.pkp-tooltip_inline
+                                span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+                li.b-tabs__item
+                    a(href="#tab-2").p-tabs__btn 
+                        span.b-tabs__btn-text
+                            | Рубрики партнёров
+                        .pkp-tooltip.pkp-tooltip_inline
+                                span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+            div.p-tabs__container
+                .p-tabs__content#tab-1
+                    label.b-label
+                        .b-label__text Быстрый поиск
+                        .b-keywords-and-phrases
+                            select.b-select.j-select-tags(multiple="multiple" style="width: 100%")
+                                option(value="Звуковые карты") Звуковые карты
+                                option(value="Модули памяти") Модули памяти
+                                option(value="Платы ввода-вывода") Платы ввода-вывода
+                                option(value="Видеокарты") Видеокарты
+                                option(value="Клавиатруы") Клавиатруы
+                                option(value="Моноблоки") Моноблоки
+                        .b-product-catalog
+                            h5.b-product-catalog__heading Каталог товаров
+                                .b-editing-actions
+                                    a(href="#").b-editing-actions__item.m-editing-actions__item_edit
+                                    a(href="#").b-editing-actions__item.m-editing-actions__item_add
+                                    a(href="#").b-editing-actions__item.m-editing-actions__item_remove
+                            ul.b-catalog-tree
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                .b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Новинки
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                span.b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_hot Горячие предложения
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                span.b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_recommended Рекомендуемые товары
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                .b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Детские товары
+                                    ul
+                                        li
+                                            label
+                                                .b-checkbox
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                        span.b-checkbox__icon
+                                                        .b-ckeckbox__text
+                                                            a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Игрушки и игровые комплексы
+                                        li
+                                            label
+                                                .b-checkbox
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                        span.b-checkbox__icon
+                                                        .b-ckeckbox__text
+                                                            a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Обучение и творчество
+                                        li
+                                            label
+                                                .b-checkbox
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                        span.b-checkbox__icon
+                                                        .b-ckeckbox__text
+                                                            a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Товары для мам и малышей
+                                        li
+                                            label
+                                                .b-checkbox
+                                                    label.b-checkbox__label
+                                                        input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                        span.b-checkbox__icon
+                                                        .b-ckeckbox__text
+                                                            a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Обучающие материалы и авторские методики
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                .b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Все для офиса
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                .b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Бытовая техника
+                                li
+                                    label
+                                        .b-checkbox
+                                            label.b-checkbox__label
+                                                input.b-checkbox__input.j-goods-input(type="checkbox")
+                                                span.b-checkbox__icon
+                                                .b-ckeckbox__text
+                                                    a(href="#").b-ckeckbox__text-link.m-ckeckbox__text-link_catalog_novelty Одежда, обувь и аксессуары
+
+                .p-tabs__content#tab-2
+                    .b-selling-files

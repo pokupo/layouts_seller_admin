@@ -1,0 +1,258 @@
+.fs-dropdown 
+  position relative
+  z-index 1
+  display block
+  max-width 100%
+
+.fs-dropdown:focus 
+  box-shadow none
+  outline none
+
+.fs-dropdown,
+.fs-dropdown:after,
+.fs-dropdown:before,
+.fs-dropdown *,
+.fs-dropdown *:after,
+.fs-dropdown *:before 
+  box-sizing border-box
+  -webkit-transition none
+          transition none
+  -webkit-user-select none !important
+     -moz-user-select none !important
+      -ms-user-select none !important
+          user-select none !important
+
+.fs-dropdown-element 
+  width 100%
+  height 100%
+  position absolute
+  left 0
+  opacity 0
+  z-index -1
+
+.fs-dropdown-element,
+.fs-dropdown-element:focus 
+  outline none
+  -webkit-tap-highlight-color rgba(255, 255, 255, 0)
+  -webkit-tap-highlight-color transparent
+
+.no-opacity .fs-dropdown-element 
+  left -999999px
+
+.fs-dropdown-selected 
+  width 100%
+  position relative
+  background #ffffff
+  border 1px solid #cccccc
+  border-radius 5px
+  color #222222
+  cursor pointer
+  display block
+  font-size 13px
+  height 36px
+  line-height 35px
+  margin 0
+  overflow hidden
+  padding 0 44px 0 15px
+  text-align left
+  text-overflow clip
+  z-index 2
+
+.fs-dropdown-selected:before
+  content ''
+  position absolute
+  width 30px
+  height 100%
+  right 0
+  background #ccc
+
+.fs-dropdown-selected:after 
+  height 0
+  width 0
+  position absolute
+  top 0
+  right 8px
+  bottom 0
+  border-left 6px solid transparent
+  border-right 6px solid transparent
+  border-top 8px solid #000000
+  content ''
+  margin auto 0
+
+.no-touch .fs-dropdown-selected:hover 
+  color #222222
+
+.no-touch .fs-dropdown-disabled .fs-dropdown-selected:hover 
+  color #cccccc
+
+.fs-dropdown-options 
+  width 100%
+  max-height 260px
+  position absolute
+  top 100%
+  left 0
+  border-width 0 1px 1px
+  border-radius 0 0 3px 3px
+  box-shadow 0 1px 4px rgba(0, 0, 0, 0.15)
+  background-color #ffffff
+  display none
+  margin 0
+  overflow auto
+  overflow-x hidden
+  padding 0
+  z-index 50
+
+.fs-dropdown-options.fs-scrollbar 
+  position absolute
+
+.no-opacity .fs-dropdown-options 
+  width auto
+
+.fs-dropdown-group 
+  border-bottom 1px solid #cccccc
+  color #999999
+  display block
+  font-size 11px
+  padding 10px 15px
+  text-transform uppercase
+
+.fs-dropdown-item 
+  width 100%
+  background #ffffff
+  color #222222
+  cursor pointer
+  display block
+  font-size 14px
+  margin 0
+  height 40px
+  line-height 40px
+  overflow hidden
+  padding 0 15px
+  text-align left
+  text-decoration none
+  text-overflow ellipsis
+  border none
+
+.fs-dropdown-item:hover
+  background #e6e6e6
+
+.fs-dropdown-item_placeholder 
+  display none
+
+.fs-dropdown-item_selected 
+  color #999999
+  position relative
+.fs-dropdown-item_selected:after
+  content ''
+  position absolute
+  top 14px
+  right 10px
+  background-icon($selected_select)
+
+.fs-dropdown-item_disabled 
+  color #999999
+  cursor default
+
+.fs-dropdown-item:first-child 
+  border-radius 0
+
+.fs-dropdown-item:last-child 
+  border-bottom 0
+  border-radius 0 0 3px 3px
+
+.no-touch .fs-dropdown-item:hover,
+.no-touch .fs-dropdown-item_selected:hover 
+  color #222222
+  background-color #dddddd
+  border-color #cccccc
+
+.fs-dropdown-item_disabled,
+.no-touch .fs-dropdown-item_disabled:hover 
+  color #cccccc
+  background-color #ffffff
+  border-color #cccccc
+
+.fs-dropdown-open 
+  z-index 3
+
+.fs-dropdown-open .fs-dropdown-options 
+  display block
+  border-radius 0 0 3px 3px
+
+.fs-dropdown-open .fs-dropdown-selected 
+  z-index 51
+  border-radius 3px 3px 0 0
+
+.fs-dropdown-open .fs-dropdown-selected,
+.fs-dropdown-focus .fs-dropdown-selected 
+  background-color #ffffff
+  box-shadow 0 0 5px rgba(0, 0, 0, 0.1)
+
+.fs-dropdown-cover.fs-dropdown-open .fs-dropdown-selected 
+  z-index 49
+
+.fs-dropdown-cover .fs-dropdown-options 
+  top 0
+  border-radius 3px
+  border-width 1px
+
+.fs-dropdown-cover .fs-dropdown-item:first-child 
+  border-radius 3px 3px 0 0
+
+.fs-dropdown-bottom .fs-dropdown-options 
+  top auto
+  bottom 100%
+  border-width 1px 1px 0
+
+.fs-dropdown-bottom .fs-dropdown-item:last-child 
+  border none
+
+.fs-dropdown-bottom.fs-dropdown-open .fs-dropdown-selected 
+  border-radius 0 0 3px 3px
+
+.fs-dropdown-bottom.fs-dropdown-open .fs-dropdown-options 
+  border-radius 3px 3px 0 0
+
+.fs-dropdown-bottom.fs-dropdown-cover .fs-dropdown-options 
+  top auto
+  bottom 0
+
+.fs-dropdown-bottom.fs-dropdown-cover.fs-dropdown-open .fs-dropdown-selected 
+  border-radius 3px
+
+.fs-dropdown-bottom.fs-dropdown-cover.fs-dropdown-open .fs-dropdown-options 
+  border-radius 3px
+
+.fs-dropdown-multiple .fs-dropdown-options 
+  width 100%
+  position static
+  border-radius 3px
+  border-width 1px
+  box-shadow none
+  display block
+
+.fs-dropdown-disabled .fs-dropdown-selected 
+  background #ffffff
+  border-color #cccccc
+  color #cccccc
+  cursor default
+
+.fs-dropdown-disabled .fs-dropdown-options 
+  background #ffffff
+  border-color #cccccc
+
+.fs-dropdown-disabled .fs-dropdown-group,
+.fs-dropdown-disabled .fs-dropdown-item 
+  border-color #cccccc
+  color #cccccc
+  cursor default
+
+.fs-dropdown-disabled .fs-dropdown-item,
+.no-touch .fs-dropdown-disabled .fs-dropdown-item:hover 
+  color #cccccc
+  background-color #ffffff
+
+.fs-dropdown-disabled .fs-dropdown-item_selected,
+.no-touch .fs-dropdown-disabled .fs-dropdown-item_selected:hover 
+  background #fafafa
+

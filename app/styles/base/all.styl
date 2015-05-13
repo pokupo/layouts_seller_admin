@@ -1,74 +1,150 @@
 //gloabel styles
-    //hint
-        .g-hint,.g-hint_right
-            .tooltip__arrow span
-                width: 0;
-                height: 0;
-                border-style: solid;
-                display block
-                background none
-            .tooltip__arrow-bottom span
-                top -10px
-                border-width: 0 10px 10px 10px;
-                border-color: transparent transparent #4c4c4c transparent !important;
-            .tooltip__arrow-top span
-                bottom -10px
-                border-width: 10px 10px 0 10px;
-                border-color: #4c4c4c transparent transparent transparent !important;
-            .tooltip__content
-                line-height 20px
-                font-size 13px
-                background #4c4c4c
-                color #ffffff
-                padding 6px 19px
+    //checkboxTree
+    .p-checkbox-tree-container ul 
+        padding-left 17px
+    .p-toggle-tree 
+        position absolute
+        left -17px
+        top 7px
+        width 0
+        height 0
+        border-style solid
+        border-width 6.5px 0 6.5px 6px
+        border-color transparent transparent transparent #494d55
+        transition all .1s ease-in-out
+        &_active 
+            transform rotate(90deg)
+    
+    .b-catalog-tree .b-editing-actions
+        position relative
+        top 4px
 
-        .g-hint_right
-            .tooltip__arrow span
-                right 20px
-                left auto
+    .m-checkbox_small
+        margin-top 4px
+
+    .m-checkbox_small .p-toggle-tree
+        margin 0 4px 2px 0
+
+    .root
+        padding-left 25px
+    
+    //bnts
+        .b-btn-green
+            color #000
+            text-transform uppercase
+            text-decoration none
+            font-size 11px
+            font-weight 600
+            line-height 14px
+            letter-spacing: 0.2px;
+            background #97ce68
+            border-radius 5px
+            padding 12px 20px
+            &:hover
+                opacity 0.8
+        
+        .m-btn-green_clone
+            position relative
+            padding-left 42px
+            float right
+            &:after
+                top 12px
+                left 20px
+                pseudo()
+                background-icon($copy--code)
+        
+        .m-btn-green_add-file
+            position relative
+            padding-left 42px
+            float right
+            margin-left 10px
+            &:after
+                top 12px
+                left 20px
+                pseudo()
+                background-icon($download-icon)
                 
+        .m-btn-green_add-goods
+            position relative
+            padding 19px 20px 19px 66px
+            font-size 14px
+            display inline-block
+            margin 0 0 0 22px
+            letter-spacing 0.4px 
+            &:after
+                top 12px
+                left 20px
+                pseudo()
+                background-icon($load-digital-goods_hover)
+                
+        .m-btn-green_recognize
+            padding 17px 20px 17px 20px
+            font-size 14px
+            text-transform uppercase
+            
+        
+        .m-btn-green_cancel-goods
+            
+        .b-btn-cancel
+            text-transform uppercase
+            border-radius 5px 
+            border 1px solid #ddd8d0
+            text-align center
+            line-height 52px
+            display inline-block
+            color #000
+            text-decoration none
+            font-weight 700
+            margin-left 9px
+            padding 0 20px
+            font-size 14px
+            &:hover
+                opacity 0.7
+
+        .b-roll-up-btn
+            color: #177a93
+            font-size 14px
+            font-weight 700
+            text-decoration none
+            border-bottom 1px dotted #177a93
+            &:hover
+                border-bottom none
+                
+        .b-store-code__copy
+            float right
+            text-transform uppercase
+            color #000
+            background #fff
+            border 1px solid #ddd8d0
+            text-decoration none
+            font-weight 600
+            border-radius 5px
+            padding 13px 19px 13px 43px
+            margin-top -13px
+            letter-spacing -0.2px
+            position relative
+            any-icon($copy--code)
+            &:after
+                top 11px
+                left 20px
+                  
     //popup
         .b-popup-holder
             display none
-
-    //checkbox
-        .b-checkbox__label
-            cursor pointer
-        .b-checkbox__input
-            position absolute 
-            overflow hidden 
-            clip rect(0 0 0 0) 
-            height 1px 
-            width 1px 
-            margin -1px 
-            padding 0
-            border 0
-            &:checked + .b-checkbox__icon
-                width $checkbox_general_checked_width
-                height $checkbox_general_checked_height
-                background url($checkbox_general_checked_image) $checkbox_general_checked_offset_x $checkbox_general_checked_offset_y
-                
-
-        .b-checkbox__icon
-            display inline-block
-            width $checkbox_general_checked_width
-            height $checkbox_general_checked_height
-            background url($checkbox_general_image) $checkbox_general_offset_x $checkbox_general_offset_y + 3
-        
-        .m-checkbox__input_system-message
-             &:checked + .b-checkbox__icon
-                background-icon($checkbox)
-                
-        .m-checkbox__icon_system-message
-            width $checkbox_unchecked_width
-            height $checkbox_unchecked_height
-            background url($checkbox_unchecked_image) $checkbox_unchecked_offset_x $checkbox_unchecked_offset_y
-            
+  
     // common
         .g-ruble
             font-family $rubl
             font-weight normal
-            
+           
+        .g-infinity
+            font-family 'Open Sans'
+            font-weight 100
+            font-size 23px
+
+        .g-required-filed
+            color #fd5656
+
         .b-inner-content
             padding: 0 20px 20px 18px;
             margin-top 10px
@@ -76,7 +152,10 @@
         .b-pkp-block-holder
             clearfix()
         .b-pkp-block__row
+            position relative
             clearfix()
+        .m-pkp-block__row_above
+            z-index 2
 
         .b-pkp-block
             background #fff
@@ -110,7 +189,6 @@
             background #efece7
             width 8px 
 
-            
         .b-resized-block
             resize vertical
             overflow auto
@@ -144,7 +222,6 @@
             font-size 14px
             letter-spacing 0.3px
             &:focus
-                border #177a93
                 border 2px solid #177a93
                        
         .m-input_date
@@ -153,20 +230,35 @@
             
         .b-select
             height 36px
- 
-    // text 
+            width 100%
+            
+        .b-textarea
+            width 100%
+            border-radius 5px
+            border 1px solid #cccccc
+            height  82px
+            padding 10px
+            font-size 14px
+   
+    // text
         .b-block-title
+            width 100%
+            &__left
+                overflow hidden
+            &__right
+                float right
+                padding 18px 0
+        .b-block-title__heading
             font-size 30px
             font-weight 300
             color #000000
             line-height 30px
-            max-width 80%
             padding 18px 0
             
-        .m-block-title_big
-            font-size 45px
+        .m-block-title__heading_big
+            font-size 44px
             line-height 45px
-            padding 10px 0 10px 0
+            padding 15px 0 10px 0
             max-width 100%
 
         .b-block-title__subtext
@@ -174,51 +266,15 @@
             display block
             line-height 20px
             letter-spacing 0.25px
-
+            
+        .b-images 
+            .b-block-title__subtext
+                margin-top 10px
+                
         .b-block-subtitle
             font-size 20px
             font-weight 300
         
-    //bnts
-        .b-btn-green
-            color #000
-            text-transform uppercase
-            text-decoration none
-            font-size 11px
-            font-weight 600
-            line-height 14px
-            letter-spacing: 0.2px;
-            background #97ce68
-            border-radius 5px
-            padding 12px 20px
-            &:hover
-                opacity 0.8
-
-        .b-roll-up-btn
-            color: #177a93
-            font-size 14px
-            font-weight 700
-            text-decoration none
-            border-bottom 1px dotted #177a93
-            &:hover
-                border-bottom none
-        .b-store-code__copy
-            float right
-            text-transform uppercase
-            color #000
-            background #fff
-            border 1px solid #ddd8d0
-            text-decoration none
-            font-weight 600
-            border-radius 5px
-            padding 13px 19px 13px 43px
-            margin-top -13px
-            letter-spacing -0.2px
-            position relative
-            any-icon($copy--code)
-            &:after
-                top 11px
-                left 20px
 
 //notice operation
     .b-operation-notice__icon
@@ -276,12 +332,14 @@
             width 18px
             height 13px
             margin -7px 0 0 -9px
+            
     .m-notification_system-message
         &:after
             background url($notification_bell_image) $notification_bell_offset_x $notification_bell_offset_y
             width 12px
             height 15px
             margin -8px 0 0 -6px
+            
     .b-notification__amount
         width 19px
         height  19px
@@ -359,8 +417,10 @@
         .b-new-orders
             width 100%
             table-layout fixed
-            margin-top -37px
+            z-index 200
             color #333333
+            margin-top -38px
+            
 
         .b-new-orders thead td
             font-size 13px
@@ -650,11 +710,52 @@
                 border-bottom none
 
 //my-goods page
+    //b-add-goods
+        .b-add-goods
+            margin-top -13px
+        .b-add-goods__item
+            width 82px
+            height 82px
+            border 2px dotted #a9a7a4
+            display inline-block
+            margin-left 7px
+            position relative
+            cursor pointer
+            &:hover
+                background #f5f3f1
+        .m-add-goods__item_real
+            centered-icon($load-real-goods)
+            &:hover
+                centered-icon($load-real-goods_hover)
+                
+        .m-add-goods__item_digital
+            centered-icon($load-digital-goods)
+            &:hover
+                centered-icon($load-digital-goods_hover)
+        .m-add-goods__item_import
+            centered-icon($import-goods)
+            &:hover
+                centered-icon($import-goods_hover)
+        
+        .b-add-goods__item input
+            display none
     //goods search
         .b-goods-search
             background #efece7
-            margin 37px 0 0 0
+            margin 37px 0 20px 0
             padding 13px 20px 20px 20px
+            position relative
+        .m-goods-search_active
+            &:after
+                content ''
+                position absolute
+                width 0
+                height 0
+                border-style solid
+                border-width 13px 14px 0 14px
+                border-color #efece7 transparent transparent transparent
+                top 100%
+                left 542px
         
         .b-goods-search__title
             font-size 30px
@@ -683,8 +784,24 @@
         .b-goods-search__form
             margin 25px 0 0 3px
         
+        .b-goods-search__filter
+            display table
+            width 100%
+            margin-bottom 20px
+
+        .b-goods-search__input-holder
+            overflow hidden
+
+        .b-goods-search__filter-holder
+            float right
+
         .b-goods-search__label
             display inline-block
+            padding-right 20px
+            width 100%
+
+        .b-goods-search__input
+            width 100%
 
         .b-goods-search__filter-title
             font-weight 700
@@ -693,12 +810,20 @@
             font-size 14px
             margin-bottom 8px
         
-        .b-goods-search__input
-            color red
-        
+        .b-goods-search__select
+            width 222px
+
         .b-goods-search__goods-type
-            display inline-block
+            float right
+            margin-left 18px
             
+        .b-goods-search__goods-status
+            float left
+
+        .b-goods-search__goods-type
+            & .b-goods-search__filter-title
+                margin-bottom 6px
+
         .b-goods-type__label
             cursor pointer
             display inline-block
@@ -754,14 +879,88 @@
                 left 9px
                 top 6px       
 
+    //b-entries-select
+        .b-entries-select
+            padding 20px 20px 14px 20px
+            border 2px dotted #ccc9c5
+            overflow hidden
+    
+        .b-entries-select__item
+            background #cccccc
+            display inline-block
+            border-radius 5px
+            font-size 13px
+            margin 0 5px 6px 0
+
+        .b-entries-select__item-text
+            border-right 1px solid #efece7
+            float left
+            line-height 36px
+            color #000
+            padding 0 17px
+            letter-spacing 0.2px
+            
+        .b-entries-select__item-text strong
+            font-weight 700
+
+        .b-entries-select__item-remove
+            width 32px
+            height 36px
+            float left
+            border-radius 0 5px 5px 0
+            position relative
+            cursor pointer
+            centered-icon($icon--close--xs)
+
+        .b-entries-select__full-list
+            width 34px
+            height 34px
+            display inline-block
+            position relative
+            border 1px solid #7caa1f
+            border-radius 999px
+            vertical-align top
+            cursor pointer
+            centered-icon($action_list_green)
+    
+    //b-goods-search__form-controls
+        .b-goods-search__form-controls
+            float right
+            padding 21px 0
+            
+        .b-goods-search__form-reset
+            position relative
+            margin-right 5px
+            display inline-block
+            width 40px
+            height 40px
+            cursor pointer
+            background #efece7
+            border 1px solid #ddd8d0
+            border-radius 5px
+            margin-left 10px
+            centered-icon($remove_big)
+            & input
+                display none
+        .b-goods-search__form-submit
+            border none
+            text-transform uppercase
+            font-size 14px
+            font-weight 600
+            float left
+            padding-left 55px
+            padding-right 55px
+            margin-left 20px
+            
+
+
     //b-actions
         .b-actions
             float left
-            margin-top 50px
             
         .b-actions__group
             display inline-block
-            margin-right 6px
+            margin-right 5px
             
             & .b-actions__item
                 &:first-child .b-actions__btn
@@ -785,9 +984,18 @@
             height 40px
             background #ebe8e3
             position relative
+            cursor pointer
             &:hover
                 background #d9d6d1
-                
+        .m-actions__btn_checkbox
+            text-align center
+            text-indent 5px
+            padding-top 6px
+        .m-actions__btn_disabled
+            opacity 0.6
+            cursor default
+            &:hover
+                background #ebe8e3
         .m-actions__btn_success
             centered-icon($action_success)
         .m-actions__btn_remove
@@ -798,20 +1006,47 @@
             centered-icon($action_plus-minus)
         .m-actions__btn_rub
             centered-icon($action_rub)
+        .m-actions__btn_euro
+            centered-icon($action_euro)
+        .m-actions__btn_dollar
+            centered-icon($action_dollar)
+        .m-actions__btn_bitcoin
+            centered-icon($action_bitcoin)
         .m-actions__btn_list
             centered-icon($action_list)
         .m-actions__btn_load
             centered-icon($action_load)
         .m-actions__btn_search
             centered-icon($search)
+        .m-actions__btn_count-increase
+            centered-icon($arrow-top)
+        .m-actions__btn_count-decrease
+            centered-icon($arrow-down2)
     //b-pagination
         .b-pagination
-            float right     
+            float right
+            
+        .b-pagination__text
+            display inline-block
+            line-height 40px 
+            vertical-align top
+            font-size 13px
+            color #333333
+            letter-spacing 0.5px
+            & strong
+                font-weight 700
+
+        .b-pagination__arrows
+            margin-left 4px
+            display inline-block
+
         .b-pagination__arrow
             btn()
+        
         .m-pagination__arrow_prev
             centered-icon($arrow-left)
         .m-pagination__arrow_next
+            margin-right 0
             centered-icon($arrow-right)
         .m-pagination__arrow_disable
             &:hover
@@ -820,10 +1055,36 @@
             &:after
                 opacity 0.5
                 
+    //b-items-per-page
+        .b-items-per-page
+            float right
+            & .b-items-per-page__item:last-child
+                margin-right 0
+        .b-items-per-page__text
+            margin-right 10px
+            letter-spacing 0.2px
+            font-size 13px
+            color #333
+
+        .b-items-per-page__item
+            btn()
+            line-height 40px
+            font-size 14px
+            font-weight 700
+            text-align center
+            text-decoration none
+            color #333333
+        
+        .m-items-per-page__item_active
+            background #ebe8e3
+            border-color #ebe8e3
+         
     //b-goods-table
         .b-goods-table
             width 100%
             table-layout fixed
+            margin 7px 0 19px 0
+            color #333
             
         .b-goods-table__thead
             background #ebe8e3
@@ -850,11 +1111,12 @@
                 text-align left
                 padding-left 5px
             & th:nth-child(6)
-                width 75px
+                width 100px
                 text-align left
             & th:nth-child(7)
                 width 140px
                 text-indent 6px
+                
             
 
         .b-goods-table__thead-title
@@ -886,6 +1148,9 @@
                 padding 5px 0 5px 0
                 border-bottom 1px solid #d4d4d4
                 height 70px
+                & p 
+                    padding-left 10px
+                    line-height 30px
             & tr:last-child td
                 border-bottom 0
             & td:nth-child(1)
@@ -902,11 +1167,67 @@
             & td:nth-child(6)
                 text-align left
                 padding-left 5px
+                & input
+                    width 75px
             & td:nth-child(7)
                 padding-right 16px
+                text-align right
         
+        .b-goods-table__row
+            transition background 0.2s ease-out
+
+        .m-goods-table__row
+            background #f5f3f1
+
+        .b-goods-table__editable
+            position relative
+            overflow hidden
+            min-height 36px
+            display inline-block
+            cursor pointer
+            width 100%
+            box-sizing initial
+            & .b-input
+                width 75px
+        .b-goods-table__editable:hover
+            border 1px solid #474b53
+            margin -1px
+            border-radius 4px
+            & .b-goods-table__editable-btn
+                display block
+                
+        .b-goods-table__editable-btn
+            border-radius 999px
+            width 20px
+            height 20px
+            border 1px solid #474b53
+            position absolute
+            top 5px
+            right 5px
+            display none
+            centered-icon($activity-btn_edit_small)
+            &:hover
+                background #474b53
+                centered-icon($activity-btn_edit_small_hover)
+
+        .b-goods-table__goods-img-holder
+            width 60px
+            height 60px
+            display table-cell
+            vertical-align middle
+            
+        .b-goods-table__goods-img
+            width 100%
+            max-width 100%
+            transition all 0.2s ease-out
+            &:hover
+                -webkit-transform: scale(2);
+                -ms-transform: scale(2);
+                transform: scale(2);
+                box-shadow 0px 4px 8px 0px rgba(0,0,0,0.3)       
+            
         .b-goods-table__rubric-list
-            margin 6px 0 9px 9px
+            margin 6px 12px 9px 9px
 
         .b-goods-table__rubric-item
             padding-left 5px
@@ -927,7 +1248,29 @@
                 top 6px
                 left 0
                 opacity 0.6
+        
+        .b-goods-table__price
+            line-height 36px
+            padding 0 8px
+            cursor pointer
+            &:hover
+                border 1px solid #474b53;
+                margin -1px
+                display inline-block
+                border-radius 4px
 
+        .b-goods-table__unavailable
+            color #ff6766
+        
+        .b-goods-table__residue
+            font-size 13px
+            font-weight 700
+            color #000
+            margin-left 4px
+        .m-goods-table__residue_plus
+            color #7caa1f
+        .m-goods-table__residue_minus
+            color #ff6766
     //b-activity-btn
         .b-activity-btn
             display inline-block
@@ -940,19 +1283,1080 @@
             border-radius 999px
             border 1px solid #ffa800
             centered-icon($activity-btn_favorite)
-            
+            &:hover
+                border-width 17px
+                centered-icon($activity-btn_favorite_hover)
+                
         .m-activity-btn_edit
             border-radius 999px
             border 1px solid #474b53
             centered-icon($activity-btn_edit)
+            &:hover
+                border-width 17px
+                centered-icon($activity-btn_edit_hover)
         
         .m-activity-btn_done
             border-radius 999px
             border 1px solid #7caa1f
-            centered-icon($activity-btn_done)
+            centered-icon($activity-btn_done)      
+            &:hover
+                border-width 17px
+                centered-icon($activity-btn_done_hover)
+           
+        .m-activity-btn_load
+            border-radius 999px
+            border 1px solid #7caa1f
+            centered-icon($activity-btn_load)      
+            &:hover
+                border-width 17px
+                centered-icon($activity-btn_load_hover)  
         
         .m-activity-btn_fail
             border-radius 999px
             border 1px solid #ff6766
+            &:after
+                content ''
+                position absolute
+                width 18px
+                height 6px
+                top 50%
+                left 50%
+                margin-top -3px
+                margin-left -9px
+                background #ff6766
+            &:hover
+                border-width 17px
+                &:after
+                    background #fff
+        
+        .m-activity-btn_list
+            border 1px solid #7caa1f
+            border-radius 999px
+            centered-icon($action_list_green)      
+            &:hover
+                border-width 17px
+                centered-icon($action_list_green_hover)
+
+        .m-activity-btn_remove
+            border 1px solid #ff6766
+            border-radius 999px
+            centered-icon($activity-btn_remove)      
+            &:hover
+                border-width 17px
+                centered-icon($activity-btn_remove_hover)
+                
+        .m-activity-btn_message
+            border-radius 999px
+            border 1px solid #7caa1f
+            centered-icon($activity-btn_message)      
+            &:hover
+                border-width 17px
+                centered-icon($activity-btn_message_hover)
+
+//my-goods__add page
+    //b-goods-description
+        .b-goods-description__info
+            position relative
+            top -12px
+        .b-goods-description
+            .b-goods-description__label:last-child
+                margin-bottom 0
+        .b-goods-description__label
+            display inline-block
+            width 100%
+            margin-bottom 22px
+        .m-goods-description__label_short-name
+            width 60.5%
+            margin-right 16px
+        .m-goods-description__label_article
+            width 17.5%
+            margin-right 18px
+        .m-goods-description__label_weight
+            width 17.5%
+        .b-goods-description__label-text 
+            font-weight 700
+            color #000
+            display block
+            font-size 14px
+            margin-bottom 8px
+            i
+                font-weight 500
             
-               
+        .b-goods-description__label-subtext
+            font-weight 500
+            display inline-block
+
+        .b-goods-description__input
+            width 100%
+            
+        //b-keywords-and-phrases
+            .b-keywords-and-phrases
+                border-radius 5px
+         
+    //b-selling-prices
+        .b-selling-prices__payments
+            background #efece7
+            padding 28px 10px 10px 10px
+            margin-bottom 20px
+            
+        .b-selling-prices__payments-price
+            padding 10px 22px 10px 10px
+            background #dfdcd8
+            display inline-block
+            margin-bottom 21px
+            & > span
+                font-size 30px
+                color #000
+                letter-spacing 0.8px
+                display inline-block
+                line-height 48px
+                vertical-align bottom
+                margin-left 13px
+            input
+                width 170px
+                
+        .b-selling-prices__input
+            height 48px
+            color #000
+            font-size 30px
+            line-height 48px
+        
+        .b-selling-prices__payments-agent
+            display inline-block
+            margin-left 6px
+            & > span
+                font-size 30px
+                color #000
+                letter-spacing 1px
+                display inline-block
+                line-height 48px
+                vertical-align bottom
+                margin-left 13px
+            input
+                width 104px
+                margin-left 5px
+            
+            .pkp-tooltip
+                position relative
+                top -4px
+                    
+        .b-configure
+            padding 26px 20px 28px 20px
+            border 2px dotted #ccc9c5
+            position relative
+            &:hover
+                background #f5f3f1
+        .m-configure_finished
+            border none
+            background #efece7
+        
+        .b-configure__tooltip
+            float right
+            position relative
+            top 3px
+
+        .b-configure__uploaded
+            font-size 14px
+            font-weight 700
+            color #000
+            line-height 25px
+            &:hover 
+                .b-configure__uploaded-remove
+                    display inline-block
+            
+        .b-configure__uploaded-remove
+              width 20px
+              height 20px
+              border 1px solid #ff6766
+              border-radius 999px
+              position relative
+              cursor pointer
+              vertical-align middle
+              top -2px
+              margin-left 6px
+              display none
+              centered-icon($remove_small)
+              
+        .b-configure__icon
+            width 36px
+            height  36px
+            border-radius 999px
+            border 1px solid #000
+            display inline-block
+            margin-right 10px
+            vertical-align top
+            position relative
+            &:after
+                content ''
+                color #000
+                font-family Arial
+                text-align center
+                line-height 36px
+                display block
+                font-size 24px
+                
+        .m-configure__icon_customize-discount
+            &:after
+                content '%'
+                
+        .m-configure__icon_upload
+            margin-top -5px
+            centered-icon($upload-icon)
+        
+        .m-configure__icon_rubric
+            centered-icon($rubric-icon)
+
+        .b-configure__link
+            font-size 24px
+            text-decoration none
+            font-weight 300
+            border-bottom 1px solid #aecace
+            position relative
+            color #177a93
+            &:hover
+                border none
+        .b-configure__subtext 
+            display inline-block
+            margin-left 7px
+            font-weight 300
+            font-size 14px
+            
+        .b-configure__discount-list
+            display inline-block
+            max-width 75%
+        
+        .b-configure__discount-link
+            font-size 14px
+            text-decoration none
+            color #000
+            line-height 25px
+            font-weight 700
+            &:hover
+                color #ff6766
+                .b-configure__discount-item-remove
+                    display inline-block
+                
+        .b-configure__discount-item-remove
+            width 20px
+            height  20px
+            border 1px solid #ff6766
+            border-radius 999px
+            position relative
+            cursor pointer
+            vertical-align middle
+            top -2px
+            margin-left 6px
+            display none
+            centered-icon($remove_small)
+
+        .b-configure__more-discount
+            display  block
+            color #4d90a4
+            line-height 20px
+            font-size 14px
+            text-decoration none
+            &:hover
+                text-decoration underline
+
+        .b-configure__discounts-btns-group
+            position absolute
+            top 20px
+            right 20px
+
+        .b-configure__edit-discounts
+            border 1px solid #ddd8d0
+            position relative
+            border-radius 5px
+            width 40px
+            height 40px
+            display inline-block
+            &:hover
+                background #d9d6d1
+            centered-icon($activity-btn_edit)
+            
+        .b-configure__roll-up-discounts
+            border 1px solid #ddd8d0
+            position relative
+            border-radius 5px
+            width 40px
+            height 40px
+            display inline-block
+            margin-left 10px
+            &:hover
+                background #d9d6d1
+            centered-icon($arrow-down2)
+
+        .b-selling-prices__universal-item
+            font-size 14px
+            color #000
+            font-weight 700
+            margin-left 20px
+            float left
+            
+        .b-selling-prices__for-sale
+            font-size 14px
+            color #000
+            font-weight 700
+            margin-left 77px
+            float left
+        
+        .b-selling-prices__item-count
+            font-size 14px
+            color #000
+            font-weight 700
+            float left
+            margin-left 20px
+            i
+                font-weight normal
+            .b-actions__group
+                vertical-align bottom
+                margin-left 6px
+            
+        .b-selling-prices__item-count-input
+            display inline-block
+            width 80px
+            margin-top 11px
+            font-weight 500
+
+        .b-selling-prices__for-sale-inner
+            margin-top 10px
+
+        .b-selling-prices__for-sale-label
+            cursor pointer
+            float left
+            color #333
+            letter-spacing 0.6px
+            &:first-child 
+                & .b-selling-prices__for-sale-span
+                    border-top-left-radius 5px
+                    border-bottom-left-radius 5px
+                    padding-left 34px
+                    &:after
+                        pseudo()
+                        background-icon($action_success)
+                        left 9px
+                        top 9px
+            &:last-child 
+                & .b-selling-prices__for-sale-span
+                    border-top-right-radius 5px
+                    border-bottom-right-radius 5px
+                    border-left 0
+                    padding-left 34px
+                    &:after
+                        pseudo()
+                        background-icon($action_remove)
+                        left 9px
+                        top 9px
+                & .b-selling-prices__for-sale-input
+                    &:checked + .b-selling-prices__for-sale-span
+                        background #ff6766
+                        border-color #ff6766
+                        &:after
+                            pseudo()
+                            background-icon($icon--reject)
+                            left 9px
+                            top 9px
+                            
+        .b-selling-prices__for-sale-input
+            position absolute 
+            overflow hidden 
+            clip rect(0 0 0 0) 
+            height 1px 
+            width 1px 
+            margin -1px 
+            padding 0
+            border 0
+            &:checked + .b-selling-prices__for-sale-span
+                background #97ce68
+                border 1px solid #97ce68
+                color #fff
+                &:after
+                    pseudo()
+                    background-icon($icon--confirm)
+                    left 9px
+                    top 9px
+        .b-selling-prices__for-sale-span
+            padding 0 9px
+            line-height 38px
+            display block
+            border 1px solid #ddd8d0
+            position relative
+            font-weight normal
+            font-size 13px
+            letter-spacing 0.3px
+    //b-files
+        .b-files__table
+            width 100%
+            thead
+                background #ebe8e3
+                th
+                    font-weight 700
+                    color #333
+                    line-height 50px
+                    padding 0 10px
+                    text-align left
+            tbody
+                border 1px solid #d4d4d4
+                tr
+                    td
+                        border-bottom 1px solid #d4d4d4
+                        font-size 13px
+                        color #333
+                        padding 16px 10px
+                        line-height 16px
+                        &:nth-child(2)
+                            font-weight 600
+                        &:nth-child(6)
+                            font-weight 600
+                        &:nth-child(8)
+                            white-space nowrap
+                        strong 
+                            font-weight 700
+                        a
+                            color #177a93
+                            &:hover
+                                text-decoration none
+    //b-images
+        .b-images__list
+            padding 0 3px
+            margin-left -10px
+            
+        .b-images__item
+            display inline-block
+            max-width 178px
+            margin 0 -4px -6px 0
+            cursor pointer
+            position relative
+            padding 10px 10px 30px 10px    
+            vertical-align top    
+        .m-images__item_active
+            box-shadow 0 4px 8px 0 rgba(0,0,0,.6)
+            background #fff
+            & .b-images__editable-block
+                display block
+                min-height 44px
+                line-height 20px
+                word-break break-all
+                cursor text
+                margin-top -18px
+            & .m-images__editable-block_error
+                border 1px solid #ff6766
+                padding 11px
+            & .b-images__description
+                position absolute
+                width 100%
+                padding 0 10px
+                left 0
+                background #fff
+                z-index 5
+                padding-bottom 26px
+                box-shadow 0 5px 6px 0 rgba(0,0,0,0.6)
+                margin-top 27px   
+            & .b-images__description-text
+                display none
+            & .b-images__letters-count 
+                display block
+            & .b-images__description-text-outer
+                display none
+        .b-images__img-holder
+            position relative
+            border 2px dotted #a3a5a9
+            width 158px
+            height  158px
+            display table-cell
+            vertical-align middle
+            text-align center
+            &:hover
+                border-color #474b53
+            &:hover .b-images__add-image-icon
+                border 1px solid #474b53
+                &:after
+                    background #474b53
+                &:before
+                    background #474b53
+            img
+                max-width 100%
+        
+        .b-images__add-image
+            display block
+            cursor pointer
+            height 100%
+            input
+                position absolute 
+                overflow hidden 
+                clip rect(0 0 0 0) 
+                height 1px 
+                width 1px 
+                margin -1px 
+                padding 0
+                border 0
+
+        .b-images__add-image-icon
+            border-radius 999px
+            border 1px solid #a3a5a9
+            position relative
+            display inline-block
+            width 46px
+            height 46px
+            margin 42px auto 0
+            &:after
+                pseudo()
+                width 6px
+                height 24px
+                top 50%
+                left 50%
+                background #a3a5a9
+                margin-left -3px
+                margin-top -12px
+            &:before
+                pseudo()
+                width 24px
+                height 6px
+                top 50%
+                left 50%
+                background #a3a5a9
+                margin-top -3px
+                margin-left -12px
+                
+        .b-images__add-image-text
+            color #333
+            text-align center
+            display block
+            margin-top 10px
+            font-size 13px
+
+        .b-images__item-remove
+            border-radius 999px
+            background #fff
+            border 1px solid #ff6766
+            width 20px
+            height 20px
+            position absolute
+            top 5px 
+            right 5px
+            z-index 2
+            centered-icon($remove_small)
+            
+        .b-images__favorite
+            position absolute
+            left -2px
+            top -2px
+            width 0
+            height 0
+            border-style solid
+            border-width 40px 40px 0 0
+            border-color #97ce68 transparent transparent transparent
+            
+        .b-images__favorite-icon
+            top -35px
+            left 4px
+            width 12px 
+            height 12px
+            position absolute
+            &:after
+                display block
+                content ''
+                background-icon($images_favorite)
+                
+        .b-images__description
+            margin-top 5px
+            border-radius 5px
+        .m-images__description_none
+            text-align center
+            color #adadad
+        
+        .b-images__description-text-outer
+            padding 9px 0
+            display block
+            &:hover
+                border-radius 5px
+                box-shadow 0 0 0 1px rgba(0,0,0,1)
+        .b-images__description-text
+            font-size 13px
+            letter-spacing 0.3px
+            line-height 16px
+            max-height 34px
+            overflow hidden
+            color #111
+            display block
+            font-size 13px
+            
+
+        .b-images__editable-block
+            border 2px solid #177a93
+            border-radius 5px
+            line-height 20px
+            padding 10px 
+            font-size 13px
+            color #333
+            text-align left
+            display none
+            span
+                background #ffcccc
+            
+        .b-images__letters-count
+            position absolute
+            right 20px
+            color #000
+            margin-top 7px
+            display none
+            
+        .m-images__letters-count_error
+            color #ff0301
+            &:before
+                content '-'
+
+        .b-outer-btns-holder
+            margin-top 20px
+
+
+        div[data-extratext]:after
+            content attr(data-extratext)
+            color #f90
+            
+//my-goods__add page_files
+    //b-selling-info
+        .b-selling-files__row
+            margin-bottom 23px
+            &:last-child
+                margin-bottom 9px
+
+        .b-label
+            display inline-block
+            width 100%
+            margin-bottom 22px
+        .m-label__third
+            width calc(100%/3 - 13px)
+            margin-right 16px
+            &:last-child
+                margin-right 0
+            .b-input
+                width 100%
+        .b-label__text
+              font-weight 700
+              color #000
+              display block
+              font-size 14px
+              margin-bottom 8px    
+                        
+        .b-label__sub-text
+            font-weight 500
+            
+//import
+    .b-import
+        .b-configure
+            margin-top 15px
+            padding-bottom 21px
+        &__filter
+            margin-top 25px
+        &__separator-inner
+            float left
+            padding-right 20px
+            width 50%
+        .b-input
+            width 100%
+    
+        &__goods-type
+            float right
+        .b-goods-search__filter-title
+            margin-bottom 5px
+        
+        &__separator
+            overflow hidden
+                        
+//recognition
+    .b-recognition .b-configure
+        padding 26px 20px 19px 20px
+        margin-top -3px
+        
+    .b-recognition__filter
+        width 334px
+        margin 13px 0 0 3px 
+        li
+            position relative                  
+                        
+    .b-recognition__upload
+        background #efece7
+        padding 18px 22px
+
+    .b-recognition__upload-existing
+        width 530px
+
+//product-reviews
+    .b-reviews
+        margin-bottom 20px
+    .b-reviews__list
+        margin-top 15px
+       
+    .b-reviews__item
+        border 1px solid #d4d4d4
+        min-height 91px
+        border-bottom none
+        padding 15px 14px 13px 19px
+        cursor pointer
+        &:last-child
+            border-bottom 1px solid #d4d4d4 
+    .b-reviews__avatar
+        display inline-block
+        margin-right 18px
+        position relative
+        centered-icon($avatar)
+        &:hover
+            centered-icon($avatar_hover)
+            .b-reviews__avatar-img-holder
+                border 3px solid #7caa1f
+            
+    .b-reviews__avatar-img-holder
+        width 60px
+        height 60px
+        border 3px solid #474b53 
+        border-radius 999px
+        position relative
+        z-index 2
+        a
+            display block
+            height 100%
+        img
+            max-width 100%
+            
+    .m-reviews__avatar-img-holder_true
+        border-color #f0ede9
+
+    .b-reviews__info
+        display inline-block
+        vertical-align top
+        margin-top 10px
+        width 240px
+        padding-right 10px
+        a
+            display block
+            margin-top 3px
+            letter-spacing 0.15px
+    .b-reviews__info-name
+        font-size 13px
+        line-height 20px
+        color #000
+        display inline-block
+        font-weight 700
+        
+    .b-reviews__info-date
+        color #999999
+        font-size 12px
+        line-height 20px
+        &:before
+            content '|'
+            display inline-block
+            margin 0 4px
+
+    .b-reviews__rate
+        display inline-block
+        margin 17px 0 0 0
+        vertical-align top
+
+    .b-reviews__message
+        float right
+        padding 11px 0 10px 10px
+
+    .b-reviews__comment
+        background #efece7
+        color #000
+        font-size 13px
+        margin 5px 60px 7px
+        padding 15px 18px
+        letter-spacing 0.3px
+        line-height 20px
+        border-radius 5px
+        position relative
+        min-height 70px
+        &:before
+            content ''
+            position absolute
+            top 22px
+            right 100%
+            width 26px
+            height  26px
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTNDQ0EyODZGNDBBMTFFNDg5Q0ZGRTdFQjMyNDdFQUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTNDQ0EyODdGNDBBMTFFNDg5Q0ZGRTdFQjMyNDdFQUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBM0NDQTI4NEY0MEExMUU0ODlDRkZFN0VCMzI0N0VBQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBM0NDQTI4NUY0MEExMUU0ODlDRkZFN0VCMzI0N0VBQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk3XBzgAAAFDSURBVHjavNbPK0RRGMbxO6fB3kLJjh2zVMYkC1FWUjaUxSwspiym7PwhshiRhYWFBbLzo9RENmqisZnMRlIaQkqZxvet95SS3Bn3vU99mqlz5j7d7jl3TuLp8T4TBMEZGoFhHBZQxjL6Ir5+EuPYSHBHQ3w5/zZ4jUOcooRb1ENeuB0ppDGKCXTKgBTJZxGZX378gRtU8apedKwDXehGD3r1Ln7EF01h1/oZSfZxEUdRQxeDeZHkGDtxFEnyeIuj6A5LcRRJCro4zIskWd2o5kU1zODdukhyibkmXj8tF0n2kIvize5CzFnD4n/LXMh5q/p38mldJFnHdKsb2jU5/wDDqFgXSa4wiG3rIskzZnVj1yyLfDbRj62/VqWLYC8+YF6PAkXLIh854IxgDEeWRT4nesQawIp/hv5wYpk2TH4JMABG+kd2om2blQAAAABJRU5ErkJggg==')
+
+
+/*--------------------------------ITERATION 2--------------------------------*/
+
+//partners-goods
+    .b-partners-goods 
+        .b-goods-search
+            margin-top 16px
+            padding-left 15px
+        .b-configure
+            overflow hidden
+    
+    .b-partners-shop
+        margin 24px 0 27px 4px
+        
+    .b-partners-shop strong
+        font-weight 700
+        color #000
+        display block
+        font-size 14px
+    
+    .b-partners-shop__link-holder
+        overflow hidden
+        padding-bottom 3px
+    .b-partners-shop__link-holder a
+        font-size 30px
+        text-decoration none
+        border-bottom 1px solid #aecace
+        font-weight 300
+        letter-spacing 0
+        line-height 36px
+        color #177a93
+        &:hover
+            border none
+        
+    .b-select-btn
+        float right
+        cursor pointer
+        border 1px solid #ddd8d0
+        position relative
+        border-radius 5px
+        width 40px
+        height 40px
+        display inline-block
+        margin-left 10px
+        &:hover
+            background #d9d6d1
+        centered-icon($arrow-down2)
+
+
+//b-catalog-moderation
+    .b-catalog-moderation
+        display inline-block
+        position relative
+        top -2px
+        
+        &__status
+            display inline-block
+            position relative
+            height 29px
+            width 32px
+            border-top-left-radius 5px
+            border-bottom-left-radius 5px
+            margin-right -2px
+                  
+        &__dropdown
+            display inline-block
+            height 29px
+            width 32px
+            border-top-right-radius 5px
+            border-bottom-right-radius 5px
+            position relative
+            &:before
+                pseudo__center()
+                width 0
+                height 0
+                border-style solid
+                border-width 6px 4.5px 0 4.5px
+                border-color #474b53 transparent transparent transparent
+                margin-left -4.5px
+                margin-top -3px
+        
+        .m-catalog-moderation__status_published
+            background #cbe6b3
+            centered-icon($activity-btn_done)     
+        .m-catalog-moderation__dropdown_published
+            background #cbe6b3      
+        .m-catalog-moderation__status_waiting
+            background #fcf5d9
+            centered-icon($waiting) 
+        .m-catalog-moderation__dropdown_waiting
+            background #fcf5d9
+        .m-catalog-moderation__status_reject
+            background #ffd1d1
+            &:before
+                pseudo()
+                width 20px
+                height 20px
+                border-radius 999px
+                border 1px solid #ff6969
+                margin 5px 0 0 6px
+            &:after
+                pseudo()
+                width 12px
+                height 4px
+                background #ff6969
+                margin 13px 0 0 10px
+        .m-catalog-moderation__dropdown_reject
+            background #ffd1d1
+            
+
+//product-catalog
+    .b-product-catalog
+        &__heading
+            color #000
+            font-size 18px
+            font-weight 600
+            padding-left 36px
+            line-height 25px
+            position relative
+            letter-spacing 0.5px
+            cursor pointer
+            display inline-block
+            &:before
+                content ''
+                position absolute
+                left 0
+                background-icon($folder)
+            &.active
+                &:before
+                    left -7px
+                    background-icon($folder_opened)
+    
+    .b-editing-actions
+        display inline-block
+        margin-left 5px
+        height  20px
+        vertical-align top
+        
+    .b-editing-actions__item
+        float left
+        border-radius 999px
+        width 20px
+        height 20px
+        border 1px solid #000
+        position relative
+        margin-left 5px
+        vertical-align top
+        &:after
+            content ''
+            position absolute
+            
+    .m-editing-actions__item_bid
+        border none
+        margin 0 5px 0 0
+        centered-icon($activity-btn_bid_small)
+    
+    .m-editing-actions__item_edit
+        border-color #474b53
+        centered-icon($activity-btn_edit_small)
+        &:hover
+            centered-icon($activity-btn_edit_small_hover)
+            border-width 10px
+    
+    .m-editing-actions__item_add
+        border-color #77b145
+        &:before
+            content ''
+            position absolute
+            width 2px 
+            height 10px
+            background #77b145
+            left 50%
+            margin-left -1px
+            margin-top 4px
+        &:after
+            height 2px 
+            width 10px
+            background #77b145
+            top 50%
+            margin-top -1px
+            margin-left 4px
+        &:hover
+            border-width 10px
+            &:before
+                content ''
+                position absolute
+                width 2px 
+                height 10px
+                background #fff
+                left 50%
+                margin-left -1px
+                margin-top -5px
+            &:after
+                height 2px 
+                width 10px
+                background #fff
+                top 50%
+                margin-top -1px
+                margin-left -5px    
+        
+    .m-editing-actions__item_remove
+        border-color #ff6766
+        centered-icon($remove_small)
+        &:hover
+            centered-icon($remove_small_hover)
+            border-width 10px
+            
+                
+//catalog tree
+    .b-catalog-tree
+        margin 17px 0 0 7px
+        //display none
+        li 
+            margin-bottom 4px
+        &__text
+            color #000
+            margin-left -3px
+            font-size 18px
+            font-weight 600
+            letter-spacing 0.4px
+            
+        .m-catalog-tree__text_small
+            font-size 14px
+            
+
+//ajax 
+    //b-product-catalog__add-dropdown
+        .b-product-catalog__add-item
+            display block
+            line-height 40px
+            font-size 13px
+            color #000
+            padding 0 12px
+            letter-spacing 0.65px
+            position relative
+            cursor pointer
+            &:hover
+                background #e6e6e6
+
+        .m-product-catalog__add-item_slider
+            padding-left 36px
+            &:before
+                content ''
+                position absolute
+                left 15px
+                top 50%
+                margin-top -4px
+                background-icon($catalog_hot_small)
+                
+        .m-product-catalog__add-item_carousel
+            padding-left 36px
+            &:before
+                content ''
+                position absolute
+                left 13px
+                top 50%
+                margin-top -4px
+                background-icon($catalog_recommended_small)
+                
+        .m-product-catalog__add-item_tile
+            padding-left 36px
+            &:before
+                content ''
+                position absolute
+                left 16px
+                top 50%
+                margin-top -4px
+                background-icon($catalog_novelty_small)
+                
+    //b-product-catalog__propose-dropdown
+        .b-product-catalog__propose-item
+            line-height 40px
+            display  block
+            padding 0 12px
+            font-size 13px
+            color #000
+            position relative
+            cursor pointer
+            border-bottom 1px solid #e6e6e6
+            &:last-child
+                border none
+            &:hover
+                background #e6e6e6

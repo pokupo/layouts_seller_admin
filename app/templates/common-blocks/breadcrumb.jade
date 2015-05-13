@@ -1,17 +1,105 @@
-.b-header
-    .b-inner-container
-        .b-breadcrumbs-wrapper
-            .b-mobile-menu.j-mobile-menu
-            ul.b-breadcrumbs
-                li.b-breadcrumbs__item.m-breadcrumbs__item_root
-                    a(href="/") Home
-                li.b-breadcrumbs__item.j-breadcrumbs__item
-                    a(href=js0) Панель управления
-                li.b-breadcrumbs__item.m-breadcrumbs__item_divider
-                    | / 
-                li.b-breadcrumbs__item.m-breadcrumbs__item_active
-                    span Мои магазины
+if(adminMain)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.j-breadcrumbs__item
+                        a(href=js0) Панель управления
+            
+            .b-btn.m-btn_support.j-btn_support
+                .b-icon.m-icon_support
+                | Служба поддержки
 
-        .b-btn.m-btn_support.j-btn_support
-            .b-icon.m-icon_support
-            | Служба поддержки
+            .b-header__notification-holder
+                span.b-notification.m-notification_message.j-hint(title="Посмотреть уведомления системы" data-position="bottom" data-theme="g-hint")
+                    span.b-notification__amount
+                        | 3
+                span.b-notification.m-notification_system-message.j-system-notification
+                    span.b-notification__amount
+                        | 25
+
+if(goods)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_goods
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Мои товары
+            
+            .b-btn.m-btn_support.j-btn_support
+                .b-icon.m-icon_support
+                | Служба поддержки
+
+            .b-header__notification-holder
+                span.b-notification.m-notification_system-message.j-hint(title="Попап удаления сообщений" data-position="bottom" data-theme="g-hint").j-message-remove
+                    span.b-notification__amount
+                        | 25
+
+if(goodsAdd)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_goods
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.j-breadcrumbs__item
+                        span Мои товары
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_divider
+                        span /
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Добавление товара
+            
+            .b-btn.m-btn_support.j-btn_support
+                .b-icon.m-icon_support
+                | Служба поддержки
+
+            .b-header__notification-holder
+                span.b-notification.m-notification_system-message.j-hint(title="Попап удаления сообщений" data-position="bottom" data-theme="g-hint").j-system-notification
+                    span.b-notification__amount
+                        | 25
+
+if(clear)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_goods
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.j-breadcrumbs__item
+                        span Мои товары
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_divider
+                        span /
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Добавление товара
+            
+            .b-btn.m-btn_support.j-btn_support
+                .b-icon.m-icon_support
+                | Служба поддержки
+
+if(breadcrumbPartnersGoods)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_goods
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Товары партнёров
+            
+            .b-btn.m-btn_support.j-btn_support
+                .b-icon.m-icon_support
+                | Служба поддержки
+
+            .b-header__notification-holder
+                span.b-notification.m-notification_system-message.j-hint(title="Каталог товаров" data-position="bottom" data-theme="g-hint").j-system-notification
+                    span.b-notification__amount
+                        | 25

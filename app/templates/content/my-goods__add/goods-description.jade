@@ -1,0 +1,49 @@
+.b-goods-description
+    .b-pkp-block.m-pkp-block_full-width
+        .b-block-title
+            .b-block-title__right
+                a(href="#").b-btn-green.m-btn-green_clone Клонировать товар
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Описание товара
+        .b-goods-description__info
+            label.b-goods-description__label.m-goods-description__label_full-width
+                span.b-goods-description__label-text
+                    | Полное наименование
+                input(type="text").b-input.b-goods-description__input
+            label.b-goods-description__label.m-goods-description__label_short-name
+                span.b-goods-description__label-text
+                    | Краткое название
+                input(type="text").b-input.b-goods-description__input
+            label.b-goods-description__label.m-goods-description__label_article
+                span.b-goods-description__label-text
+                    | Артикул
+                input(type="text").b-input.b-goods-description__input
+            label.b-goods-description__label.m-goods-description__label_weight
+                span.b-goods-description__label-text
+                    | Вес товара <i>(г)</i>
+                input(type="text").b-input.b-goods-description__input
+            label.b-goods-description__label
+                span.b-goods-description__label-text
+                    | Описание товара
+                div.b-editor
+                    textarea
+            label.b-goods-description__label.m-goods-description__label_full-width
+                span.b-goods-description__label-text
+                    | Ключевые слова и фразы 
+                    .b-goods-description__label-subtext
+                        | (через запятую)
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                div.b-keywords-and-phrases
+                    select.b-select.j-select-tags(multiple="multiple")
+                        option(value="Звуковые карты") Звуковые карты
+                        option(value="Модули памяти") Модули памяти
+                        option(value="Платы ввода-вывода") Платы ввода-вывода
+                        option(value="Видеокарты") Видеокарты
+                        option(value="Клавиатруы") Клавиатруы
+                        option(value="Моноблоки") Моноблоки
+
+
+            

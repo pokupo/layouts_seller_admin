@@ -1,20 +1,11 @@
-extends ../layouts/admin-main
+extends ../layouts/default
+
+block variables
+    - var goods = 1
+    - var navtop = 1
 
 block head
     - pageTitle = 'ЛК продавца';
-
-block scripts
-    +script([
-        'libs/jquery.mCustomScrollbar.concat.min.js', 
-        'libs/jquery.tooltip.js',
-        'libs/d3.min.js',
-        'libs/c3.min.js',
-        'libs/moment.min.js',
-        'libs/jquery.plugin.min.js',
-        'libs/jquery.datepick.min.js',
-        'libs/jquery.arcticmodal.js',
-        'common.js'
-    ])
 
 block content
     include ../content/my-goods

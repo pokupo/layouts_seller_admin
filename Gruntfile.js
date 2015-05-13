@@ -1,12 +1,12 @@
 module.exports = function (grunt) {
-
+	require("time-grunt")(grunt);
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		clean: {
-			dist: ['dist']
-		},
+		//clean: {
+		//	dist: ['dist']
+		//},
 
 		sprite: {
 			dist: {
@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 				destCSS: 'app/styles/__helpers/sprite.styl',
 				cssFormat: 'stylus',
 				algorithm: 'binary-tree',
-				padding: 8,
+				padding: 13,
 				engine: 'pngsmith',
 				imgOpts: {
 					format: 'png'
@@ -230,7 +230,7 @@ module.exports = function (grunt) {
 			},
 			livereload: {
 				options: {
-					livereload: true
+					livereload: false
 				},
 				files: ['dist/**/*']
 			},
@@ -255,11 +255,11 @@ module.exports = function (grunt) {
 				tasks: ['jade', 'newer:prettify']
 			},
 			jshint: {
-				files: ['app/scripts/**/*.js', '!app/scripts/libs/**/*'],
+				files: ['app/scripts/**/*.js'],
 				tasks: ['newer:jshint:all']
 			},
 			scripts: {
-				files: ['app/scripts/**/*.js', '!app/scripts/libs/**/*'],
+				files: ['app/scripts/**/*.js'],
 				tasks: ['newer:copy:scripts']
 			},
 			copyResources: {
@@ -293,7 +293,7 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('build', [
-		'clean',
+		//'clean',
 		'sprite',
 		'imagemin',
 		'stylus',
