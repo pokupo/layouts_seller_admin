@@ -143,7 +143,8 @@ module.exports = function (grunt) {
 			},
 			all: [
 				'app/scripts/**/*.js',
-				'!app/scripts/libs/**/*'
+				'!app/scripts/libs/**/*',
+				'!app/scripts/tinymce/**/*'
 			],
 			configFiles: [
 				'.csscomb.json',
@@ -255,11 +256,11 @@ module.exports = function (grunt) {
 				tasks: ['jade', 'newer:prettify']
 			},
 			jshint: {
-				files: ['app/scripts/**/*.js'],
+				files: ['app/scripts/**/*.js', '!app/scripts/tinymce/**/*.js'],
 				tasks: ['newer:jshint:all']
 			},
 			scripts: {
-				files: ['app/scripts/**/*.js'],
+				files: ['app/scripts/**/*.js', '!app/scripts/tinymce/**/*.js'],
 				tasks: ['newer:copy:scripts']
 			},
 			copyResources: {

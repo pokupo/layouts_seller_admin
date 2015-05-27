@@ -1,185 +1,273 @@
 .g-hidden
-	display none
-	
-.b-dropdown
-	position relative
+    display none
 
-	&__trigger
-		z-index 3
-		position relative
-		cursor pointer
+.g-ruble
+    font-family $rubl
+    font-weight normal
 
-	&__content
-		position absolute
-		padding-top 20px
-		left 0
-		right 0
-		top 0
-		z-index 2
+.g-infinity
+    font-family 'Open Sans'
+    font-weight 100
+    font-size 23px
 
-.b-menu__item
-	text-align left
-	
-	&.active > a
-		color #ccc
-		position relative
-		background $grey
+.g-required-filed
+    color #fd5656
 
-		&:hover
-			color #ccc
-			cursor default
-
-.b-menu__link
-	display block
-	width 100%	
-	padding 9px 20px
-	line-height 22px
-	text-decoration none
-	color #333
-	background transparent
-	transition background 0.1 ease-in-out
-	white-space nowrap
-	border-bottom 1px solid $grey
-	font-size 15px
-	padding-right 5px 
-	overflow hidden
-	text-overflow ellipsis
-	text-indent 0
-	
-	&:hover
-		background $grey
-				
-/* Инлайновый дропдаун */
-.b-inline-sorter 
-	display inline-block
-	padding 0 30px 0 20px
-	min-width 211px
-	line-height 16px
-	z-index 6
-	text-indent -12px
-	.b-dropdown__content
-		top -14px
-
-.b-selector__current
-	color #fff
-	&.active
-		color #555
-		border-bottom none
-	&:hover
-		border-bottom 1px dashed rgba(#fff, 0.25)
-		
-.b-dropdown__content
-	padding-top 40px
-
-	&.active
-		a 
-			color #A9A7A3
-			background #efece7 
-			
-.b-tabs
-	width 100%
-	zoom 1
-	position relative
-	box-sizing content-box
-	margin 0 -4px -14px
-	padding 0 4px 4px
-	overflow hidden
-		
-	&__trigger
-		float left
-		position relative
-		left 0
-		z-index 1
-		padding 0 15px
-		line-height 50px
-		height 50px
-		margin-right 20px
-		
-		span
-			display block
-			height 100%
-			cursor pointer
-			color $a__link
-			
-		&:hover
-			span
-				color #333
-				
-		&.selected	
-			z-index 2
-			background #FFF 
-			span
-				color #000
-				cursor default
-				border-bottom 0
-			&:hover
-				span
-					color #000
-.b-tabs
-	&__content
-		display none
-		float right
-		text-align left
-		width 100%
-		min-height 150px 
-		position relative
-		z-index 2
-		margin-left -100%
-		background #FFF
-		box-shadow 0 1px 1px rgba(#000, 0.2)
-		border-top 1px solid $grey
-		margin-top 49px
-		z-index 1
-
-		&.selected
-			display block
-.b-content
-	padding-top 20px	
-	
-
-.b-dropdown__content
-.chosen-drop
-.suggestions-suggestions
-	drop-shadow()
-
-.b-inline-sorter 
-.b-dropdown
-	.b-dropdown__trigger
-		&:after
-			content ''
-			position absolute
-			top 50%
-			right -22px
-			margin-top -1px
-			display block
-			width 0
-			height 0
-			border 6px solid transparent
-			border-top-color #c8c9cc
-			z-index 5
-		&.active
-			&:after
-				border-top-color transparent
-				border-bottom-color #000
-				margin-top -8px
-				
-.b-sidebar-header			
-	.b-dropdown
-		margin 10px
-		
-		li
-			a
-				font-size 16px
-				color $a__link
+.g-strong
+    font-weight 700
+    
+.g-strong_neutral
+    color #333
+.g-strong_negative
+    color #ff6766
+.g-strong_positive
+    color #7caa1f
 
 
 
+//sidebar	
+    .b-dropdown
+        position relative
+
+        &__trigger
+            z-index 3
+            position relative
+            cursor pointer
+
+        &__content
+            position absolute
+            padding-top 20px
+            left 0
+            right 0
+            top 0
+            z-index 2
+            
+    .b-menu__item
+        text-align left
+
+        &.active > a
+        color #ccc
+        position relative
+        background $grey
+
+            &:hover
+                color #ccc
+                cursor default
+
+    .b-menu__link
+        display block
+        width 100%	
+        padding 9px 20px
+        line-height 22px
+        text-decoration none
+        color #333
+        background transparent
+        transition background 0.1 ease-in-out
+        white-space nowrap
+        border-bottom 1px solid $grey
+        font-size 15px
+        padding-right 5px 
+        overflow hidden
+        text-overflow ellipsis
+        text-indent 0
+
+        &:hover
+            background $grey
+    /* Инлайновый дропдаун */
+    .b-inline-sorter 
+        display inline-block
+        padding 0 30px 0 20px
+        min-width 211px
+        line-height 16px
+        z-index 6
+        text-indent -12px
+        .b-dropdown__content
+            top -14px
 
 
 
+    .b-selector__current
+        color #fff
+        &.active
+            color #555
+            border-bottom none
+        &:hover
+            border-bottom 1px dashed rgba(#fff, 0.25)
+            
+    .b-dropdown__content
+        padding-top 40px
+
+        &.active
+            a 
+                color #A9A7A3
+                background #efece7 
+
+    .b-dropdown__content
+    .chosen-drop
+    .suggestions-suggestions
+        drop-shadow()
+
+    .b-inline-sorter 
+    .b-dropdown
+        .b-dropdown__trigger
+            &:after
+                content ''
+                position absolute
+                top 50%
+                right -22px
+                margin-top -1px
+                display block
+                width 0
+                height 0
+                border 6px solid transparent
+                border-top-color #c8c9cc
+                z-index 5
+            &.active
+                &:after
+                    border-top-color transparent
+                    border-bottom-color #000
+                    margin-top -8px
+
+    .b-sidebar-header
+        .b-dropdown
+            margin 10px
+            li
+                a
+                    font-size 16px
+                    color $a__link
 
 
+.b-block-title
+    width 100%
+    &__left
+        overflow hidden
+    &__right
+        float right
+        padding 18px 0
+    &:after
+        content ''
+        display block
+        clear both
+.b-block-title__heading
+    font-size 30px
+    font-weight 300
+    color #000000
+    line-height 30px
+    padding 18px 0
+    
+.m-block-title__heading_big
+    font-size 44px
+    line-height 45px
+    padding 15px 0 10px 0
+    max-width 100%
+
+.b-block-title__subtext
+    font-size 13px
+    display block
+    line-height 20px
+    letter-spacing 0.25px
+    
+.m-block-title__subtext_inline
+    display inline-block
+    
+.b-images 
+    .b-block-title__subtext
+        margin-top 10px
+        
+.b-block-subtitle
+    font-size 20px
+    font-weight 300
 
 
+.b-label
+    display inline-block
+    width 100%
+    margin-bottom 22px
+.m-label__third
+    width calc(100%/3 - 13px)
+    margin-right 16px
+    &:last-child
+        margin-right 0
+    .b-input
+        width 100%
+.m-label_charging-type
+    width 440px
+    vertical-align top
+.m-label_delivery-price
+    vertical-align top
+    width 375px
+.b-label__text
+      font-weight 700
+      color #000
+      display block
+      font-size 14px
+      margin-bottom 8px
+      white-space nowrap   
+                
+.b-label__sub-text
+    font-weight 500
+    
+.m-goods-description__label_short-name
+    width 60.5%
+    margin-right 16px
+.m-goods-description__label_article
+    width 17.5%
+    margin-right 18px
+.m-goods-description__label_weight
+    width 17%
+    
+.b-tinymce
+    height 233px
+    
+.b-resized-block
+    resize vertical
+    overflow auto
 
+.b-link
+    color #177a93
+    letter-spacing 0.35px
+    font-size 13px
+    &:hover
+        text-decoration none
 
+.b-input-holder,.b-select-holder
+    position relative
+.b-input
+    background #fff
+    border 1px solid #cccccc
+    border-radius 5px
+    height 36px
+    padding 0 12px
+    color #000
+    font-size 14px
+    letter-spacing 0.3px
+    width 100%
+    &:focus
+        border 2px solid #177a93
+               
+.m-input_date
+    width 132px
+    position relative
+    
+.m-input_payment-perc
+    width 70px
+    display inline-block
+    margin 0 10px
+    
+.b-select
+    height 36px
+    width 100%
+    
+.b-textarea
+    width 100%
+    border-radius 5px
+    border 1px solid #cccccc
+    height  82px
+    padding 10px
+    font-size 14px
+
+input[type="password"]
+    font: small-caption
+    font-size 22px
+    letter-spacing 1px
+        

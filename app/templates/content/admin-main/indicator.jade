@@ -1,21 +1,21 @@
-div.b-indicator
+.b-indicator
     .b-block-title
         .b-block-title__left
             h2.b-block-title__heading.m-block-title__heading_big.b-indicator__title
                 | Показатели
     .b-indicator__top
         .b-indicator__line
-            a(href="#").b-indicator-btn.m-indicator-btn_first
+            a(href="#").b-indicator__line-btn
                 | Вчера
-            a(href="#" title="Посмотреть уведомления системы" data-position="top" data-theme="g-hint").b-indicator-btn.j-hint
+            a(href="#" title="Посмотреть уведомления системы" data-position="top" data-theme="g-hint").b-indicator__line-btn.j-hint
                 | Сегодня
-            a.b-indicator-btn.m-indicator-btn_active(href="#")
+            a.b-indicator__line-btn.m-indicator__line-btn_active(href="#")
                 | Неделя
-            a.b-indicator-btn(href="#")
+            a.b-indicator__line-btn(href="#")
                 | Месяц
-            a.b-indicator-btn(href="#")
+            a.b-indicator__line-btn(href="#")
                 | Квартал
-            a.b-indicator-btn.m-indicator-btn_last(href="#")
+            a.b-indicator__line-btn(href="#")
                 | Год
         .b-indicator__calendar
             span.b-indicator__calendar-text
@@ -31,8 +31,9 @@ div.b-indicator
                     label.b-calendar-range__label
                         input.b-input.m-input_date.j-calendar.j-calendar__range-end(type="text" readonly)
                         span.b-calendar-range__date-input-icon
+                            
     .b-indicator__content
-        .b-pkp-block.m-pkp-block_full-width
+        .b-pkp-block
             .b-block-title
                 .b-block-title__left
                     h2.b-block-title__heading
@@ -61,7 +62,7 @@ div.b-indicator
                         td
                             | Яндекс. Деньги
                         td
-                            a.b-btn-green(href="#")
+                            a.b-new-orders__process(href="#")
                                 | Обработать
                     tr
                         td
@@ -74,7 +75,7 @@ div.b-indicator
                         td
                             | Visa QIWI Wallet
                         td
-                            a.b-btn-green(href="#")
+                            a.b-new-orders__process(href="#")
                                 | Обработать
                     tr
                         td
@@ -87,6 +88,6 @@ div.b-indicator
                         td
                             | Z-Payment
                         td
-                            a.b-btn-green(href="#")
+                            a.b-new-orders__process(href="#")
                                 | Обработать
                                 

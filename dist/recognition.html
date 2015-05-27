@@ -128,8 +128,9 @@
 								</li>
 							</ul>
 						</div>
-						<div class="b-btn m-btn_support j-btn_support">
-							<div class="b-icon m-icon_support"></div>Служба поддержки</div>
+						<div class="b-header__support j-btn_support">
+							<div class="m-icon_support">Служба поддержки</div>
+						</div>
 					</div>
 				</div>
 				<div class="b-previous-page">
@@ -138,7 +139,7 @@
 				<div class="b-inner-content">
 					<form action="#">
 						<div class="b-recognition">
-							<div class="b-pkp-block m-pkp-block_full-width">
+							<div class="b-pkp-block">
 								<div class="b-block-title">
 									<div class="b-block-title__left">
 										<h2 class="b-block-title__heading m-block-title__heading_big"> Распознание формата файла</h2>
@@ -303,10 +304,10 @@
 						</div>
 				</div>
 			</div>
-			<div class="b-outer-btns-holder"><a href="#" class="b-btn-green m-btn-green_recognize">загрузить товары</a><a href="#" class="b-btn-cancel">отмена</a>
+			<div class="b-outer-btns-holder"><a href="#" class="b-btn">загрузить товары</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
 			</div>
 			<div class="video-holder">
-				<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
+				<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" width="100%" height="100%" controls="true" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
 				<div class="playlist-components">
 					<div class="b-playlist">
 						<h1>Список материалов</h1>
@@ -319,19 +320,19 @@
 				</div>
 			</div>
 			<div class="b-popup-holder">
-				<div class="b-notification-popup j-tabs-popup">
-					<div class="b-notification-popup__close j-modal-close"></div>
+				<div class="b-popup j-goods-add-popup">
+					<div class="b-popup__close j-modal-close"></div>
 					<div class="b-block-title__heading">Добавление цифрового товара</div>
 					<div class="b-tabs j-tabs">
 						<ul class="b-tabs__list">
-							<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text">Продаваемая информация</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+							<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text m-tabs__btn-text_small">Продаваемая информация</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
 							</li>
-							<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text">Продаваемый файл</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+							<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text m-tabs__btn-text_small">Продаваемый файл</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
 							</li>
 						</ul>
 						<div class="p-tabs__container">
 							<div id="tab-1" class="p-tabs__content">
-								<div class="b-selling-info">
+								<div class="b-tabs__inner b-selling-info">
 									<div class="b-selling-info__row">
 										<label class="b-label"><span class="b-label__text m-label__text_required">Текст сообщения </span>
 											<textarea class="b-textarea"></textarea>
@@ -349,9 +350,11 @@
 										</label>
 									</div>
 								</div>
+								<div class="b-outer-btns-holder"><a href="#" class="b-btn m-btn_download-store">добавить информацию</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
+								</div>
 							</div>
 							<div id="tab-2" class="p-tabs__content">
-								<div class="b-selling-files">
+								<div class="b-tabs__inner b-selling-files">
 									<div class="b-selling-files__row">
 										<div class="b-configure"><span class="b-configure__icon m-configure__icon_customize-discount"></span><a href="#" class="b-configure__link m-configure__link_customize-discounts">Выбрать рубрики</a><span class="b-configure__subtext">(csv, txt, xml не более 5 МБ)</span>
 										</div>
@@ -368,10 +371,10 @@
 										</label>
 									</div>
 								</div>
+								<div class="b-outer-btns-holder"><a href="#" class="b-btn m-btn_download-store">добавить информацию</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="b-outer-btns-holder"><a href="#" class="b-btn-green m-btn-green_add-goods">добавить товар</a><a href="#" class="b-btn-cancel">отмена</a>
 					</div>
 				</div>
 			</div>
@@ -379,26 +382,26 @@
 		</div>
 		</div>
 		</div>
-		<script src="scripts/libs/jquery-2.1.1.min.js?1431505306571"></script>
-		<script src="http://vjs.zencdn.net/4.7/video.js?1431505306571"></script>
-		<script src="scripts/libs/jstarbox.js?1431505306571"></script>
-		<script src="scripts/libs/jquery.tooltip.js?1431505306571"></script>
-		<script src="scripts/libs/playlist.js?1431505306571"></script>
-		<script src="scripts/libs/d3.min.js?1431505306571"></script>
-		<script src="scripts/libs/c3.min.js?1431505306571"></script>
-		<script src="scripts/libs/moment.min.js?1431505306571"></script>
-		<script src="scripts/libs/jquery.plugin.min.js?1431505306571"></script>
-		<script src="scripts/libs/jquery.datepick.min.js?1431505306571"></script>
-		<script src="scripts/libs/formstone.core.js?1431505306571"></script>
-		<script src="scripts/libs/formstone.touch.js?1431505306571"></script>
-		<script src="scripts/libs/formstone.dropdown.js?1431505306571"></script>
-		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1431505306571"></script>
-		<script src="scripts/libs/jquery.arcticmodal.js?1431505306571"></script>
-		<script src="scripts/libs/select2.full.min.js?1431505306571"></script>
-		<script src="scripts/libs/tabulous.js?1431505306571"></script>
-		<script src="scripts/libs/checkboxTree.js?1431505306571"></script>
-		<script src="scripts/tinymce/tinymce.min.js?1431505306571"></script>
-		<script src="scripts/common.js?1431505306571"></script>
-		<script src="scripts/debug.js?1431505306571"></script>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1432713307532"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1432713307532"></script>
+		<script src="scripts/libs/jstarbox.js?1432713307532"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1432713307532"></script>
+		<script src="scripts/libs/playlist.js?1432713307532"></script>
+		<script src="scripts/libs/d3.min.js?1432713307532"></script>
+		<script src="scripts/libs/c3.min.js?1432713307532"></script>
+		<script src="scripts/libs/moment.min.js?1432713307532"></script>
+		<script src="scripts/libs/jquery.plugin.min.js?1432713307532"></script>
+		<script src="scripts/libs/jquery.datepick.min.js?1432713307532"></script>
+		<script src="scripts/libs/formstone.core.js?1432713307532"></script>
+		<script src="scripts/libs/formstone.touch.js?1432713307532"></script>
+		<script src="scripts/libs/formstone.dropdown.js?1432713307532"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1432713307532"></script>
+		<script src="scripts/libs/jquery.arcticmodal.js?1432713307532"></script>
+		<script src="scripts/libs/select2.full.min.js?1432713307532"></script>
+		<script src="scripts/libs/tabulous.js?1432713307532"></script>
+		<script src="scripts/libs/checkboxTree.js?1432713307532"></script>
+		<script src="scripts/tinymce/tinymce.min.js?1432713307532"></script>
+		<script src="scripts/common.js?1432713307532"></script>
+		<script src="scripts/debug.js?1432713307532"></script>
 	</body>
 </html>

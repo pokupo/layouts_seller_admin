@@ -1,0 +1,59 @@
+.b-popup-holder   
+    .b-popup.j-add-delivery-method-popup
+        .b-popup__close.j-modal-close
+        .b-block-title__heading
+            | Добавление способа доставки 
+        .b-popup__content
+            h3.b-popup__title
+                | Выбрать из шаблона
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+            table.b-add-delivery-method__table
+                thead
+                    tr
+                        th
+                            | Логотип
+                        th
+                            | Название
+                        th
+                            | Сайт
+                        th
+                            | Авторасчет </br>стоимости
+                        th
+                            
+                tbody
+                    tr
+                        td
+                            img(src="images/shops/shipping1.png")
+                        td
+                            | EMS почта
+                        td
+                            a(href="#") www.emspost.ru
+                        td
+                            | Да
+                        td
+                            a(href="#").b-btn.m-btn_small.m-btn_chose-template Выбрать шаблон
+                    tr
+                        td
+                            img(src="images/shops/shipping2.png")
+                        td
+                            | Деловые линии
+                        td
+                            a(href="#")  www.dellin.ru
+                        td
+                            | Да
+                        td
+                            a(href="#").b-btn.m-btn_small.m-btn_chose-template Выбрать шаблон
+                    tr
+                        td
+                            img(src="images/shops/shipping3.png")
+                        td
+                            | Курьерская доставка
+                        td
+                            a(href="#") www.ponyexpress.ru
+                        td
+                            | Да
+                        td
+                            a(href="#").b-btn.m-btn_small.m-btn_chose-template Выбрать шаблон
+

@@ -1,0 +1,138 @@
+//b-actions
+    .b-actions
+        float left
+    .m-actions_full    
+        width 100%
+
+    .b-actions__group
+        display inline-block
+        margin-right 5px
+        & .b-actions__item
+            &:first-child .b-actions__btn
+                border-top-left-radius 5px
+                border-bottom-left-radius 5px
+            &:last-child .b-actions__btn
+                border-top-right-radius 5px
+                border-bottom-right-radius 5px
+    
+    .m-actions__group_right
+        float right
+        margin 0 0 0 12px
+                
+    .b-actions__item
+        float left
+        margin 0 1px
+        position relative
+        &:first-child
+            margin-left 0
+        &:last-child
+            margin-right 0
+        .b-product-catalog__add-dropdown
+            top 43px
+            left 9px    
+
+    .b-actions__btn
+        display block
+        width 61px
+        height 40px
+        background #ebe8e3
+        position relative
+        cursor pointer
+        &:hover
+            background #d9d6d1
+        .m-checkbox__icon_minus
+            position relative
+            left -2px
+    .m-actions__btn_checkbox
+        text-align center
+        text-indent 5px
+        padding-top 6px
+    .m-actions__btn_disabled
+        opacity 0.6
+        cursor default
+        &:hover
+            background #ebe8e3
+    .m-actions__btn_success
+        centered-icon($action_success)
+    .m-actions__btn_remove
+        centered-icon($action_remove)
+    .m-actions__btn_delete
+        centered-icon($action_delete)
+    .m-actions__btn_plus-minus
+        centered-icon($action_plus-minus)
+    .m-actions__btn_rub
+        centered-icon($action_rub)
+    .m-actions__btn_euro
+        centered-icon($action_euro)
+    .m-actions__btn_dollar
+        centered-icon($action_dollar)
+    .m-actions__btn_bitcoin
+        centered-icon($action_bitcoin)
+    .m-actions__btn_list
+        centered-icon($action_list)
+    .m-actions__btn_load
+        centered-icon($action_load)
+    .m-actions__btn_search
+        centered-icon($search)
+    .m-actions__btn_count-increase
+        centered-icon($arrow-top)
+    .m-actions__btn_count-decrease
+        centered-icon($arrow-down2)
+    .m-actions__hide-headings
+        width 42px
+        centered-icon($hide-headings)
+    .m-actions__show-headings
+        width 42px
+        centered-icon($show-headings)
+    .m-actions__btn_add
+        centered-icon($action_add)
+    .m-actions__btn_add-from-another
+        width 195px
+        line-height 36px
+        font-size 13px
+        font-weight 500
+        letter-spacing 0.25px
+        padding-left 44px
+        &:before
+            pseudo()
+            background-icon($action_add)
+            left 18px
+            top 9px
+    .m-actions__btn_asc
+        &:before
+            content ''
+            width 0
+            height 0
+            border-style solid
+            border-width 0 8px 10px 8px
+            border-color transparent transparent #474b53 transparent
+            left 50%
+            position absolute
+            margin-left -8px
+            top 50%
+            margin-top -5px
+    .m-actions__btn_desc
+        &:before
+            content ''
+            width 0
+            height 0
+            border-style solid
+            border-width 10px 8px 0 8px
+            border-color #474b53 transparent transparent transparent
+            left 50%
+            position absolute
+            margin-left -8px
+            top 50%
+            margin-top -5px
+
+    .b-actions__search-triangle
+        width 0
+        height 0
+        border-style solid
+        border-width 13px 14px 0 14px
+        border-color #efece7 transparent transparent transparent
+        position absolute
+        bottom 100%
+        margin-bottom 7px
+        left 50%
+        margin-left -14px

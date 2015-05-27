@@ -1,9 +1,23 @@
-.b-subnavigation
-    .b-inner-container
-        ul.b-subnavigation__list
-            li.b-subnavigation__item.m-subnavigation__item_active
-                a(href="/") Мои товары 
-            li.b-subnavigation__item
-                a(href=js0) Товары партнёров
-            li.b-subnavigation__item
-                a(href=js0) Рубрикатор
+if(!navtopMyShops)
+    .b-subnavigation
+        .b-inner-container
+            ul.b-subnavigation__list
+                li.b-subnavigation__item.m-subnavigation__item_active
+                    a(href="/") Мои товары 
+                li.b-subnavigation__item
+                    a(href=js0) Товары партнёров
+                li.b-subnavigation__item
+                    a(href=js0) Рубрикатор
+
+if(navtopMyShops)
+    .b-subnavigation
+        .b-inner-container
+            ul.b-subnavigation__list
+                li.b-subnavigation__item.m-subnavigation__item_active
+                    a(href="/") Мои магазины
+                li.b-subnavigation__item
+                    a(href=js0) Магазины партнёров
+
+                    
+
+

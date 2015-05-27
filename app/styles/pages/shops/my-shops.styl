@@ -1,0 +1,233 @@
+//MY SHOPS
+    .b-store
+        background #fff
+        padding-top 16px
+        padding-bottom 28px
+        position relative
+        
+    .m-store_favorite
+        box-shadow inset 0 0 0 2px #97ce68
+        &:after
+            top 2px
+            left 2px
+            position absolute
+            background-icon($favorite-store)
+            
+    .b-store__delete
+        width 34px
+        height 34px
+        border-radius 999px
+        border 1px solid #3e424a
+        position absolute
+        top 10px
+        right 10px
+        cursor pointer
+        transition all .4s
+        &:before
+            content ''
+            position absolute
+            width 2px
+            height 15px
+            transform rotate(45deg)
+            background #3e424a
+            left 50%
+            top 50%
+            margin-top -7.5px
+            margin-left -1px
+            transition all .4s
+        &:after
+            content ''
+            position absolute
+            width 2px
+            height 15px
+            transform rotate(-45deg)
+            background #3e424a
+            left 50%
+            top 50%
+            margin-top -7.5px 
+            margin-left -1px
+            transition all .4s
+        &:hover
+            background #3e424a
+            &:before
+                transform rotate(-45deg)
+                background #fff
+            &:after
+                transform rotate(-135deg)
+                background #fff
+            
+
+    .b-store__logo
+        width 150px
+        height 150px
+        border-radius 999px
+        background #efece7
+        padding 2px
+        position relative
+        float left
+        margin-right 19px
+        position relative
+        centered-icon($shop)
+        
+    .b-store__log-img-holder
+        display table-cell
+        vertical-align middle
+        text-align center
+        width 146px
+        height 146px
+        background #fff
+        border-radius 999px
+        position relative
+        z-index 2
+        img
+            max-width 100%
+            vertical-align top
+        
+    .b-store__logo-status
+        width 40px
+        height 40px
+        position absolute
+        background #fff
+        bottom 5px
+        right 5px
+        border-radius 999px
+        padding 3px
+        z-index 2
+
+    .b-store__current
+        color #000
+        font-size 14px
+        font-weight 700
+        display block
+    
+    .b-store__chose-active
+        color #177a93
+        font-size 14px
+        padding-left 24px
+        line-height 20px
+        letter-spacing 0.4px
+        position relative
+        &:hover
+            text-decoration none
+            &:before
+                opacity 0.8
+        &:before
+            pseudo()
+            background-icon($star)
+            left 0
+        
+        
+    .b-store__info
+        padding 5px 25px 0 0
+        overflow hidden
+    
+    .b-store__title
+        font-size 30px
+        display block
+        margin 12px 0
+    
+    .b-store__activity
+        font-size 13px
+        font-weight 500
+        line-height 20px
+        letter-spacing 0.3px
+    .m-store__activity_active
+        color #7caa1f
+    .m-store__activity_unactive
+        color #ff6766
+       
+    .b-store__description
+        color #333
+        font-size 13px
+        line-height 20px
+        letter-spacing 0.25px
+        margin -4px 0 10px 0
+        display inline-block
+        
+    .b-store__site
+        line-height 20px
+        display block
+        color #333333
+        font-size 13px
+        letter-spacing 0.2px
+        a
+            color #177a93
+            &:hover
+                text-decoration none
+
+    .b-store__raiting
+        line-height 20px
+        display block
+        color #333333
+        font-size 13px
+    
+    .b-store__raiting-mark
+        font-weight 700
+        margin-left 3px
+    .m-store__raiting-mark_positive
+        color #7caa1f 
+        
+    .b-store__reviews 
+        a
+            color #177a93
+            line-height 20px
+            font-size 13px
+            letter-spacing 0.3px
+            &:hover
+                text-decoration none
+        span
+            color #333
+            line-height 20px
+            font-size 13px
+            letter-spacing 0.3px
+        strong
+            font-weight 700
+            margin 0 2px
+        .b-store__reviews-positive
+            color #7caa1f  
+        .b-store__reviews-negative
+            color #c64c1b
+            
+    .b-store__goods-count
+        font-size 13px
+        color #333333
+        line-height 20px
+        display block
+        strong 
+            font-weight 700
+            margin 0 6px
+            color #333333
+            
+    .b-store__reward
+        font-size 13px
+        color #333333
+        display block
+        line-height 20px
+        strong 
+            font-weight 700
+            margin 0 6px
+            color #333333
+    
+    .b-store__link
+        display block
+        color #177a93
+        font-size 18px
+        line-height 20px
+        font-weight 500
+        letter-spacing 0.3px
+        margin 17px 0 0 0
+        &:hover
+            text-decoration none
+    
+    .b-store__link-icon
+        position relative
+        margin-left 16px
+    
+    .m-store__link-icon_confirmed
+        centered-icon($activity-btn_done)
+        opacity 0.7  
+    .m-store__link-icon_not-confirmed
+        centered-icon($alert)
+        
+    .b-store__btns
+        margin-top 17px

@@ -1,0 +1,10 @@
+form(action="#")
+    include my-goods__add/upload-from-file
+    .b-outer-btns-holder
+        a(href="#").b-btn
+            | загрузить
+        a(href="#").b-btn.m-btn_gray.m-btn_cancel
+            | отмена
+        span.j-popup-trigger(style="margin: 0 10px" data-popup="j-add-digital") Попап
+    include ../appeared-blocks/add-digital
+    include ../appeared-blocks/video

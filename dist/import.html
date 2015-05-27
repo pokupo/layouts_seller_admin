@@ -120,13 +120,16 @@
 							<ul class="b-breadcrumbs">
 								<li class="b-breadcrumbs__item m-breadcrumbs__item_root m-breadcrumbs__item_root_goods"><a href="/">Home</a>
 								</li>
-								<li class="b-breadcrumbs__item m-breadcrumbs__item_last j-breadcrumbs__item"><span>Мои товары</span>
+								<li class="b-breadcrumbs__item j-breadcrumbs__item"><span>Мои товары</span>
+								</li>
+								<li class="b-breadcrumbs__item m-breadcrumbs__item_divider"><span>/</span>
+								</li>
+								<li class="b-breadcrumbs__item m-breadcrumbs__item_last j-breadcrumbs__item"><span>Добавление товара</span>
 								</li>
 							</ul>
 						</div>
-						<div class="b-btn m-btn_support j-btn_support">
-							<div class="b-icon m-icon_support"></div>Служба поддержки</div>
-						<div class="b-header__notification-holder"><span title="Попап удаления сообщений" data-position="bottom" data-theme="g-hint" class="b-notification m-notification_system-message j-hint j-message-remove"><span class="b-notification__amount">25</span></span>
+						<div class="b-header__support j-btn_support">
+							<div class="m-icon_support">Служба поддержки</div>
 						</div>
 					</div>
 				</div>
@@ -136,7 +139,7 @@
 				<div class="b-inner-content">
 					<form action="#">
 						<div class="b-import">
-							<div class="b-pkp-block m-pkp-block_full-width">
+							<div class="b-pkp-block">
 								<div class="b-block-title">
 									<div class="b-block-title__left">
 										<h2 class="b-block-title__heading m-block-title__heading_big"> Импорт товаров</h2>
@@ -157,137 +160,136 @@
 									</div>
 								</div>
 								<div class="b-import__filter">
-									<div class="b-import__goods-type"><span class="b-goods-search__filter-title">Тип товаров<div class="pkp-tooltip pkp-tooltip_inline"><span title="Ключевые слова и фразы" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span>
+									<div class="b-import__goods-type">
+										<div class="b-goods-type"><span class="b-label"><div class="b-label__text">Тип товара</div><label class="b-goods-type__label"><input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_physical">Физический товар</span>
+											</label>
+											<label class="b-goods-type__label">
+												<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_digital">Цифровой товар</span>
+											</label>
+											</span>
+										</div>
 									</div>
-									</span>
-									<div class="b-goods-type">
-										<label class="b-goods-type__label">
-											<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_physical">Физический товар</span>
-										</label>
-										<label class="b-goods-type__label">
-											<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_digital">Цифровой товар</span>
-										</label>
+									<div class="b-import__separator">
+										<div class="b-import__separator-inner">
+											<label class="b-label">
+												<div class="b-label__text">Разделитель записей<span class="g-required-filed"> *</span>
+													<div class="pkp-tooltip pkp-tooltip_inline"><span title="Ключевые слова и фразы" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span>
+													</div>
+												</div>
+												<input class="b-input">
+											</label>
+										</div>
+										<div class="b-import__separator-inner">
+											<label class="b-label">
+												<div class="b-label__text">Разделитель полей<span class="g-required-filed"> *</span>
+													<div class="pkp-tooltip pkp-tooltip_inline"><span title="Ключевые слова и фразы" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span>
+													</div>
+												</div>
+												<input class="b-input">
+											</label>
+										</div>
 									</div>
 								</div>
-								<div class="b-import__separator">
-									<div class="b-import__separator-inner">
-										<label class="b-label">
-											<div class="b-label__text">Разделитель записей<span class="g-required-filed"> *</span>
-												<div class="pkp-tooltip pkp-tooltip_inline"><span title="Ключевые слова и фразы" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span>
+							</div>
+						</div>
+						<div class="b-outer-btns-holder"><a href="#" class="b-btn">распознать файл</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
+						</div>
+						<div class="video-holder">
+							<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" width="100%" height="100%" controls="true" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
+							<div class="playlist-components">
+								<div class="b-playlist">
+									<h1>Список материалов</h1>
+									<div class="b-playlist__scroll">
+										<ul></ul><span class="b-playlist__close js-close-playlist"></span>
+									</div>
+								</div>
+							</div>
+							<div class="b-playlist-controls"><span class="j-close-video b-playlist-controls__close"></span><span id="js-prev" data-target="prev" class="b-playlist-control prev"></span><span id="js-next" data-target="next" class="b-playlist-control next"></span><span class="b-playlist-control playlist js-show-playlist"><span class="b-playlist-control__num">24</span></span>
+							</div>
+						</div>
+						<div class="b-popup-holder">
+							<div class="b-popup j-goods-add-popup">
+								<div class="b-popup__close j-modal-close"></div>
+								<div class="b-block-title__heading">Добавление цифрового товара</div>
+								<div class="b-tabs j-tabs">
+									<ul class="b-tabs__list">
+										<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text m-tabs__btn-text_small">Продаваемая информация</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+										</li>
+										<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text m-tabs__btn-text_small">Продаваемый файл</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+										</li>
+									</ul>
+									<div class="p-tabs__container">
+										<div id="tab-1" class="p-tabs__content">
+											<div class="b-tabs__inner b-selling-info">
+												<div class="b-selling-info__row">
+													<label class="b-label"><span class="b-label__text m-label__text_required">Текст сообщения </span>
+														<textarea class="b-textarea"></textarea>
+													</label>
+												</div>
+												<div class="b-selling-info__row">
+													<label class="b-label m-label__third"><span class="b-label__text">Доступен после продажи <span class="b-label__sub-text">(дней)</span></span>
+														<input class="b-input">
+													</label>
+													<label class="b-label m-label__third"><span class="b-label__text">Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span></span>
+														<input class="b-input">
+													</label>
+													<label class="b-label m-label__third"><span class="b-label__text">Метка, номер, примечание </span>
+														<input class="b-input">
+													</label>
 												</div>
 											</div>
-											<input class="b-input">
-										</label>
-									</div>
-									<div class="b-import__separator-inner">
-										<label class="b-label">
-											<div class="b-label__text">Разделитель полей<span class="g-required-filed"> *</span>
-												<div class="pkp-tooltip pkp-tooltip_inline"><span title="Ключевые слова и фразы" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span>
+											<div class="b-outer-btns-holder"><a href="#" class="b-btn m-btn_download-store">добавить информацию</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
+											</div>
+										</div>
+										<div id="tab-2" class="p-tabs__content">
+											<div class="b-tabs__inner b-selling-files">
+												<div class="b-selling-files__row">
+													<div class="b-configure"><span class="b-configure__icon m-configure__icon_customize-discount"></span><a href="#" class="b-configure__link m-configure__link_customize-discounts">Выбрать рубрики</a><span class="b-configure__subtext">(csv, txt, xml не более 5 МБ)</span>
+													</div>
+												</div>
+												<div class="b-selling-files__row">
+													<label class="b-label m-label__third"><span class="b-label__text">Доступен после продажи <span class="b-label__sub-text">(дней)</span></span>
+														<input class="b-input">
+													</label>
+													<label class="b-label m-label__third"><span class="b-label__text">Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span></span>
+														<input class="b-input">
+													</label>
+													<label class="b-label m-label__third"><span class="b-label__text">Метка, номер, примечание </span>
+														<input class="b-input">
+													</label>
 												</div>
 											</div>
-											<input class="b-input">
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-				</div>
-				<div class="b-outer-btns-holder"><a href="#" class="b-btn-green m-btn-green_recognize">распознать файл</a><a href="#" class="b-btn-cancel">отмена</a>
-				</div>
-				<div class="video-holder">
-					<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
-					<div class="playlist-components">
-						<div class="b-playlist">
-							<h1>Список материалов</h1>
-							<div class="b-playlist__scroll">
-								<ul></ul><span class="b-playlist__close js-close-playlist"></span>
-							</div>
-						</div>
-					</div>
-					<div class="b-playlist-controls"><span class="j-close-video b-playlist-controls__close"></span><span id="js-prev" data-target="prev" class="b-playlist-control prev"></span><span id="js-next" data-target="next" class="b-playlist-control next"></span><span class="b-playlist-control playlist js-show-playlist"><span class="b-playlist-control__num">24</span></span>
-					</div>
-				</div>
-				<div class="b-popup-holder">
-					<div class="b-notification-popup j-tabs-popup">
-						<div class="b-notification-popup__close j-modal-close"></div>
-						<div class="b-block-title__heading">Добавление цифрового товара</div>
-						<div class="b-tabs j-tabs">
-							<ul class="b-tabs__list">
-								<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text">Продаваемая информация</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
-								</li>
-								<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text">Продаваемый файл</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
-								</li>
-							</ul>
-							<div class="p-tabs__container">
-								<div id="tab-1" class="p-tabs__content">
-									<div class="b-selling-info">
-										<div class="b-selling-info__row">
-											<label class="b-label"><span class="b-label__text m-label__text_required">Текст сообщения </span>
-												<textarea class="b-textarea"></textarea>
-											</label>
-										</div>
-										<div class="b-selling-info__row">
-											<label class="b-label m-label__third"><span class="b-label__text">Доступен после продажи <span class="b-label__sub-text">(дней)</span></span>
-												<input class="b-input">
-											</label>
-											<label class="b-label m-label__third"><span class="b-label__text">Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span></span>
-												<input class="b-input">
-											</label>
-											<label class="b-label m-label__third"><span class="b-label__text">Метка, номер, примечание </span>
-												<input class="b-input">
-											</label>
-										</div>
-									</div>
-								</div>
-								<div id="tab-2" class="p-tabs__content">
-									<div class="b-selling-files">
-										<div class="b-selling-files__row">
-											<div class="b-configure"><span class="b-configure__icon m-configure__icon_customize-discount"></span><a href="#" class="b-configure__link m-configure__link_customize-discounts">Выбрать рубрики</a><span class="b-configure__subtext">(csv, txt, xml не более 5 МБ)</span>
+											<div class="b-outer-btns-holder"><a href="#" class="b-btn m-btn_download-store">добавить информацию</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
 											</div>
 										</div>
-										<div class="b-selling-files__row">
-											<label class="b-label m-label__third"><span class="b-label__text">Доступен после продажи <span class="b-label__sub-text">(дней)</span></span>
-												<input class="b-input">
-											</label>
-											<label class="b-label m-label__third"><span class="b-label__text">Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span></span>
-												<input class="b-input">
-											</label>
-											<label class="b-label m-label__third"><span class="b-label__text">Метка, номер, примечание </span>
-												<input class="b-input">
-											</label>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="b-outer-btns-holder"><a href="#" class="b-btn-green m-btn-green_add-goods">добавить товар</a><a href="#" class="b-btn-cancel">отмена</a>
-						</div>
-					</div>
+					</form>
 				</div>
-				</form>
 			</div>
 		</div>
-		</div>
-		<script src="scripts/libs/jquery-2.1.1.min.js?1431505304559"></script>
-		<script src="http://vjs.zencdn.net/4.7/video.js?1431505304559"></script>
-		<script src="scripts/libs/jstarbox.js?1431505304559"></script>
-		<script src="scripts/libs/jquery.tooltip.js?1431505304559"></script>
-		<script src="scripts/libs/playlist.js?1431505304559"></script>
-		<script src="scripts/libs/d3.min.js?1431505304559"></script>
-		<script src="scripts/libs/c3.min.js?1431505304559"></script>
-		<script src="scripts/libs/moment.min.js?1431505304559"></script>
-		<script src="scripts/libs/jquery.plugin.min.js?1431505304559"></script>
-		<script src="scripts/libs/jquery.datepick.min.js?1431505304559"></script>
-		<script src="scripts/libs/formstone.core.js?1431505304559"></script>
-		<script src="scripts/libs/formstone.touch.js?1431505304559"></script>
-		<script src="scripts/libs/formstone.dropdown.js?1431505304559"></script>
-		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1431505304559"></script>
-		<script src="scripts/libs/jquery.arcticmodal.js?1431505304559"></script>
-		<script src="scripts/libs/select2.full.min.js?1431505304559"></script>
-		<script src="scripts/libs/tabulous.js?1431505304559"></script>
-		<script src="scripts/libs/checkboxTree.js?1431505304559"></script>
-		<script src="scripts/tinymce/tinymce.min.js?1431505304559"></script>
-		<script src="scripts/common.js?1431505304559"></script>
-		<script src="scripts/debug.js?1431505304559"></script>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1432713301179"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1432713301179"></script>
+		<script src="scripts/libs/jstarbox.js?1432713301179"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1432713301179"></script>
+		<script src="scripts/libs/playlist.js?1432713301179"></script>
+		<script src="scripts/libs/d3.min.js?1432713301179"></script>
+		<script src="scripts/libs/c3.min.js?1432713301179"></script>
+		<script src="scripts/libs/moment.min.js?1432713301179"></script>
+		<script src="scripts/libs/jquery.plugin.min.js?1432713301179"></script>
+		<script src="scripts/libs/jquery.datepick.min.js?1432713301179"></script>
+		<script src="scripts/libs/formstone.core.js?1432713301179"></script>
+		<script src="scripts/libs/formstone.touch.js?1432713301179"></script>
+		<script src="scripts/libs/formstone.dropdown.js?1432713301179"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1432713301179"></script>
+		<script src="scripts/libs/jquery.arcticmodal.js?1432713301179"></script>
+		<script src="scripts/libs/select2.full.min.js?1432713301179"></script>
+		<script src="scripts/libs/tabulous.js?1432713301179"></script>
+		<script src="scripts/libs/checkboxTree.js?1432713301179"></script>
+		<script src="scripts/tinymce/tinymce.min.js?1432713301179"></script>
+		<script src="scripts/common.js?1432713301179"></script>
+		<script src="scripts/debug.js?1432713301179"></script>
 	</body>
 </html>

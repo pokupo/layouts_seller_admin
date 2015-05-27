@@ -84,7 +84,7 @@ PKP.mobile = {
            $('.j-breadcrumbs__item').css({
                 'max-width': $(window).width() - 135 - $('.m-breadcrumbs__item_active').width()
            });
-           window.addEventListener("resize", function() {
+           window.addEventListener('resize', function() {
                 setTimeout(function(){
                     $('.j-breadcrumbs__item').css({
                         'max-width': $(window).width() - 135 - $('.m-breadcrumbs__item_active').width()
@@ -100,16 +100,77 @@ PKP.mobile = {
 /* Элементы интерфейса */
 PKP.UI = {
     init: function() {
+        PKP.UI.scroll();
         PKP.UI.goods();
         PKP.UI.popup();
-        PKP.UI.charts();
         PKP.UI.common();
+        PKP.UI.profile();
         PKP.UI.dropdowns();
+        PKP.UI.charts();
         PKP.UI.sidebar();
         PKP.UI.calendar();
-        PKP.UI.mini();            
+        PKP.UI.tabs();
+        PKP.UI.mini();    
+        PKP.UI.tinymce();
+        PKP.UI.select();
+        PKP.UI.rubricator();
+    },
+    profile: function(){
+        //табы для страницы Профиля
+        $('.j-profile-tabs').each(function(){
+            $(this).find('.b-profile-menu__item').on('click', function(){
+                var $self = $(this),
+                    attr = $self.data('some'),
+                    prev = $self.prevAll(),
+                    visibleTabId = $('.b-profile').children().filter(':visible').data('tab');
+
+                $self.siblings().removeClass('m-profile-menu__item_previous-steps');
+                prev.andSelf().find('.b-profile-menu__icon').removeClass('m-profile-menu__icon_not-verified');
+                $self.nextAll().find('.b-profile-menu__icon').addClass('m-profile-menu__icon_not-verified');
+                prev.addClass('m-profile-menu__item_previous-steps');
+
+                if(visibleTabId!=attr){
+                    $('.b-profile').children().each(function(){
+                        $(this).slideUp(400, function() {
+                            $(this).filter('[data-tab="'+attr+'"]').slideDown();
+                        });
+                    });
+                }
+
+            });
+        });
+        //Закрытие предупреждения
+        $('.j-warning-close').on('click', function(){
+            var warningBlock = $(this).parent(),
+                warningBlockHeight = warningBlock.outerHeight();
+            $(this).parent().animate({
+                'margin-top': -warningBlockHeight
+            },{
+                duration: 250,
+                complete: function(){
+                    $(this).remove();
+                }
+            });
+        });
+    },
+    tinymce: function(){
+        //tinymce editor    
+        tinymce.init({
+            menubar:false,
+            selector: '.tinymce',
+            language: 'ru',
+            plugins: [
+                'advlist fullpage autolink lists charmap print preview anchor',
+                'link anchor image media code insertdatetime preview textcolor searchreplace',
+                'table hr charmap emoticons print fullscreen directionality visualchars spellchecker pagebreak nonbreaking visualblocks'
+            ],
+            toolbar1: 'newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect',
+            toolbar2: 'cut copy paste | searchreplace | bullist numlist | indent outdent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview | forecolor backcolor',
+            toolbar3: 'table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | visualchars | spellchecker | visualchars visualblocks nonbreaking pagebreak |'
+        });
     },
     goods: function(){
+        //блок "Изображения". Возможность редактирования описания к товару
         $('.j-goods-desc').on('click', function(e){
             $(this).parents('.b-images__item').addClass('m-images__item_active').find('.j-editable').focus();
         });
@@ -139,24 +200,158 @@ PKP.UI = {
             $(this).parents('.b-images__item').removeClass('m-images__item_active');
         });
     },
-    popup: function(){
-        // Уведомления системы
-        $('.j-system-notification').on('click', function(){
-            $('.j-notification-popup').arcticmodal();
-            $('.j-tabs-popup').arcticmodal({
-                afterOpen: function(data, el){
-                    el.find('.p-tabs__btn').eq(0).trigger('click');
-                }
+    scroll: function(){
+        //Кастомный  скролл
+        $('.j-scrollbar').mCustomScrollbar();//скролл для меню слева
+        $('.j-scroll').each(function(i,e){
+            var $self = $(this);
+            var options = {
+                position: $self.data('scroll-position'),
+                theme: $self.data('scroll-theme'),
+                axis: $self.data('axis')
+            };
+            $self.mCustomScrollbar({
+                scrollbarPosition: options.position,
+                axis: options.axis,
+                theme: options.theme
             });
         });
-        $('.j-message-remove').on('click', function(){
-            $('.j-message-remove-popup').arcticmodal();
+    },
+    tabs: function(){
+        $('.j-tabs').tabulous({
+            effect: 'scale'
+        });
+    },
+    calendar: function(){
+        //Календарь на главной странице админки
+        $('.j-calendar__range-start,.j-calendar__range-end').datepick($.extend({
+            firstDay: 1,
+            dateFormat: 'dd.mm.yyyy',
+            showOtherMonths: true,
+            nextText: '',
+            prevText: '',
+            changeMonth: false,
+            onSelect: customRange,
+        },
+            $.datepick.regionalOptions['ru']
+        ));
+        function customRange(dates) { 
+            if ($(this).hasClass('j-calendar__range-start')) { 
+                $('.j-calendar__range-end').datepick('option', 'minDate', dates[0] || null); 
+            } 
+            else { 
+                $('.j-calendar__range-start').datepick('option', 'maxDate', dates[0] || null); 
+            } 
+        }
+    },
+    popup: function(){
+        // Попапы
+        $('.j-popup-trigger').on('click', function(){
+            var $self = $(this);
+            var popup = $self.data('popup');
+            $('.'+popup).arcticmodal();
+            return false;
         });
         // Закрытие попап
         $('.j-modal-close').on('click', function(){
             $.arcticmodal('close');
         });
     },
+    select: function(){
+        //селект с тегами
+        $('.j-select-tags').select2({
+            tags: true,
+            tokenSeparators: [','],
+        });
+        // Кастомный селкт
+        $('.j-select').dropdown();
+    },
+    dropdowns: function() {
+        //dropdown tree
+        $('.b-select-tree__head').on('click', function(){
+            var $self = $(this),
+                $content = $self.parent().find('.b-select-tree__content');
+            if($content.is(':visible')){
+                $content.hide();
+            }else{
+                $content.show();
+            }
+        });
+        // «Выпадайка» 
+        PKP.$body.on('click', '.j-dropdown__trigger', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+
+            if($this.is('.disabled')) {
+                return false;
+            }
+
+            if($('.b-dropdown__trigger.active').length) {
+                $('.b-dropdown__trigger.active')
+                    .not(this).removeClass('active')
+                    .closest('.b-dropdown')
+                    .find('.b-dropdown__content').addClass('g-hidden');   
+            }
+            $this
+                .toggleClass('active')
+                .closest('.b-dropdown')
+                .find('.b-dropdown__content[data-target="' + $this.data('target') + '"]')
+                .toggleClass('g-hidden');
+        });
+
+        /* Скрываем выпадайку по клику мимо неё */
+        PKP.$document.on('click', function(e) {
+            var $this = $(e.target);
+            if(!$this.is('.b-dropdown__trigger')) {
+                $('.b-dropdown__trigger.active').removeClass('active').siblings('.b-dropdown__content').addClass('g-hidden');
+            }
+            if(!$this.is('.b-select-tree *')) {
+                $('.b-select-tree__content').hide();
+            }
+        });
+
+        /* По клику на внутреннюю ссылку «выпадайка» закрывается */
+        PKP.$body.on('click', '.b-dropdown__content a', function() {
+            $(this).
+                closest('.b-dropdown__content').toggleClass('g-hidden').
+                siblings('.b-dropdown__trigger').toggleClass('active');
+        });
+
+        /* Снимаем класс ошибки при фокусе */
+        $('input.error').on('focus', function() {
+            $(this).removeClass('error');
+            $(this).closest('.input-holder').find('.error__message').hide();
+        });
+    },
+    sidebar: function() {
+        $('.b-sidebar-navigation li > a').click(function() {
+            var li = $(this).parent('li').siblings().removeClass('active');
+        });
+
+        $('.b-sidebar-navigation li').click(function(event) {
+            event.stopPropagation();
+            
+            var li = $(this);
+                    
+            if( li.children('ul').length > 0 || 
+                li.children('.panel').length > 0) {
+
+                if(li.hasClass('active')) {
+                    li.removeClass('active');
+                    li.find('li.active').removeClass('active');
+                } else {
+                    li.addClass('active');
+                }
+                                   
+                return false;
+            }                                     
+        });
+        
+        /* XN-SEARCH */
+        $('.b-sidebar-search').on('click', function(){
+            $(this).find('input').focus();
+        });
+    }, 
     charts: function(){
         var visitsChart = c3.generate({
             bindto: d3.select('.j-visits-graph'),
@@ -210,8 +405,8 @@ PKP.UI = {
             tooltip: {
                 show: true,
                 position: function (data, width, height, element) {
-                    var chartOffsetX = document.querySelector(".j-visits-graph").getBoundingClientRect().left;
-                    var graphOffsetX = document.querySelector(".j-visits-graph g.c3-axis-y").getBoundingClientRect().right;
+                    var chartOffsetX = document.querySelector('.j-visits-graph').getBoundingClientRect().left;
+                    var graphOffsetX = document.querySelector('.j-visits-graph g.c3-axis-y').getBoundingClientRect().right;
                     var someY = parseInt(element.getAttribute('x')) + parseInt(element.getAttribute('width')/2) - 19;
                     var point = $(element).parents('.j-visits-graph').find('.c3-circle-' + data[0].index);
 
@@ -254,9 +449,9 @@ PKP.UI = {
                         }else{
                             text += "<td class='name'>" + name + ":&nbsp;" + value + "</td>";
                         }
-                        text += "</tr>";
+                        text += '</tr>';
                     }
-                    return text + "</table>" ;
+                    return text + '</table>' ;
                 }
             },
             legend: {
@@ -316,8 +511,8 @@ PKP.UI = {
             tooltip: {
                 show: true,
                 position: function (data, width, height, element) {
-                    var chartOffsetX = document.querySelector(".j-orders-graph").getBoundingClientRect().left;
-                    var graphOffsetX = document.querySelector(".j-orders-graph g.c3-axis-y").getBoundingClientRect().right;
+                    var chartOffsetX = document.querySelector('.j-orders-graph').getBoundingClientRect().left;
+                    var graphOffsetX = document.querySelector('.j-orders-graph g.c3-axis-y').getBoundingClientRect().right;
                     var someY = parseInt(element.getAttribute('x')) + parseInt(element.getAttribute('width')/2) - 19;
                     var point = $(element).parents('.j-orders-graph').find('.c3-circle-' + data[0].index);
                     var graph = $('.j-orders-graph');
@@ -359,9 +554,9 @@ PKP.UI = {
                         }else{
                             text += "<td class='name'>" + name + ":&nbsp;" + value + "</td>";
                         }
-                        text += "</tr>";
+                        text += '</tr>';
                     }
-                    return text + "</table>" ;
+                    return text + '</table>' ;
                 }
             },
             legend: {
@@ -431,7 +626,7 @@ PKP.UI = {
                     threshold: 0.1,
                     format: function (value, ratio, id) {
                         var round = Math.round(ratio*100);
-                        return (round + "%");
+                        return (round + '%');
                     }
                 }
             },
@@ -441,15 +636,15 @@ PKP.UI = {
         });
         var visitsGeographyChart = function(){
             var svg = d3.select(".j-visits-geography-graph")
-                .append("svg")
-                .append("g");
+                .append('svg')
+                .append('g');
 
-            svg.append("g")
-                .attr("class", "slices");
-            svg.append("g")
-                .attr("class", "labels");
-            svg.append("g")
-                .attr("class", "lines");
+            svg.append('g')
+                .attr('class', 'slices');
+            svg.append('g')
+                .attr('class', 'labels');
+            svg.append('g')
+                .attr('class', 'lines');
 
             var width = 230,
                 height = 230,
@@ -469,29 +664,29 @@ PKP.UI = {
                 .innerRadius(radius * 1.2)
                 .outerRadius(radius * 1.2);
 
-            svg.attr("transform", "translate(" + 180 + "," + 115 + ")");
+            svg.attr('transform', 'translate(' + 180 + ',' + 115 + ')');
 
             var key = function(d){ return d.data.label; };
 
             var data = [{
-                        "label":"Украина", 
-                        "value":23,
-                        "color": '#efece7'
+                        'label':'Украина', 
+                        'value':23,
+                        'color': '#efece7'
                     }, 
                     {
-                        "label":"Белоруссия",
-                        "value":29,
-                        "color": '#4dbbec'
+                        'label':'Белоруссия',
+                        'value':29,
+                        'color': '#4dbbec'
                     }, 
                     {
-                        "label":"Сербия", 
-                        "value":17,
-                        "color": '#719f4a'
+                        'label':'Сербия', 
+                        'value':17,
+                        'color': '#719f4a'
                     },
                     {
-                        "label":"Россия", 
-                        "value":31,
-                        "color": '#97ce68'
+                        'label':'Россия', 
+                        'value':31,
+                        'color': '#97ce68'
                     }];
 
             change(data);
@@ -499,15 +694,15 @@ PKP.UI = {
 
             function change(data) {
                 /* ------- PIE SLICES -------*/
-                var slice = svg.select(".slices").selectAll("path.slice")
+                var slice = svg.select('.slices').selectAll('path.slice')
                     .data(pie(data), key);
 
                 slice.enter()
-                    .insert("path")
-                    .style("fill", function(d) { 
+                    .insert('path')
+                    .style('fill', function(d) { 
                         return d.data.color; 
                     })
-                    .attr("class", "slice");
+                    .attr('class', 'slice');
 
                 slice       
                     .transition().duration(1000)
@@ -525,13 +720,13 @@ PKP.UI = {
 
                 /* ------- TEXT LABELS -------*/
 
-                var text = svg.select(".labels").selectAll("text")
+                var text = svg.select('.labels').selectAll('text')
                     .data(pie(data), key);
 
                 text.enter()
-                    .append("text")
+                    .append('text')
                     .attr({
-                        "dy": ".35em"
+                        'dy': '.35em'
                     })
                     .html(function(d) {                
                         return '<tspan x="0" class="labels__label">' + d.data.label + '</tspan>' + '<tspan class="labels__value" style="text-anchor:start" x="0" dy="20">' + d.data.value + '%' + '</tspan>';
@@ -542,7 +737,7 @@ PKP.UI = {
                 }
 
                 text.transition().duration(1000)
-                    .attrTween("transform", function(d) {
+                    .attrTween('transform', function(d) {
                         this._current = this._current || d;
                         var interpolate = d3.interpolate(this._current, d);
                         this._current = interpolate(0);
@@ -550,16 +745,16 @@ PKP.UI = {
                             var d2 = interpolate(t);
                             var pos = outerArc.centroid(d2);
                             pos[0] = radius * (midAngle(d2) < Math.PI ? 0.9 : -1.4);
-                            return "translate("+ pos +")";
+                            return 'translate('+ pos +')';
                         };
                     })
-                    .styleTween("text-anchor", function(d){
+                    .styleTween('text-anchor', function(d){
                         this._current = this._current || d;
                         var interpolate = d3.interpolate(this._current, d);
                         this._current = interpolate(0);
                         return function(t) {
                             var d2 = interpolate(t);
-                            return midAngle(d2) < Math.PI ? "start":"start";
+                            return midAngle(d2) < Math.PI ? 'start':'start';
                         };
                     });
 
@@ -568,14 +763,14 @@ PKP.UI = {
 
                 /* ------- SLICE TO TEXT POLYLINES -------*/
 
-                var polyline = svg.select(".lines").selectAll("polyline")
+                var polyline = svg.select('.lines').selectAll('polyline')
                     .data(pie(data), key);
                 
                 polyline.enter()
-                    .append("polyline");
+                    .append('polyline');
 
                 polyline.transition().duration(1000)
-                    .attrTween("points", function(d){
+                    .attrTween('points', function(d){
                         this._current = this._current || d;
                         var interpolate = d3.interpolate(this._current, d);
                         this._current = interpolate(0);
@@ -590,191 +785,168 @@ PKP.UI = {
             }
         }();
     },
-    common: function(){
-        //Блок "Изображения" удаление элемента
-        $('.j-images__remove').on('click', function(e){
-            $(this).parents('.b-images__item').fadeOut(400,function(){
-                $(this).remove();
+    common: function(){                
+
+        //Анимация появления/исчезновения блока с поиском
+            $('.j-actions__search').on('click', function(){
+                var $self = $(this),
+                    $searchBlock = $('.j-goods-search'),
+                    $overlayBlock = $('.b-goods-search__overlay'),
+                    searchBlockWidth = $searchBlock.width()/2,
+                    activeClass = 'm-goods-search_active',
+                    duration = 500;
+                if($overlayBlock.is(':animated')) {
+                    return false;
+                }
+                if($searchBlock.hasClass(activeClass)){
+                    $self.find('.b-actions__search-triangle').fadeOut();
+                    $overlayBlock.stop().animate({
+                        'width': searchBlockWidth + 200
+                    },{
+                        duration: duration,
+                        easing: 'linear',
+                        complete: function(){
+                            $searchBlock.slideUp(duration);
+                        }
+                    });
+                    $searchBlock.removeClass(activeClass);
+                }else{
+                    $self.find('.b-actions__search-triangle').fadeIn();
+                    $searchBlock.stop().slideDown(duration, function(){
+                        $overlayBlock.animate({
+                            'width': 0
+                        },{
+                            duration: duration,
+                            easing: 'linear',
+                            complete: function(){
+                                $searchBlock.addClass(activeClass);
+                            }
+                        });
+                    });
+                }
             });
-            e.preventDefault();
-        });
+        //рейтинг на странице "Отзывы о товаре"
+            $('.j-rates').each(function(){
+                var rating = $(this).data('rating');
+                $(this).starbox({
+                    average: rating,
+                    buttons: 10,
+                    changeable: 'once',
+                    autoUpdateAverage: true,
+                    ghosting: true,
+                }).bind('starbox-value-moved', function(event, value) {
+                    $('body').find('.tooltip__content').text('Отзыв ' + value*10 + ' из ' + 10);
+                });
+            });
+        //Добавление класса для строки товара
+            $('.j-goods-input').on('change', function(){
+                var $self = $(this),
+                    $row = $self.parents('.b-goods-table__row');
+
+                if($self.prop('checked')) {
+                    $row.addClass('m-goods-table__row');
+                }else{
+                    $row.removeClass('m-goods-table__row');
+                }
+            });
+        //Сворачивание блока с кодом
+            $('.j-code-roll-up').each(function(){
+                var $self = $(this),
+                    $content =  $(this).parents('.b-code').find('.b-code__content');
+                    if($content.hasClass('m-code__content_hidden')){
+                        $self.text('Показать');
+                    }else{
+                        $self.text('Скрыть код');
+                    }
+                $self.on('click', function(){
+                    if($content.hasClass('m-code__content_hidden')){
+                        $self.text('Скрыть код');
+                        $content.removeClass('m-code__content_hidden');
+                    }else{
+                        $self.text('Показать');
+                        $content.addClass('m-code__content_hidden');
+                    }
+                });
+            });
+        //Блок "Изображения" удаление элемента
+            $('.j-images__remove').on('click', function(e){
+                $(this).parents('.b-images__item').fadeOut(400,function(){
+                    $(this).remove();
+                });
+                e.preventDefault();
+            });
+        //Сворачивание/разворачивание рубрикатора
+        //Сворачивание блока c инструкцией
+            $('.j-roll-instruction').each(function(){
+                    var $self = $(this),
+                        $content =  $(this).parents('.b-instruction').find('.b-instruction__content');
+                        if($content.hasClass('hidden')){
+                            $self.addClass('m-instruction__roll-up_active');
+                            $self.text('Показать инструкцию');
+                        }else{
+                            $self.removeClass('m-instruction__roll-up_active');
+                            $self.text('Скрыть инструкцию');
+                        }
+                    $self.on('click', function(){
+                        if(!$content.is(':visible')){
+                            $self.removeClass('m-instruction__roll-up_active').text('Скрыть инструкцию');
+                            $content.addClass('hidden').slideDown();
+                        }else{
+                            $self.addClass('m-instruction__roll-up_active').text('Показать инструкцию');
+                            $content.removeClass('hidden').slideUp();
+                        }
+                    });
+                });
+        //Удаление магазина партнера
+            $('.j-store-delete').on('click', function(){
+                $(this).parents('.b-store').slideUp(400, function(){
+                    $(this).remove();
+                });
+            }); 
+    },
+
+    rubricator: function(){
+        //Свернуть/развернуть все итемы 
+            $('.j-rubricator-show-all').on('click', function(){
+                $('.b-rubricator__main-list').find('ul').slideDown(600);
+                $('.b-rubricator__main-list').find('.p-toggle-tree').addClass('p-toggle-tree_active');
+            });
+            $('.j-rubricator-hide-all').on('click', function(){
+                $('.b-rubricator__main-list').find('ul').slideUp(600);
+                $('.b-rubricator__main-list').find('.p-toggle-tree').removeClass('p-toggle-tree_active');
+            });
         $('.j-catalog').on('click', function(){
             $(this).toggleClass('active').next('.b-catalog-tree').stop(true,false).slideToggle();
         });
+        $('.b-catalog-moderation__dropdown-item').on('click', function(){
+            $(this).addClass('m-catalog-moderation__dropdown-item_checked').siblings().removeClass('m-catalog-moderation__dropdown-item_checked');
+            return false;
+        });
+        //модерация выпадайка
+
+        $('.j-catalog-moderation-dropdown').on('click', function(e){
+            $(this).toggleClass('m-catalog-moderation__dropdown_opened').parent().find('.b-catalog-moderation__dropdown-list').slideToggle();
+            return false;
+        });
+        $('.b-catalog-moderation__status,.b-catalog-moderation,.b-editing-actions').on('click', function(){
+            return false;
+        });
+
         $('.j-catalog-tree').checkboxTree();
-        //tinymce editor    
-        tinymce.init({
-            menubar:false,
-            selector: 'textarea',
-            language: 'ru',
-            plugins: [
-                'advlist fullpage autolink lists charmap print preview anchor',
-                'link anchor image media code insertdatetime preview textcolor searchreplace',
-                'table hr charmap emoticons print fullscreen directionality visualchars spellchecker pagebreak nonbreaking visualblocks'
-            ],
-            toolbar1: 'newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect',
-            toolbar2: 'cut copy paste | searchreplace | bullist numlist | indent outdent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview | forecolor backcolor',
-            toolbar3: 'table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | visualchars | spellchecker | visualchars visualblocks nonbreaking pagebreak |'
-        });
-        //rating
-        $('.j-rates').each(function(){
-            var rating = $(this).data('rating');
-            $(this).starbox({
-                average: rating,
-                buttons: 10,
-                changeable: 'once',
-                autoUpdateAverage: true,
-                ghosting: true,
-            }).bind('starbox-value-moved', function(event, value) {
-                $('body').find('.tooltip__content').text('Отзыв ' + value*10 + ' из ' + 10);
-            });
-        });
-        //Сворачивание блока
-        $('.j-roll-up').on('click', function(){
-            $(this).parents('.j-roll-up-wrapper').find('.j-roll-up-content').slideToggle();
-        });
 
-        $('.j-informer__close').on('click', function(){
-            $(this).closest('.b-informer').hide();
-        });
-        //Добавление класса
-        $('.j-goods-input').on('change', function(){
-            var self = $(this),
-                row = self.parents('.b-goods-table__row');
-            if(self.prop('checked')) {
-                row.addClass('m-goods-table__row');
-            }else{
-                row.removeClass('m-goods-table__row');
-            }
-        });
-    },
-    dropdowns: function() {
-        $(".j-select-tags").select2({
-            tags: true,
-            tokenSeparators: [',']
-        });
-        $('.j-tabs').tabulous({
-            effect: 'scale'
-        }); 
-        // Кастомный dropdown
-        $('.j-select').dropdown();
-        // Кастомный скроллбар
-        $('.j-scrollbar').mCustomScrollbar();
-
-        $('.j-scrollbar_both').mCustomScrollbar({
-            scrollbarPosition: 'inside',
-            axis: "yx",
-        });
-        $('.j-scrollbar-y').mCustomScrollbar({
-            scrollbarPosition: 'outside',
-            axis: "yx",
-        });
-
-        // «Выпадайка» 
-        PKP.$body.on("click", '.j-dropdown__trigger', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-
-            if($this.is('.disabled')) {
-                return false;
-            }
-
-            if($('.b-dropdown__trigger.active').length) {
-                $('.b-dropdown__trigger.active')
-                    .not(this).removeClass('active')
-                    .closest('.b-dropdown')
-                    .find('.b-dropdown__content').addClass('g-hidden');   
-            }
-            $this
-                .toggleClass('active')
-                .closest('.b-dropdown')
-                .find('.b-dropdown__content[data-target="' + $this.data('target') + '"]')
-                .toggleClass('g-hidden');
-        });
-
-        /* Скрываем выпадайку по клику мимо неё */
-        PKP.$document.click(function(e) {
-            var $this = $(e.target);
-            if(!$this.is('.b-dropdown__trigger')) {
-                $('.b-dropdown__trigger.active').removeClass('active').siblings('.b-dropdown__content').addClass('g-hidden');
-            }
-        });
-
-        /* По клику на внутреннюю ссылку «выпадайка» закрывается */
-        PKP.$body.on("click", '.b-dropdown__content a', function() {
-            $(this).
-                closest('.b-dropdown__content').toggleClass('g-hidden').
-                siblings('.b-dropdown__trigger').toggleClass('active');
-        });
-
-        /* Табы */
-        PKP.$body.on("click", '.j-tabs', function() {
-            var $this = $(this);
-            $this
-                .siblings()
-                    .removeClass('selected');
-            $this
-                .addClass('selected')
-                .next()
-                    .addClass('selected');
-        });
-
-        /* Снимаем класс ошибки при фокусе */
-        $('input.error').on('focus', function() {
-            $(this).removeClass('error');
-            $(this).closest(".input-holder").find('.error__message').hide();
-        });
-    },
-    sidebar: function() {
-        $(".b-sidebar-navigation li > a").click(function() {
-            var li = $(this).parent('li').siblings().removeClass("active");
-        });
-
-        $(".b-sidebar-navigation li").click(function(event) {
-            event.stopPropagation();
-            
-            var li = $(this);
-                    
-            if( li.children("ul").length > 0 || 
-                li.children(".panel").length > 0) {
-
-                if(li.hasClass("active")) {
-                    li.removeClass("active");
-                    li.find("li.active").removeClass("active");
-                } else {
-                    li.addClass("active");
-                }
-                                   
-                return false;
-            }                                     
+        $('.j-product-catalog__add-dropdown').on('click', function(){
+            $(this).find('.b-product-catalog__add-dropdown').slideToggle(300);
         });
         
-        /* XN-SEARCH */
-        $(".b-sidebar-search").on("click", function(){
-            $(this).find("input").focus();
+        $('.b-checkbox__label').on('mouseenter', function(){
+            $(this).find('.b-editing-actions').css('display','inline-block');
+        }).on('mouseleave', function(){
+            $(this).find('.b-product-catalog__add-dropdown').hide();
+            $(this).find('.b-editing-actions').css('display','none');
         });
     },
-    calendar: function(){
-        $('.j-calendar__range-start,.j-calendar__range-end').datepick($.extend({
-            firstDay: 1,
-            dateFormat: "dd.mm.yyyy",
-            showOtherMonths: true,
-            nextText: '',
-            prevText: '',
-            changeMonth: false,
-            onSelect: customRange,
-        },
-            $.datepick.regionalOptions["ru"]
-        ));
-        function customRange(dates) { 
-            if ($(this).hasClass('j-calendar__range-start')) { 
-                $('.j-calendar__range-end').datepick('option', 'minDate', dates[0] || null); 
-            } 
-            else { 
-                $('.j-calendar__range-start').datepick('option', 'maxDate', dates[0] || null); 
-            } 
-        }
-    },
+    
+    
     mini: function() {
         $('.j-mobile-menu').on('click', function(){
             $(this).toggleClass('m-mobile-menu_active');
@@ -785,47 +957,6 @@ PKP.UI = {
 
 PKP.Tip = {
     init: function() {   
-
-        /*$('.test').on('click', function(){
-            $(this).parent().find('.fs-dropdown-selected').trigger('click');
-        });*/
-
-        /*$('.test').tooltip({
-            content: 'Loading...',
-            updateAnimation: false,
-            interactive: true,
-            contentAsHTML: true,
-            position: 'right',
-            positionTracker: true,
-            interactiveTolerance: 20000,
-            offsetX: -12,
-            offsetY: 0,
-            functionBefore: function(origin, continueTooltip) {
-                continueTooltip();
-                if (origin.data('ajax') !== 'cached') {
-                    $.ajax({
-                        type: 'GET',
-                        dataType: 'html',
-                        url: 'test.html',
-                        success: function(data) {
-                            origin
-                                .tooltip('content', data)
-                                .data('ajax', 'cached');
-                        }
-                    });
-                }
-            },
-            functionReady: function(origin, tooltip) {
-                if($('body').hasClass('mobile')){
-                    $(".j-another-tooltip").tooltip('option', 'offsetX', '-200');
-                    $('.tooltip__base').css('right','10px');
-                    $('.j-another-tooltip').tooltip('reposition');
-                }
-            }
-        });*/
-                
-                
-
         $('.j-hint').each(function(){
             var $self = $(this);
             var option = {
@@ -838,7 +969,9 @@ PKP.Tip = {
             if(!option.content){
                 $self.tooltip({
                     theme: option.theme,
-                    position: option.position
+                    position: option.position,
+                    offsetX: option.offsetX,
+                    offsetY: option.offsety
                 });
             }
             if(option.content) {
@@ -858,7 +991,7 @@ PKP.Tip = {
         });
 
         // First tooltip (button)
-        $(".j-another-tooltip").tooltip({
+        $('.j-another-tooltip').tooltip({
             content: 'Loading...',
             updateAnimation: false,
             interactive: true,
@@ -885,7 +1018,7 @@ PKP.Tip = {
             },
             functionReady: function(origin, tooltip) {
                 if($('body').hasClass('mobile')){
-                    $(".j-another-tooltip").tooltip('option', 'offsetX', '-200');
+                    $('.j-another-tooltip').tooltip('option', 'offsetX', '-200');
                     $('.tooltip__base').css('right','10px');
                     $('.j-another-tooltip').tooltip('reposition');
                 }
@@ -893,7 +1026,7 @@ PKP.Tip = {
         });
         
         // First tooltip (button)
-        $(".j-btn_support").tooltip({
+        $('.j-btn_support').tooltip({
             content: 'Loading...',
             updateAnimation: false,
             interactive: true,
@@ -946,11 +1079,11 @@ PKP.Tip = {
             }
         });
         
-        PKP.$body.on("click", '.j-tooltip-close', function(e) {
+        PKP.$body.on('click', '.j-tooltip-close', function(e) {
             var $this = $(this);
             $('.tooltiped').tooltip('hide');
         });
-        PKP.$body.on("click", function(e) {
+        PKP.$body.on('click', function(e) {
             var $this = $(this);
             $('.tooltiped').tooltip('hide');
         });
@@ -961,13 +1094,13 @@ PKP.Tip = {
 PKP.Video = {
     init: function() {
         if($('.video-holder').length > 0) {
-            var pkPlayer = videojs("intro-video", { 
-                "width": "100%",
-                "height": "100%",
-                "controls": true, 
-                "autoplay": false, 
-                "preload": "auto",
-                "nativeControlsForTouch": false
+            var pkPlayer = videojs('intro-video', { 
+                'width': '100%',
+                'height': '100%',
+                'controls': true, 
+                'autoplay': false, 
+                'preload': 'auto',
+                'nativeControlsForTouch': false
             });
 
             $('#js-video').on('click',function () {
@@ -1026,12 +1159,12 @@ PKP.Playlist = {
     },
 
     initVideo: function() {
-        this.player = videojs("intro-video", { 
-            "width": "100%",
-            "height": "100%",
-            "controls": true, 
-            "autoplay": false, 
-            "preload": "auto" 
+        this.player = videojs('intro-video', { 
+            'width': '100%',
+            'height': '100%',
+            'controls': true, 
+            'autoplay': false, 
+            'preload': 'auto' 
         });
         this.player.playList(PKP.videos);
     },

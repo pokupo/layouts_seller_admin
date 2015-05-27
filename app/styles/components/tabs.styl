@@ -1,5 +1,11 @@
 .b-tabs
     margin 0 auto
+    overflow visible
+    &__inner
+        border 1px solid #e3e0db
+        padding 18px 22px 0 18px
+        border-top none
+        background #fff
     &__list
         display table
         width 100%
@@ -12,14 +18,25 @@
     &__btn-text
         font-size 30px
         color #177a93
-        border-bottom 1px dotted #177a93
         display inline-block
         margin-right 4px
         line-height 34px
         margin-bottom -1px
-        &:hover
-            border none
-        
+        position relative
+        &:hover:after
+            border-bottom none
+        &:after
+            pseudo()
+            border-bottom 1px dotted #177a93
+            top 100%
+            width 100%
+            left 0
+    .m-tabs__btn-text_small
+        font-size 20px
+        font-weight 300
+        line-height 26px
+    
+       
 .p-tabs__btn
     display block
     padding 21px 18px 13px 18px
@@ -32,21 +49,24 @@
         box-shadow: inset 1px 0 0 0 rgba(227,224,219,1), inset -1px 0 0 0 rgba(227,224,219,1);
         .b-tabs__btn-text
             color #000
-            border-bottom none
+            &:after
+                border-bottom none
+
         
         
 .p-tabs__container
-    overflow hidden
+    overflow visible
     position relative
-    background #fff
-    border 1px solid #e3e0db
+    //background #fff
+    //border 1px solid #e3e0db
     border-top none
-    padding 18px 0 8px 0
+    //padding 18px 0 8px 0
     box-sizing content-box
 
 .p-tabs__content
     width 100%
-    padding 0 22px 0 18px 
+    //padding 0 22px 0 18px 
+    
 .transition
     -webkit-transition all .3s ease-in-out
     -moz-transition all .3s ease-in-out
@@ -74,6 +94,7 @@
     transform scale(0.9)
     opacity 0
     left -9999px
+    display none
 
 .showscale
     -webkit-transform scale(1)
@@ -88,6 +109,7 @@
     -ms-transition-delay .3s
     transition-delay .3s
     left 0
+    display block
 
 .hideleft
     -webkit-transform translateX(-100%)

@@ -1,27 +1,27 @@
 .b-popup-holder
-    .b-notification-popup.j-tabs-popup
-        .b-notification-popup__close.j-modal-close
+    .b-popup.j-goods-add-popup
+        .b-popup__close.j-modal-close
         .b-block-title__heading
             | Добавление цифрового товара
         .b-tabs.j-tabs
             ul.b-tabs__list
                 li.b-tabs__item
                     a(href="#tab-1").p-tabs__btn
-                        span.b-tabs__btn-text
+                        span.b-tabs__btn-text.m-tabs__btn-text_small
                             | Продаваемая информация
                         .pkp-tooltip.pkp-tooltip_inline
                                 span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
                                     | ?
                 li.b-tabs__item
                     a(href="#tab-2").p-tabs__btn 
-                        span.b-tabs__btn-text
+                        span.b-tabs__btn-text.m-tabs__btn-text_small
                             | Продаваемый файл
                         .pkp-tooltip.pkp-tooltip_inline
                                 span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
                                     | ?
             div.p-tabs__container
                 .p-tabs__content#tab-1
-                    .b-selling-info
+                    .b-tabs__inner.b-selling-info
                         .b-selling-info__row
                             label.b-label
                                 span.b-label__text.m-label__text_required
@@ -40,8 +40,13 @@
                                 span.b-label__text
                                     | Метка, номер, примечание 
                                 input.b-input
+                    .b-outer-btns-holder
+                        a(href="#").b-btn.m-btn_download-store
+                            | добавить информацию
+                        a(href="#").b-btn.m-btn_gray.m-btn_cancel
+                            | отмена
                 .p-tabs__content#tab-2
-                    .b-selling-files
+                    .b-tabs__inner.b-selling-files
                         .b-selling-files__row
                             .b-configure
                                 span.b-configure__icon.m-configure__icon_customize-discount
@@ -62,11 +67,11 @@
                                 span.b-label__text
                                     | Метка, номер, примечание 
                                 input.b-input
-        .b-outer-btns-holder
-            a(href="#").b-btn-green.m-btn-green_add-goods
-                | добавить товар
-            a(href="#").b-btn-cancel
-                | отмена
-        
+                    .b-outer-btns-holder
+                        a(href="#").b-btn.m-btn_download-store
+                            | добавить информацию
+                        a(href="#").b-btn.m-btn_gray.m-btn_cancel
+                            | отмена
+                
 
                             

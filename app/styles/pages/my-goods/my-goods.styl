@@ -1,0 +1,196 @@
+.b-own-goods
+    .b-pkp-block
+        padding-bottom 40px
+//b-goods-table
+    .b-goods-table
+        width 100%
+        table-layout fixed
+        margin 7px 0 19px 0
+        color #333
+        position relative
+        z-index 2
+        
+    .b-goods-table__thead
+        background #ebe8e3
+        border-right 1px solid #ebe8e3
+    
+    .b-goods-table__thead 
+        & th:nth-child(1)
+            width 57px
+        & th:nth-child(2)
+            width 60px
+        & th:nth-child(3)
+            text-align left
+            padding-left 5px
+            width 250px
+        & th:nth-child(4)
+            width 250px
+            text-align left
+            padding-left 5px
+        & th:nth-child(4)
+            width 250px
+            text-align left
+            padding-left 5px
+        & th:nth-child(5)
+            width 75px
+            text-align left
+            padding-left 5px
+        & th:nth-child(6)
+            width 100px
+            text-align left
+        & th:nth-child(7)
+            width 140px
+            text-indent 6px
+
+    .b-goods-table__thead-title
+        color #333333
+        line-height 50px
+        font-weight 700
+        font-size 13px
+    .m-goods-table__thead-title_sortable
+        padding-left 8px
+        position relative
+    .m-goods-table__thead-title_sortable_top
+        &:before
+            pseudo()
+            background-icon($arrow-sort-top)
+            left 0
+            top 5px
+    .m-goods-table__thead-title_sortable_bottom
+        &:before
+            pseudo()
+            background-icon($arrow-sort-down)
+            left 0
+            top 5px
+    
+    .b-goods-table__tbody
+        border 1px solid #d4d4d4
+        & td 
+            font-size 13px
+            text-align center
+            padding 5px 0 5px 0
+            border-bottom 1px solid #d4d4d4
+            height 70px
+            & p 
+                padding-left 10px
+                line-height 30px
+        & tr:last-child td
+            border-bottom 0
+        & td:nth-child(1)
+            padding-left 20px
+            text-align left
+        & td:nth-child(3)
+            padding-left 12px
+            text-align left
+        & td:nth-child(4)
+            text-align left
+        & td:nth-child(5)
+            text-align left
+            padding-left 5px
+        & td:nth-child(6)
+            text-align left
+            padding-left 5px
+            & input
+                width 75px
+        & td:nth-child(7)
+            padding-right 16px
+            text-align right
+    
+    .b-goods-table__row
+        transition background 0.2s ease-out
+
+    .m-goods-table__row
+        background #f5f3f1
+
+    .b-goods-table__editable
+        position relative
+        overflow hidden
+        min-height 36px
+        display inline-block
+        cursor pointer
+        width 100%
+        box-sizing initial
+        & .b-input
+            width 75px
+    .b-goods-table__editable:hover
+        border 1px solid #474b53
+        margin -1px
+        border-radius 4px
+        & .b-goods-table__editable-btn
+            display block
+            
+    .b-goods-table__editable-btn
+        border-radius 999px
+        width 20px
+        height 20px
+        border 1px solid #474b53
+        position absolute
+        top 5px
+        right 5px
+        display none
+        centered-icon($activity-btn_edit_small)
+        &:hover
+            background #474b53
+            centered-icon($activity-btn_edit_small_hover)
+
+    .b-goods-table__goods-img-holder
+        width 60px
+        height 60px
+        display table-cell
+        vertical-align middle
+        
+    .b-goods-table__goods-img
+        width 100%
+        max-width 100%
+        transition all 0.2s ease-out
+        &:hover
+            -webkit-transform: scale(2);
+            -ms-transform: scale(2);
+            transform: scale(2);
+            box-shadow 0px 4px 8px 0px rgba(0,0,0,0.3)       
+        
+    .b-goods-table__rubric-list
+        margin 6px 12px 9px 9px
+
+    .b-goods-table__rubric-item
+        padding-left 5px
+        position relative
+        letter-spacing 0.3px
+        margin-bottom 3px
+        color #333
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+        width 230px
+        &:before
+            content ''
+            position absolute
+            width 2px 
+            height 2px
+            background #333333
+            top 6px
+            left 0
+            opacity 0.6
+    
+    .b-goods-table__price
+        line-height 36px
+        padding 0 8px
+        cursor pointer
+        &:hover
+            border 1px solid #474b53;
+            margin -1px
+            display inline-block
+            border-radius 4px
+
+    .b-goods-table__unavailable
+        color #ff6766
+    
+    .b-goods-table__residue
+        font-size 13px
+        font-weight 700
+        color #000
+        margin-left 4px
+    .m-goods-table__residue_plus
+        color #7caa1f
+    .m-goods-table__residue_minus
+        color #ff6766

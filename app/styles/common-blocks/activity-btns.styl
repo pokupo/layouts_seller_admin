@@ -1,0 +1,111 @@
+//b-activity-btn
+    .b-activity-btn
+        display inline-block
+        width 34px
+        height  34px
+        position relative
+        margin-right 5px
+        transition border-width .4s
+        
+    .m-activity-btn_favorite
+        border-radius 999px
+        border 1px solid #ffa800
+        centered-icon($activity-btn_favorite)
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_favorite_hover)
+            
+    .m-activity-btn_edit
+        border-radius 999px
+        border 1px solid #474b53
+        centered-icon($activity-btn_edit)
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_edit_hover)
+       
+    .m-activity-btn_load
+        border-radius 999px
+        border 1px solid #7caa1f
+        centered-icon($activity-btn_load)      
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_load_hover)  
+    
+    .m-activity-btn_done
+        border-radius 999px
+        border 1px solid #7caa1f
+        centered-icon($activity-btn_done)      
+        &:hover
+            border-width 17px
+            border-color #ff6766
+            &:after
+                content ''
+                position absolute
+                width 18px
+                height 6px
+                top 50%
+                left 50%
+                margin-top -3px
+                margin-left -9px
+                background #fff
+                border-width 17px
+                
+    .m-activity-btn_fail
+        border-radius 999px
+        border 1px solid #ff6766
+        &:after
+            content ''
+            position absolute
+            width 18px
+            height 6px
+            top 50%
+            left 50%
+            margin-top -3px
+            margin-left -9px
+            background #ff6766
+        &:hover
+            border-width 17px
+            border-color #7caa1f
+            &:after
+                background #7caa1f
+            centered-icon($activity-btn_done_hover)
+
+    .m-activity-btn_list
+        border 1px solid #7caa1f
+        border-radius 999px
+        centered-icon($action_list_green)      
+        &:hover
+            border-width 17px
+            centered-icon($action_list_green_hover)
+
+    .m-activity-btn_remove
+        border 1px solid #ff6766
+        border-radius 999px
+        centered-icon($activity-btn_remove)      
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_remove_hover)
+            
+    .m-activity-btn_message
+        border-radius 999px
+        border 1px solid #7caa1f
+        centered-icon($activity-btn_message)      
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_message_hover)
+
+    .m-activity-btn_add-partner
+        border 1px solid #7caa1f
+        border-radius 999px
+        centered-icon($activity-btn_add-partner)      
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_add-partner_hover)
+            
+    .m-activity-btn_agreement
+        border 1px solid #ffa800
+        border-radius 999px
+        centered-icon($activity-btn_search)      
+        &:hover
+            border-width 17px
+            centered-icon($activity-btn_search_hover)

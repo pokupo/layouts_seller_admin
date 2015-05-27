@@ -124,9 +124,10 @@
 								</li>
 							</ul>
 						</div>
-						<div class="b-btn m-btn_support j-btn_support">
-							<div class="b-icon m-icon_support"></div>Служба поддержки</div>
-						<div class="b-header__notification-holder"><span title="Каталог товаров" data-position="bottom" data-theme="g-hint" class="b-notification m-notification_system-message j-hint j-system-notification"><span class="b-notification__amount">25</span></span>
+						<div class="b-header__support j-btn_support">
+							<div class="m-icon_support">Служба поддержки</div>
+						</div>
+						<div class="b-header__notification-holder"><span data-popup="j-product-catalog" title="Каталог товаров" data-position="bottom" data-theme="g-hint" class="b-notification m-notification_system-message j-popup-trigger j-hint"><span class="b-notification__amount">25</span></span>
 						</div>
 					</div>
 				</div>
@@ -144,14 +145,14 @@
 				</div>
 				<div class="b-inner-content">
 					<div class="b-partners-goods">
-						<div class="b-pkp-block m-pkp-block_full-width">
+						<div class="b-pkp-block">
 							<div class="b-block-title">
 								<div class="b-block-title__left">
 									<h2 class="b-block-title__heading m-block-title__heading_big">Товары партнёров</h2>
 								</div>
 							</div>
-							<div class="b-goods-search m-goods-search_active">
-								<h2 class="b-goods-search__title">Поиск товаров</h2>
+							<div class="b-goods-search m-goods-search_active j-goods-search">
+								<div class="b-goods-search__overlay m-goods-search__overlay_left"></div><a href="#" class="b-goods-search__title">Поиск товаров</a>
 								<div class="b-partners-shop"><strong>Магазин партнёра</strong>
 									<div class="b-select-btn"></div>
 									<div class="b-partners-shop__link-holder"><a href="#">Торговая платформа полного цикла Pokupo</a>
@@ -160,46 +161,48 @@
 								<form class="b-goods-search__form">
 									<div class="b-goods-search__filter">
 										<div class="b-goods-search__filter-holder">
-											<div class="b-goods-search__goods-status"><span class="b-goods-search__filter-title">Статус товара</span>
-												<div class="b-goods-search__select">
-													<select class="b-select j-select">
-														<option>Любой статус</option>
-														<option>Запрещен</option>
-														<option>Продается</option>
-														<option>Вне каталога</option>
-														<option>Ожидает модерации</option>
-													</select>
-												</div>
+											<div class="b-goods-search__goods-status">
+												<label class="b-label">
+													<div class="b-label__text">Статус товара</div>
+													<div class="b-goods-search__select">
+														<select class="b-select j-select">
+															<option>Любой статус</option>
+															<option>Запрещен</option>
+															<option>Продается</option>
+															<option>Вне каталога</option>
+															<option>Ожидает модерации</option>
+														</select>
+													</div>
+												</label>
 											</div>
-											<div class="b-goods-search__goods-type"><span class="b-goods-search__filter-title">Тип товара</span>
-												<div class="b-goods-type">
-													<label class="b-goods-type__label">
-														<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span">Все товары</span>
-													</label>
-													<label class="b-goods-type__label">
-														<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_physical">Физические</span>
-													</label>
-													<label class="b-goods-type__label">
-														<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_digital">Цифровые</span>
-													</label>
-												</div>
+											<div class="b-goods-type"><span class="b-label"><div class="b-label__text">Тип товара</div><label class="b-goods-type__label"><input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span">Все товары</span>
+												</label>
+												<label class="b-goods-type__label">
+													<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_physical">Физические</span>
+												</label>
+												<label class="b-goods-type__label">
+													<input type="radio" name="goodsType" class="b-goods-type__input"><span class="b-goods-type__span m-goods-type__span_digital">Цифровые</span>
+												</label>
+												</span>
 											</div>
 										</div>
 										<div class="b-goods-search__input-holder">
-											<label class="b-goods-search__label"><span class="b-goods-search__filter-title">Ключевые слова</span>
-												<input type="text" class="b-input b-goods-search__input">
+											<label class="b-label">
+												<div class="b-label__text">Ключевые слова</div>
+												<input type="text" class="b-input">
 											</label>
 										</div>
 									</div>
-									<div class="b-goods-search__form-controls">
-										<input type="submit" value="найти" class="b-btn-green b-goods-search__form-submit">
-										<label class="b-goods-search__form-reset">
+									<div class="b-goods-search__controls">
+										<input type="submit" value="найти" class="b-goods-search__controls-submit">
+										<label class="b-goods-search__controls-reset">
 											<input type="reset" value="">
 										</label>
 									</div>
 									<div class="b-configure"><span class="b-configure__icon m-configure__icon_customize-discount"></span><a href="#" class="b-configure__link m-configure__link_customize-discounts">Выбрать рубрики</a><span class="b-configure__subtext">(выбраны все рубрики)</span>
 									</div>
 								</form>
+								<div class="b-goods-search__overlay m-goods-search__overlay_right"></div>
 							</div>
 							<div class="b-pkp-block__row">
 								<div class="b-actions">
@@ -215,35 +218,19 @@
 										</li>
 									</ul>
 									<ul class="b-actions__group">
-										<li class="b-actions__item">
-											<a href="#" title="Выставить на продажу" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_success j-hint"></a>
+										<li class="b-actions__item"><span title="Выставить на продажу" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_success j-hint"></span>
 										</li>
-										<li class="b-actions__item">
-											<a href="#" title="Снять с продажи" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_remove j-hint"></a>
+										<li class="b-actions__item"><span title="Снять с продажи" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_remove j-hint"></span>
 										</li>
-										<li class="b-actions__item">
-											<a href="#" class="b-actions__btn m-actions__btn_delete"></a>
+										<li class="b-actions__item"><span class="b-actions__btn m-actions__btn_delete"></span>
 										</li>
 									</ul>
 									<ul class="b-actions__group">
-										<li class="b-actions__item">
-											<a href="#" class="b-actions__btn m-actions__btn_plus-minus"></a>
-										</li>
-										<li class="b-actions__item">
-											<a href="#" class="b-actions__btn m-actions__btn_rub"></a>
-										</li>
-										<li class="b-actions__item">
-											<a href="#" title="Изменить категорию" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_list j-hint"></a>
+										<li class="b-actions__item"><span title="Изменить категорию" data-position="top" data-theme="g-hint" class="b-actions__btn m-actions__btn_list j-hint"></span>
 										</li>
 									</ul>
 									<ul class="b-actions__group">
-										<li class="b-actions__item">
-											<a href="#" class="b-actions__btn m-actions__btn_load"></a>
-										</li>
-									</ul>
-									<ul class="b-actions__group">
-										<li class="b-actions__item">
-											<a href="#" class="b-actions__btn m-actions__btn_search"></a>
+										<li class="b-actions__item"><span class="b-actions__btn m-actions__btn_search j-actions__search"><span class="b-actions__search-triangle"></span></span>
 										</li>
 									</ul>
 								</div>
@@ -490,33 +477,34 @@
 								</div>
 							</div>
 						</div>
-						<div class="b-notification-popup j-notification-popup">
-							<div class="b-notification-popup__close j-modal-close"></div>
+					</div>
+					<div class="b-popup-holder">
+						<div class="b-popup j-product-catalog">
+							<div class="b-popup__close j-modal-close"></div>
 							<div class="b-block-title__heading">Каталог товаров</div>
-							<div class="b-tabs">
+							<div class="b-tabs j-tabs">
 								<ul class="b-tabs__list">
-									<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text">Мои рубрики</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+									<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-configure__icon m-configure__icon_rubric"></span><span class="b-tabs__btn-text m-tabs__btn-text_small">Мои рубрики</span></a>
 									</li>
-									<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text">Рубрики партнёров</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
+									<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-configure__icon m-configure__icon_rubric"></span><span class="b-tabs__btn-text m-tabs__btn-text_small">Рубрики партнёров</span></a>
 									</li>
 								</ul>
 								<div class="p-tabs__container">
-									<div id="tab-1" class="p-tabs__content">
+									<div id="tab-1" class="b-tabs__inner p-tabs__content">
 										<label class="b-label">
 											<div class="b-label__text">Быстрый поиск</div>
 											<div class="b-keywords-and-phrases">
 												<select multiple="multiple" style="width: 100%" class="b-select j-select-tags">
-													<option value="Звуковые карты" class="j-hint">Звуковые карты</option>
-													<option value="Модули памяти">Модули памяти</option>
-													<option value="Платы ввода-вывода">Платы ввода-вывода</option>
-													<option value="Видеокарты">Видеокарты</option>
-													<option value="Клавиатруы">Клавиатруы</option>
-													<option value="Моноблоки">Моноблоки</option>
+													<option value="Звуковые карты" class="j-hint">Видеокарты</option>
+													<option value="Модули памяти">Видеокамеры</option>
+													<option value="Платы ввода-вывода">Видеорегистраторы</option>
+													<option value="Видеокарты">Видеокарты asus</option>
+													<option value="Клавиатруы">Видеорегистраторы mio</option>
 												</select>
 											</div>
 										</label>
-										<div class="b-product-catalog">
-											<h5 class="b-product-catalog__heading j-catalog">Каталог товаров<div class="b-editing-actions"><a href="#" class="b-editing-actions__item m-editing-actions__item_edit"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_add"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_remove"></a></div></h5>
+										<div data-scroll-position="inside" data-scroll-theme="custom_green" data-axis="y" style="max-height: 500px; width: 100%" class="b-product-catalog j-scroll">
+											<h5 class="b-product-catalog__heading b-checkbox__label j-catalog">Каталог товаров<div class="b-editing-actions"><span class="b-editing-actions__item m-editing-actions__item_edit"></span><div class="b-editing-actions__add-dropdown-holder j-product-catalog__add-dropdown"><span class="b-editing-actions__item m-editing-actions__item_add"></span><div class="b-product-catalog__add-dropdown"><span class="b-product-catalog__propose-item">Предложить каталог</span><span class="b-product-catalog__propose-item">Создать каталог</span><span class="b-product-catalog__propose-item">Переименовать каталог</span></div></div><span class="b-editing-actions__item m-editing-actions__item_remove"></span></div></h5>
 											<ul class="b-catalog-tree j-catalog-tree">
 												<li>
 													<div class="b-checkbox">
@@ -536,9 +524,9 @@
 													</div>
 												</li>
 												<li style="margin-bottom: 11px">
-													<div class="b-checkbox">
-														<label class="b-checkbox__label">
-															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><span class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_recommended"></span><a href="#" class="b-ckeckbox__text-link">Рекомендуемые товары</a>
+													<div class="b-radio">
+														<label class="b-radio__label">
+															<input type="radio" class="b-radio__input"><span class="b-radio__icon"></span><span class="b-radio__text"><span class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_recommended"></span><a href="#" class="b-ckeckbox__text-link">Рекомендуемые товары</a>
 															</span>
 														</label>
 													</div>
@@ -550,7 +538,10 @@
 															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Детские товары</span>
 															</div>
 															<div class="b-editing-actions">
-																<a href="#" data-offsetx="-9" data-offsety="-5" data-theme="product-catalog-dropdown" data-content="j-template_propose-dropdown" data-position="bottom-left" class="b-editing-actions__item m-editing-actions__item_add j-hint"></a>
+																<div class="b-editing-actions__add-dropdown-holder j-product-catalog__add-dropdown"><span class="b-editing-actions__item m-editing-actions__item_add"></span>
+																	<div class="b-product-catalog__add-dropdown"><span class="b-product-catalog__propose-item">Предложить секцию товаров</span><span class="b-product-catalog__propose-item">Предложить категорию товаров</span>
+																	</div>
+																</div>
 															</div>
 														</label>
 													</div>
@@ -559,15 +550,16 @@
 															<div class="b-checkbox m-checkbox_small">
 																<label class="b-checkbox__label">
 																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
-																	<div class="b-editing-actions">
-																		<a href="#" title="Заявка" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_bid j-hint"></a>
-																	</div>
+																	<a href="#" title="Заявка" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_bid j-hint"></a>
 																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Игрушки и игровые комплексы</span>
 																	</div>
-																	<div class="b-editing-actions">
-																		<a href="#" title="Утвердить" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_edit j-hint"></a>
-																		<a href="#" data-offsetx="-9" data-offsety="-5" data-theme="product-catalog-dropdown" data-content="j-template_add-dropdown" data-position="bottom-left" class="b-editing-actions__item m-editing-actions__item_add j-hint"></a>
-																		<a href="#" class="b-editing-actions__item m-editing-actions__item_remove"></a>
+																	<div class="b-editing-actions"><span title="Утвердить" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_done j-hint"></span>
+																		<div class="b-editing-actions__add-dropdown-holder j-product-catalog__add-dropdown"><span class="b-editing-actions__item m-editing-actions__item_add"></span>
+																			<div class="b-product-catalog__add-dropdown"><span class="b-product-catalog__add-item">Добавить категорию товаров</span><span class="b-product-catalog__add-item">Добавить секцию товаров</span><span class="b-product-catalog__add-item m-product-catalog__add-item_slider">Добавить слайдер</span>
+																				<span
+																				class="b-product-catalog__add-item m-product-catalog__add-item_carousel">Добавить карусель</span><span class="b-product-catalog__add-item m-product-catalog__add-item_tile">Добавить плитку</span>
+																			</div>
+																		</div><span class="b-editing-actions__item m-editing-actions__item_remove"></span>
 																	</div>
 																</label>
 															</div>
@@ -587,18 +579,6 @@
 															<div class="b-checkbox m-checkbox_small">
 																<label class="b-checkbox__label">
 																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
-																	<div class="b-catalog-moderation">
-																		<div class="b-catalog-moderation__status m-catalog-moderation__status_published"></div>
-																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_published"></div>
-																	</div>
-																	<div class="b-catalog-moderation">
-																		<div class="b-catalog-moderation__status m-catalog-moderation__status_waiting"></div>
-																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_waiting"></div>
-																	</div>
-																	<div class="b-catalog-moderation">
-																		<div class="b-catalog-moderation__status m-catalog-moderation__status_reject"></div>
-																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_reject"></div>
-																	</div>
 																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучение и творчество</span>
 																	</div>
 																</label>
@@ -632,6 +612,17 @@
 																			</div>
 																		</label>
 																	</div>
+																	<ul>
+																		<li>
+																			<div class="b-checkbox m-checkbox_small">
+																				<label class="b-checkbox__label">
+																					<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																					<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для творчества 2</span>
+																					</div>
+																				</label>
+																			</div>
+																		</li>
+																	</ul>
 																</li>
 																<li>
 																	<div class="b-checkbox m-checkbox_small">
@@ -641,12 +632,35 @@
 																			</div>
 																		</label>
 																	</div>
+																	<ul>
+																		<li>
+																			<div class="b-checkbox m-checkbox_small">
+																				<label class="b-checkbox__label">
+																					<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																					<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для школы 2</span>
+																					</div>
+																				</label>
+																			</div>
+																		</li>
+																	</ul>
 																</li>
 																<li>
 																	<div class="b-checkbox m-checkbox_small">
 																		<label class="b-checkbox__label">
 																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
-																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучающие материалы и авторские методики</span>
+																			<div class="b-catalog-moderation">
+																				<div class="b-catalog-moderation__status m-catalog-moderation__status_published"></div>
+																				<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_published j-catalog-moderation-dropdown"></div>
+																				<div class="b-catalog-moderation__dropdown-list">
+																					<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link">Обучающие материалы и авторские методики</a>
 																			</div>
 																		</label>
 																	</div>
@@ -655,7 +669,19 @@
 																	<div class="b-checkbox m-checkbox_small">
 																		<label class="b-checkbox__label">
 																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
-																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Чертежные принадлежности</span>
+																			<div class="b-catalog-moderation">
+																				<div class="b-catalog-moderation__status m-catalog-moderation__status_published"></div>
+																				<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_published j-catalog-moderation-dropdown"></div>
+																				<div class="b-catalog-moderation__dropdown-list">
+																					<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link">Чертежные принадлежности</a>
 																			</div>
 																		</label>
 																	</div>
@@ -664,7 +690,19 @@
 																	<div class="b-checkbox m-checkbox_small">
 																		<label class="b-checkbox__label">
 																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
-																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Тетради, дневники, альбомы</span>
+																			<div class="b-catalog-moderation">
+																				<div class="b-catalog-moderation__status m-catalog-moderation__status_waiting"></div>
+																				<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_waiting j-catalog-moderation-dropdown"></div>
+																				<div class="b-catalog-moderation__dropdown-list">
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link">Тетради, дневники, альбомы</a>
 																			</div>
 																		</label>
 																	</div>
@@ -692,10 +730,22 @@
 															</ul>
 														</li>
 														<li>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
-																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучающие материалы и авторские методики</span>
+															<div class="b-radio m-radio_small">
+																<label class="b-radio__label">
+																	<input type="radio" class="b-radio__input m-radio__input_small"><span class="b-radio__icon m-radio__icon_small"></span>
+																	<div class="b-catalog-moderation">
+																		<div class="b-catalog-moderation__status m-catalog-moderation__status_reject"></div>
+																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_reject j-catalog-moderation-dropdown"></div>
+																		<div class="b-catalog-moderation__dropdown-list">
+																			<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																			</div>
+																			<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																			</div>
+																			<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="b-radio__text"><a href="#" class="b-ckeckbox__text-link">Обучающие материалы и авторские методики</a>
 																	</div>
 																</label>
 															</div>
@@ -712,12 +762,13 @@
 													</div>
 													<ul>
 														<li>
-															<div class="b-checkbox"></div>
-															<label class="b-checkbox__label">
-																<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
-																<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса 2</span>
-																</div>
-															</label>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Все для офиса 2</span>
+																	</div>
+																</label>
+															</div>
 														</li>
 													</ul>
 												</li>
@@ -731,12 +782,13 @@
 													</div>
 													<ul>
 														<li>
-															<div class="b-checkbox"></div>
-															<label class="b-checkbox__label">
-																<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
-																<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса 2</span>
-																</div>
-															</label>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Бытовая техника 2</span>
+																	</div>
+																</label>
+															</div>
 														</li>
 													</ul>
 												</li>
@@ -749,192 +801,353 @@
 														</label>
 													</div>
 													<ul>
-														<li class="root">
-															<div class="b-checkbox"></div>
-															<label class="b-checkbox__label">
-																<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
-																<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса 2</span>
-																</div>
-															</label>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Одежда, обувь и аксессуары 2</span>
+																	</div>
+																</label>
+															</div>
 														</li>
 													</ul>
 												</li>
 											</ul>
 										</div>
 									</div>
-									<div id="tab-2" class="p-tabs__content">
-										<div class="b-selling-files"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<script type="text/template" class="j-template_add-dropdown">
-					< div class = "b-product-catalog__add-dropdown" > < span class = "b-product-catalog__add-item" > Добавитькатегориютоваров < /span><span class="b-product-catalog__add-item">Добавить секцию товаров</span > < span class = "b-product-catalog__add-item m-product-catalog__add-item_slider" > Добавитьслайдер < /span><span class="b-product-catalog__add-item m-product-catalog__add-item_carousel">Добавить карусель</span > < span class = "b-product-catalog__add-item m-product-catalog__add-item_tile" > Добавитьплитку < /span></div >
-					</script>
-					<script type="text/template" class="j-template_propose-dropdown">
-					< div class = "b-product-catalog__propose-dropdown" > < span class = "b-product-catalog__propose-item" > Предложитьсекциютоваров < /span><span class="b-product-catalog__propose-item">Предложить категорию товаров</span > < /div>
-					</script>
-					<div class="b-popup-holder">
-						<div class="b-notification-popup j-notification-popup">
-							<div class="b-notification-popup__close j-modal-close"></div>
-							<div class="b-block-title__heading">Каталог товаров</div>
-							<div class="b-tabs j-tabs">
-								<ul class="b-tabs__list">
-									<li class="b-tabs__item"><a href="#tab-1" class="p-tabs__btn"><span class="b-tabs__btn-text">Мои рубрики</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
-									</li>
-									<li class="b-tabs__item"><a href="#tab-2" class="p-tabs__btn"><span class="b-tabs__btn-text">Рубрики партнёров</span><div class="pkp-tooltip pkp-tooltip_inline"><span title="выплаты агенту" data-position="top" data-theme="g-hint" class="pkp-tooltip__trigger j-hint">?</span></div></a>
-									</li>
-								</ul>
-								<div class="p-tabs__container">
-									<div id="tab-1" class="p-tabs__content">
+									<div id="tab-2" class="b-tabs__inner p-tabs__content">
 										<label class="b-label">
 											<div class="b-label__text">Быстрый поиск</div>
 											<div class="b-keywords-and-phrases">
 												<select multiple="multiple" style="width: 100%" class="b-select j-select-tags">
-													<option value="Звуковые карты">Звуковые карты</option>
-													<option value="Модули памяти">Модули памяти</option>
-													<option value="Платы ввода-вывода">Платы ввода-вывода</option>
-													<option value="Видеокарты">Видеокарты</option>
-													<option value="Клавиатруы">Клавиатруы</option>
-													<option value="Моноблоки">Моноблоки</option>
+													<option value="Звуковые карты" class="j-hint">Видеокарты</option>
+													<option value="Модули памяти">Видеокамеры</option>
+													<option value="Платы ввода-вывода">Видеорегистраторы</option>
+													<option value="Видеокарты">Видеокарты asus</option>
+													<option value="Клавиатруы">Видеорегистраторы mio</option>
 												</select>
 											</div>
-											<div class="b-product-catalog">
-												<h5 class="b-product-catalog__heading">Каталог товаров<div class="b-editing-actions"><a href="#" class="b-editing-actions__item m-editing-actions__item_edit"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_add"></a><a href="#" class="b-editing-actions__item m-editing-actions__item_remove"></a></div></h5>
-												<ul class="b-catalog-tree">
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Новинки</a>
-																	</div>
-																</label>
-															</div>
-														</label>
-													</li>
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_hot">Горячие предложения</a></span>
-																</label>
-															</div>
-														</label>
-													</li>
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_recommended">Рекомендуемые товары</a></span>
-																</label>
-															</div>
-														</label>
-													</li>
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Детские товары</a>
-																	</div>
-																</label>
-															</div>
-														</label>
-														<ul>
-															<li>
-																<label>
-																	<div class="b-checkbox">
-																		<label class="b-checkbox__label">
-																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Игрушки и игровые комплексы</a>
-																			</div>
-																		</label>
-																	</div>
-																</label>
-															</li>
-															<li>
-																<label>
-																	<div class="b-checkbox">
-																		<label class="b-checkbox__label">
-																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Обучение и творчество</a>
-																			</div>
-																		</label>
-																	</div>
-																</label>
-															</li>
-															<li>
-																<label>
-																	<div class="b-checkbox">
-																		<label class="b-checkbox__label">
-																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Товары для мам и малышей</a>
-																			</div>
-																		</label>
-																	</div>
-																</label>
-															</li>
-															<li>
-																<label>
-																	<div class="b-checkbox">
-																		<label class="b-checkbox__label">
-																			<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Обучающие материалы и авторские методики</a>
-																			</div>
-																		</label>
-																	</div>
-																</label>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Все для офиса</a>
-																	</div>
-																</label>
-															</div>
-														</label>
-													</li>
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Бытовая техника</a>
-																	</div>
-																</label>
-															</div>
-														</label>
-													</li>
-													<li>
-														<label>
-															<div class="b-checkbox">
-																<label class="b-checkbox__label">
-																	<input type="checkbox" class="b-checkbox__input j-goods-input"><span class="b-checkbox__icon"></span>
-																	<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link m-ckeckbox__text-link_catalog_novelty">Одежда, обувь и аксессуары</a>
-																	</div>
-																</label>
-															</div>
-														</label>
-													</li>
-												</ul>
-											</div>
 										</label>
-									</div>
-									<div id="tab-2" class="p-tabs__content">
-										<div class="b-selling-files"></div>
+										<div style="max-height: 500px; width: 100%" class="b-product-catalog j-scrollbar">
+											<h5 class="b-product-catalog__heading b-checkbox__label j-catalog">Каталог товаров<div class="b-editing-actions"><span class="b-editing-actions__item m-editing-actions__item_edit"></span><div class="b-editing-actions__add-dropdown-holder j-product-catalog__add-dropdown"><span class="b-editing-actions__item m-editing-actions__item_add"></span><div class="b-product-catalog__add-dropdown"><span class="b-product-catalog__propose-item">Предложить каталог</span><span class="b-product-catalog__propose-item">Создать каталог</span><span class="b-product-catalog__propose-item">Переименовать каталог</span></div></div><span class="b-editing-actions__item m-editing-actions__item_remove"></span></div></h5>
+											<ul class="b-catalog-tree j-catalog-tree">
+												<li>
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_novelty"></span><a href="#" class="b-ckeckbox__text-link">Новинки</a>
+															</div>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span><span class="b-ckeckbox__text"><span title="Слайдер" data-position="bottom" data-theme="g-hint" class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_hot j-hint"></span><a href="#" class="b-ckeckbox__text-link">Горячие предложения</a>
+															</span>
+														</label>
+													</div>
+												</li>
+												<li style="margin-bottom: 11px">
+													<div class="b-radio">
+														<label class="b-radio__label">
+															<input type="radio" class="b-radio__input"><span class="b-radio__icon"></span><span class="b-radio__text"><span class="b-ckeckbox__text-icon m-ckeckbox__text-icon_catalog_recommended"></span><a href="#" class="b-ckeckbox__text-link">Рекомендуемые товары</a>
+															</span>
+														</label>
+													</div>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Детские товары</span>
+															</div>
+															<div class="b-editing-actions">
+																<div class="b-editing-actions__add-dropdown-holder j-product-catalog__add-dropdown"><span class="b-editing-actions__item m-editing-actions__item_add"></span>
+																	<div class="b-product-catalog__add-dropdown"><span class="b-product-catalog__propose-item">Предложить секцию товаров</span><span class="b-product-catalog__propose-item">Предложить категорию товаров</span>
+																	</div>
+																</div>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<a href="#" title="Заявка" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_bid j-hint"></a>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Игрушки и игровые комплексы</span>
+																	</div>
+																	<div class="b-editing-actions"><span title="Утвердить" data-position="bottom" data-theme="g-hint" class="b-editing-actions__item m-editing-actions__item_done j-hint"></span>
+																		<div class="b-editing-actions__add-dropdown-holder j-product-catalog__add-dropdown"><span class="b-editing-actions__item m-editing-actions__item_add"></span>
+																			<div class="b-product-catalog__add-dropdown"><span class="b-product-catalog__add-item">Добавить категорию товаров</span><span class="b-product-catalog__add-item">Добавить секцию товаров</span><span class="b-product-catalog__add-item m-product-catalog__add-item_slider">Добавить слайдер</span>
+																				<span
+																				class="b-product-catalog__add-item m-product-catalog__add-item_carousel">Добавить карусель</span><span class="b-product-catalog__add-item m-product-catalog__add-item_tile">Добавить плитку</span>
+																			</div>
+																		</div><span class="b-editing-actions__item m-editing-actions__item_remove"></span>
+																	</div>
+																</label>
+															</div>
+															<ul>
+																<li>
+																	<div class="b-checkbox">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Игрушки и игровые комплексы 2</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Обучение и творчество</span>
+																	</div>
+																</label>
+															</div>
+															<ul>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Наука и техника</span>
+																			</div>
+																		</label>
+																	</div>
+																	<ul>
+																		<li>
+																			<div class="b-checkbox m-checkbox_small">
+																				<label class="b-checkbox__label">
+																					<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																					<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Наука и техника 2</span>
+																					</div>
+																				</label>
+																			</div>
+																		</li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для творчества</span>
+																			</div>
+																		</label>
+																	</div>
+																	<ul>
+																		<li>
+																			<div class="b-checkbox m-checkbox_small">
+																				<label class="b-checkbox__label">
+																					<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																					<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для творчества 2</span>
+																					</div>
+																				</label>
+																			</div>
+																		</li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для школы</span>
+																			</div>
+																		</label>
+																	</div>
+																	<ul>
+																		<li>
+																			<div class="b-checkbox m-checkbox_small">
+																				<label class="b-checkbox__label">
+																					<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																					<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для школы 2</span>
+																					</div>
+																				</label>
+																			</div>
+																		</li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-catalog-moderation">
+																				<div class="b-catalog-moderation__status m-catalog-moderation__status_published"></div>
+																				<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_published j-catalog-moderation-dropdown"></div>
+																				<div class="b-catalog-moderation__dropdown-list">
+																					<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link">Обучающие материалы и авторские методики</a>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-catalog-moderation">
+																				<div class="b-catalog-moderation__status m-catalog-moderation__status_published"></div>
+																				<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_published j-catalog-moderation-dropdown"></div>
+																				<div class="b-catalog-moderation__dropdown-list">
+																					<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link">Чертежные принадлежности</a>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-catalog-moderation">
+																				<div class="b-catalog-moderation__status m-catalog-moderation__status_waiting"></div>
+																				<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_waiting j-catalog-moderation-dropdown"></div>
+																				<div class="b-catalog-moderation__dropdown-list">
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																					</div>
+																					<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="b-ckeckbox__text"><a href="#" class="b-ckeckbox__text-link">Тетради, дневники, альбомы</a>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для мам и малышей</span>
+																	</div>
+																</label>
+															</div>
+															<ul>
+																<li>
+																	<div class="b-checkbox m-checkbox_small">
+																		<label class="b-checkbox__label">
+																			<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																			<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Товары для мам и малышей 2</span>
+																			</div>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="b-radio m-radio_small">
+																<label class="b-radio__label">
+																	<input type="radio" class="b-radio__input m-radio__input_small"><span class="b-radio__icon m-radio__icon_small"></span>
+																	<div class="b-catalog-moderation">
+																		<div class="b-catalog-moderation__status m-catalog-moderation__status_reject"></div>
+																		<div class="b-catalog-moderation__dropdown m-catalog-moderation__dropdown_reject j-catalog-moderation-dropdown"></div>
+																		<div class="b-catalog-moderation__dropdown-list">
+																			<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_published"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_published">Опубликован</span>
+																			</div>
+																			<div class="b-catalog-moderation__dropdown-item"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_waiting"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_waiting">Ожидает модерации</span>
+																			</div>
+																			<div class="b-catalog-moderation__dropdown-item m-catalog-moderation__dropdown-item_checked"><span class="b-catalog-moderation__dropdown-icon m-catalog-moderation__dropdown-icon_reject"></span><span class="b-catalog-moderation__dropdown-text m-catalog-moderation__dropdown-text_reject">Отклонить</span>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="b-radio__text"><a href="#" class="b-ckeckbox__text-link">Обучающие материалы и авторские методики</a>
+																	</div>
+																</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Все для офиса</span>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Все для офиса 2</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Бытовая техника</span>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Бытовая техника 2</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li class="root">
+													<div class="b-checkbox">
+														<label class="b-checkbox__label">
+															<input type="checkbox" class="b-checkbox__input"><span class="b-checkbox__icon"></span>
+															<div class="b-ckeckbox__text"><span class="b-catalog-tree__text">Одежда, обувь и аксессуары</span>
+															</div>
+														</label>
+													</div>
+													<ul>
+														<li>
+															<div class="b-checkbox m-checkbox_small">
+																<label class="b-checkbox__label">
+																	<input type="checkbox" class="b-checkbox__input m-checkbox__input_small"><span class="b-checkbox__icon m-checkbox__icon_small"></span>
+																	<div class="b-ckeckbox__text"><span class="b-catalog-tree__text m-catalog-tree__text_small">Одежда, обувь и аксессуары 2</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
+							</div>
+							<div class="b-outer-btns-holder"><a href="#" class="b-btn">Сохранить</a><a href="#" style="margin-left: 33px" class="b-btn m-btn_gray m-btn_cancel">Отменить изменения</a><a href="#" class="b-btn m-btn_gray m-btn_cancel">отмена</a>
 							</div>
 						</div>
 					</div>
 					<div class="video-holder">
-						<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
+						<video id="intro-video" src="https://dl.dropboxusercontent.com/u/3902787/pokupo/pokupo-intro.mp4" width="100%" height="100%" controls="true" data-setup="{&quot;customControlsOnMobile&quot;: true}" class="video-js vjs-pokupo-skin"></video><span class="j-close-video close-video"></span>
 						<div class="playlist-components">
 							<div class="b-playlist">
 								<h1>Список материалов</h1>
@@ -949,26 +1162,26 @@
 				</div>
 			</div>
 		</div>
-		<script src="scripts/libs/jquery-2.1.1.min.js?1431505306086"></script>
-		<script src="http://vjs.zencdn.net/4.7/video.js?1431505306086"></script>
-		<script src="scripts/libs/jstarbox.js?1431505306086"></script>
-		<script src="scripts/libs/jquery.tooltip.js?1431505306086"></script>
-		<script src="scripts/libs/playlist.js?1431505306086"></script>
-		<script src="scripts/libs/d3.min.js?1431505306086"></script>
-		<script src="scripts/libs/c3.min.js?1431505306086"></script>
-		<script src="scripts/libs/moment.min.js?1431505306086"></script>
-		<script src="scripts/libs/jquery.plugin.min.js?1431505306086"></script>
-		<script src="scripts/libs/jquery.datepick.min.js?1431505306086"></script>
-		<script src="scripts/libs/formstone.core.js?1431505306086"></script>
-		<script src="scripts/libs/formstone.touch.js?1431505306086"></script>
-		<script src="scripts/libs/formstone.dropdown.js?1431505306086"></script>
-		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1431505306086"></script>
-		<script src="scripts/libs/jquery.arcticmodal.js?1431505306086"></script>
-		<script src="scripts/libs/select2.full.min.js?1431505306086"></script>
-		<script src="scripts/libs/tabulous.js?1431505306086"></script>
-		<script src="scripts/libs/checkboxTree.js?1431505306086"></script>
-		<script src="scripts/tinymce/tinymce.min.js?1431505306086"></script>
-		<script src="scripts/common.js?1431505306086"></script>
-		<script src="scripts/debug.js?1431505306086"></script>
+		<script src="scripts/libs/jquery-2.1.1.min.js?1432713306339"></script>
+		<script src="http://vjs.zencdn.net/4.7/video.js?1432713306339"></script>
+		<script src="scripts/libs/jstarbox.js?1432713306339"></script>
+		<script src="scripts/libs/jquery.tooltip.js?1432713306339"></script>
+		<script src="scripts/libs/playlist.js?1432713306339"></script>
+		<script src="scripts/libs/d3.min.js?1432713306339"></script>
+		<script src="scripts/libs/c3.min.js?1432713306339"></script>
+		<script src="scripts/libs/moment.min.js?1432713306339"></script>
+		<script src="scripts/libs/jquery.plugin.min.js?1432713306339"></script>
+		<script src="scripts/libs/jquery.datepick.min.js?1432713306339"></script>
+		<script src="scripts/libs/formstone.core.js?1432713306339"></script>
+		<script src="scripts/libs/formstone.touch.js?1432713306339"></script>
+		<script src="scripts/libs/formstone.dropdown.js?1432713306339"></script>
+		<script src="scripts/libs/jquery.mCustomScrollbar.concat.min.js?1432713306339"></script>
+		<script src="scripts/libs/jquery.arcticmodal.js?1432713306339"></script>
+		<script src="scripts/libs/select2.full.min.js?1432713306339"></script>
+		<script src="scripts/libs/tabulous.js?1432713306339"></script>
+		<script src="scripts/libs/checkboxTree.js?1432713306339"></script>
+		<script src="scripts/tinymce/tinymce.min.js?1432713306339"></script>
+		<script src="scripts/common.js?1432713306339"></script>
+		<script src="scripts/debug.js?1432713306339"></script>
 	</body>
 </html>

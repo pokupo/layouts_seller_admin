@@ -1,41 +1,42 @@
-.b-pkp-block.m-pkp-block_full-width
-    .b-block-title
-        .b-block-title__left
-            h2.b-block-title__heading
-                | Код магазина
-                span.b-block-title__subtext
-                    | Чтобы добавить магазин на ваш сайт, вставьте код виджета Pokupo на страницы вашего магазина
-    .b-store-code.j-roll-up-wrapper
-        h4.b-block-subtitle
-            | HTML код магазина
-        a.b-roll-up-btn.j-roll-up(href=js0)
-            | Скрыть код
-        a.b-store-code__copy(href=js0)
-            | копировать код
-        .b-store-code__content.b-resized-block.j-scrollbar_both.j-roll-up-content
-            .b-store-code__inner
-                pre.
-                       &lt;script type='text/javascript'&gt;
-                                var clientSettings = {
-                                    widget_id:  7,
-                                    widget_url: '',    
-                                    site_name: 'zpcode',    
-                                    widget_type: 'ticket',    
-                                    tab_bg_color: '#1EA619',  
-                                    tab_border_color: '#E0E0E0', 
-                                    tab_border_width: 2,
-                                    tab_border_radius: 5,
-                                    tab_indent: '50%',
-                                    tab_location: 'left',
-                                    widget_width: 740,
-                                    widget_height: 520,
-                                    tab_image_url: 'http://helpdesk.dz7.su/images/user_widgets_pics/7.png' 'http://helpdesk.dz7.su/images/user_widgets_pics/7.png''http://helpdesk.dz7.su/images/user_widgets_pics/7.png'  
-                                };
+.b-store-code
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading
+                    | Код магазина
+                    span.b-block-title__subtext
+                        | Чтобы добавить магазин на ваш сайт, вставьте код виджета Pokupo на страницы вашего магазина
+        .b-code
+            h4.b-block-subtitle
+                | HTML код магазина
+            span.b-code__roll-up.j-code-roll-up
+                | Скрыть код
+            a.b-code__copy(href=js0)
+                | копировать код
+            .b-code__content.b-resized-block.j-scroll(data-scroll-position="inside" data-scroll-theme="custom_code" data-axis="yx")
+                .b-code__inner
+                    pre.
+                           &lt;script type='text/javascript'&gt;
+                                    var clientSettings = {
+                                        widget_id:  7,
+                                        widget_url: '',    
+                                        site_name: 'zpcode',    
+                                        widget_type: 'ticket',    
+                                        tab_bg_color: '#1EA619',  
+                                        tab_border_color: '#E0E0E0', 
+                                        tab_border_width: 2,
+                                        tab_border_radius: 5,
+                                        tab_indent: '50%',
+                                        tab_location: 'left',
+                                        widget_width: 740,
+                                        widget_height: 520,
+                                        tab_image_url: 'http://helpdesk.dz7.su/images/user_widgets_pics/7.png' 'http://helpdesk.dz7.su/images/user_widgets_pics/7.png''http://helpdesk.dz7.su/images/user_widgets_pics/7.png'  
+                                    };
 
-                                (function() {
-                                    var script = document.createElement('script');
-                                    script.type = 'text/javascript'; script.async = true;
-                                    script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';
-                                    document.getElementsByTagName('head')[0].appendChild(script);
-                                })();
-                        &lt;/script&gt;
+                                    (function() {
+                                        var script = document.createElement('script');
+                                        script.type = 'text/javascript'; script.async = true;
+                                        script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';script.src = 'http://helpdesk.dz7.su/bundles/helpdeskpublic/js/zpayment.js';
+                                        document.getElementsByTagName('head')[0].appendChild(script);
+                                    })();
+                            &lt;/script&gt;

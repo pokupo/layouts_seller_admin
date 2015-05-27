@@ -37,14 +37,9 @@
             } else if (this.options.effect == 'flip') {
                tab_content = firstdiv.find('.p-tabs__content').not(':nth-child(1)').addClass('hideflip');
             }
-
             var firstdivheight = firstdiv.find('.p-tabs__content').eq(0).height();
 
             var alldivs = this.$elem.find('.p-tabs__content');
-
-            alldivs.css({'position': 'absolute'});
-
-            firstdiv.css('height',firstdivheight+'px');
 
             firstchild.addClass('p-tabs__btn_active');
 
@@ -79,20 +74,14 @@
                 } else if (effect == 'flip') {
                     alldivs.removeClass('showflip').addClass('make_transist').addClass('hideflip');
                     thisform.find('div'+thislink).addClass('make_transist').addClass('showflip');
-                }
-
-
-                firstdiv.css('height',thisdivwidth+'px');
-
-                
-
+                }               
 
             });
 
            
 
 
-         
+    
             
         },
 

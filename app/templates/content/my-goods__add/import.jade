@@ -1,5 +1,5 @@
 .b-import
-    .b-pkp-block.m-pkp-block_full-width
+    .b-pkp-block
         .b-block-title
             .b-block-title__left
                 h2.b-block-title__heading.m-block-title__heading_big
@@ -29,20 +29,17 @@
         
         .b-import__filter
             .b-import__goods-type
-                span.b-goods-search__filter-title
-                    | Тип товаров
-                    .pkp-tooltip.pkp-tooltip_inline
-                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
-                            | ?
                 .b-goods-type
-                    label.b-goods-type__label
-                        input(type="radio" name="goodsType").b-goods-type__input
-                        span.b-goods-type__span.m-goods-type__span_physical
-                            | Физический товар
-                    label.b-goods-type__label
-                        input(type="radio" name="goodsType").b-goods-type__input
-                        span.b-goods-type__span.m-goods-type__span_digital
-                            | Цифровой товар
+                    span.b-label
+                        .b-label__text Тип товара
+                        label.b-goods-type__label
+                            input(type="radio" name="goodsType").b-goods-type__input
+                            span.b-goods-type__span.m-goods-type__span_physical
+                                | Физический товар
+                        label.b-goods-type__label
+                            input(type="radio" name="goodsType").b-goods-type__input
+                            span.b-goods-type__span.m-goods-type__span_digital
+                                | Цифровой товар
 
             .b-import__separator
                 .b-import__separator-inner

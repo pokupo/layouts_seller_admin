@@ -1,0 +1,117 @@
+//b-full-width-graph
+    .b-full-width-graph__item
+        display inline-block
+        margin-right 43px
+        
+    .b-full-width-graph__number
+        font-size 45px
+        font-weight 600
+        color #000
+
+    .b-full-width-graph__text
+        display block
+        font-size 13px
+        margin-top 5px
+        letter-spacing 0.3px
+        
+    .b-full-width-graph__symbol
+        font-size 25px
+        line-height 20px
+        margin-left -4px
+
+    .b-graph-legend
+        position absolute
+        top 35px
+        right 19px
+        
+    .b-graph-legend__item
+        float left
+        margin-left 30px
+
+    .b-graph-legend__indicator
+        height 14px
+        width 30px
+        margin-right 5px
+        border-radius 10px
+        display inline-block
+        vertical-align top
+        cursor pointer
+
+    .m-graph-legend__indicator_green
+        background #97ce68
+
+    .m-graph-legend__indicator_gray
+        background #efece7
+
+    .m-graph-legend__indicator_visitation
+        background #4dbbec
+        height 4px
+        width 35px
+        position relative
+        top 5px
+        &:before
+            content ''
+            position absolute
+            width 12px
+            height 12px
+            display block
+            background #4dbbec
+            left 50%
+            top 50%
+            margin -6px 0 0 -6px
+            border-radius 999px
+        &:after
+            content ''
+            position absolute
+            width 6px
+            height 6px
+            display block
+            background #fff
+            left 50%
+            top 50%
+            margin -3px 0 0 -3px
+            border-radius 999px
+            
+    .m-graph-legend__blue
+        background #c9eaf9  
+
+    .b-graph-legend__title
+        font-size 10px
+        color #333
+        font-weight 600
+        letter-spacing -0.2px
+
+//double graph
+    .b-donut 
+        position relative
+    
+    .b-donut-graph
+        padding 53px 0 5px 0
+        width 360px
+        margin 0 auto        
+
+    .b-donut__info
+        position absolute
+        display table
+        width 200px
+        height 200px
+        top 50%
+        left 50%
+        margin -100px 0 0 -100px
+        
+    .b-donut__info-cell
+        display table-cell
+        vertical-align middle
+        text-align center
+
+    .b-donut__info-text
+        font-size 13px
+        line-height 16px
+        color #000000
+    
+    .b-donut__info-amount
+        font-size 30px
+        font-weight 600
+        display block
+        margin-top: 8px
+        color #000000

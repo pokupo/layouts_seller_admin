@@ -6,18 +6,18 @@ if(adminMain)
                 ul.b-breadcrumbs
                     li.b-breadcrumbs__item.m-breadcrumbs__item_root
                         a(href="/") Home
-                    li.b-breadcrumbs__item.j-breadcrumbs__item
-                        a(href=js0) Панель управления
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Панель управления
             
-            .b-btn.m-btn_support.j-btn_support
-                .b-icon.m-icon_support
-                | Служба поддержки
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
 
             .b-header__notification-holder
                 span.b-notification.m-notification_message.j-hint(title="Посмотреть уведомления системы" data-position="bottom" data-theme="g-hint")
                     span.b-notification__amount
                         | 3
-                span.b-notification.m-notification_system-message.j-system-notification
+                span.b-notification.m-notification_system-message.j-popup-trigger(data-popup="j-notification-popup")
                     span.b-notification__amount
                         | 25
 
@@ -32,16 +32,16 @@ if(goods)
                     li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
                         span Мои товары
             
-            .b-btn.m-btn_support.j-btn_support
-                .b-icon.m-icon_support
-                | Служба поддержки
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
 
             .b-header__notification-holder
-                span.b-notification.m-notification_system-message.j-hint(title="Попап удаления сообщений" data-position="bottom" data-theme="g-hint").j-message-remove
+                span.b-notification.m-notification_system-message.j-popup-trigger.j-hint(data-popup="j-message-remove-popup" title="Попап удаления сообщений" data-position="bottom" data-theme="g-hint")
                     span.b-notification__amount
                         | 25
 
-if(goodsAdd)
+if(breadcrumbsGoodsAdd)
     .b-header
         .b-inner-container
             .b-breadcrumbs-wrapper
@@ -56,14 +56,9 @@ if(goodsAdd)
                     li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
                         span Добавление товара
             
-            .b-btn.m-btn_support.j-btn_support
-                .b-icon.m-icon_support
-                | Служба поддержки
-
-            .b-header__notification-holder
-                span.b-notification.m-notification_system-message.j-hint(title="Попап удаления сообщений" data-position="bottom" data-theme="g-hint").j-system-notification
-                    span.b-notification__amount
-                        | 25
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
 
 if(clear)
     .b-header
@@ -80,9 +75,9 @@ if(clear)
                     li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
                         span Добавление товара
             
-            .b-btn.m-btn_support.j-btn_support
-                .b-icon.m-icon_support
-                | Служба поддержки
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
 
 if(breadcrumbPartnersGoods)
     .b-header
@@ -95,11 +90,60 @@ if(breadcrumbPartnersGoods)
                     li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
                         span Товары партнёров
             
-            .b-btn.m-btn_support.j-btn_support
-                .b-icon.m-icon_support
-                | Служба поддержки
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
 
             .b-header__notification-holder
-                span.b-notification.m-notification_system-message.j-hint(title="Каталог товаров" data-position="bottom" data-theme="g-hint").j-system-notification
+                span.b-notification.m-notification_system-message.j-popup-trigger.j-hint(data-popup="j-product-catalog" title="Каталог товаров" data-position="bottom" data-theme="g-hint")
                     span.b-notification__amount
                         | 25
+if(breadcrumbMyShops)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_shops
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Магазины
+            
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
+
+if(breadcrumbMyShopsStoreData)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_goods
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.j-breadcrumbs__item
+                        a(href="/") Мои магазины
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_divider
+                        span /
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Создание магазина
+            
+            .b-header__support.j-btn_support
+                .m-icon_support
+                        | Служба поддержки
+
+if(breadcrumbSeller)
+    .b-header
+        .b-inner-container
+            .b-breadcrumbs-wrapper
+                .b-mobile-menu.j-mobile-menu
+                ul.b-breadcrumbs
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_root.m-breadcrumbs__item_root_seller
+                        a(href="/") Home
+                    li.b-breadcrumbs__item.m-breadcrumbs__item_last.j-breadcrumbs__item
+                        span Продавец
+            
+            .b-header__support.j-btn_support
+                .m-icon_support
+                    | Служба поддержки
+

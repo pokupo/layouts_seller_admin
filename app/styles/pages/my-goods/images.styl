@@ -1,0 +1,190 @@
+//b-images
+    .b-images__list
+        padding 0 3px
+        margin-left -10px
+        
+    .b-images__item
+        display inline-block
+        max-width 178px
+        margin 0 -4px -6px 0
+        cursor pointer
+        position relative
+        padding 10px 10px 30px 10px    
+        vertical-align top    
+    .m-images__item_active
+        box-shadow 0 4px 8px 0 rgba(0,0,0,.6)
+        background #fff
+        & .b-images__editable-block
+            display block
+            min-height 44px
+            line-height 20px
+            word-break break-all
+            cursor text
+            margin-top -18px
+        & .m-images__editable-block_error
+            border 1px solid #ff6766
+            padding 11px
+        & .b-images__description
+            position absolute
+            width 100%
+            padding 0 10px
+            left 0
+            background #fff
+            z-index 5
+            padding-bottom 26px
+            box-shadow 0 5px 6px 0 rgba(0,0,0,0.6)
+            margin-top 27px   
+        & .b-images__description-text
+            display none
+        & .b-images__letters-count 
+            display block
+        & .b-images__description-text-outer
+            display none
+    .b-images__img-holder
+        position relative
+        border 2px dotted #a3a5a9
+        width 158px
+        height  158px
+        display table-cell
+        vertical-align middle
+        text-align center
+        &:hover
+            border-color #474b53
+        &:hover .b-images__add-image-icon
+            border 1px solid #474b53
+            &:after
+                background #474b53
+            &:before
+                background #474b53
+        img
+            max-width 100%
+    
+    .b-images__add-image
+        display block
+        cursor pointer
+        height 100%
+        input
+            position absolute 
+            overflow hidden 
+            clip rect(0 0 0 0) 
+            height 1px 
+            width 1px 
+            margin -1px 
+            padding 0
+            border 0
+
+    .b-images__add-image-icon
+        border-radius 999px
+        border 1px solid #a3a5a9
+        position relative
+        display inline-block
+        width 46px
+        height 46px
+        margin 42px auto 0
+        &:after
+            pseudo()
+            width 6px
+            height 24px
+            top 50%
+            left 50%
+            background #a3a5a9
+            margin-left -3px
+            margin-top -12px
+        &:before
+            pseudo()
+            width 24px
+            height 6px
+            top 50%
+            left 50%
+            background #a3a5a9
+            margin-top -3px
+            margin-left -12px
+            
+    .b-images__add-image-text
+        color #333
+        text-align center
+        display block
+        margin-top 10px
+        font-size 13px
+
+    .b-images__item-remove
+        border-radius 999px
+        background #fff
+        border 1px solid #ff6766
+        width 20px
+        height 20px
+        position absolute
+        top 5px 
+        right 5px
+        z-index 2
+        centered-icon($remove_small)
+        
+    .b-images__favorite
+        position absolute
+        left -2px
+        top -2px
+        width 0
+        height 0
+        border-style solid
+        border-width 40px 40px 0 0
+        border-color #97ce68 transparent transparent transparent
+        
+    .b-images__favorite-icon
+        top -35px
+        left 4px
+        width 12px 
+        height 12px
+        position absolute
+        &:after
+            display block
+            content ''
+            background-icon($images_favorite)
+            
+    .b-images__description
+        margin-top 5px
+        border-radius 5px
+    .m-images__description_none
+        text-align center
+        color #adadad
+    
+    .b-images__description-text-outer
+        padding 9px 0
+        display block
+        &:hover
+            border-radius 5px
+            box-shadow 0 0 0 1px rgba(0,0,0,1)
+            
+    .b-images__description-text
+        font-size 13px
+        letter-spacing 0.3px
+        line-height 16px
+        max-height 34px
+        overflow hidden
+        color #111
+        display block
+        font-size 13px
+        
+
+    .b-images__editable-block
+        border 2px solid #177a93
+        border-radius 5px
+        line-height 20px
+        padding 10px 
+        font-size 13px
+        color #333
+        text-align left
+        display none
+        span
+            background #ffcccc
+        
+    .b-images__letters-count
+        position absolute
+        right 20px
+        color #000
+        margin-top 7px
+        display none
+        
+    .m-images__letters-count_error
+        color #ff0301
+        &:before
+            content '-'

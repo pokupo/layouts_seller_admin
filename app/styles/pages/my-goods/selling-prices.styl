@@ -1,0 +1,160 @@
+//b-selling-prices
+    .b-selling-prices
+        .b-pkp-block
+            padding-bottom 0px
+            
+    .b-selling-prices__payments
+        background #efece7
+        padding 28px 10px 10px 10px
+        margin-bottom 20px
+        
+    .b-selling-prices__payments-price
+        padding 10px 22px 10px 10px
+        background #dfdcd8
+        display inline-block
+        margin-bottom 21px
+        & > span
+            font-size 30px
+            color #000
+            letter-spacing 0.8px
+            display inline-block
+            line-height 48px
+            vertical-align bottom
+            margin-left 13px
+        input
+            width 170px
+            
+    .b-selling-prices__input
+        height 48px
+        color #000
+        font-size 30px
+        line-height 48px
+    
+    .b-selling-prices__payments-agent
+        display inline-block
+        margin-left 6px
+        & > span
+            font-size 30px
+            color #000
+            letter-spacing 1px
+            display inline-block
+            line-height 48px
+            vertical-align bottom
+            margin-left 13px
+        input
+            width 104px
+            margin-left 5px
+        
+        .pkp-tooltip
+            position relative
+            top -4px
+
+    .b-selling-prices__universal-item
+        font-size 14px
+        color #000
+        font-weight 700
+        margin-left 20px
+        margin-right 20px
+        float left
+        & .b-label__text
+            margin-bottom 0
+        
+    .b-selling-prices__photo-gallery
+        float left
+        margin 20px 20px 0 85px
+
+    .b-selling-prices__for-sale
+        font-size 14px
+        color #000
+        font-weight 700
+        margin-left 61px
+        float left
+        .b-label
+            margin-bottom 0
+    
+    .b-selling-prices__item-count
+        font-size 14px
+        color #000
+        font-weight 700
+        float left
+        i
+            font-weight normal
+        .b-actions__group
+            vertical-align bottom
+            margin-left 6px
+        & .b-label__text
+            margin-bottom 0
+        
+    .b-selling-prices__item-count-input
+        display inline-block
+        width 80px
+        margin-top 11px
+        font-weight 500
+
+    .b-selling-prices__for-sale-inner
+        overflow hidden
+
+    .b-selling-prices__for-sale-label
+        cursor pointer
+        float left
+        color #333
+        letter-spacing 0.6px
+        &:first-child 
+            & .b-selling-prices__for-sale-span
+                border-top-left-radius 5px
+                border-bottom-left-radius 5px
+                padding-left 34px
+                &:after
+                    pseudo()
+                    background-icon($action_success)
+                    left 9px
+                    top 9px
+        &:last-child 
+            & .b-selling-prices__for-sale-span
+                border-top-right-radius 5px
+                border-bottom-right-radius 5px
+                border-left 0
+                padding-left 34px
+                &:after
+                    pseudo()
+                    background-icon($action_remove)
+                    left 9px
+                    top 9px
+            & .b-selling-prices__for-sale-input
+                &:checked + .b-selling-prices__for-sale-span
+                    background #ff6766
+                    border-color #ff6766
+                    &:after
+                        pseudo()
+                        background-icon($icon--reject)
+                        left 9px
+                        top 9px
+                        
+    .b-selling-prices__for-sale-input
+        position absolute 
+        overflow hidden 
+        clip rect(0 0 0 0) 
+        height 1px 
+        width 1px 
+        margin -1px 
+        padding 0
+        border 0
+        &:checked + .b-selling-prices__for-sale-span
+            background #97ce68
+            border 1px solid #97ce68
+            color #fff
+            &:after
+                pseudo()
+                background-icon($icon--confirm)
+                left 9px
+                top 9px
+                
+    .b-selling-prices__for-sale-span
+        padding 0 9px
+        line-height 38px
+        display block
+        border 1px solid #ddd8d0
+        position relative
+        font-weight normal
+        font-size 13px
+        letter-spacing 0.3px

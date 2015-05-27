@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block variables
+    - var prevpage = 1
+    - var prevpageMyShopsCodeSettings = 1
+    - var breadcrumbMyShops = 1
+
+block head
+    - pageTitle = 'ЛК продавца - Магазины - настрйока кода';
+
+block content
+    include ../content/my-shops__code-settings

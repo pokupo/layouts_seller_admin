@@ -1,0 +1,50 @@
+.b-popup-holder
+    .b-popup.b-add-digital-popup.j-add-digital
+        .b-popup__close.j-modal-close
+        .b-block-title__heading
+            | Добавление цифрового товара
+        .b-popup__content
+            h3.b-popup__title
+                | Загрузка из файла
+            .b-instruction
+                span.b-instruction__roll-up.j-roll-instruction Скрыть инструкцию
+                .b-instruction__content
+                    h2.b-instruction__heading
+                        | Загрузить можно текстовый файл со следующими </br> форматами заполнения товаров:
+                    .b-instruction__items
+                        .b-instruction__item
+                            .b-instruction__img
+                                img(src="images/content-images/instruction1.png" alt="")
+                            .b-instruction__description
+                                | Экземпляры товаров разделены переносом строк
+                        .b-instruction__item.m-instruction__item_divider или
+                        .b-instruction__item
+                            .b-instruction__img
+                                img(src="images/content-images/instruction1.png" alt="")
+                            .b-instruction__description
+                                | Экземпляры товаров разделены переносом строк, метки / номера отделены от товаров точой с запятой
+            .b-configure
+                span.b-configure__icon.m-configure__icon_upload
+                a(href="#").b-configure__link.m-configure__link_customize-discounts
+                    | Выбрать файл
+                span.b-configure__subtext 
+                    | (Доступен после продажи (дней)
+                .b-configure__tooltip
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Файл с информацией о товарах в формате: \n csv, txt, xml объемом не более 5 Мб" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+            .b-upload-from-file__row
+                label.b-label.m-label__third
+                    span.b-label__text
+                        | Доступен после продажи <span class="b-label__sub-text">(дней)</span>
+                    input.b-input
+                label.b-label.m-label__third
+                    span.b-label__text
+                        | Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span>
+                    input.b-input
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | загрузить 
+            a(href="#" ).b-btn.m-btn_gray.m-btn_cancel
+                | Отмена

@@ -30,6 +30,7 @@
             width $checkbox_general_small_checked_width
             height $checkbox_general_small_checked_height
             background url($checkbox_general_small_checked_image) $checkbox_general_small_checked_offset_x $checkbox_general_small_checked_offset_y
+            
 
     .b-checkbox__icon
         display inline-block
@@ -71,7 +72,10 @@
         line-height 26px
         font-weight normal
         margin-left 5px
-        
+      
+    .m-ckeckbox__text_big
+        line-height 46px
+        margin-left 0
     
     .b-ckeckbox__text-link
         font-size 14px
@@ -87,7 +91,8 @@
 
     .m-ckeckbox__text-icon_catalog_novelty
         top 3px
-        margin 0 10px 0 3px
+        left -3px
+        margin 0 10px 0 4px
         background-icon($catalog_novelty)
         
     .m-ckeckbox__text-icon_catalog_hot
@@ -101,3 +106,122 @@
         left -2px
         background-icon($catalog_recommended)
         
+
+
+
+
+
+
+
+
+
+    .b-radio
+        position relative
+    .b-radio__label
+        cursor pointer
+        display inline-block
+    .b-radio__input
+        position absolute 
+        overflow hidden 
+        clip rect(0 0 0 0) 
+        height 1px 
+        width 1px 
+        margin -1px 
+        padding 0
+        border 0
+        &:checked + .b-radio__icon
+            width $radio_checked_width
+            height $radio_checked_height
+            background url($radio_checked_image) $radio_checked_offset_x $radio_checked_offset_y
+            
+        &:checked + .m-radio__icon_small
+            width $radio_small_checked_width
+            height $radio_small_checked_height
+            background url($radio_small_checked_image) $radio_small_checked_offset_x $radio_small_checked_offset_y
+            
+        &:checked + .m-radio__icon_big
+            width $radio_big_checked_width
+            height $radio_big_checked_height
+            background url($radio_big_checked_image) $radio_big_checked_offset_x $radio_big_checked_offset_y
+            
+        &:checked + .m-radio__icon_woman
+            opacity 1
+            background-icon($radio_woman_checked)
+            & + .b-radio__text
+                opacity 1
+            
+        &:checked + .m-radio__icon_man
+            opacity 1
+            background-icon($radio_man_checked)
+            & + .b-radio__text
+                opacity 1
+
+    .b-radio__icon
+        min-width 27px
+        position relative
+        top 3px
+        left 1px
+        display inline-block
+        width $radio_width
+        height $radio_height
+        background url($radio_image) $radio_offset_x $radio_offset_y
+        vertical-align top
+        display inline-block
+        
+    .m-radio__icon_small
+        position relative
+        top 5px
+        left 0
+        width $radio_small_width
+        height $radio_small_height
+        background url($radio_small_image) $radio_small_offset_x $radio_small_offset_y
+        
+    .m-radio__icon_big
+        position relative
+        top 5px
+        left 0
+        width $radio_big_width
+        height $radio_big_height
+        background url($radio_big_image) $radio_big_offset_x $radio_big_offset_y
+        
+    .m-radio__icon_woman
+        margin-right 5px
+        background-icon($radio_woman)
+        
+    .m-radio__icon_man
+        margin-right 5px
+        background-icon($radio_man)
+    
+
+       
+    .b-radio__text
+        display inline-block
+        vertical-align top
+        color #000
+        font-size 13px
+        line-height 26px
+        font-weight normal
+        margin-left 5px
+       
+    .m-radio__text_big
+        line-height 46px
+        margin-left 10px 
+    
+    .m-radio__text_sex
+        font-size 14px
+        font-weight 700
+        line-height 44px
+        margin-right 38px
+        opacity 0.5
+    
+    .b-radio__text-link
+        font-size 14px
+        color #177a93
+        text-decoration none
+        position relative
+        letter-spacing 0.3px
+    
+
+    .b-radio__text-icon
+        position relative
+        display inline-block     

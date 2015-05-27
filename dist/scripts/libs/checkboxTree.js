@@ -9,7 +9,7 @@
 
         $self.addClass('p-checkbox-tree-container');
         //скрыть все внутренние списки
-        //$innerList.hide();
+        $innerList.hide();
 
         //для li в котором есть ul добавить класс 
         if($innerList.length){
@@ -21,40 +21,50 @@
         var $parentInput = $parent.find(checkbox);
         
         //элемент развернуть/свернуть дерево элементов
-        $parent.find('>.b-checkbox').prepend('<span class="p-toggle-tree"></span>');
+        $parent.each(function(i,e){
+            $(e).find('.b-ckeckbox__text').first().prepend('<span class="p-toggle-tree"></span>');
+        });
 
-        $('.p-toggle-tree').on('click', function(){
+        $('.b-catalog-tree__text').on('click', function(e){
+            $(this).closest('li').find('.p-toggle-tree').eq(0).trigger('click');
+            e.preventDefault();
+        });
+        $('.p-toggle-tree').on('click', function(e){
             var $list = $(this).closest('.p-parent-item').find('>ul');
 
-            $(this).toggleClass('p-toggle-tree_active');
-            $list.toggleClass('p-inner-list');
-
-            if($list.hasClass('p-inner-list')) {
+            if($(this).hasClass('p-toggle-tree_active')) {
+                $(this).removeClass('p-toggle-tree_active');
+                $list.removeClass('p-inner-list');
                 $list.slideUp();
             }else{
+                $(this).addClass('p-toggle-tree_active');
+                $list.addClass('p-inner-list');
                 $list.slideDown();
             }
+            e.preventDefault();
         });
                 
         //переключение инпутов
         $self.find(checkbox).on('change', function(){
 
-            var inputState = $(this).is(':checked');
-
-            var innerNotChecked = $(this).closest('.p-parent-item ul').find(checkbox).filter(':not(:checked)').length;
-
-
+            var inputState = $(this).is(':checked');           
+            
             if($(this).closest('li').hasClass('p-parent-item')) {
                 $(this).closest('.p-parent-item').find(checkbox).prop('checked', inputState);
             }
-            //проверка состояния checked/unchecked инпутов. Источник багов может быть в этом месте
-            if(innerNotChecked && !$(this).parents('.b-checkbox').next().length) {
-                $(this).closest('.p-parent-item').find('>.b-checkbox').find(checkbox).prop('checked', false);
-            }
-            if(!innerNotChecked && !$(this).parents('.b-checkbox').next().length) {
-                $(this).closest('.p-parent-item').find('>.b-checkbox').find(checkbox).prop('checked', true);
-            }
             
+            $(this).parents('li').each(function(index, cParent){
+                if(index !== 0){
+                    var $chBoxs = $(cParent).find(checkbox),
+                        $topBox = $chBoxs.eq(0);
+                        innerNotChecked = $chBoxs.filter(':not(:checked)').length;
+                    if(innerNotChecked === 1 && $topBox.prop('checked') === false){
+                        $topBox.prop('checked', true);
+                    }else{
+                        $topBox.prop('checked', false);
+                    }
+                }
+            });            
         });
     };
 })(jQuery);

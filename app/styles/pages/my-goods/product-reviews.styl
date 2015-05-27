@@ -1,0 +1,94 @@
+//product-reviews
+    .b-reviews
+        margin-bottom 20px
+    .b-reviews__list
+        margin-top 15px
+       
+    .b-reviews__item
+        border 1px solid #d4d4d4
+        min-height 91px
+        border-bottom none
+        padding 15px 14px 13px 19px
+        cursor pointer
+        &:last-child
+            border-bottom 1px solid #d4d4d4 
+    .b-reviews__avatar
+        display inline-block
+        margin-right 18px
+        position relative
+        centered-icon($avatar)
+        &:hover
+            centered-icon($avatar_hover)
+            .b-reviews__avatar-img-holder
+                border 3px solid #7caa1f
+            
+    .b-reviews__avatar-img-holder
+        width 60px
+        height 60px
+        border 3px solid #474b53 
+        border-radius 999px
+        position relative
+        z-index 2
+        a
+            display block
+            height 100%
+        img
+            max-width 100%
+            
+    .m-reviews__avatar-img-holder_true
+        border-color #f0ede9
+
+    .b-reviews__info
+        display inline-block
+        vertical-align top
+        margin-top 10px
+        width 240px
+        padding-right 10px
+        a
+            display block
+            margin-top 3px
+            letter-spacing 0.15px
+    .b-reviews__info-name
+        font-size 13px
+        line-height 20px
+        color #000
+        display inline-block
+        font-weight 700
+        
+    .b-reviews__info-date
+        color #999999
+        font-size 12px
+        line-height 20px
+        &:before
+            content '|'
+            display inline-block
+            margin 0 4px
+
+    .b-reviews__rate
+        display inline-block
+        margin 17px 0 0 0
+        vertical-align top
+
+    .b-reviews__message
+        float right
+        padding 11px 0 10px 10px
+
+    .b-reviews__comment
+        background #efece7
+        color #000
+        font-size 13px
+        margin 5px 60px 7px
+        padding 15px 18px
+        letter-spacing 0.3px
+        line-height 20px
+        border-radius 5px
+        position relative
+        min-height 70px
+        &:before
+            content ''
+            position absolute
+            top 22px
+            right 100%
+            width 26px
+            height  26px
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTNDQ0EyODZGNDBBMTFFNDg5Q0ZGRTdFQjMyNDdFQUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTNDQ0EyODdGNDBBMTFFNDg5Q0ZGRTdFQjMyNDdFQUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBM0NDQTI4NEY0MEExMUU0ODlDRkZFN0VCMzI0N0VBQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBM0NDQTI4NUY0MEExMUU0ODlDRkZFN0VCMzI0N0VBQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk3XBzgAAAFDSURBVHjavNbPK0RRGMbxO6fB3kLJjh2zVMYkC1FWUjaUxSwspiym7PwhshiRhYWFBbLzo9RENmqisZnMRlIaQkqZxvet95SS3Bn3vU99mqlz5j7d7jl3TuLp8T4TBMEZGoFhHBZQxjL6Ir5+EuPYSHBHQ3w5/zZ4jUOcooRb1ENeuB0ppDGKCXTKgBTJZxGZX378gRtU8apedKwDXehGD3r1Ln7EF01h1/oZSfZxEUdRQxeDeZHkGDtxFEnyeIuj6A5LcRRJCro4zIskWd2o5kU1zODdukhyibkmXj8tF0n2kIvize5CzFnD4n/LXMh5q/p38mldJFnHdKsb2jU5/wDDqFgXSa4wiG3rIskzZnVj1yyLfDbRj62/VqWLYC8+YF6PAkXLIh854IxgDEeWRT4nesQawIp/hv5wYpk2TH4JMABG+kd2om2blQAAAABJRU5ErkJggg==')

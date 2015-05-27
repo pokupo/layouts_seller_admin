@@ -5,7 +5,7 @@
 .mCustomScrollBox 
     position relative
     overflow hidden
-    height calc(100% - 80px)
+    height 100%
     max-width 100%
     outline none
     direction ltr
@@ -1035,162 +1035,153 @@
     background-color rgba(255,255,255,0.9)
     
 /*custom styles*/
-.b-store-code__content, .b-system-message__content
-  .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container
-      width 100% !important
-      max-width 100%
-      padding-right 0
-      
-  .mCustomScrollbar
-        -ms-touch-action none
-        touch-action none
-        &.mCS_no_scrollbar
-            -ms-touch-action auto
-            touch-action auto
+//custom green   
+    .mCS-custom_green
+        .mCSB_container_wrapper > .mCSB_container
+            padding-right 0
+            padding-bottom 0
+            
+        .mCSB_container_wrapper
+            margin-right 15px
+            margin-bottom 15px
+          
+        .mCSB_scrollTools.mCSB_scrollTools_horizontal
+            width auto
+            height 16px
+            top auto
+            right 7px
+            bottom 0
+            left 0
+            
+        .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
+            margin 4px 0
+            
+        .mCSB_scrollTools .mCSB_draggerRail
+            background #efece7
 
-    .mCustomScrollBox
-        position relative
-        overflow hidden
-        height calc(100% - 15px)
-        max-width 100%
-        outline none
-        direction ltr
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+            background-color transparent
 
-    .mCSB_container
-        overflow hidden
+        .mCSB_scrollTools.mCSB_scrollTools_horizontal
+            height 11px
+
+        .mCSB_scrollTools
+            width 12px
+            bottom 8px
+            .mCSB_dragger
+                background #97ce68
+                border-radius 10px
+
+.mCSB_outside + .mCS-custom_green
+    right -20px 
+    width 11px
+    .mCSB_dragger
+        background #97ce68
+        border-radius 20px
+    .mCSB_dragger_bar
+        display none
+    .mCSB_draggerRail
+        background #fff
+        width 3px
+        
+//custom green thin 
+    .mCS-custom_green_thin
+        .mCSB_container_wrapper > .mCSB_container
+            padding-right 0
+            padding-bottom 0
+            
+        .mCSB_container_wrapper
+            margin-right 15px
+            margin-bottom 15px
+          
+        .mCSB_scrollTools.mCSB_scrollTools_horizontal
+            width auto
+            height 16px
+            top auto
+            right 7px
+            bottom 0
+            left 0
+
+        .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
+            margin 4px 0
+            
+        .mCSB_scrollTools .mCSB_draggerRail
+            background transparent
+
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+            background-color transparent
+
+        .mCSB_scrollTools.mCSB_scrollTools_horizontal
+            height 11px
+
+        .mCSB_scrollTools
+            width 4px
+            right 1px
+            .mCSB_dragger
+                background #97ce68
+                border-radius 10px
+
+.mCSB_outside + .mCS-custom_green
+    right -20px 
+    width 11px
+    .mCSB_dragger
+        background #97ce68
+        border-radius 20px
+    .mCSB_dragger_bar
+        display none
+    .mCSB_draggerRail
+        background #fff
+        width 3px
+
+//custom code
+.mCS-custom_code
+    height calc(100% - 15px)
+    overflow visible
+    .mCSB_container_wrapper > .mCSB_container
+        padding-right 0
+        padding-bottom 0
+        
+    .mCSB_container_wrapper
+        margin-right 15px
+        margin-bottom 0
+    
+    .mCSB_scrollTools.mCSB_scrollTools_horizontal
         width auto
-        height auto
-        &.mCS_no_scrollbar_y
-            &.mCS_y_hidden
-                margin-right 0
+        height 16px
+        top auto
+        right 10px
+        bottom 0
+        left 0
+       
+    .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical
+        bottom 10px
+    
+    .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal
+        right 10px
 
-    .mCSB_inside
-        & > .mCSB_container
-            margin-right 0
+    .mCSB_scrollTools.mCSB_scrollTools_vertical
+        bottom -10px
+        right 2px
+        height calc(100% + 5px)
 
-    .mCS-dir-rtl
-        & > .mCSB_inside
-            & > .mCSB_container
-                margin-right 0
-                margin-left 30px
-                &.mCS_no_scrollbar_y
-                    &.mCS_y_hidden
-                        margin-left 0
-        & > .mCSB_outside
-            & + .mCSB_scrollTools
-                left -26px
+    .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
+        margin 4px 0
+        
+    .mCSB_scrollTools .mCSB_draggerRail
+        background transparent
+
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+        background-color transparent
+
+    .mCSB_scrollTools.mCSB_scrollTools_horizontal
+        height 11px
+        bottom -13px
 
     .mCSB_scrollTools
-        position absolute
         width 12px
-        height auto
-        left auto
-        top 0
-        right 0
-        bottom 0
-        .mCSB_draggerContainer
-            position absolute
-            top 0
-            left 0
-            bottom 0
-            right 0
-            height auto
-        a
-            & + .mCSB_draggerContainer
-                margin 20px 0
-        .mCSB_draggerRail
-            width 0
-            height 100%
-            margin 0 auto
-            -webkit-border-radius 16px
-            -moz-border-radius 16px
-            border-radius 16px
+        bottom 8px
         .mCSB_dragger
-            cursor pointer
-            width 100%
-            height 30px
-            z-index 1
             background #97ce68
             border-radius 10px
-            .mCSB_dragger_bar
-                position relative
-                width 0
-                height 100%
-                margin 0 auto
-                -webkit-border-radius 16px
-                -moz-border-radius 16px
-                border-radius 16px
-                text-align center
-        .mCSB_buttonDown
-            bottom 0
-
-    .mCSB_outside
-        & + .mCSB_scrollTools
-            right -7px
-
-    .mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
-      .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools
-        right auto
-        left 0
-
-    .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
-      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar
-        width 12px
-
-    .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
-      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail
-        width 8px
-
-    .mCSB_scrollTools .mCSB_buttonUp,
-      .mCSB_scrollTools .mCSB_buttonDown
-        display block
-        position absolute
-        height 20px
-        width 100%
-        overflow hidden
-        margin 0 auto
-        cursor pointer
-
-    .mCSB_scrollTools, 
-      .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
-      .mCSB_scrollTools .mCSB_buttonUp,
-      .mCSB_scrollTools .mCSB_buttonDown,
-      .mCSB_scrollTools .mCSB_buttonLeft,
-      .mCSB_scrollTools .mCSB_buttonRight
-        -webkit-transition opacity .2s ease-in-out, background-color .2s ease-in-out
-        -moz-transition opacity .2s ease-in-out, background-color .2s ease-in-out
-        -o-transition opacity .2s ease-in-out, background-color .2s ease-in-out
-        transition opacity .2s ease-in-out, background-color .2s ease-in-out
-
-    .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, 
-      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, 
-      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, 
-      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail
-        -webkit-transition width .2s ease-out .2s, height .2s ease-out .2s, 
-     margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
-              margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
-              opacity .2s ease-in-out, background-color .2s ease-in-out
-        -moz-transition width .2s ease-out .2s, height .2s ease-out .2s, 
-     margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
-              margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
-              opacity .2s ease-in-out, background-color .2s ease-in-out
-        -o-transition width .2s ease-out .2s, height .2s ease-out .2s, 
-     margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
-              margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
-              opacity .2s ease-in-out, background-color .2s ease-in-out
-        transition width .2s ease-out .2s, height .2s ease-out .2s, 
-     margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
-              margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
-              opacity .2s ease-in-out, background-color .2s ease-in-out
 
 
-.b-system-message__content
-    .mCustomScrollBox
-        height 100%
-    .mCSB_outside
-        & + .mCSB_scrollTools
-            right -1px
-            
-    .mCSB_scrollTools .mCSB_draggerRail
-        width 3px
-        background #fff
