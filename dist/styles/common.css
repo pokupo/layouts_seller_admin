@@ -340,6 +340,16 @@ table {
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Open Sans';
+	src: url("../fonts/OpenSans-Extrabold_gdi.eot");
+	src: url("../fonts/OpenSans-Extrabold_gdi.eot?#iefix") format('embedded-opentype'), url("../fonts/OpenSans-Extrabold_gdi.woff") format('woff'), url("../fonts/OpenSans-Extrabold_gdi.ttf") format('truetype'), url("../fonts/OpenSans-Extrabold_gdi.svg#OpenSans-Extrabold") format('svg');
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2212;
+}
+
 html,
 body {
 	position: relative;
@@ -4151,7 +4161,7 @@ a.b-sidebar-navigation-minimize {
 	color: #177a93;
 	text-decoration: none;
 	letter-spacing: 0.4px;
-	font-weight: 600;
+	font-weight: 800;
 }
 
 .b-subnavigation__item a:hover {
@@ -5873,6 +5883,12 @@ a.b-sidebar-navigation-minimize {
 .b-bestseller__link {
 	line-height: 20px;
 	font-weight: normal;
+	text-decoration: none;
+	border-bottom: 1px solid #b9d7de;
+}
+
+.b-bestseller__link:hover {
+	border-bottom: none;
 }
 
 .b-bestseller__img-holder {
@@ -6201,6 +6217,8 @@ a.b-sidebar-navigation-minimize {
 .b-new-orders tbody tr td {
 	font-weight: 600;
 	letter-spacing: 0.6px;
+	height: 70px;
+	line-height: 16px;
 }
 
 .b-new-orders tbody tr td:first-child {
@@ -6231,15 +6249,17 @@ a.b-sidebar-navigation-minimize {
 }
 
 .b-new-orders__order-number {
-	line-height: 70px;
-	color: #177a93;
 	font-size: 18px;
+	line-height: 20px;
+	text-decoration: none;
+	border-bottom: 1px solid #b9d7de;
+	color: #177a93;
 	letter-spacing: -0.2px;
 	font-weight: 300;
 }
 
 .b-new-orders__order-number:hover {
-	text-decoration: none;
+	border-bottom: none;
 }
 
 .b-platform-news__item {
@@ -6769,6 +6789,10 @@ a.b-sidebar-navigation-minimize {
 	transition: background 0.2s ease-out;
 }
 
+.b-goods-table__row:hover {
+	background: #f5f3f1;
+}
+
 .m-goods-table__row {
 	background: #f5f3f1;
 }
@@ -7012,6 +7036,10 @@ a.b-sidebar-navigation-minimize {
 
 .b-reviews__item:last-child {
 	border-bottom: 1px solid #d4d4d4;
+}
+
+.b-reviews__item:hover {
+	background: #f5f3f1;
 }
 
 .b-reviews__avatar {
@@ -9216,7 +9244,7 @@ body.locked {
 }
 
 .c3-chart-arc text {
-	fill: #fff;
+	fill: #3e424a;
 	font-size: 13px;
 }
 
@@ -9387,6 +9415,10 @@ svg {
 	stroke-width: 3px;
 }
 
+.b-full-width-graph .c3-shape.c3-circle {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUNBNzBBODgwNjFDMTFFNUI3QUVBQTAyOEUwRDVFMkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUNBNzBBODkwNjFDMTFFNUI3QUVBQTAyOEUwRDVFMkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1Q0E3MEE4NjA2MUMxMUU1QjdBRUFBMDI4RTBENUUyRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1Q0E3MEE4NzA2MUMxMUU1QjdBRUFBMDI4RTBENUUyRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pp9o5OMAAAF3SURBVHjaYvz//z8DOvDb89YYSIGwMBC/B+Izm1yEz6CrY0TWDNRkA6T6gNiUAROcA+I8oCFHMTQDNSYAqTlAzMyAG/wB4jSgAfPhmoEarYHsfUDMBhLkYGZkMBNlYxDjYGJ48+Mfw4nXvxh+/IW78C8QOwENOMQCFZgE06jCx8JQpc/LIMLOBLfu7c9/DK0XPzPc+QSyGOyyflCYMPrufmMAZJwHibIDbZxuKcAgwsGE4d73QAPSj31AdoEBEzRUwcBMhBWrRhAQBLrEQowNWcgCpFIUxhPnxBdWDOAwQAIiIN4rGO/l9794Nb/6/g+Z+5YJGn9gcOrNb4Y3P/9h1QjyMyjUkcBxWFSdgfldmZeFoRoU2hw4QxucYIBRZQzTbAkUOACLLjYmRgZzUVYGMWAYgJx6+g1KPP8GYkdQSkNOYdFAagEQs+DxNkhjOkoKQ0rbVkCqB4gtsWgEea0Aa9pGy1VaQMoKmqveggIHqOkqujqAAAMApxuXfRfef4MAAAAASUVORK5CYII=");
+}
+
 .b-full-width-graph .c3-xgrid,
 .b-full-width-graph .c3-ygrid {
 	stroke-dasharray: 1;
@@ -9495,6 +9527,10 @@ svg {
 	stroke: #3e424a;
 	stroke-width: 1px;
 	fill: none;
+}
+
+.c3-chart-arc:nth-child(2) text {
+	fill: #fff;
 }
 
 .p-checkbox-tree-container ul {
@@ -10615,6 +10651,10 @@ button.datepick-cmd {
 	width: 28px;
 	height: 28px;
 	background-size: cover;
+}
+
+.b-reviews__item:hover .starbox .stars .star_holder .star {
+	background-image: url("../images/5-large_hover.png");
 }
 
 .starbox .stars {

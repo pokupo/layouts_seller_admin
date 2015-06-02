@@ -785,8 +785,58 @@ PKP.UI = {
             }
         }();
     },
-    common: function(){                
+    common: function(){          
+        $('.b-goods-table__tbody').find('input[type="checkbox"]').on('change', function(){
+                var button = $(this);
+                var actions = $('.b-actions');
 
+                actions.each(function(){
+                    var $self = $(this);
+                    var search = $self.find('.j-actions__search').closest('.b-actions__item');
+                    var minus = $self.find('.j-goods-input').closest('.b-actions__item');
+                    var total = $self.find('.b-actions__item').length;
+
+                    if(search.length) {
+                        var searchPos = search.position().left;
+                    }
+
+                    minus.css({
+                        'position': 'relative',
+                        'z-index': 2
+                    });
+
+                    var items = $self.find('.b-actions__item').not(search).not(minus);
+                            if(button.prop('checked')){
+                                search.animate({
+                                    'position': 'relative',
+                                    'margin-left': 0,
+                                    'opacity': 1
+                                });
+                            }else{ 
+                                search.delay((total - 2)*150).animate({
+                                    'position': 'relative',
+                                    'margin-left': -searchPos + 70,
+                                    'opacity': 1
+                                });
+                            } 
+                        items.each(function(i,e){
+                            var x = $(this).position().left;
+                            if(button.prop('checked')){
+                                $(e).delay(i*150).animate({
+                                    'position': 'relative',
+                                    'left': 0,
+                                    'opacity': 1
+                                });
+                            }else{
+                                $(e).delay(i*150).animate({
+                                    'position': 'relative',
+                                    'left': -x,
+                                    'opacity': 0
+                                });
+                            }                      
+                        });
+                });
+        });
         //Анимация появления/исчезновения блока с поиском
             $('.j-actions__search').on('click', function(){
                 var $self = $(this),
@@ -971,6 +1021,8 @@ PKP.Tip = {
                     theme: option.theme,
                     position: option.position,
                     offsetX: option.offsetX,
+                    interactive: true,
+                    interactiveTolerance: 200000,
                     offsetY: option.offsety
                 });
             }
@@ -978,10 +1030,10 @@ PKP.Tip = {
                 $self.tooltip({
                     content: $($('.' + option.content).html()),
                     updateAnimation: false,
-                    interactive: true,
                     contentAsHTML: true,
                     position: option.position,
                     positionTracker: true,
+                    interactive: true,
                     interactiveTolerance: 2000,
                     offsetX: option.offsetX,
                     offsetY: option.offsetY,
