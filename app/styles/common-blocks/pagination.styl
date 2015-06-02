@@ -1,0 +1,56 @@
+//b-pagination
+    .b-pagination
+        float right
+        
+    .b-pagination__text
+        display inline-block
+        line-height 40px 
+        vertical-align top
+        font-size 13px
+        color #333333
+        letter-spacing 0.5px
+        & strong
+            font-weight 700
+
+    .b-pagination__arrows
+        margin-left 4px
+        display inline-block
+
+    .b-pagination__arrow
+        btn()
+
+    .m-pagination__arrow_prev
+        centered-icon($arrow-left)
+    .m-pagination__arrow_next
+        margin-right 0
+        centered-icon($arrow-right)
+    .m-pagination__arrow_disable
+        &:hover
+            background #fff
+            border-color #ddd8d0
+        &:after
+            opacity 0.5
+
+//b-items-per-page
+    .b-items-per-page
+        float right
+        & .b-items-per-page__item:last-child
+            margin-right 0
+    .b-items-per-page__text
+        margin-right 10px
+        letter-spacing 0.2px
+        font-size 13px
+        color #333
+
+    .b-items-per-page__item
+        btn()
+        line-height 40px
+        font-size 14px
+        font-weight 700
+        text-align center
+        text-decoration none
+        color #333333
+    
+    .m-items-per-page__item_active
+        background #ebe8e3
+        border-color #ebe8e3

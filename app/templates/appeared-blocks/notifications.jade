@@ -1,112 +1,111 @@
 .b-popup-holder
-    .b-notification-popup.j-notification-popup
-        .b-notification-popup__close.j-modal-close
-        .b-block-title
+    .b-popup.j-notification-popup
+        .b-popup__close.j-modal-close
+        .b-block-title__heading
             | Уведомления системы
-        .b-notification-popup__content
-            .b-system-message
-                .b-system-message__content.j-scrollbar-y
-                    .b-system-message__item
-                        .b-system-message__item-content
-                            .b-system-message__item-text
-                                h4.b-system-message__item-title
-                                    | Команда Pokupo
-                                p
-                                    | Уважаемые пользователи Pokupo!
-                                p
-                                    | Завтра, 28.08.2014, с 04:00 до 11:00 по московскому времени серверы портала будут остановлены для 
-                                    | проведения плановых технических работ. Приносим извинения за возможные неудобства. Следите за 
-                                    | новостями на сайте, в группе <a href="#">ВКонтакте</a> и на странице <a href="#">Facebook</a>.
-                        .b-system-message__item-date
-                            | сегодня в 21:32
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint_right(title="Отметить как непрочитанное")
-                    .b-system-message__item.m-system-message__item_disabled
-                        .b-system-message__item-content
-                            .b-system-message__item-text
-                                h4.b-system-message__item-title
-                                    | Команда Pokupo
-                                p
-                                    | Пока сайт на стадии бета-тестирования — два раза в месяц.
-                        .b-system-message__item-date
-                            | 18 июня 2014 г.
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint_right(title="Отметить как непрочитанное")
-                    .b-system-message__item.m-system-message__item_done
-                        .b-system-message__item-content
-                            .b-operation-notice
-                                .b-operation-notice__icon.m-operation-notice__icon_done
-                                p.b-operation-notice_text
-                                    | Операция прошла успешно
-                        .b-system-message__item-date
-                            | 18 июня 2014 г.
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint_right(title="Отметить как непрочитанное")
-                    .b-system-message__item.m-system-message__item_fail.m-system-message__item_disabled
-                        .b-system-message__item-content
-                            .b-operation-notice
-                                .b-operation-notice__icon.m-operation-notice__icon_fail
-                                p.b-operation-notice_text
-                                    | Ошибка проведения операции
-                        .b-system-message__item-date
-                            | 18 июня 2014 г.
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint_right(title="Отметить как непрочитанное")
-                    .b-system-message__item.m-system-message__item_alert
-                        .b-system-message__item-content
-                            .b-operation-notice
-                                .b-operation-notice__icon.m-operation-notice__icon_alert
-                                p.b-operation-notice_text
-                                    | Вы не <a href="#">активировали</a> свою учетную запись
-                        .b-system-message__item-date
-                            | 18 июня 2014 г.
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint_right(title="Отметить как непрочитанное")
-                    .b-system-message__item.m-system-message__item_disabled
-                        .b-system-message__item-content
-                            .b-system-message__item-text
-                                h4.b-system-message__item-title
-                                    | Команда Pokupo
-                                p
-                                    | Пока сайт на стадии бета-тестирования — два раза в месяц.
-                        .b-system-message__item-date
-                            | 18 июня 2014 г.
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint_right(title="Отметить как непрочитанное")
-                    .b-system-message__item.m-system-message__item_disabled
-                        .b-system-message__item-content
-                            .b-system-message__item-text
-                                h4.b-system-message__item-title
-                                    | Команда Pokupo
-                                p
-                                    | Пока сайт на стадии бета-тестирования — два раза в месяц.
-                        .b-system-message__item-date
-                            | 18 июня 2014 г.
-                        .b-system-message__item-chechbox
-                            .b-checkbox
-                                label.b-checkbox__label
-                                    input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
-                                    span.b-checkbox__icon.j-hint_right(title="Отметить как непрочитанное")
-                .b-system-message__footer
-                    a.b-system-message__load(href="#")
-                        | Показать еще
+        .b-notification-popup__content.b-system-message
+            .b-system-message__content.j-scroll(data-scroll-position="outside" data-scroll-theme="custom_green" data-axis="y")
+                .b-system-message__item
+                    .b-system-message__item-content
+                        .b-system-message__item-text
+                            h4.b-system-message__item-title
+                                | Команда Pokupo
+                            p
+                                | Уважаемые пользователи Pokupo!
+                            p
+                                | Завтра, 28.08.2014, с 04:00 до 11:00 по московскому времени серверы портала будут остановлены для 
+                                | проведения плановых технических работ. Приносим извинения за возможные неудобства. Следите за 
+                                | новостями на сайте, в группе <a href="#">ВКонтакте</a> и на странице <a href="#">Facebook</a>.
+                    .b-system-message__item-date
+                        | сегодня в 21:32
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+                .b-system-message__item.m-system-message__item_disabled
+                    .b-system-message__item-content
+                        .b-system-message__item-text
+                            h4.b-system-message__item-title
+                                | Команда Pokupo
+                            p
+                                | Пока сайт на стадии бета-тестирования — два раза в месяц.
+                    .b-system-message__item-date
+                        | 18 июня 2014 г.
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+                .b-system-message__item.m-system-message__item_done
+                    .b-system-message__item-content
+                        .b-operation-notice
+                            .b-operation-notice__icon.m-operation-notice__icon_done
+                            p.b-operation-notice_text
+                                | Операция прошла успешно
+                    .b-system-message__item-date
+                        | 18 июня 2014 г.
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+                .b-system-message__item.m-system-message__item_fail.m-system-message__item_disabled
+                    .b-system-message__item-content
+                        .b-operation-notice
+                            .b-operation-notice__icon.m-operation-notice__icon_fail
+                            p.b-operation-notice_text
+                                | Ошибка проведения операции
+                    .b-system-message__item-date
+                        | 18 июня 2014 г.
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+                .b-system-message__item.m-system-message__item_alert
+                    .b-system-message__item-content
+                        .b-operation-notice
+                            .b-operation-notice__icon.m-operation-notice__icon_alert
+                            p.b-operation-notice_text
+                                | Вы не <a href="#">активировали</a> свою учетную запись
+                    .b-system-message__item-date
+                        | 18 июня 2014 г.
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+                .b-system-message__item.m-system-message__item_disabled
+                    .b-system-message__item-content
+                        .b-system-message__item-text
+                            h4.b-system-message__item-title
+                                | Команда Pokupo
+                            p
+                                | Пока сайт на стадии бета-тестирования — два раза в месяц.
+                    .b-system-message__item-date
+                        | 18 июня 2014 г.
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+                .b-system-message__item.m-system-message__item_disabled
+                    .b-system-message__item-content
+                        .b-system-message__item-text
+                            h4.b-system-message__item-title
+                                | Команда Pokupo
+                            p
+                                | Пока сайт на стадии бета-тестирования — два раза в месяц.
+                    .b-system-message__item-date
+                        | 18 июня 2014 г.
+                    .b-system-message__item-chechbox
+                        .b-checkbox
+                            label.b-checkbox__label
+                                input.b-checkbox__input.m-checkbox__input_system-message(type="checkbox")
+                                span.b-checkbox__icon.m-checkbox__icon_system-message.j-hint(title="Отметить как непрочитанное" data-position="bottom-right" data-theme="g-hint")
+            .b-system-message__footer
+                a.b-system-message__load(href="#")
+                    | Показать еще
 
                         

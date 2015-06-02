@@ -1,0 +1,191 @@
+//configure block
+.b-configure
+    padding 26px 20px 28px 20px
+    border 2px dotted #ccc9c5
+    position relative
+    overflow hidden
+    &:hover
+        background #f5f3f1
+.m-configure_finished
+    border none
+    background #efece7
+
+.b-configure__tooltip
+    float right
+    position relative
+    top 3px
+
+.b-configure__uploaded
+    font-size 14px
+    font-weight 700
+    color #000
+    line-height 25px
+    &:hover 
+        .b-configure__uploaded-remove
+            display inline-block
+    
+.b-configure__uploaded-remove
+      width 20px
+      height 20px
+      border 1px solid #ff6766
+      border-radius 999px
+      position relative
+      cursor pointer
+      vertical-align middle
+      top -2px
+      margin-left 6px
+      display none
+      centered-icon($remove_small)
+      
+.b-configure__icon
+    width 36px
+    height  36px
+    border-radius 999px
+    border 1px solid #000
+    display inline-block
+    margin-right 10px
+    vertical-align top
+    position relative
+    &:after
+        content ''
+        color #000
+        font-family Arial
+        text-align center
+        line-height 36px
+        display block
+        font-size 24px
+        
+.m-configure__icon_customize-discount
+    &:after
+        content '%'
+        
+.m-configure__icon_upload
+    margin-top -5px
+    centered-icon($upload-icon)
+
+.m-configure__icon_rubric
+    centered-icon($rubric-icon)
+
+.b-configure__link
+    font-size 24px
+    text-decoration none
+    font-weight 300
+    border-bottom 1px solid #aecace
+    position relative
+    color #177a93
+    &:hover
+        border none
+.b-configure__subtext 
+    display inline-block
+    margin-left 7px
+    font-weight 300
+    font-size 14px
+    
+.b-configure__discount-list
+    display inline-block
+    max-width 75%
+
+.b-configure__discount-link
+    font-size 14px
+    text-decoration none
+    color #000
+    line-height 25px
+    font-weight 700
+    &:hover
+        color #ff6766
+        .b-configure__discount-item-remove
+            display inline-block
+        
+.b-configure__discount-item-remove
+    width 20px
+    height  20px
+    border 1px solid #ff6766
+    border-radius 999px
+    position relative
+    cursor pointer
+    vertical-align middle
+    top -2px
+    margin-left 6px
+    display none
+    centered-icon($remove_small)
+
+.b-configure__more-discount
+    display  block
+    color #4d90a4
+    line-height 20px
+    font-size 14px
+    text-decoration none
+    &:hover
+        text-decoration underline
+
+.b-configure__discounts-btns-group
+    position absolute
+    top 20px
+    right 20px
+
+.b-configure__edit-discounts
+    border 1px solid #ddd8d0
+    position relative
+    border-radius 5px
+    width 40px
+    height 40px
+    display inline-block
+    &:hover
+        background #d9d6d1
+    centered-icon($activity-btn_edit)
+    
+.b-configure__roll-up-discounts
+    border 1px solid #ddd8d0
+    position relative
+    border-radius 5px
+    width 40px
+    height 40px
+    display inline-block
+    margin-left 10px
+    &:hover
+        background #d9d6d1
+    centered-icon($arrow-down2)
+
+//entries select
+.b-entries-select
+    padding 20px 20px 14px 20px
+    border 2px dotted #ccc9c5
+    overflow hidden
+
+.b-entries-select__item
+    background #cccccc
+    display inline-block
+    border-radius 5px
+    font-size 13px
+    margin 0 5px 6px 0
+
+.b-entries-select__item-text
+    border-right 1px solid #efece7
+    float left
+    line-height 36px
+    color #000
+    padding 0 17px
+    letter-spacing 0.2px
+    
+.b-entries-select__item-text strong
+    font-weight 700
+
+.b-entries-select__item-remove
+    width 32px
+    height 36px
+    float left
+    border-radius 0 5px 5px 0
+    position relative
+    cursor pointer
+    centered-icon($icon--close--xs)
+
+.b-entries-select__full-list
+    width 34px
+    height 34px
+    display inline-block
+    position relative
+    border 1px solid #7caa1f
+    border-radius 999px
+    vertical-align top
+    cursor pointer
+    centered-icon($action_list_green)

@@ -2,6 +2,12 @@
 	color #fff
 	height 100%
 	background #474b53
+	width 231px
+	float left
+	position fixed
+	top 0
+	z-index 3
+	padding-bottom 80px
 
 	&-header
 		height 100px
@@ -127,126 +133,122 @@
 			cursor pointer
 			height 100%
 			width 100%
-		
-	
-			.b-tooltip
-				opacity 0
-				display block
-				position absolute
-				top -70px
-				font-size 13px
-				font-family 'Open Sans'	
-				color #000
-				background #fff
-				padding 8px 18px
-				box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.25);
-				white-space nowrap
-				transition all 0.3s ease-in-out
-				pointer-events none
 				
-			.b-tooltip:after
-				content ''
-				width 0
-				height 0
-				border-style solid
-				border-width 6px 6.5px 0 6.5px
-				border-color #ffffff transparent transparent transparent
-				bottom: -6px;
-				left: 50%;
-				margin-left -6px
-				position absolute
-				
-			.m-tooltip_left
-				left 1px
-				
-			.m-tooltip_left:after
-				left 10px
-			
-			.m-tooltip_right
-				right 0
-				
-			.m-tooltip_right:after
-				right 10px
-				left auto
-			
 			&:hover .b-tooltip
 				opacity 1
 				top -41px
 				
 			&:hover
 				background rgba(#000, 0.15)
-						
-.b-shop
-	position relative
-	text-align center
-	min-height 100px
-	padding 20px 5px 8px
-	border-bottom 1px solid #3e424a
-	
-	&__image
-
-		img
-			display block
-			margin 0 auto 5px
-			height 40px
-			width auto
-	
-	&__data
-		font-size 16px
-		margin-bottom 10px
-		line-height 20px
+				
+//b-sidebar footer tooltips
+	.b-tooltip
+		opacity 0
+		display block
+		position absolute
+		top -70px
+		font-size 13px
+		color #000
+		background #fff
+		padding 8px 18px
+		box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.25);
+		white-space nowrap
+		transition all 0.3s ease-in-out
+		pointer-events none
 		
-	&__control
-		padding 10px
-		margin 0 -5px
-		font-size 14px
-		cursor pointer
+	.b-tooltip:after
+		content ''
+		width 0
+		height 0
+		border-style solid
+		border-width 6px 6.5px 0 6.5px
+		border-color #ffffff transparent transparent transparent
+		bottom: -6px;
+		left: 50%;
+		margin-left -6px
+		position absolute
+		
+	.m-tooltip_left
+		left 1px
+		
+	.m-tooltip_left:after
+		left 10px
 
-.b-icon
-	position relative
-	
-.m-icon_settings
-	centered-icon($icon--settings)
-	
-.m-icon_cart
-	centered-icon($icon--cart)
-	
-.m-icon_help
-	centered-icon($icon--help)
+	.m-tooltip_right
+		right 0
+		
+	.m-tooltip_right:after
+		right 10px
+		left auto
 
-.m-icon_home
-	centered-icon($icon--home)
+//sidebar
 
-.m-icon_shop
-	centered-icon($icon--shop)
-	
-.m-icon_goods
-	centered-icon($icon--goods)
-	
-.m-icon_sales
-	centered-icon($icon--sales)
-	
-.m-icon_docs
-	centered-icon($icon--docs)
-	
-.m-icon_users
-	centered-icon($icon--users)
-	
-.m-icon_search
-	centered-icon($icon--search)
+						
+	.b-shop
+		position relative
+		text-align center
+		min-height 100px
+		padding 20px 5px 8px
+		border-bottom 1px solid #3e424a
+		
+		&__image
 
-.m-menu__link_logout
-	position relative
-	centered-icon($icon--logout)
-	&:after
-		left auto!important
-		right 20px
+			img
+				display block
+				margin 0 auto 5px
+				height 40px
+				width auto
+		
+		&__data
+			font-size 16px
+			margin-bottom 10px
+			line-height 20px
+			
+		&__control
+			padding 10px
+			margin 0 -5px
+			font-size 14px
+			cursor pointer
 
+	.b-icon
+		position relative
+		
+	.m-icon_settings
+		centered-icon($icon--settings)
+		
+	.m-icon_cart
+		centered-icon($icon--cart)
+		
+	.m-icon_help
+		centered-icon($icon--help)
 
+	.m-icon_home
+		centered-icon($icon--home)
 
+	.m-icon_shop
+		centered-icon($icon--shop)
+		
+	.m-icon_goods
+		centered-icon($icon--goods)
+		
+	.m-icon_sales
+		centered-icon($icon--sales)
+		
+	.m-icon_docs
+		centered-icon($icon--docs)
+		
+	.m-icon_users
+		centered-icon($icon--users)
+		
+	.m-icon_search
+		centered-icon($icon--search)
 
-
-
+	.m-menu__link_logout
+		position relative
+		centered-icon($icon--logout)
+		&:after
+			left auto!important
+			right 20px
 
 
 

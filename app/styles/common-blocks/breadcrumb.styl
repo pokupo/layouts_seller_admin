@@ -1,91 +1,134 @@
-.b-mobile-menu
-	display none
-		
-.b-breadcrumbs-wrapper
-	overflow hidden
-	position relative
-	float left
-	
 .b-header
-	padding 26px 20px 12px
+	padding 20px
 	background #FFF
 	border-bottom 1px solid #efece7 
 	overflow hidden
+	position relative
+	z-index 10
 	
-.b-breadcrumbs
-	display block
-	vertical-align middle
-	font-size 18px
-	line-height 30px
-	font-weight 100 
-	
-.b-breadcrumbs__item
-	display inline-block
-	vertical-align middle
-	font-size 24px
-	line-height 20px
-	border-bottom: 1px solid #b9d7de;
-	padding-bottom 3px
-	&:hover
-		opacity 0.8
-	a
-		color $a__link
-		text-decoration none
-		
-.m-breadcrumbs__item_root
-	border-bottom none
-	a
-		display inline-block
-		width 30px
-		height 30px
+	&__support
+		padding 14px 14px 14px 48px
+		float right
 		position relative
+		background $btngreen
+		border-radius 8px
+		font-size 11px
+		line-height 1
+		font-weight 600  
+		letter-spacing 0.5px
+		text-transform uppercase
+		color #333333
+		cursor pointer
+		&:before
+			position absolute
+			left 16px
+			top 9px
+			pseudo()
+			background-icon($icon--support)
+		&:hover
+			opacity 0.9
+			
+//breadcrumbs
+	.b-breadcrumbs-wrapper
 		overflow hidden
-		text-indent -1000em
+		position relative
+		float left
+		margin-top 5px
+
+	.b-breadcrumbs
+		display block
+		vertical-align middle
+		font-size 18px
+		line-height 30px
+		font-weight 100 
+
+	.b-breadcrumbs__item
+		display inline-block
+		vertical-align middle
+		font-size 24px
+		line-height 20px
+		border-bottom: 1px solid #b9d7de;
+		padding-bottom 3px
+		&:hover
+			opacity 0.8
+		a
+			color $a__link
+			text-decoration none
+
+	.m-breadcrumbs__item_last
+		border-bottom 0
+		color #010101
+		&:hover
+			opacity 1
+			
+	.m-breadcrumbs__item_root
+		border-bottom none
+		a
+			display inline-block
+			width 30px
+			height 30px
+			position relative
+			overflow hidden
+			text-indent -1000em
+			margin-right 8px
+			centered-icon($icon--root)
+			
+	.m-breadcrumbs__item_root_goods a
+		centered-icon($icon--root_goods)
+
+	.m-breadcrumbs__item_root_shops a
+		centered-icon($icon--root_shops)
+		
+	.m-breadcrumbs__item_root_seller a
 		margin-right 8px
-		centered-icon($icon--root)
-	
-.m-breadcrumbs__item_divider
-	border-bottom none
-	margin 0 2px
-
-.m-breadcrumbs__item_active
-	border-bottom none
-	color #000
-
-.b-btn
-	display inline-block
-	background $btngreen
-	padding 14px 30px
-	border-radius 8px
-	text-transform uppercase
-	color #333
-	font-size 11px
-	line-height 1
-	font-weight 600  
-	letter-spacing 0.5px 
-	position relative
-	cursor pointer
-	
-	&.tooltiped
-		background lighten($btngreen, 0.5)
-	&:hover
-		opacity 0.9
-a.b-btn
-	color #333
+		centered-icon($icon--root_seller)
 		
-.m-btn_support
-	padding 14px 14px 14px 48px
-	float right
-	position relative
-	
-	.b-icon
-		width 24px
-		height 21px
+	.m-breadcrumbs__item_divider
+		border-bottom none
+		margin 0 2px
+
+	.m-breadcrumbs__item_active
+		border-bottom none
+		color #000
+		
+//notifications
+	.b-header__notification-holder
+		float right
+
+	.b-notification
+		width 40px   
+		height  40px
+		border 1px solid #ddd8d0
+		border-radius 5px
+		background #fff
+		display inline-block
+		margin-right 10px
+		cursor pointer
+		position relative
+		vertical-align top
+		&:hover
+			background #ebe8e3
+			border-color #ebe8e3
+
+	.m-notification_message
+		centered-icon($notification_message)
+
+	.m-notification_system-message
+		centered-icon($notification_bell)
+
+	.b-notification__amount
+		height 19px
+		padding 0 7px
+		border-radius 8px
+		background #e23f3f
+		color #fff
 		position absolute
-		top 50%
-		left 14px
-		margin-top -10.5px
-		centered-icon($icon--support)
-		
+		top -6px
+		right -7px
+		text-align center
+		line-height 19px
+		font-size 10px
+		font-weight 600
+
 	
 		

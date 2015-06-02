@@ -1,0 +1,422 @@
+//b-catalog-moderation
+    .b-catalog-moderation
+        display inline-block
+        position relative
+        top -2px
+        
+        &__status
+            display inline-block
+            position relative
+            height 29px
+            width 32px
+            border-top-left-radius 5px
+            border-bottom-left-radius 5px
+            margin-right -2px
+            pointer-events none
+        &__dropdown
+            display inline-block
+            height 29px
+            width 32px
+            border-top-right-radius 5px
+            border-bottom-right-radius 5px
+            position relative
+            &:before
+                pseudo__center()
+                width 0
+                height 0
+                border-style solid
+                border-width 6px 4.5px 0 4.5px
+                border-color #474b53 transparent transparent transparent
+                margin-left -4.5px
+                margin-top -3px
+
+    .m-catalog-moderation__dropdown_opened
+        &:before
+                pseudo__center()
+                width 0
+                height 0
+                border-style solid
+                border-width 0 4.5px 6px 4.5px
+                border-color transparent transparent #474b53 transparent
+                margin-left -4.5px
+                margin-top -3px
+                
+    .m-catalog-moderation__status_published
+        background #cbe6b3
+        centered-icon($activity-btn_done)     
+    .m-catalog-moderation__dropdown_published
+        background #cbe6b3
+        &:hover
+            background #cbe6b3 - #111
+    .m-catalog-moderation__status_waiting
+        background #fcf5d9
+        centered-icon($waiting) 
+    .m-catalog-moderation__dropdown_waiting
+        background #fcf5d9
+        &:hover
+            background #fcf5d9 - #111
+    .m-catalog-moderation__status_reject
+        background #ffd1d1
+        &:before
+            pseudo()
+            width 20px
+            height 20px
+            border-radius 999px
+            border 1px solid #ff6969
+            margin 5px 0 0 6px
+        &:after
+            pseudo()
+            width 12px
+            height 4px
+            background #ff6969
+            margin 13px 0 0 10px
+    .m-catalog-moderation__dropdown_reject
+        background #ffd1d1
+        &:hover
+            background #ffd1d1 - #111
+    .b-catalog-moderation__dropdown-list
+        background #fff
+        position absolute
+        width 210px            
+        box-shadow 0 2px 4px 0 rgba(0,0,0,.5)
+        z-index 2
+        top 30px
+        display none
+        
+    .b-catalog-moderation__dropdown-item
+        border-bottom 1px solid #e6e6e6
+        font-weight 600
+        position relative
+    .m-catalog-moderation__dropdown-item_checked
+        opacity 0.5
+        &:after
+            pseudo()
+            background-icon($selected_select)
+            right 8px
+            top 14px
+
+    .b-catalog-moderation__dropdown-text
+        letter-spacing 0.3px
+        font-size 13px
+        line-height 40px
+    .m-catalog-moderation__dropdown-text_published
+        color #5c823b
+    .m-catalog-moderation__dropdown-text_waiting
+        color #9b731d
+    .m-catalog-moderation__dropdown-text_reject
+        color #ff6766
+        
+    .b-catalog-moderation__dropdown-icon
+        width 33px
+        display inline-block
+        height 40px
+        vertical-align top
+        position relative
+    .m-catalog-moderation__dropdown-icon_published
+        centered-icon($activity-btn_done)
+    .m-catalog-moderation__dropdown-icon_waiting
+        centered-icon($waiting)
+    .m-catalog-moderation__dropdown-icon_reject
+        &:before
+            pseudo()
+            width 20px
+            height 20px
+            border-radius 999px
+            border 1px solid #ff6969
+            left 6px
+            top 9px
+        &:after
+            pseudo()
+            width 12px
+            height 4px
+            background #ff6969
+            left 10px
+            top 17px
+
+    //product-catalog
+    .b-product-catalog
+        margin-bottom 17px
+        &__heading
+            color #000
+            font-size 18px
+            font-weight 600
+            padding-left 36px
+            line-height 25px
+            position relative
+            letter-spacing 0.5px
+            cursor pointer
+            display inline-block
+            margin-left 10px
+            &   .b-editing-actions
+                    position relative
+                    top 5px
+                    left -1px
+            &:before
+                content ''
+                position absolute
+                left 0
+                background-icon($folder)
+            &.active
+                &:before
+                    left -7px
+                    background-icon($folder_opened)
+    .m-product-catalog__heading_small
+        margin-left 20px
+        &:before
+            content ''
+            position absolute
+            left -23px
+            top 2px
+            background-icon($folder_opened_small)
+
+    .b-editing-actions
+        display inline-block
+        margin-left 5px
+        height  20px
+        vertical-align top
+        
+    .b-editing-actions__item
+        float left
+        border-radius 999px
+        width 20px
+        height 20px
+        border 1px solid #000
+        position relative
+        margin-left 5px
+        cursor pointer
+        vertical-align top
+        &:after
+            content ''
+            position absolute
+            
+            
+    .m-editing-actions__item_bid
+        border none
+        display inline-block
+        float none
+        margin 3px 4px 0 3px
+        centered-icon($activity-btn_bid_small)
+    .m-editing-actions__item_edit
+        border-color #474b53
+        centered-icon($activity-btn_edit_small)
+        &:hover
+            centered-icon($activity-btn_edit_small_hover)
+            border-width 10px
+    .m-editing-actions__item_add
+        border-color #77b145
+        &:before
+            content ''
+            position absolute
+            width 2px 
+            height 10px
+            background #77b145
+            left 50%
+            margin-left -1px
+            margin-top 4px
+        &:after
+            height 2px 
+            width 10px
+            background #77b145
+            top 50%
+            margin-top -1px
+            margin-left 4px
+        &:hover
+            border-width 10px
+            &:before
+                content ''
+                position absolute
+                width 2px 
+                height 10px
+                background #fff
+                left 50%
+                margin-left -1px
+                margin-top -5px
+            &:after
+                height 2px 
+                width 10px
+                background #fff
+                top 50%
+                margin-top -1px
+                margin-left -5px
+    .m-editing-actions__item_done
+        border-color #77b145
+        centered-icon($activity-btn_done_small)
+        &:hover
+            centered-icon($activity-btn_done_small_hover)
+            border-width 10px  
+    .m-editing-actions__item_remove
+        border-color #ff6766
+        centered-icon($remove_small)
+        &:hover
+            centered-icon($remove_small_hover)
+            border-width 10px
+    .m-editing-actions__item_goods-view
+        border-color #177a93
+        centered-icon($activity-btn_goods-view_small)
+        &:hover
+            centered-icon($activity-btn_goods-view_small_hover)
+            border-width 10px
+    .m-editing-actions__item_setup
+        border-color #914c1a
+        centered-icon($activity-btn_setup_small)
+        &:hover
+            centered-icon($activity-btn_setup_small_hover)
+            border-width 10px
+    .m-editing-actions__item_deactivate
+        border-color #fe6766
+        &:before
+            content ''
+            position absolute
+            width 10px 
+            height 4px
+            background #ff6766
+            left 50%
+            top 50%
+            margin-left -5px
+            margin-top -2px
+        &:hover
+            border-width 10px
+            &:before
+                background #fff
+    .m-editing-actions__item_top
+        border-color #474b53
+        &:before
+            content ''
+            position absolute
+            width 0
+            height 0
+            border-style solid
+            border-width 0 5px 6px 5px
+            border-color transparent transparent #474b53 transparent
+            left 50%
+            top 50%
+            margin-left -5px
+            margin-top -4px
+        &:hover
+            border-width 10px
+            &:before
+                border-color transparent transparent #fff transparent
+    .m-editing-actions__item_bottom
+        border-color #474b53
+        &:before
+            content ''
+            position absolute
+            width 0
+            height 0
+            border-style solid
+            border-width 6px 5px 0 5px
+            border-color #474b53 transparent transparent transparent
+            left 50%
+            top 50%
+            margin-left -5px
+            margin-top -3px
+        &:hover
+            border-width 10px
+            &:before
+                border-color #fff transparent transparent transparent
+//catalog tree
+    .b-catalog-tree
+        margin 17px 0 0 7px
+        display none
+        li 
+            margin-bottom 4px
+        &__text
+            color #000
+            margin-left -3px
+            font-size 18px
+            font-weight 600
+            letter-spacing 0.4px
+            
+        .m-catalog-tree__text_small
+            font-size 14px
+    .b-checkbox__label
+        .b-editing-actions
+            display none
+
+//b-product-catalog__add-dropdown
+    .b-editing-actions__add-dropdown-holder
+        float left
+        position relative
+    .b-product-catalog__add-dropdown
+        display none
+        position absolute
+        top 30px
+        left -7px
+        z-index 2
+        width 225px
+        box-shadow 0 4px 7px 2px rgba(#000, 0.25)
+        margin-bottom 20px
+        &:before
+            content ''
+            position absolute
+            top -10px
+            left 10px
+            background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAYAAABlNU3NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDRBRkM5MURDM0VFMTFFNDlFOTZFNDRFNDU0ODU0QTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDRBRkM5MUVDM0VFMTFFNDlFOTZFNDRFNDU0ODU0QTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NEFGQzkxQkMzRUUxMUU0OUU5NkU0NEU0NTQ4NTRBNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NEFGQzkxQ0MzRUUxMUU0OUU5NkU0NEU0NTQ4NTRBNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoPuMY4AAADtSURBVHjapJI7D4JAEISFU/GX2djYaWNnoZ2Flb1/lIbwKEhIDM9bd/BA5HGgTrLkcrP7TbisQUSzMRksnU8aiKELaIHLc1EUN5yFEPeKrw3CXV8pIMrkElzzLMuupIQz7pRnVv0dzgQ4IIs4ji/sSXpL4g6e6ukN0cGFGlxGUXRqwesQ9s7oafzNR8gY3ArD8MheTsPK0YPevhDds1hBEBxG4HUIehsh9XMNwj3P27GX0nSlvu/ve0K6cNd1tzyQ0PdKMNsKqdcQ22A5jrPhxgf9rgcYKgTM8oMtWNm2vZZS/gN/rRYzwALzKcAASAEPxke8aLIAAAAASUVORK5CYII=");
+            width 20px
+            height 10px
+    .m-product-catalog__add-dropdown_right
+        right -7px
+        left auto
+        &:before
+            right 10px
+            left auto
+    .b-product-catalog__add-item
+        display block
+        line-height 40px
+        font-size 13px
+        color #000
+        padding 0 12px
+        letter-spacing 0.65px
+        position relative
+        cursor pointer
+        font-size 13px
+        background #fff
+        &:hover
+            background #e6e6e6
+
+    .m-product-catalog__add-item_slider
+        padding-left 36px
+        &:before
+            content ''
+            position absolute
+            left 15px
+            top 50%
+            margin-top -4px
+            background-icon($catalog_hot_small)
+            
+    .m-product-catalog__add-item_carousel
+        padding-left 36px
+        &:before
+            content ''
+            position absolute
+            left 13px
+            top 50%
+            margin-top -4px
+            background-icon($catalog_recommended_small)
+            
+    .m-product-catalog__add-item_tile
+        padding-left 36px
+        &:before
+            content ''
+            position absolute
+            left 16px
+            top 50%
+            margin-top -4px
+            background-icon($catalog_novelty_small)
+     
+//b-product-catalog__propose-dropdown
+    .b-product-catalog__propose-item
+        line-height 40px
+        display  block
+        padding 0 12px
+        font-size 13px
+        color #000
+        position relative
+        cursor pointer
+        background #fff
+        border-bottom 1px solid #e6e6e6
+        &:last-child
+            border none
+        &:hover
+            background #e6e6e6
+        

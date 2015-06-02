@@ -1,0 +1,270 @@
+//checkboxTree
+    .p-checkbox-tree-container ul 
+        padding-left 17px
+    .p-toggle-tree 
+        position absolute
+        left -17px
+        top 7px
+        width 0
+        height 0
+        border-style solid
+        border-width 6.5px 0 6.5px 6px
+        border-color transparent transparent transparent #494d55
+        transition all .1s ease-in-out
+        &_active 
+            transform rotate(90deg)
+    
+    .b-catalog-tree .b-editing-actions
+        position relative
+        top 4px
+
+    .m-checkbox_small
+        margin-top 4px
+
+    .m-checkbox_small .p-toggle-tree
+        margin 0 4px 2px 0
+
+    .root
+        padding-left 25px
+       
+
+
+
+
+
+
+
+
+
+//rubricator
+.b-rubricator
+    margin-top 9px
+    margin-bottom 20px
+        
+.b-rubricator__header
+    background #ebe8e3
+    overflow hidden
+
+.b-rubricator__header-cell
+    float left
+    font-size 13px
+    font-weight 700
+    color #000
+    height 50px
+    line-height 50px
+    &:nth-child(1)
+        width 40px
+    &:nth-child(2)
+        width 62.5%
+        padding-left 36px
+        padding-right 20px
+    &:nth-child(3)
+        width 19.5%
+        padding-left 6px
+        padding-right 20px
+    &:nth-child(4)
+        padding-left 5px
+            
+
+.b-rubricator__content
+    background #fff
+    border-top 1px solid #ccc
+
+    ul
+        padding-left 0
+
+        li:not(.p-parent-item)
+            .b-catalog-tree__text
+                color #177a93
+                font-weight 500
+                font-size 14px
+        .b-catalog-tree__text
+            line-height 39px
+            margin-top -7px
+            display inline-block
+
+.b-rubricator__main > .b-rubricator__row .p-toggle-tree
+    display none
+
+.b-rubricator__root
+    .b-ckeckbox__text
+        padding-left 25px
+    .m-ckeckbox__text-icon_catalog_novelty
+        margin-left -21px
+    .m-ckeckbox__text-icon_catalog_hot
+        margin-left -23px
+        margin-right 12px
+    .m-ckeckbox__text-icon_catalog_recommended
+        margin-left -27px
+        margin-right 7px
+        
+    ul
+        .b-ckeckbox__text
+            padding-left 45px
+            .b-catalog-tree__text
+                font-size 14px
+        ul
+            .b-ckeckbox__text
+                padding-left 65px
+            ul
+                .b-ckeckbox__text
+                    padding-left 85px
+                ul
+                    .b-ckeckbox__text
+                        padding-left 105px
+                        ul
+                            .b-ckeckbox__text
+                                padding-left 125px
+
+.b-rubricator__row
+    border 1px solid #ccc
+    border-top none
+    height 39px
+    padding-top 7px
+    transition all .4s
+    cursor pointer
+    &:hover
+        background #f5f3f1
+        .b-checkbox .b-editing-actions
+            display inline-block 
+            vertical-align baseline
+            
+    .b-checkbox .b-editing-actions
+        display none
+    
+    .b-checkbox__label
+        padding-left 12px
+        
+    .b-editing-actions__add-dropdown-holder
+        float right
+
+    .p-toggle-tree
+        display inline-block
+        position relative
+        top 0px
+        left -21px
+        margin-right -5px
+            
+.b-rubricator__cell
+    float left
+    &:nth-child(1)
+        width calc(62.5% + 40px)
+    &:nth-child(2)
+        float left
+        padding-left 6px
+        line-height 22px
+        font-weight 700
+        font-size 14px
+        color #000
+        width 19.5%
+    &.m-rubricator__cell_empty
+        font-weight 500
+    &:nth-child(3)
+        width 130px
+        float left
+        padding-left 5px
+        .b-editing-actions
+            margin 0
+            width 120px
+            position relative
+        .b-editing-actions__item
+            margin-left 5px
+            float right
+        .m-editing-actions__item_done
+            float left
+            margin 0
+        .m-editing-actions__item_deactivate
+            float left
+            margin 0
+            
+.p-checkbox-tree-container > .p-parent-item > .p-inner-list
+    display block !important    
+
+
+    
+
+
+//////////////////////////////////////////
+.b-dropdown-tree
+    max-height 550px
+    
+    li:not(.p-parent-item)
+        .b-catalog-tree__text
+            color #177a93
+            font-weight 500
+            font-size 13px
+
+.b-dropdown-tree__root-item
+    margin-left -17px
+    margin-bottom 4px
+    &:first-child
+        margin-top 4px
+
+.b-dropdown-tree__root-item.p-parent-item
+    padding-left 20px
+    & .b-catalog-tree__text
+        font-size 13px
+    .b-checkbox
+        margin 4px 0
+
+.m-catalog-tree__text_dropdown-tree_main  
+    font-size 13px
+    color #177a93
+    margin-left 2px
+    letter-spacing 0.2px
+    
+//////////////////////////////////////////
+.b-select-tree
+    position relative
+    &__head
+        border 1px solid #cccccc
+        border-radius 5px
+        padding-left 17px
+        position relative
+        cursor pointer
+    &__text
+        color #000
+        font-size 13px
+        font-weight 500
+        line-height 34px
+    &__icon
+        width 31px
+        position absolute
+        right 0
+        height 100%
+        background #ccc
+        top 0
+        &:before
+            height 0
+            width 0
+            position absolute
+            top 1px
+            right 9px
+            bottom 0
+            border-left 6px solid transparent
+            border-right 6px solid transparent
+            border-top 8px solid #000
+            content ''
+            margin auto 0
+            
+    &__content
+        position absolute
+        width 100%
+        background #fff
+        top 36px
+        box-shadow 0 4px 8px rgba(0,0,0,0.15)
+        padding 7px 0 6px 23px
+        display none
+        margin-bottom 10px
+        z-index 100
+        
+////
+    .b-categories-import
+        .b-block-subtitle
+            padding 20px 0
+        .b-pkp-block
+            padding-bottom 0
+        .b-ckeckbox__text
+            max-width 300px
+
+        

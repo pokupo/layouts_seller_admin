@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block variables
+    - var prevpage = 1
+    - var prevpageMyShopsCreate = 1
+    - var breadcrumbMyShopsStoreData = 1
+
+block head
+    - pageTitle = 'ЛК продавца - Магазины - Настройка каталога';
+
+block content
+    include ../content/my-shops__catalog-settings

@@ -1,0 +1,50 @@
+.b-goods-description
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__right
+                a(href="#").b-btn.m-btn_small.m-btn_clone Клонировать товар
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Описание товара
+        .b-goods-description__info
+            label.b-label
+                .b-label__text Полное наименование
+                    span.g-required-filed  *
+                input(type="text").b-input
+            
+            label.b-label.m-goods-description__label_short-name
+                .b-label__text Краткое название
+                input(type="text").b-input
+
+            label.b-label.m-goods-description__label_article
+                .b-label__text Артикул
+                input(type="text").b-input
+
+            label.b-label.m-goods-description__label_weight
+                .b-label__text Вес товара 
+                    span.b-label__sub-text (г)
+                input(type="text").b-input
+
+            label.b-label
+                .b-label__text Описание товара 
+                div.b-editor
+                    textarea.b-tinymce.tinymce
+
+            label.b-label
+                .b-label__text Ключевые слова и фразы 
+                    span.b-label__sub-text (через запятую)
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                div.b-keywords-and-phrases
+                    select.b-select.j-select-tags(multiple="multiple")
+                        option(value="1") Звуковые карты
+                        option(value="2") Модули памяти
+                        option(value="3") Платы ввода-вывода
+                        option(value="4") Видеокарты
+                        option(value="5") Клавиатруы
+                        
+                
+
+
+            

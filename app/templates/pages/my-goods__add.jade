@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block variables
+    - var breadcrumbsGoodsAdd = 1
+    - var prevpage = 1
+    - var prevpageMyGoodsAdd = 1
+    - var files = 1
+
+block head
+    - pageTitle = 'ЛК продавца - Добавление товара';
+
+block content
+    include ../content/my-goods__add

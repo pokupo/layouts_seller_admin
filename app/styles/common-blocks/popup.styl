@@ -1,0 +1,57 @@
+//popup common
+    .b-popup-holder
+        display none
+        
+    .b-popup
+        padding 15px 40px 30px 40px
+        width 1000px
+        background #efece7
+        position relative
+        max-height 1000px
+        .b-outer-btns-holder
+            padding 0
+            
+    .b-popup__close
+        position absolute
+        right 14px
+        width 22px
+        height 22px
+        cursor pointer
+        transition all .4s
+        &:after
+            content ''
+            position absolute
+            background #10100f
+            height 22px
+            width 2px
+            transform rotate(45deg)
+            right 11px
+            transition all .4s
+        &:before
+            content ''
+            position absolute
+            background #10100f
+            height 22px
+            width 2px
+            transform rotate(-45deg)
+            right 11px
+            transition all .4s
+        &:hover
+            &:before
+                transform rotate(-135deg)
+            &:after
+                transform rotate(-45deg)
+            
+    .b-popup__content
+        background #fff
+        padding 0 22px 21px 19px
+        margin-top 8px
+        &:after
+            display table
+            clear both
+            content ''
+    
+    .b-popup__title
+        font-size 20px
+        font-weight 300
+        padding 23px 0

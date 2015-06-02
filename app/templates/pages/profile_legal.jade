@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block variables
+    - var navtop_profile = 1
+    - var navtop_profile_legal = 1
+    - var breadcrumbSeller = 1
+
+block head
+    - pageTitle = 'ЛК продавца - Продавец - профиль юр. лица';
+
+block content
+    include ../content/profile_legal

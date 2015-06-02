@@ -1,0 +1,14 @@
+form(action="#")
+    include shops/code-settings
+    include shops/shop-preview
+    include shops/codes
+    .b-outer-btns-holder
+        a(href="#").b-btn.m-btn_download-store
+            | Скачать магазин
+        a(href="#").b-btn.m-btn_gray.m-btn_copy-code
+            | копировать код
+        a(href="#").b-btn.m-btn_gray.m-btn_check-shop-install
+            | Проверить установку магазина
+        span(href="#").b-shop-success-install
+            | Магазин успешно установлен
+    include ../appeared-blocks/video

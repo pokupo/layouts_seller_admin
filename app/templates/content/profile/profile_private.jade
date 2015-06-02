@@ -1,0 +1,348 @@
+.b-profile
+    .b-profile__profile(data-tab="1")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Профиль продавца
+            
+            .b-profile-description
+                .b-profile-description__row
+                    span.b-profile-description__text Торговое имя
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                    strong Торговая платформа Pokupo
+                .b-profile-description__row
+                    span.b-profile-description__text Тип продавца
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                    strong Организация
+
+            label.b-label
+                .b-label__text Информация о продавце
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                textarea.b-textarea
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Сайт
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    input(type="text").b-input
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+    
+    .b-profile__personal-information(data-tab="2" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Персональные данные
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Фамилия
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Имя
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Отчество
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Дата рождения
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                div
+                    label.b-radio__label
+                        input(type="radio" name="sex").b-radio__input
+                        span.b-radio__icon.m-radio__icon_man
+                        span.b-radio__text.m-radio__text_sex Мужчина
+                            span.g-required-filed  *
+
+                    label.b-radio__label
+                        input(type="radio" name="sex").b-radio__input
+                        span.b-radio__icon.m-radio__icon_woman
+                        span.b-radio__text.m-radio__text_sex Женщина
+                            span.g-required-filed  *
+        
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Почтовый адрес
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Страна
+                        span.g-required-filed  *
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Российская Федерация
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Регион, область, край
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Город
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Улица, дом, квартира
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Почтовый идекс
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        | Паспортные данные
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Серия и номер паспорта
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Кем выдан паспорт
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Дата выдачи паспорта
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                label.b-label
+                    .b-label__text Страна выдачи паспорта
+                        span.g-required-filed  *
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Российская Федерация
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+
+    .b-profile__verification(data-tab="3" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Верификация
+            table.b-profile__verification-table
+                thead
+                    tr
+                        th ID
+                        th Дата </br>подачи
+                        th Дата </br>обновления
+                        th Документы
+                        th Статус заявки
+                tbody
+                    tr
+                        td 10
+                        td 10.12.2014 13:20
+                        td 16.12.2014 09:45
+                        td
+                            ul
+                                li
+                                    | Скан паспорта — <strong class="g-strong g-strong_neutral">Проверяется</strong>
+                                li
+                                    | Скан банковской карты — <strong class="g-strong g-strong_positive">Принят</strong>
+                                li
+                                    | Фото с паспортом — <strong class="g-strong g-strong_negative">Отклонен</strong>
+                                li
+                                    | Дополнительный документ — <strong class="g-strong g-strong_positive">Принят</strong>
+                                li
+                                    | Дополнительный документ — <strong class="g-strong g-strong_neutral">Проверяется</strong>
+                        td Ожидает проверки
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Верификация
+                        span.b-block-title__subtext 
+                            | Вы можете подать заявку на проверку своих персональных данных. Все загруженные документы используются исключительно для проверки ваших 
+                            | данных и хранятся в системе в зашифрованном виде. Загружая копии документов, вы даёте своё согласие на обработку и хранение своих 
+                            | персональных данных Администратору системы.
+            label.b-label
+                .b-label__text Скан паспорта
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_upload
+                    a(href="#").b-configure__link.m-configure__link_customize-discounts
+                        | Выбрать файл
+                    span.b-configure__subtext 
+                        | (csv, txt, xml не более 5 МБ)
+
+            label.b-label
+                .b-label__text Ваше фото с паспортом
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(data-position="right" data-content="j-template_passport-photo").pkp-tooltip__trigger.j-hint
+                            | ?
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_upload
+                    a(href="#").b-configure__link.m-configure__link_customize-discounts
+                        | Выбрать файл
+                    span.b-configure__subtext 
+                        | (csv, txt, xml не более 5 МБ)
+
+            label.b-label
+                .b-label__text Скан лицевой стороны карты
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_upload
+                    a(href="#").b-configure__link.m-configure__link_customize-discounts
+                        | Выбрать файл
+                    span.b-configure__subtext 
+                        | (csv, txt, xml не более 5 МБ)
+
+            label.b-label
+                .b-label__text Дополнительный документ
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_upload
+                    a(href="#").b-configure__link.m-configure__link_customize-discounts
+                        | Выбрать файл
+                    span.b-configure__subtext 
+                        | (csv, txt, xml не более 5 МБ)
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Подать заявку     
+
+    .b-profile__security(data-tab="4" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Изменение пароля
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Текущий пароль
+                        span.g-required-filed  *
+                    input(type="password").b-input
+
+
+                label.b-label
+                    .b-label__text Новый пароль
+                        span.g-required-filed  *
+                    input(type="password").b-input
+
+                label.b-label
+                    .b-label__text Подтвердите пароль
+                        span.g-required-filed  *
+                    input(type="password").b-input
+
+//- Темлейт для подсказки верификации (паспорт) 
+script(type="text/template" class="j-template_passport-photo").
+    <div class="b-template_passport-photo">
+        <p> Сделайте цветную фотографию с разворотом паспорта в правой руке рядом с вашим лицом. </p>
+        <p> Паспорт должен хорошо читаться, выражение лица нейтральное как в паспорте. Допустимы форматы jpg, png, gif, размер не менее 600×600 и не более 3000×3000, весом не более 2048 Кб</p>
+        <img src="images/content-images/passport.jpg" alt="">
+    </div>
+
+

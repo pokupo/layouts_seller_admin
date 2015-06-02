@@ -1,0 +1,62 @@
+.b-instruction
+    background #f5f5f5
+    margin-top 10px
+    text-align center
+    margin-bottom 20px
+    color #000
+    position relative
+    &__roll-up
+        color #177a93
+        font-size 14px
+        font-weight 700
+        cursor pointer
+        border-bottom 1px dotted #177a93
+        line-height 23px
+        position absolute
+        right 0
+        top -50px
+        &:before
+            pseudo()
+            background-icon($arrow-down_hover)
+            transition all 0.4s
+            left -21px
+            top 9px
+            transform rotate(180deg)
+        &:hover
+            border-bottom none
+    &__content
+        padding 23px 0 14px 0
+    &__heading
+        font-weight 300
+        font-size 20px
+        text-align center
+        line-height 22px
+        
+    &__items
+        display table
+        margin 23px auto 0
+        
+    &__item
+        display table-cell
+        font-weight 300
+        font-size 20px
+        text-align center
+        line-height 22px
+        vertical-align top
+        
+    &__description
+        width 180px
+        font-size 13px
+        font-weight 500
+        line-height 20px
+        margin 10px auto
+
+.m-instruction__roll-up_active
+    &:before
+        transform rotate(0deg)
+
+.m-instruction__item_divider
+    padding: 118px 32px 0;
+
+.b-upload-from-file__row
+    margin-top 20px

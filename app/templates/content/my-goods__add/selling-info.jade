@@ -1,0 +1,69 @@
+.b-tabs.j-tabs
+    ul.b-tabs__list
+        li.b-tabs__item
+            a(href="#tab-1").p-tabs__btn
+                span.b-tabs__btn-text
+                    | Продаваемая информация
+                .pkp-tooltip.pkp-tooltip_inline
+                        span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+        li.b-tabs__item
+            a(href="#tab-2").p-tabs__btn 
+                span.b-tabs__btn-text
+                    | Продаваемый файл
+                .pkp-tooltip.pkp-tooltip_inline
+                        span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+    .p-tabs__container
+        .p-tabs__content#tab-1
+            .b-tabs__inner.b-selling-info
+                .b-selling-info__row
+                    label.b-label
+                        span.b-label__text.m-label__text_required
+                            | Текст сообщения 
+                        textarea.b-textarea
+                .b-selling-info__row
+                    label.b-label.m-label__third
+                        span.b-label__text
+                            | Доступен после продажи <span class="b-label__sub-text">(дней)</span>
+                        input.b-input
+                    label.b-label.m-label__third
+                        span.b-label__text
+                            | Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span>
+                        input.b-input
+                    label.b-label.m-label__third
+                        span.b-label__text
+                            | Метка, номер, примечание 
+                        input.b-input
+            .b-outer-btns-holder
+                a(href="#").b-btn.m-btn_download-store
+                    | добавить информацию
+                a(href="#").b-btn.m-btn_gray.m-btn_cancel
+                    | отмена
+        .p-tabs__content#tab-2
+            .b-tabs__inner.b-selling-files
+                .b-selling-files__row
+                    .b-configure
+                        span.b-configure__icon.m-configure__icon_customize-discount
+                        a(href="#").b-configure__link.m-configure__link_customize-discounts
+                            | Выбрать рубрики
+                        span.b-configure__subtext 
+                            | (csv, txt, xml не более 5 МБ)
+                .b-selling-files__row
+                    label.b-label.m-label__third
+                        span.b-label__text
+                            | Доступен после продажи <span class="b-label__sub-text">(дней)</span>
+                        input.b-input
+                    label.b-label.m-label__third
+                        span.b-label__text
+                            | Макс. кол-во загрузок  <span class="b-label__sub-text">(до 100)</span>
+                        input.b-input
+                    label.b-label.m-label__third
+                        span.b-label__text
+                            | Метка, номер, примечание 
+                        input.b-input
+            .b-outer-btns-holder
+                a(href="#").b-btn.m-btn_download-store
+                    | добавить товар
+                a(href="#").b-btn.m-btn_gray.m-btn_cancel
+                    | отмена

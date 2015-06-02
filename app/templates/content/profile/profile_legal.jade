@@ -1,0 +1,692 @@
+.b-profile
+    .b-profile__profile(data-tab="1")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Профиль продавца
+            
+            .b-profile-description
+                .b-profile-description__row
+                    span.b-profile-description__text Торговое имя
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                    strong Торговая платформа Pokupo
+                .b-profile-description__row
+                    span.b-profile-description__text Тип продавца
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                    strong Организация
+
+            label.b-label
+                .b-label__text Информация о продавце
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                textarea.b-textarea
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Сайт
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    input(type="text").b-input
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+
+    .b-profile__personal-information(data-tab="2" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Персональные данные
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Фамилия
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Имя
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Отчество
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Дата рождения
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                div
+                    label.b-radio__label
+                        input(type="radio" name="sex").b-radio__input
+                        span.b-radio__icon.m-radio__icon_man
+                        span.b-radio__text.m-radio__text_sex Мужчина
+                            span.g-required-filed  *
+
+                    label.b-radio__label
+                        input(type="radio" name="sex").b-radio__input
+                        span.b-radio__icon.m-radio__icon_woman
+                        span.b-radio__text.m-radio__text_sex Женщина
+                            span.g-required-filed  *
+        
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Почтовый адрес
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Страна
+                        span.g-required-filed  *
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Российская Федерация
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Регион, область, край
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Город
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Улица, дом, квартира
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Почтовый идекс
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        | Паспортные данные
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Серия и номер паспорта
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Кем выдан паспорт
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Дата выдачи паспорта
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                label.b-label
+                    .b-label__text Страна выдачи паспорта
+                        span.g-required-filed  *
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Российская Федерация
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+
+    .b-profile__requisites(data-tab="3" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Ревизиты компании
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Правовая форма организации
+                        span.g-required-filed  *
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Общество с ограниченной ответственностью
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Название компании
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text ИНН
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text ОГРН
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text КПП
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text ОКВЭД
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                div
+                    label.b-radio__label
+                        input(type="radio" name="sex").b-radio__input
+                        span.b-radio__icon.m-radio__icon_man
+                        span.b-radio__text.m-radio__text_sex Мужчина
+                            span.g-required-filed  *
+
+                    label.b-radio__label
+                        input(type="radio" name="sex").b-radio__input
+                        span.b-radio__icon.m-radio__icon_woman
+                        span.b-radio__text.m-radio__text_sex Женщина
+                            span.g-required-filed  *
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Адреса
+
+            .b-profile__half
+                
+                label.b-label
+                    .b-label__text Юридический адрес
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Почтовый идекс
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Регион, область, край
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Город
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Почтовый адрес
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Адресат
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        | Контакты
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text ФИО руководителя
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text ФИО руководителя в родительном падеже
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Фамилия и инициалы руководителя
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text На основании чего дуйствует
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                label.b-label
+                    .b-label__text E-mail руководителя
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Телефоны
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text ФИО бухгалтера
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text E-mail бухгалтера
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Факс
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+
+    .b-profile__bank-score(data-tab="4" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Банковские реквизиты
+
+            .b-profile__half
+
+                label.b-label
+                    .b-label__text БИК банка
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Расчетный счет
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Название банка
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Кор. счет
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Адрес банка
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text ИНН банка
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?      
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+
+    .b-profile__agreements(data-tab="5" style="display:none")
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Договора
+                        span.b-block-title__subtext
+                            | У вас нет действующего договора для работы, вы можете сформировать свой договор.
+            .b-profile__half
+                label.b-label
+                    .b-label__text Номер договора
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Дата подписания
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+                label.b-label
+                    .b-label__text Минимальная сумма вывода
+                        span.g-required-filed  *
+                    .b-input-holder
+                        input(type="text").b-input
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Ключевые слова и фразы" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            .b-profile__agreements-days
+                span.b-label
+                    .b-label__text Дни вывода
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    label.b-checkbox__label
+                        input(type="checkbox").b-checkbox__input
+                        span.b-checkbox__icon.m-checkbox__icon_big
+                        span.b-ckeckbox__text.m-ckeckbox__text_big Понедельник
+
+                    label.b-checkbox__label
+                        input(type="checkbox").b-checkbox__input
+                        span.b-checkbox__icon.m-checkbox__icon_big
+                        span.b-ckeckbox__text.m-ckeckbox__text_big Вторник
+
+                    label.b-checkbox__label
+                        input(type="checkbox").b-checkbox__input
+                        span.b-checkbox__icon.m-checkbox__icon_big
+                        span.b-ckeckbox__text.m-ckeckbox__text_big Среда
+
+                    label.b-checkbox__label
+                        input(type="checkbox").b-checkbox__input
+                        span.b-checkbox__icon.m-checkbox__icon_big
+                        span.b-ckeckbox__text.m-ckeckbox__text_big Четверг
+
+                    label.b-checkbox__label
+                        input(type="checkbox").b-checkbox__input
+                        span.b-checkbox__icon.m-checkbox__icon_big
+                        span.b-ckeckbox__text.m-ckeckbox__text_big Пятница
+
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Договора
+    
+            table.b-profile__agreements-table
+                thead
+                    tr
+                        th ID
+                        th № договора
+                        th Дата <br/>подписания
+                        th Комиссия, %
+                        th Мин. сумма <br/>вывода
+                        th Дни вывода
+                        th Статус договора
+                        th
+                tbody
+                    tr
+                        td 1
+                        td PKP3_7
+                        td 16.12.2014
+                        td динамическая
+                        td 2 000 руб
+                        td Понедельник
+                        td Новый договор
+                        td
+                            a(href="#" title="Просмотреть договор" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_agreement.j-hint
+                            a(href="#" title="Изменить сратус договора" data-position="bottom-right" data-theme="g-hint").b-activity-btn.m-activity-btn_edit.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_load.j-hint
+                    tr
+                        td 2
+                        td PKP3_7
+                        td 16.12.2014
+                        td 5%
+                        td 2 000 руб
+                        td Понедельник
+                        td Подписан
+                        td
+                            a(href="#" title="Просмотреть договор" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_agreement.j-hint
+                            a(href="#" title="Изменить сратус договора" data-position="bottom-right" data-theme="g-hint").b-activity-btn.m-activity-btn_edit.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_load.j-hint
+                    tr
+                        td 3
+                        td PKP3_7
+                        td 16.12.2014
+                        td динамическая
+                        td 2 000 руб
+                        td Понедельник
+                        td Выслан по почте
+                        td
+                            a(href="#" title="Просмотреть договор" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_agreement.j-hint
+                            a(href="#" title="Изменить сратус договора" data-position="bottom-right" data-theme="g-hint").b-activity-btn.m-activity-btn_edit.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_load.j-hint
+                    tr
+                        td 4
+                        td PKP3_7
+                        td 16.12.2014
+                        td динамическая
+                        td 2 000 руб
+                        td Понедельник
+                        td Выслан по почте
+                        td
+                            a(href="#" title="Просмотреть договор" data-position="bottom" data-theme="g-hint").b-activity-btn.m-activity-btn_agreement.j-hint
+                            a(href="#" title="Изменить сратус договора" data-position="bottom-right" data-theme="g-hint").b-activity-btn.m-activity-btn_edit.j-hint
+                            a(href="#").b-activity-btn.m-activity-btn_load.j-hint
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+            a(href="#" data-popup="j-agreements-popup").b-btn.m-btn_gray.m-btn_treaty-view.j-popup-trigger
+                | Просмотреть договор 
+
+    .b-profile__security(data-tab="6" style="display:none")
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Изменение пароля
+
+            .b-profile__half
+                label.b-label
+                    .b-label__text Текущий пароль
+                        span.g-required-filed  *
+                    input(type="password").b-input
+
+
+                label.b-label
+                    .b-label__text Новый пароль
+                        span.g-required-filed  *
+                    input(type="password").b-input
+
+                label.b-label
+                    .b-label__text Подтвердите пароль
+                        span.g-required-filed  *
+                    input(type="password").b-input
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Изменить пароль 

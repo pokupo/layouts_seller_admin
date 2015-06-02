@@ -1,0 +1,81 @@
+//message remove popup
+    .b-message-remove-popup
+        background #fff
+        position relative
+        padding 61px 33px 39px
+
+    .b-message-remove-popup__close
+        position absolute
+        right 5px
+        top 7px
+        width 22px
+        height 22px
+        cursor pointer
+        opacity 0.8
+        &:after
+            content ''
+            position absolute
+            background #10100f
+            height 22px
+            width 2px
+            transform rotate(45deg)
+            right 11px
+            transition all .4s
+        &:before
+            content ''
+            position absolute
+            background #10100f
+            height 22px
+            width 2px
+            transform rotate(-45deg)
+            right 11px
+            transition all .4s
+        &:hover
+            &:before
+                transform rotate(-135deg)
+            &:after
+                transform rotate(-45deg)
+    .b-message-remove-popup p
+        color #000
+        font-size 16px
+        letter-spacing 0.3px
+
+    .b-message-remove-popup__btns
+        text-align center
+        margin-top 38px
+        
+    .b-message-remove-popup__btn
+        display inline-block
+        width 104px
+        height 52px
+        line-height 52px
+        position relative
+        text-align center
+        text-transform uppercase
+        color #fff
+        text-decoration none
+        font-weight 600
+        margin-left 20px
+        border-radius 5px
+        font-size 14px
+        &:after
+            top 16px
+        &:first-child
+            margin 0
+            
+    .m-message-remove-popup__btn_confirm
+        background #ff6766
+        text-indent 26px
+        &:after
+            pseudo()
+            background-icon($icon--confirm)
+            left 29px
+            
+    .m-message-remove-popup__btn_reject
+        background #97ce68
+        text-indent 25px
+        &:after
+            pseudo()
+            background-icon($icon--reject)
+            left 26px
+        

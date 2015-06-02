@@ -1,0 +1,60 @@
+.b-import
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading.m-block-title__heading_big
+                    |  Импорт товаров
+        .b-configure
+            span.b-configure__icon.m-configure__icon_upload
+            a(href="#").b-configure__link.m-configure__link_customize-discounts
+                | Выбрать файл
+            span.b-configure__subtext 
+                | (csv, txt, xml не более 5 МБ)
+            .b-configure__tooltip
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Файл с информацией о товарах в формате: \n csv, txt, xml объемом не более 5 Мб" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+    
+        .b-configure.m-configure_finished
+            span.b-configure__icon.m-configure__icon_upload
+            span.b-configure__uploaded
+                | Загруженный файл.txt
+                span.b-configure__subtext 
+                    | (15МБ)
+                span.b-configure__uploaded-remove
+            .b-configure__tooltip
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Файл с информацией о товарах в формате: \n csv, txt, xml объемом не более 5 Мб" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+        
+        .b-import__filter
+            .b-import__goods-type
+                .b-goods-type
+                    span.b-label
+                        .b-label__text Тип товара
+                        label.b-goods-type__label
+                            input(type="radio" name="goodsType").b-goods-type__input
+                            span.b-goods-type__span.m-goods-type__span_physical
+                                | Физический товар
+                        label.b-goods-type__label
+                            input(type="radio" name="goodsType").b-goods-type__input
+                            span.b-goods-type__span.m-goods-type__span_digital
+                                | Цифровой товар
+
+            .b-import__separator
+                .b-import__separator-inner
+                    label.b-label
+                        .b-label__text Разделитель записей
+                            span.g-required-filed  *
+                            .pkp-tooltip.pkp-tooltip_inline
+                                span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+                        input.b-input
+                .b-import__separator-inner
+                    label.b-label
+                        .b-label__text Разделитель полей
+                            span.g-required-filed  *
+                            .pkp-tooltip.pkp-tooltip_inline
+                                span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+                        input.b-input

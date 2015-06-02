@@ -1,0 +1,185 @@
+.b-recognition
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading.m-block-title__heading_big
+                    |  Распознание формата файла
+        ul.b-recognition__filter
+            li
+                label.b-label
+                    .b-label__text ID
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Наименование
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Мини фото
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Фото
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Цена СП
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Цена, прайс
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Артикул
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+            li
+                label.b-label
+                    .b-label__text Описание
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Пропустить поле
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации
+                        .pkp-tooltip.pkp-tooltip_outer
+                            span(title="Разделитель между товарами в csv или имя узла блока с информацией о товаре в xml" data-position="right" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+        .b-recognition__upload
+            label.b-label
+                .b-label__text Загрузить файлы в...
+                    span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                .b-configure
+                    span.b-configure__icon.m-configure__icon_rubric
+                    a(href="#").b-configure__link.m-configure__link_customize-discounts
+                        | Выбрать рубрику
+                    span.b-configure__subtext 
+                        | (выбраны все рубрики)
+
+            .b-recognition__upload-existing
+                label.b-label
+                    .b-label__text Действие с существующими товарами
+                        span.g-required-filed  *
+                            .pkp-tooltip.pkp-tooltip_inline
+                                span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                    | ?
+                    .b-select-holder
+                        select.b-select.j-select
+                            option
+                                | Полностью обновить из файла
+                            option
+                                | Запрещен
+                            option
+                                | Продается
+                            option
+                                | Вне каталога
+                            option
+                                | Ожидает модерации

@@ -1,0 +1,69 @@
+form(action="#")
+    .b-goods-description
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Описание товара
+            .b-goods-description__info
+                label.b-label
+                    .b-label__text Полное наименование
+                        span.g-required-filed  *
+                    input(type="text").b-input
+                
+                label.b-label.m-goods-description__label_short-name
+                    .b-label__text Краткое название
+                    input(type="text").b-input
+
+                label.b-label.m-goods-description__label_article
+                    .b-label__text Артикул
+                    input(type="text").b-input
+    .b-selling-prices
+        .b-pkp-block
+            .b-block-title
+                .b-block-title__left
+                    h2.b-block-title__heading
+                        |  Цена продажи
+            
+            .b-selling-prices__payments
+
+                .b-selling-prices__payments-row
+                    .b-selling-prices__payments-price
+                        input(type="text").b-input.b-selling-prices__input
+                        span руб.
+                    .b-selling-prices__payments-agent
+                        span 5 +
+                        input(type="text").b-input.b-selling-prices__input
+                        span
+                            | % выплаты агенту
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="выплаты агенту" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+
+            .b-selling-prices__universal-item
+                label.b-label
+                    .b-label__text Универсальный товар?
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Универсальный товар" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?            
+                    .b-checkbox
+                        label.b-checkbox__label
+                            input.b-checkbox__input.j-goods-input(type="checkbox")
+                            span.b-checkbox__icon.m-checkbox__icon_big
+                            span.b-ckeckbox__text.m-ckeckbox__text_big
+                                | Да
+
+            .b-selling-prices__photo-gallery         
+                .b-checkbox
+                    label.b-checkbox__label
+                        input.b-checkbox__input.j-goods-input(type="checkbox")
+                        span.b-checkbox__icon.m-checkbox__icon_big
+                        span.b-ckeckbox__text.m-ckeckbox__text_big
+                            | Копировать фотогалерею
+
+    .b-outer-btns-holder
+        a(href="#").b-btn.m-btn_clone.m-btn_clone_big
+            | Клонировать товар
+        a(href="#").b-btn.m-btn_gray.m-btn_cancel
+            | отмена
+    include ../appeared-blocks/video

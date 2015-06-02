@@ -1,0 +1,53 @@
+.b-shipping-methods
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__right
+                span.b-btn.m-btn_small.m-btn_add-shipping.j-popup-trigger(data-popup="j-add-delivery-method-popup") добавить способ доставки
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Способы доставки
+        table.b-shipping-methods__table
+            thead
+                tr
+                    th Логотип
+                    th Название
+                    th Описание
+                    th Стоимость
+                    th Действия
+            tbody
+                tr
+                    td
+                        img(src="images/shops/shipping1.png")
+                    td
+                        | EMS почта
+                    td
+                        | Доставка по России и регионам </br> выполняет EMS Почта России
+                    td
+                        | 800 <span class="g-ruble">Р</span> 
+                    td
+                        a(href="#").b-activity-btn.m-activity-btn_edit
+                        a(href="#").b-activity-btn.m-activity-btn_remove
+                tr
+                    td
+                        img(src="images/shops/shipping2.png")
+                    td
+                        | Деловые линии
+                    td
+                        | Доставка по России и регионам выполняет </br> транспортная компания Деловые Линиии
+                    td
+                        | 1500 <span class="g-ruble">Р</span> 
+                    td
+                        a(href="#").b-activity-btn.m-activity-btn_edit
+                        a(href="#").b-activity-btn.m-activity-btn_remove
+                tr
+                    td
+                        img(src="images/shops/shipping3.png")
+                    td
+                        | Курьерская доставка
+                    td
+                        | В крупных городах это наиболее </br> востребованный способ и популярнейшая </br> служба доставки.
+                    td
+                        | 600 <span class="g-ruble">Р</span> 
+                    td
+                        a(href="#").b-activity-btn.m-activity-btn_edit
+                        a(href="#").b-activity-btn.m-activity-btn_remove

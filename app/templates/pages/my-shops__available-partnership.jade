@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block variables
+    - var navtop = 1
+    - var navtopMyShops = 1
+    - var breadcrumbMyShops = 1
+
+block head
+    - pageTitle = 'ЛК продавца - Магазины, доступные для партнёрства';
+
+block content
+    include ../content/my-shops__available-partnership.jade

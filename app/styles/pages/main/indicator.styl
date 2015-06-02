@@ -1,0 +1,132 @@
+//b-indicator
+.b-indicator__title
+    padding-left 18px
+    
+.b-indicator__top
+    margin-top 15px
+    clearfix()
+
+.b-indicator__line
+    float left
+    
+.b-indicator__calendar
+    float right  
+
+.b-indicator__calendar-text
+    display inline-block
+    font-size 14px
+    font-weight 700
+    margin-right 3px
+    color #333
+
+.b-calendar-range
+    display inline-block
+    margin-top 3px
+
+.b-calendar-range__input-holder
+    display inline-block
+    position relative
+
+.b-calendar-range__date-input-icon
+    width 19px
+    height 20px
+    background url($calendar_icon_image) $calendar_icon_offset_x $calendar_icon_offset_y
+    position absolute
+    right 16px
+    top 8px
+
+.b-calendar-range__divider
+    margin 0 4px
+    display inline-block
+
+.b-indicator__line-btn
+    width 81px
+    line-height 40px
+    height 40px
+    color #000000
+    font-size 13px
+    text-decoration none
+    background #fff
+    text-align center
+    margin-right 1px
+    float left
+    &:hover
+        color #fff
+        background #97ce68
+    &:first-child
+        border-radius 5px 0 0 5px
+    &:last-child
+       border-radius 0 5px 5px 0 
+               
+.m-indicator__line-btn_active
+    background #97ce68
+    color #fff
+    
+.b-indicator__content 
+    margin-top 12px
+    
+.b-new-orders
+    width 100%
+    table-layout fixed
+    z-index 200
+    color #333333
+    margin-top -38px
+    
+.b-new-orders thead td
+    font-size 13px
+    font-weight 700
+    height 54px
+    vertical-align top
+
+.b-new-orders thead td:nth-child(1)
+    width 39.8%
+.b-new-orders thead td:nth-child(2)
+    width 17.5%
+.b-new-orders thead td:nth-child(3)
+    width 13%
+.b-new-orders thead td:nth-child(4)
+    width 16%
+.b-new-orders thead td:nth-child(5)
+    width 136px
+
+.b-new-orders tbody tr
+    border 1px solid #d4d4d4
+
+.b-new-orders tbody tr td
+    font-weight 600
+    letter-spacing: 0.6px;
+    height 70px
+    line-height 16px
+
+.b-new-orders tbody tr td:first-child
+    padding 0 20px
+    
+.b-new-orders tbody tr td:last-child
+    padding 0 20px 0 0
+
+.b-new-orders__process
+    color #000
+    text-transform uppercase
+    text-decoration none
+    font-size 11px
+    font-weight 600
+    line-height 14px
+    letter-spacing: 0.2px;
+    background #97ce68
+    border-radius 5px
+    padding 12px 20px
+    position relative
+    cursor pointer
+    &:hover
+        opacity 0.8
+
+.b-new-orders__order-number
+    font-size 18px
+    line-height 20px
+    text-decoration none
+    border-bottom 1px solid #b9d7de
+    color #177a93
+    letter-spacing -0.2px
+    font-weight 300
+    &:hover
+        border-bottom none

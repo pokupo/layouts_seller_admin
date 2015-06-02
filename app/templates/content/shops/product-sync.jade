@@ -1,0 +1,34 @@
+.b-product-sync
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Синхронизация товаров
+        .b-product-sync__left
+            label.b-label
+                .b-label__text Адрес страницы YML 
+                    span.b-label__sub-text (yandex markup language)
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                input(type="text").b-input
+        .b-product-sync__right
+            label.b-label
+                .b-label__text Секция назначения 
+                    span.b-label__sub-text (для автоматического обновления каталога)
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                select.b-select.j-select
+                    option
+                        | Все товары
+                    option
+                        | Запрещен
+                    option
+                        | Продается
+                    option
+                        | Вне каталога
+                    option
+                        | Ожидает модерации

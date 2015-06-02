@@ -1,0 +1,66 @@
+//profile menu
+    .b-profile-menu
+        background #fff
+        border-bottom 1px solid #efece7
+        padding 22px 28px
+        position relative
+        z-index 10
+        
+        &__item
+            display inline-block
+            font-weight 800
+            margin 0 18px 0 10px
+            font-size 14px 
+            text-align center
+            cursor pointer
+            position relative
+        
+        &__text
+            color #333333
+            font-size 14px
+            font-weight 700
+            float right
+            margin-left 25px
+        
+        &__icon
+            float left
+            top -1px
+            left 1px
+            position absolute
+            background-icon($activity-btn_done)
+        
+    .m-profile-menu__icon_not-verified
+        centered-icon($alert)
+
+    .m-profile-menu__item_previous-steps
+        opacity 0.6
+    
+//warning
+    .b-warning
+        background #ffd1d1
+        position relative
+        padding 10px 50px 10px 20px
+        display table
+        width 100%
+        
+        &__close
+            right 20px
+            top 20px
+            cursor pointer
+            position absolute
+            background-icon($icon--close--xs)
+            
+        &__icon
+            background-icon($pic__fail)
+            display table-cell
+            vertical-align top
+            
+            
+        &__text
+            color #ff6766
+            font-size 13px
+            display table-cell
+            vertical-align middle
+            padding-left 10px
+        
+    

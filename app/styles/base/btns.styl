@@ -1,0 +1,274 @@
+.b-outer-btns-holder
+    margin-top 20px
+    padding 0 20px 0 25px
+
+//green btns
+.b-btn
+    display inline-block
+    background $btngreen
+    width 184px
+    line-height 52px
+    height 52px
+    border-radius 8px
+    text-transform uppercase
+    color #333
+    font-size 14px
+    font-weight 600  
+    letter-spacing 0.5px 
+    position relative
+    cursor pointer
+    text-align center
+    text-decoration none
+    &:hover
+        opacity 0.9
+.m-btn_small
+    height 40px
+    font-size 11px
+    line-height 40px
+.m-btn_add-goods
+    padding 0 20px 0 66px
+    width auto
+    margin 0 9px 0 0
+    &:after
+        top 12px
+        left 20px
+        pseudo()
+        background-icon($load-real-goods_hover)
+.m-btn_add-goods
+    padding 0 20px 0 66px
+    width auto
+    margin 0 9px 0 0
+    &:after
+        top 12px
+        left 20px
+        pseudo()
+        background-icon($load-physl-goods)
+.m-btn_clone
+    padding 0 18px 0 42px
+    width auto
+    float right
+    &:after
+        top 12px
+        left 20px
+        pseudo()
+        background-icon($copy--code)
+.m-btn_clone_big
+    float none
+    margin-right 10px
+    padding-left 46px
+    &:after
+        top 12px
+        left 20px
+        pseudo()
+        background-icon($clone_big)
+.m-btn_add-file
+    padding 0 16px 0 42px
+    float right
+    margin-left 10px
+    width auto
+    &:after
+        top 12px
+        left 20px
+        pseudo()
+        background-icon($download-icon)
+.m-btn_add-shipping
+    width auto
+    margin-top -3px
+    padding 0 16px 0 51px
+    margin-right 3px
+    letter-spacing 0.4px
+    &:before
+        pseudo()
+        background-icon($shipping)
+        left 20px
+        top 10px
+.m-btn_add-shipping_big
+    width auto
+    margin-top -3px
+    padding 0 16px 0 73px
+    margin-right 3px
+    letter-spacing 0.4px
+    &:before
+        pseudo()
+        background-icon($shipping_big)
+        left 20px
+        top 10px
+.m-btn_chose-template
+    width auto
+    padding 0 20px
+.m-btn_download-store
+    padding 0 20px 0 51px
+    width auto
+    letter-spacing 0.45px
+    &:before
+        pseudo()
+        background-icon($upload-icon)
+        left 22px
+        top 18px
+.m-btn_add-shop
+    padding 0 29px 0 69px
+    margin 0 0 0 22px
+    width auto
+    &:after
+        top 7px
+        left 29px
+        pseudo()
+        background-icon($add_shop)
+.m-btn_theme
+    position absolute
+    top 50%
+    margin-top -26px
+    left 50%
+    margin-left -76px
+    padding 0 28px 0 58px
+    width auto
+    &:hover
+        opacity 1
+        background #87b95b
+    &:after
+        pseudo()
+        background-icon($activity-btn_done_black)
+        left 32px
+        top 18px
+.m-btn_integration
+    padding-left 53px
+    padding-right 18px
+    margin-right 21px
+    width auto
+    &:before
+        pseudo()
+        background-icon($integration)
+        left 19px
+        top 13px
+.m-btn_add-partners
+    background #ebe8e3
+    margin-left 2px
+    padding-left 46px
+    padding-right 20px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    width auto
+    &:before
+        pseudo()
+        background-icon($add-partners)
+        left 20px
+        top 9px
+//gray btns
+.m-btn_gray
+    background #efece7
+    border 1px solid #ddd8d0
+    &:hover
+        background #ddd8d0
+.m-btn_treaty-view
+    width auto
+    float right
+    padding 0 20px 0 40px
+    &:before
+        pseudo()
+        background-icon($search_small)
+        top 19px
+        left 21px
+.m-btn_cancel
+    width auto
+    padding 0 19px
+    margin-left 10px
+.m-btn_copy-code
+    width auto
+    margin-left 8px
+    padding 0 19px 0 45px
+    &:before
+        pseudo()
+        background-icon($copy--code)
+        left 20px
+        top 15px
+.m-btn_check-shop-install
+    width auto
+    margin-left 31px
+    padding 0 19px 0 49px
+    &:before
+        pseudo()
+        background-icon($activity-btn_done_black)
+        left 20px
+        top 15px
+.m-btn_rubricator
+    background #ebe8e3
+    padding-left 47px
+    padding-right 20px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    width auto
+    &:before
+        pseudo()
+        background-icon($action_list)
+        left 19px
+        top 12px
+.m-btn_delivery
+    background #ebe8e3
+    margin-left 10px
+    padding-left 57px
+    padding-right 26px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    width auto
+    &:before
+        pseudo()
+        background-icon($delivery)
+        left 27px
+        top 14px
+.m-btn_settings
+    background #ebe8e3
+    margin-left 10px
+    padding-left 52px
+    padding-right 22px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    width auto
+    &:before
+        pseudo()
+        background-icon($settings)
+        left 23px
+        top 11px
+.m-btn_payment
+    background #ebe8e3
+    margin-left 10px
+    padding-left 68px
+    padding-right 27px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    width auto
+    &:before
+        pseudo()
+        background-icon($payment)
+        left 27px
+        top 12px
+.m-btn_partner-goods
+    background #ebe8e3
+    margin-left 10px
+    padding-left 49px
+    padding-right 21px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    &:before
+        pseudo()
+        background-icon($partner-goods)
+        left 21px
+        top 9px  
+.m-btn_store-rights
+    background #ebe8e3
+    margin-left 10px
+    padding-left 41px
+    padding-right 20px
+    letter-spacing 0.2px
+    text-transform none
+    font-size 12px
+    &:before
+        pseudo()
+        background-icon($store-rights)
+        left 20px
+        top 12px

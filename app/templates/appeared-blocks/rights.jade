@@ -1,0 +1,101 @@
+.b-popup-holder
+    .b-popup.b-partners-shop-rights.j-partners-shop-rights-popup
+        .b-popup__close.j-modal-close
+        .b-block-title__heading
+            | Редактирование прав магазина партнера
+        .b-popup__content.b-pkp-block
+            h4.b-block-subtitle Товары и рубрикатор
+            .b-partners-shop-rights__left
+                span.b-label
+                    .b-label__text Товары партнёра
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    label.b-radio__label
+                        input(type="radio" name="goods").b-radio__input
+                        span.b-radio__icon.m-radio__icon_big
+                        span.b-radio__text.m-radio__text_big Публикация товаров запрещена
+
+                    label.b-radio__label
+                            input(type="radio" name="goods").b-radio__input
+                            span.b-radio__icon.m-radio__icon_big
+                            span.b-radio__text.m-radio__text_big Разрешено с модерацией
+
+                    label.b-radio__label
+                            input(type="radio" name="goods").b-radio__input
+                            span.b-radio__icon.m-radio__icon_big
+                            span.b-radio__text.m-radio__text_big Разрешено без модерацией
+
+            .b-partners-shop-rights__right
+                span.b-label
+                    .b-label__text Рубрикатор продавца
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    label.b-radio__label
+                        input(type="radio" name="goods").b-radio__input
+                        span.b-radio__icon.m-radio__icon_big
+                        span.b-radio__text.m-radio__text_big Редактирование рубрикатора запрещено
+
+                    label.b-radio__label
+                            input(type="radio" name="goods").b-radio__input
+                            span.b-radio__icon.m-radio__icon_big
+                            span.b-radio__text.m-radio__text_big Разрешено с модерацией
+
+                    label.b-radio__label
+                            input(type="radio" name="goods").b-radio__input
+                            span.b-radio__icon.m-radio__icon_big
+                            span.b-radio__text.m-radio__text_big Разрешено без модерацией
+
+        .b-popup__content.b-pkp-block
+            h4.b-block-subtitle Автоматически публиковать все товары партнера
+            .b-partners-shop-rights__left
+                span.b-label
+                    span.b-label__text Из 
+                        span.b-label__sub-text (выберете секцию / категорию)
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    select.j-select.b-select
+                        option(value="") Все товары
+                        option(value="") Все товары 2
+                        option(value="") Все товары 3
+                        option(value="") Все товары 4
+                        option(value="") Все товары 5
+                        option(value="") Все товары 6
+ 
+            .b-partners-shop-rights__right
+                span.b-label
+                    span.b-label__text В 
+                        span.b-label__sub-text (выберете секцию / категорию)
+                        span.g-required-filed  *
+                        .pkp-tooltip.pkp-tooltip_inline
+                            span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                                | ?
+                    select.j-select.b-select
+                        option(value="") Все товары
+                        option(value="") Все товары 2
+                        option(value="") Все товары 3
+                        option(value="") Все товары 4
+                        option(value="") Все товары 5
+                        option(value="") Все товары 6
+
+        .b-popup__content.b-pkp-block
+            h4.b-block-subtitle Процент выплаты
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+            .b-partners-shop-rights__row
+                p Автоматически исключать товары из публикации, если % выплаты меньше
+                    input(type="text").b-input.m-input_payment-perc
+                    strong %
+            
+
+        .b-outer-btns-holder
+            a(href="#").b-btn
+                | Сохранить 
+            a(href="#" ).b-btn.m-btn_gray.m-btn_cancel
+                | Отмена

@@ -1,0 +1,113 @@
+.b-code-settings
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Настройка кода
+        label.b-label
+            .b-label__text Стиль оформления
+                span.g-required-filed  *
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+            select.b-select.j-select
+                    option
+                        | Стильный, модный, молодёжный
+                    option
+                        | Запрещен
+                    option
+                        | Продается
+                    option
+                        | Вне каталога
+                    option
+                        | Ожидает модерации
+
+        .b-code-settings__left
+            label.b-label
+                .b-label__text Часовой пояс 
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                input(type="text").b-input
+            span.b-label
+                .b-label__text Настройки темы
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Нужна ли шапка?
+
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Нужно ли меню?
+
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Нужен ли поиск?
+
+            span.b-label
+                .b-label__text Использовать корзину?
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-radio__label
+                    input(type="radio" name="useBasket").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Да
+
+                label.b-radio__label
+                    input(type="radio" name="useBasket").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Нет
+
+
+        .b-code-settings__right
+            label.b-label
+                .b-label__text Кнопки в рубрикаторе
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                input(type="text").b-input
+
+            span.b-label
+                .b-label__text Настройки темы
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Нужен ли расширенный поиск?
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Нужен ли расширенный поиск?
+
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Нужен ли расширенный поиск?
+
+            span.b-label
+                .b-label__text Проверять заказы до оплаты?
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-radio__label
+                    input(type="radio" name="checkOrder").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Да
+
+                label.b-radio__label
+                    input(type="radio" name="checkOrder").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Нет
+

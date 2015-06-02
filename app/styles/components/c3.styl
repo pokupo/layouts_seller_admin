@@ -17,7 +17,7 @@
   path
     stroke #fff
   text
-    fill #fff
+    fill #3e424a
     font-size 13px
   .c3-gauge-value
     fill #000
@@ -134,11 +134,11 @@
 .c3-chart-arcs .c3-chart-arcs-gauge-max,.c3-chart-arcs .c3-chart-arcs-gauge-min
   fill #777
 
-// styling for full-width-graph-holder
+// styling for full-width-graph
 svg
     width 100%
     
-.b-full-width-graph-holder
+.b-full-width-graph
     .c3-target-area-data2 .c3-lines-data2
         display none
         
@@ -149,9 +149,12 @@ svg
         stroke rgba(77,187,236,1)
         stroke-width: 3px
     
+    .c3-shape.c3-circle
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUNBNzBBODgwNjFDMTFFNUI3QUVBQTAyOEUwRDVFMkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUNBNzBBODkwNjFDMTFFNUI3QUVBQTAyOEUwRDVFMkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1Q0E3MEE4NjA2MUMxMUU1QjdBRUFBMDI4RTBENUUyRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1Q0E3MEE4NzA2MUMxMUU1QjdBRUFBMDI4RTBENUUyRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pp9o5OMAAAF3SURBVHjaYvz//z8DOvDb89YYSIGwMBC/B+Izm1yEz6CrY0TWDNRkA6T6gNiUAROcA+I8oCFHMTQDNSYAqTlAzMyAG/wB4jSgAfPhmoEarYHsfUDMBhLkYGZkMBNlYxDjYGJ48+Mfw4nXvxh+/IW78C8QOwENOMQCFZgE06jCx8JQpc/LIMLOBLfu7c9/DK0XPzPc+QSyGOyyflCYMPrufmMAZJwHibIDbZxuKcAgwsGE4d73QAPSj31AdoEBEzRUwcBMhBWrRhAQBLrEQowNWcgCpFIUxhPnxBdWDOAwQAIiIN4rGO/l9794Nb/6/g+Z+5YJGn9gcOrNb4Y3P/9h1QjyMyjUkcBxWFSdgfldmZeFoRoU2hw4QxucYIBRZQzTbAkUOACLLjYmRgZzUVYGMWAYgJx6+g1KPP8GYkdQSkNOYdFAagEQs+DxNkhjOkoKQ0rbVkCqB4gtsWgEea0Aa9pGy1VaQMoKmqveggIHqOkqujqAAAMApxuXfRfef4MAAAAASUVORK5CYII=');
+
+
     /*.c3-target-line-data1 .c3-shape*/
         
-
     .c3-xgrid, .c3-ygrid
         stroke-dasharray 1
         
@@ -241,6 +244,6 @@ svg
             stroke #3e424a
             stroke-width 1px
             fill none
-
-          
-      
+  
+.c3-chart-arc:nth-child(2) text
+  fill #fff

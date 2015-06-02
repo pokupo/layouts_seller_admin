@@ -1,16 +1,23 @@
 include ../__helpers/variables
 include ../__helpers/mixins
 
+block variables
+
 doctype html
 html(lang='ru')
-	include ../common-blocks/head
-	body
-		.b-page-container
-			include ../common-blocks/sidebar
-			.b-page-content
-				include ../common-blocks/breadcrumb
-				include ../common-blocks/navtop
-				block content
-				include ../common-blocks/footer
+    include ../common-blocks/head
+    body
+        .b-page-container
+            include ../common-blocks/sidebar
+            .b-page-content
+                include ../common-blocks/breadcrumb
+                if(navtop) 
+                    include ../common-blocks/navtop
+                if(prevpage)
+                    include ../common-blocks/prevpage
+                if(navtop_profile)
+                    include ../common-blocks/navtop_profile
+                .b-inner-content
+                        block content
 
-		include ../common-blocks/scripts
+        include ../common-blocks/scripts

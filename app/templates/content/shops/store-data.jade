@@ -1,0 +1,122 @@
+.b-store-data
+    .b-pkp-block
+        .b-block-title
+            .b-block-title__left
+                h2.b-block-title__heading
+                    |  Данные магазина
+
+        label.b-label
+            .b-label__text Название магазина
+                span.g-required-filed  *
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+            input(type="text").b-input
+
+        label.b-label
+            .b-label__text Описание
+                span.g-required-filed  *
+                .pkp-tooltip.pkp-tooltip_inline
+                    span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                        | ?
+            textarea.b-tinymce.tinymce
+
+        .b-store-data__left
+            label.b-label
+                .b-label__text Часовой пояс 
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                select.b-select.j-select
+                    option
+                        | (GMT +3:00) Московское время
+                    option
+                        | Запрещен
+                    option
+                        | Продается
+                    option
+                        | Вне каталога
+                    option
+                        | Ожидает модерации
+            span.b-label
+                .b-label__text Тип продаж
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Продаю свои товары 
+
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Продаю товары партнеров
+
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Разрешаю продавать свои товары партнерам 
+
+            span.b-label
+                .b-label__text Использовать корзину?
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-radio__label
+                    input(type="radio" name="useBasket").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Да
+
+                label.b-radio__label
+                    input(type="radio" name="useBasket").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Нет
+
+
+        .b-store-data__right
+            label.b-label
+                .b-label__text Выплата агенту 
+                    span.b-label__sub-text (в процентах)
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                input(type="text").b-input
+
+            span.b-label
+                .b-label__text Кнопки в рубрикаторе
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Просмотр товара 
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Добавить в корзину 
+
+                label.b-checkbox__label
+                    input(type="checkbox").b-checkbox__input
+                    span.b-checkbox__icon.m-checkbox__icon_big
+                    span.b-ckeckbox__text.m-ckeckbox__text_big Быстрая покупка 
+
+            span.b-label
+                .b-label__text Проверять заказы до оплаты?
+                    span.g-required-filed  *
+                    .pkp-tooltip.pkp-tooltip_inline
+                        span(title="Ключевые слова и фразы" data-position="top" data-theme="g-hint").pkp-tooltip__trigger.j-hint
+                            | ?
+                label.b-radio__label
+                    input(type="radio" name="checkOrder").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Да
+
+                label.b-radio__label
+                    input(type="radio" name="checkOrder").b-radio__input
+                    span.b-radio__icon.m-radio__icon_big
+                    span.b-radio__text.m-radio__text_big Нет

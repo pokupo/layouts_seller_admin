@@ -1,0 +1,101 @@
+.pkp-tooltip
+    position relative
+    width 20px
+    &_inline
+        display inline-block
+        margin-left 4px
+    &_outer
+        position absolute
+        top 50%
+        right -30px
+        margin-top -10px
+.pkp-tooltip__trigger
+    width 20px
+    height 20px
+    border 1px solid #7caa1f
+    display inline-block
+    border-radius 999px
+    color #7caa1f
+    font 10px 'Open Sans', Arial, sans-serif
+    font-weight 700
+    text-align center
+    line-height 18px
+    cursor pointer
+    vertical-align middle
+
+.pkp-tooltip:hover .pkp-tooltip__trigger
+    color #fff
+    background #7caa1f
+
+.pkp-tooltip__content
+    pointer-events none
+    position absolute
+    width 495px
+    padding 20px 20px
+    background #fff
+    box-shadow 0 2px 8px 0 rgba(0,0,0,.5)
+    top 28px
+    right -21px
+    font 13px 'Open Sans', Arial, sans-serif
+    font-weight 400
+    opacity 0
+    -webkit-transform translate(35px) rotate(25deg) scale(1.5)
+    -moz-transform translate(35px) rotate(25deg) scale(1.5)
+    -o-transform translate(35px) rotate(25deg) scale(1.5)
+    -ms-transform translate(35px) rotate(25deg) scale(1.5)
+    transform translate(35px) rotate(25deg) scale(1.5)
+    -webkit-transition all 0.3s ease-in-out
+    -moz-transition all 0.3s ease-in-out
+    -o-transition all 0.3s ease-in-out
+    -ms-transition all 0.3s ease-in-out
+    transition all 0.3s ease-in-out
+    z-index 99
+    text-align left
+
+.pkp-tooltip__content:after
+    content ''
+    width 20px
+    height 12px
+    background-repeat no-repeat
+    background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUQyRkRDMDNDODA0MTFFNEFCQUFFNEMyQ0QxRUFEOTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUQyRkRDMDRDODA0MTFFNEFCQUFFNEMyQ0QxRUFEOTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFRDJGREMwMUM4MDQxMUU0QUJBQUU0QzJDRDFFQUQ5MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFRDJGREMwMkM4MDQxMUU0QUJBQUU0QzJDRDFFQUQ5MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvHI/AgAAAELSURBVHjapI69bsJAEITPyIoAkx9ElDejQKIiRapISZXkCXgnt+5c2YU7N3bpyo1BIug2O9Gecz4cQmCk0a32Zr47j4iULY9lRnVc30VyAH4PzAa6cHJOdDpQvwcGD6zZa5rmHWcQBGuBGesDqJwGggeu2EP2mD2p6/qDRJixk7uhZH3zAcN0YSMp3VZV9cYhTT/S2OFOMiMXqhwYXr5mT4uieHFgLbQsy1dkJDt2oB3YDXuW5/kzF/f0u/bIICsdG9qFZVn29AeshSLbA21h90mSrLTWn3SikE3T9BFdC6rusIjjeMmBHf1T6KArULDUQxRFC77Y0plCFwywVBiGc15s6EKBAdaXAAMA9U69aKy4xDcAAAAASUVORK5CYII=');
+    position absolute
+    top -12px
+    right 21px
+
+.pkp-tooltip__content_left
+    left -21px
+
+.pkp-tooltip__content_left:after
+    left 21px
+
+.pkp-tooltip__content_center_comments
+    width 460px
+    right -300px
+
+.pkp-tooltip__content_center_comments:after
+    right 300px
+
+.pkp-tooltip:hover .pkp-tooltip__content
+    opacity 1
+    -webkit-transform translate(0px) rotate(0deg) scale(1)
+    -moz-transform translate(0px) rotate(0deg) scale(1)
+    -o-transform translate(0px) rotate(0deg) scale(1)
+    -ms-transform translate(0px) rotate(0deg) scale(1)
+    transform translate(0px) rotate(0deg) scale(1)
+    pointer-events auto
+    transition all 0.3s ease-in-out
+
+.pkp-tooltip__title
+    font 13px 'Open Sans', Arial, sans-serif
+    font-weight 700
+    margin 0 0 20px 0
+
+.pkp-tooltip__content a
+    color #177a93
+    text-decoration none
+
+.pkp-tooltip__content a:hover
+    text-decoration underline
+
+.pkp-tooltip__content p
+    margin 5px 0 0 0
