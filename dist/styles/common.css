@@ -4143,35 +4143,6 @@ a.b-sidebar-navigation-minimize {
 	text-shadow: none;
 }
 
-.b-subnavigation {
-	background: #fff;
-	border-bottom: 1px solid #efece7;
-	padding: 22px 28px;
-}
-
-.b-subnavigation__item {
-	display: inline-block;
-	font-weight: 800;
-	margin: 0 18px 0 10px;
-	font-size: 14px;
-	text-align: center;
-}
-
-.b-subnavigation__item a {
-	color: #177a93;
-	text-decoration: none;
-	letter-spacing: 0.4px;
-	font-weight: 800;
-}
-
-.b-subnavigation__item a:hover {
-	opacity: 0.8;
-}
-
-.m-subnavigation__item_active a {
-	color: #000;
-}
-
 .b-profile-menu {
 	background: #fff;
 	border-bottom: 1px solid #efece7;
