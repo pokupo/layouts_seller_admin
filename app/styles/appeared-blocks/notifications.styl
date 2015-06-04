@@ -14,16 +14,22 @@
     width 921px
     min-height 90px
     
+.m-system-message__item_checked
+    opacity 0.5
+    &:hover
+      opacity 1
+      .m-checkbox__icon_system-message
+        width $checkbox_unchecked_width
+        height $checkbox_unchecked_height
+        background url($checkbox_unchecked_image) $checkbox_unchecked_offset_x $checkbox_unchecked_offset_y
+            
 .m-system-message__item_done
     background #cbe6b3
 .m-system-message__item_fail
     background #ffd1d1
 .m-system-message__item_alert
     background #fcf5d9
-.m-system-message__item_disabled
-    opacity 0.4
-    pointer-events none
-    
+        
 .b-system-message__item-content
     width 680px
     display table-cell

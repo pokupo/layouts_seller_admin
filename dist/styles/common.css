@@ -3105,6 +3105,9 @@ input[type="password"] {
 	border-radius: 999px;
 	vertical-align: top;
 	cursor: pointer;
+	-webkit-transition: border-width 0.4s;
+	-o-transition: border-width 0.4s;
+	transition: border-width 0.4s;
 }
 
 .b-entries-select__full-list:after {
@@ -3115,6 +3118,24 @@ input[type="password"] {
 	top: 50%;
 	background-image: url("../images/sprite.png");
 	background-position: -98px -377px;
+	width: 16px;
+	height: 16px;
+	margin-left: -8px;
+	margin-top: -8px;
+}
+
+.b-entries-select__full-list:hover {
+	border-width: 17px;
+}
+
+.b-entries-select__full-list:hover:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-image: url("../images/sprite.png");
+	background-position: -378px -204px;
 	width: 16px;
 	height: 16px;
 	margin-left: -8px;
@@ -4141,6 +4162,35 @@ a.b-sidebar-navigation-minimize {
 	line-height: 20px;
 	color: #fff;
 	text-shadow: none;
+}
+
+.b-subnavigation {
+	background: #fff;
+	border-bottom: 1px solid #efece7;
+	padding: 22px 28px;
+}
+
+.b-subnavigation__item {
+	display: inline-block;
+	font-weight: 800;
+	margin: 0 18px 0 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.b-subnavigation__item a {
+	color: #177a93;
+	text-decoration: none;
+	letter-spacing: 0.4px;
+	font-weight: 800;
+}
+
+.b-subnavigation__item a:hover {
+	opacity: 0.8;
+}
+
+.m-subnavigation__item_active a {
+	color: #000;
 }
 
 .b-profile-menu {
@@ -6889,16 +6939,24 @@ a.b-sidebar-navigation-minimize {
 }
 
 .b-goods-table__price {
-	line-height: 36px;
-	padding: 0 8px;
+	display: inline-block;
+	padding: 12px 8px;
 	cursor: pointer;
 }
 
 .b-goods-table__price:hover {
 	border: 1px solid #474b53;
 	margin: -1px;
-	display: inline-block;
 	border-radius: 4px;
+}
+
+.m-goods-table__price_editable {
+	padding: 12px 0;
+}
+
+.m-goods-table__price_editable:hover {
+	border: none;
+	margin: 0;
 }
 
 .b-goods-table__unavailable {
@@ -8830,6 +8888,20 @@ a.b-sidebar-navigation-minimize {
 	clear: both;
 }
 
+.m-system-message__item_checked {
+	opacity: 0.5;
+}
+
+.m-system-message__item_checked:hover {
+	opacity: 1;
+}
+
+.m-system-message__item_checked:hover .m-checkbox__icon_system-message {
+	width: 25px;
+	height: 20px;
+	background: url("../images/sprite.png") 0px -344px;
+}
+
 .m-system-message__item_done {
 	background: #cbe6b3;
 }
@@ -8840,11 +8912,6 @@ a.b-sidebar-navigation-minimize {
 
 .m-system-message__item_alert {
 	background: #fcf5d9;
-}
-
-.m-system-message__item_disabled {
-	opacity: 0.4;
-	pointer-events: none;
 }
 
 .b-system-message__item-content {
