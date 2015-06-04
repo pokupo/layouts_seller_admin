@@ -472,6 +472,9 @@ PKP.UI = {
                 y: {
                     show: true
                 }
+            },
+            oninit: function(){
+                
             }
         });
         var ordersChart = c3.generate({
@@ -592,7 +595,7 @@ PKP.UI = {
                 y: {
                     show: true
                 }
-            }
+            },
         });
         var visitorsChart =c3.generate({
             bindto: '.j-visitors-graph',
@@ -785,8 +788,108 @@ PKP.UI = {
             }
         }();
     },
-    common: function(){                
+    common: function(){
+        //механизм редактирования данных
+        $('.j-goods-price').on('click', function(){
+            var $self = $(this);
 
+            var $price = $(this).find('.b-goods-table__price-value');
+            var priceValue = $(this).find('.b-goods-table__price-value').text();
+            var $input = $(this).find('input');
+            var $ruble = $(this).find('.g-ruble');
+
+            $(this).addClass('m-goods-table__price_editable');
+            $ruble.hide();
+            $price.hide();
+            $input.show().focus().val(priceValue);
+            $input.on('focusout', function(){
+                $ruble.show();
+                $input.hide();
+                $self.removeClass('m-goods-table__price_editable');
+                if($input.val().length==0){
+                    $price.show().text('0');
+                }else{                   
+                    $price.show().text($input.val());
+                }
+            });
+        });
+
+        //сворачивание поиска
+        $('.b-goods-search__title').on('click', function(){
+                $('.j-actions__search').trigger('click');
+                return false;
+        }); 
+        //функциональные кнопки посика
+
+            $('.j-goods-minus').on('change', function(){
+                $('.j-goods-input').prop('checked', $(this).prop('checked'))
+            });
+            function some() {
+                $('.b-actions').each(function(){
+                    var $self = $(this);
+                    var $search = $self.find('.j-actions__search').closest('.b-actions__item');
+                    var $minus = $self.find('.j-goods-minus').closest('.b-actions__item');
+                    var total = $self.find('.b-actions__item').length;
+                    var checkedBox = $('.j-goods-input').not('.j-goods-minus').filter(':checked').length;
+
+                    $minus.find('input').prop('checked', checkedBox)
+
+                    $minus.closest('.b-actions__group').css({
+                        'z-index': 2,
+                        'position': 'relative'
+                    })
+
+                    if($search.length) {
+                        var $searchPos = $search.position().left;
+                    }
+
+                    var items = $self.find('.b-actions__item').not($search).not($minus);
+
+                    if(checkedBox){
+                        $search.animate({
+                            'position': 'relative',
+                            'margin-left': 0,
+                            'opacity': 1
+                        });     
+                    }else{ 
+                        $search.delay((total - 2)*50).animate({
+                            'position': 'relative',
+                            'margin-left': -$searchPos + 70,
+                            'opacity': 1
+                        });
+                    } 
+                    items.each(function(i,e){
+                        var pos = $(this).position().left;
+                        if(checkedBox){
+                            $(e).delay(i*50).animate({
+                                'position': 'relative',
+                                'left': 0,
+                                'opacity': 1
+                            });
+                        }else{
+                            $(e).delay(i*50).animate({
+                                'position': 'relative',
+                                'left': -pos,
+                                'opacity': 0
+                            });
+                        }                      
+                    });
+                });
+            }
+            some();
+            $('.j-goods-input').on('change', function(){
+                some();
+            });
+        //попап "Уведомления системы"
+            $('.j-notification-popup').find('input[type="checkbox"]').on('change', function(){
+                var $self = $(this),
+                    $item = $self.parents('.b-system-message__item');
+                if($self.prop('checked')==true) {
+                    $item.addClass('m-system-message__item_checked');
+                }else{
+                    $item.removeClass('m-system-message__item_checked');
+                }
+            });    
         //Анимация появления/исчезновения блока с поиском
             $('.j-actions__search').on('click', function(){
                 var $self = $(this),
@@ -978,10 +1081,10 @@ PKP.Tip = {
                 $self.tooltip({
                     content: $($('.' + option.content).html()),
                     updateAnimation: false,
-                    interactive: true,
                     contentAsHTML: true,
                     position: option.position,
                     positionTracker: true,
+                    interactive: true,
                     interactiveTolerance: 2000,
                     offsetX: option.offsetX,
                     offsetY: option.offsetY,

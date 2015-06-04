@@ -98,6 +98,8 @@
     
     .b-goods-table__row
         transition background 0.2s ease-out
+        &:hover
+            background #f5f3f1
 
     .m-goods-table__row
         background #f5f3f1
@@ -173,15 +175,18 @@
             opacity 0.6
     
     .b-goods-table__price
-        line-height 36px
-        padding 0 8px
+        display inline-block
+        padding 12px 8px
         cursor pointer
         &:hover
             border 1px solid #474b53;
             margin -1px
-            display inline-block
             border-radius 4px
-
+    .m-goods-table__price_editable
+        padding 12px 0
+        &:hover
+            border none
+            margin 0
     .b-goods-table__unavailable
         color #ff6766
     
