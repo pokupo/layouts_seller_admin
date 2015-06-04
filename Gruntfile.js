@@ -296,7 +296,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		//'clean',
 		'sprite',
-		'imagemin',
+		//'imagemin',
 		'stylus',
 		'autoprefixer',
 		'cmq',
