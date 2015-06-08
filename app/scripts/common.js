@@ -474,7 +474,9 @@ PKP.UI = {
                 }
             },
             oninit: function(){
-                
+                var graph = $('.j-visits-graph');
+                var lines = graph.find('.c3-chart-lines').eq(0);
+                graph.find('.c3-axis-y2').after(lines);
             }
         });
         var ordersChart = c3.generate({
@@ -596,6 +598,11 @@ PKP.UI = {
                     show: true
                 }
             },
+            oninit: function(){
+                var graph = $('.j-orders-graph');
+                var lines = graph.find('.c3-chart-lines').eq(0);
+                graph.find('.c3-axis-y2').after(lines);
+            }
         });
         var visitorsChart =c3.generate({
             bindto: '.j-visitors-graph',
