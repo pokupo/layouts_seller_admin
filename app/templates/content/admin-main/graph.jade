@@ -41,3 +41,11 @@
                 span.b-full-width-graph__text
                     | конверсия
         .b-visits-graph.j-visits-graph
+
+svg(width="10" height="10")
+  defs
+    radialGradient#grad1(cx="50%" cy="50%" r="50%" fx="50%" fy="50%")
+      stop(offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1")
+      stop(offset="50%" style="stop-color:rgb(255,255,255);stop-opacity:1")
+      stop(offset="50%" style="stop-color:rgb(77, 187, 236);stop-opacity:1")
+      stop(offset="100%" style="stop-color:rgb(77, 187, 236);stop-opacity:1")
